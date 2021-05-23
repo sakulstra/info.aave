@@ -1,0 +1,237 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+  // provider = "sqlite"
+  // url      = "file:./db.sqlite"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongodb"]
+  // previewFeatures = ["napi"]
+  // previewFeatures = []
+}
+
+model UserReserve {
+  id                              String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  userId                          String
+  // user                            AaveUser @relation(fields: [userId], references: [id])
+  poolId                          String
+  reserve                         Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  reserveId                       String
+  principalStableDebt             String
+  scaledATokenBalance             String
+  scaledVariableDebt              String
+  currentTotalDebt                String
+  stableBorrowRate                String
+  variableBorrowIndex             String
+  lastUpdateTimestamp             Int
+  stableBorrowLastUpdateTimestamp Int
+  usageAsCollateralEnabledOnUser  Boolean
+
+  @@unique([userId, poolId, reserveId])
+  @@index([lastUpdateTimestamp])
+  @@index([userId, poolId])
+  @@index([scaledATokenBalance])
+  @@index([currentTotalDebt])
+}
+
+model AaveUser {
+  id                          String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  userId                      String
+  poolId                      String
+  healthFactor                Float
+  totalBorrowsETH             Float
+  totalBorrowsUSD             Float
+  totalCollateralETH          Float
+  totalCollateralUSD          Float
+  totalLiquidityETH           Float
+  totalLiquidityUSD           Float
+  availableBorrowsETH         Float
+  currentLiquidationThreshold Float
+  currentLoanToValue          Float
+  lastUpdateTimestamp         Int
+
+  @@unique([userId, poolId])
+  @@index([lastUpdateTimestamp])
+  @@index([healthFactor])
+}
+
+model FormattedUserReserve {
+  id                              String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  userId                          String
+  poolId                          String
+  reserve                         Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  reserveId                       String
+  principalStableDebt             Float
+  scaledATokenBalance             Float
+  scaledVariableDebt              Float
+  currentTotalDebt                Float
+  stableBorrowRate                Float
+  variableBorrowIndex             String
+  lastUpdateTimestamp             Int
+  stableBorrowLastUpdateTimestamp Int
+  usageAsCollateralEnabledOnUser  Boolean
+
+  @@unique([userId, poolId, reserveId])
+  @@index([lastUpdateTimestamp])
+}
+
+model Reserve {
+  id                               String            @id @map("_id")
+  aTokenId                         String
+  vTokenId                         String
+  sTokenId                         String
+  priceInEth                       String
+  underlyingAsset                  String
+  poolId                           String
+  reserveLiquidationBonus          String
+  reserveLiquidationThreshold      String
+  name                             String
+  symbol                           String
+  liquidityRate                    String
+  liquidityIndex                   String
+  variableBorrowIndex              String
+  averageStableRate                String
+  stableBorrowRate                 String
+  baseLTVasCollateral              String
+  reserveFactor                    String
+  stableRateSlope1                 String
+  stableRateSlope2                 String
+  variableRateSlope1               String
+  variableRateSlope2               String
+  optimalUtilisationRate           String
+  availableLiquidity               String
+  baseVariableBorrowRate           String
+  variableBorrowRate               String
+  totalPrincipalStableDebt         String
+  totalScaledVariableDebt          String
+  stableBorrowRateEnabled          Boolean
+  usageAsCollateralEnabled         Boolean
+  isActive                         Boolean
+  isFrozen                         Boolean
+  borrowingEnabled                 Boolean
+  stableDebtLastUpdateTimestamp    Int
+  lastUpdateTimestamp              Int
+  decimals                         Int
+  lifetimeFlashLoanPremium         String
+  lifetimeReserveFactorAccrued     String
+  lifetimeDepositorsInterestEarned String
+  lifetimeFlashLoans               String
+  lifetimeLiquidated               String
+  liquidations                     LiquidationCall[] @relation("collateralReserve")
+  liquidators                      LiquidationCall[] @relation("principalReserve")
+
+  UserReserve          UserReserve[]
+  FormattedUserReserve FormattedUserReserve[]
+  Deposit              Deposit[]
+  Borrow               Borrow[]
+  Repay                Repay[]
+  Withdrawal           Withdrawal[]
+  FlashLoan            FlashLoan[]
+  @@unique([underlyingAsset, poolId])
+}
+
+model ReserveHistoryItem {
+  id                               String @id @map("_id")
+  reserveId                        String
+  poolId                           String
+  totalLiquidity                   String
+  availableLiquidity               String
+  liquidityIndex                   String
+  liquidityRate                    String
+  variableBorrowIndex              String
+  variableBorrowRate               String
+  priceInEth                       String
+  priceInUsd                       String
+  utilizationRate                  String
+  stableBorrowRate                 String
+  lifetimeFlashLoanPremium         String
+  lifetimeReserveFactorAccrued     String
+  lifetimeDepositorsInterestEarned String
+  lifetimeFlashLoans               String
+  lifetimeScaledVariableDebt       String
+  lifetimePrincipalStableDebt      String
+  lifetimeCurrentVariableDebt      String
+  timestamp                        Int
+  chain                            String
+
+  @@index([timestamp])
+  @@index([timestamp, reserveId, poolId])
+  @@index([chain])
+}
+
+model LiquidationCall {
+  id                  String  @id @map("_id")
+  userId              String
+  liquidatorId        String
+  poolId              String
+  collateralReserveId String
+  collateralReserve   Reserve @relation("collateralReserve", fields: [collateralReserveId, poolId], references: [underlyingAsset, poolId])
+  collateralAmount    Float
+  principalReserveId  String
+  principalReserve    Reserve @relation("principalReserve", fields: [principalReserveId, poolId], references: [underlyingAsset, poolId])
+  principalAmount     Float
+  timestamp           Int
+}
+
+model Deposit {
+  id           String  @id @map("_id")
+  userId       String
+  poolId       String
+  reserveId    String
+  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  onBehalfOfId String
+  referrerId   String?
+  amount       Float
+  timestamp    Int
+}
+
+model Borrow {
+  id             String  @id @map("_id")
+  userId         String
+  poolId         String
+  reserveId      String
+  reserve        Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  onBehalfOfId   String
+  referrerId     String?
+  amount         Float
+  borrowRateMode String
+  timestamp      Int
+}
+
+model Repay {
+  id           String  @id @map("_id")
+  userId       String
+  poolId       String
+  reserveId    String
+  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  onBehalfOfId String
+  amount       Float
+  timestamp    Int
+}
+
+model Withdrawal {
+  id           String  @id @map("_id")
+  userId       String
+  poolId       String
+  reserveId    String
+  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  onBehalfOfId String
+  amount       Float
+  timestamp    Int
+}
+
+model FlashLoan {
+  id          String  @id @map("_id")
+  initiatorId String
+  poolId      String
+  reserveId   String
+  reserve     Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  amount      Float
+  totalFee    Float
+  timestamp   Int
+}

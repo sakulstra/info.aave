@@ -1,0 +1,4699 @@
+directive @entity on OBJECT
+
+directive @derivedFrom(field: String) on FIELD_DEFINITION
+
+directive @subgraphId(id: String) on OBJECT
+
+type AToken {
+  """
+  AToken address
+  
+  """
+  id: ID!
+  pool: Pool!
+  underlyingAssetAddress: Bytes!
+  underlyingAssetDecimals: Int!
+}
+
+type ATokenBalanceHistoryItem {
+  """
+  userReserve + txHash
+  
+  """
+  id: ID!
+  userReserve: UserReserve!
+  balance: BigInt!
+  userBalanceIndex: BigInt!
+  interestRedirectionAddress: Bytes!
+  redirectedBalance: BigInt!
+  timestamp: Int!
+}
+
+input ATokenBalanceHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  balance: BigInt
+  balance_not: BigInt
+  balance_gt: BigInt
+  balance_lt: BigInt
+  balance_gte: BigInt
+  balance_lte: BigInt
+  balance_in: [BigInt!]
+  balance_not_in: [BigInt!]
+  userBalanceIndex: BigInt
+  userBalanceIndex_not: BigInt
+  userBalanceIndex_gt: BigInt
+  userBalanceIndex_lt: BigInt
+  userBalanceIndex_gte: BigInt
+  userBalanceIndex_lte: BigInt
+  userBalanceIndex_in: [BigInt!]
+  userBalanceIndex_not_in: [BigInt!]
+  interestRedirectionAddress: Bytes
+  interestRedirectionAddress_not: Bytes
+  interestRedirectionAddress_in: [Bytes!]
+  interestRedirectionAddress_not_in: [Bytes!]
+  interestRedirectionAddress_contains: Bytes
+  interestRedirectionAddress_not_contains: Bytes
+  redirectedBalance: BigInt
+  redirectedBalance_not: BigInt
+  redirectedBalance_gt: BigInt
+  redirectedBalance_lt: BigInt
+  redirectedBalance_gte: BigInt
+  redirectedBalance_lte: BigInt
+  redirectedBalance_in: [BigInt!]
+  redirectedBalance_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum ATokenBalanceHistoryItem_orderBy {
+  id
+  userReserve
+  balance
+  userBalanceIndex
+  interestRedirectionAddress
+  redirectedBalance
+  timestamp
+}
+
+input AToken_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  underlyingAssetAddress: Bytes
+  underlyingAssetAddress_not: Bytes
+  underlyingAssetAddress_in: [Bytes!]
+  underlyingAssetAddress_not_in: [Bytes!]
+  underlyingAssetAddress_contains: Bytes
+  underlyingAssetAddress_not_contains: Bytes
+  underlyingAssetDecimals: Int
+  underlyingAssetDecimals_not: Int
+  underlyingAssetDecimals_gt: Int
+  underlyingAssetDecimals_lt: Int
+  underlyingAssetDecimals_gte: Int
+  underlyingAssetDecimals_lte: Int
+  underlyingAssetDecimals_in: [Int!]
+  underlyingAssetDecimals_not_in: [Int!]
+}
+
+enum AToken_orderBy {
+  id
+  pool
+  underlyingAssetAddress
+  underlyingAssetDecimals
+}
+
+scalar BigDecimal
+
+scalar BigInt
+
+input Block_height {
+  hash: Bytes
+  number: Int
+}
+
+type Borrow implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  amount: BigInt!
+  borrowRate: BigInt!
+  borrowRateMode: BorrowRateMode!
+  accruedBorrowInterest: BigInt!
+  referrer: Referrer
+  timestamp: Int!
+}
+
+enum BorrowRateMode {
+  None
+  Stable
+  Variable
+}
+
+input Borrow_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  borrowRate: BigInt
+  borrowRate_not: BigInt
+  borrowRate_gt: BigInt
+  borrowRate_lt: BigInt
+  borrowRate_gte: BigInt
+  borrowRate_lte: BigInt
+  borrowRate_in: [BigInt!]
+  borrowRate_not_in: [BigInt!]
+  borrowRateMode: BorrowRateMode
+  borrowRateMode_not: BorrowRateMode
+  accruedBorrowInterest: BigInt
+  accruedBorrowInterest_not: BigInt
+  accruedBorrowInterest_gt: BigInt
+  accruedBorrowInterest_lt: BigInt
+  accruedBorrowInterest_gte: BigInt
+  accruedBorrowInterest_lte: BigInt
+  accruedBorrowInterest_in: [BigInt!]
+  accruedBorrowInterest_not_in: [BigInt!]
+  referrer: String
+  referrer_not: String
+  referrer_gt: String
+  referrer_lt: String
+  referrer_gte: String
+  referrer_lte: String
+  referrer_in: [String!]
+  referrer_not_in: [String!]
+  referrer_contains: String
+  referrer_not_contains: String
+  referrer_starts_with: String
+  referrer_not_starts_with: String
+  referrer_ends_with: String
+  referrer_not_ends_with: String
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum Borrow_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  amount
+  borrowRate
+  borrowRateMode
+  accruedBorrowInterest
+  referrer
+  timestamp
+}
+
+scalar Bytes
+
+type ChainlinkAggregator {
+  id: ID!
+  oracleAsset: PriceOracleAsset!
+}
+
+input ChainlinkAggregator_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  oracleAsset: String
+  oracleAsset_not: String
+  oracleAsset_gt: String
+  oracleAsset_lt: String
+  oracleAsset_gte: String
+  oracleAsset_lte: String
+  oracleAsset_in: [String!]
+  oracleAsset_not_in: [String!]
+  oracleAsset_contains: String
+  oracleAsset_not_contains: String
+  oracleAsset_starts_with: String
+  oracleAsset_not_starts_with: String
+  oracleAsset_ends_with: String
+  oracleAsset_not_ends_with: String
+}
+
+enum ChainlinkAggregator_orderBy {
+  id
+  oracleAsset
+}
+
+type ContractToPoolMapping {
+  id: ID!
+  pool: Pool!
+}
+
+input ContractToPoolMapping_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+}
+
+enum ContractToPoolMapping_orderBy {
+  id
+  pool
+}
+
+type Deposit implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  amount: BigInt!
+  referrer: Referrer
+  timestamp: Int!
+}
+
+input Deposit_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  referrer: String
+  referrer_not: String
+  referrer_gt: String
+  referrer_lt: String
+  referrer_gte: String
+  referrer_lte: String
+  referrer_in: [String!]
+  referrer_not_in: [String!]
+  referrer_contains: String
+  referrer_not_contains: String
+  referrer_starts_with: String
+  referrer_not_starts_with: String
+  referrer_ends_with: String
+  referrer_not_ends_with: String
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum Deposit_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  amount
+  referrer
+  timestamp
+}
+
+type FlashLoan {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  reserve: Reserve!
+  target: Bytes!
+  amount: BigInt!
+  totalFee: BigInt!
+  protocolFee: BigInt!
+  timestamp: Int!
+}
+
+input FlashLoan_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  target: Bytes
+  target_not: Bytes
+  target_in: [Bytes!]
+  target_not_in: [Bytes!]
+  target_contains: Bytes
+  target_not_contains: Bytes
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  totalFee: BigInt
+  totalFee_not: BigInt
+  totalFee_gt: BigInt
+  totalFee_lt: BigInt
+  totalFee_gte: BigInt
+  totalFee_lte: BigInt
+  totalFee_in: [BigInt!]
+  totalFee_not_in: [BigInt!]
+  protocolFee: BigInt
+  protocolFee_not: BigInt
+  protocolFee_gt: BigInt
+  protocolFee_lt: BigInt
+  protocolFee_gte: BigInt
+  protocolFee_lte: BigInt
+  protocolFee_in: [BigInt!]
+  protocolFee_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum FlashLoan_orderBy {
+  id
+  pool
+  reserve
+  target
+  amount
+  totalFee
+  protocolFee
+  timestamp
+}
+
+type LiquidationCall implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  collateralReserve: Reserve!
+  collateralUserReserve: UserReserve!
+  collateralAmount: BigInt!
+  principalReserve: Reserve!
+  principalUserReserve: UserReserve!
+  principalAmount: BigInt!
+  liquidator: Bytes!
+  timestamp: Int!
+}
+
+input LiquidationCall_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  collateralReserve: String
+  collateralReserve_not: String
+  collateralReserve_gt: String
+  collateralReserve_lt: String
+  collateralReserve_gte: String
+  collateralReserve_lte: String
+  collateralReserve_in: [String!]
+  collateralReserve_not_in: [String!]
+  collateralReserve_contains: String
+  collateralReserve_not_contains: String
+  collateralReserve_starts_with: String
+  collateralReserve_not_starts_with: String
+  collateralReserve_ends_with: String
+  collateralReserve_not_ends_with: String
+  collateralUserReserve: String
+  collateralUserReserve_not: String
+  collateralUserReserve_gt: String
+  collateralUserReserve_lt: String
+  collateralUserReserve_gte: String
+  collateralUserReserve_lte: String
+  collateralUserReserve_in: [String!]
+  collateralUserReserve_not_in: [String!]
+  collateralUserReserve_contains: String
+  collateralUserReserve_not_contains: String
+  collateralUserReserve_starts_with: String
+  collateralUserReserve_not_starts_with: String
+  collateralUserReserve_ends_with: String
+  collateralUserReserve_not_ends_with: String
+  collateralAmount: BigInt
+  collateralAmount_not: BigInt
+  collateralAmount_gt: BigInt
+  collateralAmount_lt: BigInt
+  collateralAmount_gte: BigInt
+  collateralAmount_lte: BigInt
+  collateralAmount_in: [BigInt!]
+  collateralAmount_not_in: [BigInt!]
+  principalReserve: String
+  principalReserve_not: String
+  principalReserve_gt: String
+  principalReserve_lt: String
+  principalReserve_gte: String
+  principalReserve_lte: String
+  principalReserve_in: [String!]
+  principalReserve_not_in: [String!]
+  principalReserve_contains: String
+  principalReserve_not_contains: String
+  principalReserve_starts_with: String
+  principalReserve_not_starts_with: String
+  principalReserve_ends_with: String
+  principalReserve_not_ends_with: String
+  principalUserReserve: String
+  principalUserReserve_not: String
+  principalUserReserve_gt: String
+  principalUserReserve_lt: String
+  principalUserReserve_gte: String
+  principalUserReserve_lte: String
+  principalUserReserve_in: [String!]
+  principalUserReserve_not_in: [String!]
+  principalUserReserve_contains: String
+  principalUserReserve_not_contains: String
+  principalUserReserve_starts_with: String
+  principalUserReserve_not_starts_with: String
+  principalUserReserve_ends_with: String
+  principalUserReserve_not_ends_with: String
+  principalAmount: BigInt
+  principalAmount_not: BigInt
+  principalAmount_gt: BigInt
+  principalAmount_lt: BigInt
+  principalAmount_gte: BigInt
+  principalAmount_lte: BigInt
+  principalAmount_in: [BigInt!]
+  principalAmount_not_in: [BigInt!]
+  liquidator: Bytes
+  liquidator_not: Bytes
+  liquidator_in: [Bytes!]
+  liquidator_not_in: [Bytes!]
+  liquidator_contains: Bytes
+  liquidator_not_contains: Bytes
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum LiquidationCall_orderBy {
+  id
+  pool
+  user
+  collateralReserve
+  collateralUserReserve
+  collateralAmount
+  principalReserve
+  principalUserReserve
+  principalAmount
+  liquidator
+  timestamp
+}
+
+enum OrderDirection {
+  asc
+  desc
+}
+
+type OriginationFeeLiquidation implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  collateralReserve: Reserve!
+  collateralUserReserve: UserReserve!
+  principalReserve: Reserve!
+  principalUserReserve: UserReserve!
+  feeLiquidated: BigInt!
+  liquidatedCollateralForFee: BigInt!
+  timestamp: Int!
+}
+
+input OriginationFeeLiquidation_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  collateralReserve: String
+  collateralReserve_not: String
+  collateralReserve_gt: String
+  collateralReserve_lt: String
+  collateralReserve_gte: String
+  collateralReserve_lte: String
+  collateralReserve_in: [String!]
+  collateralReserve_not_in: [String!]
+  collateralReserve_contains: String
+  collateralReserve_not_contains: String
+  collateralReserve_starts_with: String
+  collateralReserve_not_starts_with: String
+  collateralReserve_ends_with: String
+  collateralReserve_not_ends_with: String
+  collateralUserReserve: String
+  collateralUserReserve_not: String
+  collateralUserReserve_gt: String
+  collateralUserReserve_lt: String
+  collateralUserReserve_gte: String
+  collateralUserReserve_lte: String
+  collateralUserReserve_in: [String!]
+  collateralUserReserve_not_in: [String!]
+  collateralUserReserve_contains: String
+  collateralUserReserve_not_contains: String
+  collateralUserReserve_starts_with: String
+  collateralUserReserve_not_starts_with: String
+  collateralUserReserve_ends_with: String
+  collateralUserReserve_not_ends_with: String
+  principalReserve: String
+  principalReserve_not: String
+  principalReserve_gt: String
+  principalReserve_lt: String
+  principalReserve_gte: String
+  principalReserve_lte: String
+  principalReserve_in: [String!]
+  principalReserve_not_in: [String!]
+  principalReserve_contains: String
+  principalReserve_not_contains: String
+  principalReserve_starts_with: String
+  principalReserve_not_starts_with: String
+  principalReserve_ends_with: String
+  principalReserve_not_ends_with: String
+  principalUserReserve: String
+  principalUserReserve_not: String
+  principalUserReserve_gt: String
+  principalUserReserve_lt: String
+  principalUserReserve_gte: String
+  principalUserReserve_lte: String
+  principalUserReserve_in: [String!]
+  principalUserReserve_not_in: [String!]
+  principalUserReserve_contains: String
+  principalUserReserve_not_contains: String
+  principalUserReserve_starts_with: String
+  principalUserReserve_not_starts_with: String
+  principalUserReserve_ends_with: String
+  principalUserReserve_not_ends_with: String
+  feeLiquidated: BigInt
+  feeLiquidated_not: BigInt
+  feeLiquidated_gt: BigInt
+  feeLiquidated_lt: BigInt
+  feeLiquidated_gte: BigInt
+  feeLiquidated_lte: BigInt
+  feeLiquidated_in: [BigInt!]
+  feeLiquidated_not_in: [BigInt!]
+  liquidatedCollateralForFee: BigInt
+  liquidatedCollateralForFee_not: BigInt
+  liquidatedCollateralForFee_gt: BigInt
+  liquidatedCollateralForFee_lt: BigInt
+  liquidatedCollateralForFee_gte: BigInt
+  liquidatedCollateralForFee_lte: BigInt
+  liquidatedCollateralForFee_in: [BigInt!]
+  liquidatedCollateralForFee_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum OriginationFeeLiquidation_orderBy {
+  id
+  pool
+  user
+  collateralReserve
+  collateralUserReserve
+  principalReserve
+  principalUserReserve
+  feeLiquidated
+  liquidatedCollateralForFee
+  timestamp
+}
+
+type Pool {
+  id: ID!
+  protocol: Protocol!
+  lendingPool: Bytes
+  lendingPoolCore: Bytes
+  lendingPoolParametersProvider: Bytes
+  lendingPoolManager: Bytes
+  lendingPoolConfigurator: Bytes
+  lendingPoolLiquidationManager: Bytes
+  lendingPoolDataProvider: Bytes
+  proxyPriceProvider: Bytes
+  lendingRateOracle: Bytes
+  feeProvider: Bytes
+  history(skip: Int = 0, first: Int = 100, orderBy: PoolConfigurationHistoryItem_orderBy, orderDirection: OrderDirection, where: PoolConfigurationHistoryItem_filter): [PoolConfigurationHistoryItem!]!
+  lastUpdateTimestamp: Int!
+  reserves(skip: Int = 0, first: Int = 100, orderBy: Reserve_orderBy, orderDirection: OrderDirection, where: Reserve_filter): [Reserve!]!
+  depositHistory(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+  redeemUnderlyingHistory(skip: Int = 0, first: Int = 100, orderBy: RedeemUnderlying_orderBy, orderDirection: OrderDirection, where: RedeemUnderlying_filter): [RedeemUnderlying!]!
+  borrowHistory(skip: Int = 0, first: Int = 100, orderBy: Borrow_orderBy, orderDirection: OrderDirection, where: Borrow_filter): [Borrow!]!
+  swapHistory(skip: Int = 0, first: Int = 100, orderBy: Swap_orderBy, orderDirection: OrderDirection, where: Swap_filter): [Swap!]!
+  usageAsCollateralHistory(skip: Int = 0, first: Int = 100, orderBy: UsageAsCollateral_orderBy, orderDirection: OrderDirection, where: UsageAsCollateral_filter): [UsageAsCollateral!]!
+  rebalanceStableBorrowRateHistory(skip: Int = 0, first: Int = 100, orderBy: RebalanceStableBorrowRate_orderBy, orderDirection: OrderDirection, where: RebalanceStableBorrowRate_filter): [RebalanceStableBorrowRate!]!
+  repayHistory(skip: Int = 0, first: Int = 100, orderBy: Repay_orderBy, orderDirection: OrderDirection, where: Repay_filter): [Repay!]!
+  flashLoanHistory(skip: Int = 0, first: Int = 100, orderBy: FlashLoan_orderBy, orderDirection: OrderDirection, where: FlashLoan_filter): [FlashLoan!]!
+  liquidationCallHistory(skip: Int = 0, first: Int = 100, orderBy: LiquidationCall_orderBy, orderDirection: OrderDirection, where: LiquidationCall_filter): [LiquidationCall!]!
+  originationFeeLiquidationHistory(skip: Int = 0, first: Int = 100, orderBy: OriginationFeeLiquidation_orderBy, orderDirection: OrderDirection, where: OriginationFeeLiquidation_filter): [OriginationFeeLiquidation!]!
+}
+
+type PoolConfigurationHistoryItem {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  lendingPool: Bytes
+  lendingPoolCore: Bytes
+  lendingPoolParametersProvider: Bytes
+  lendingPoolManager: Bytes
+  lendingPoolConfigurator: Bytes
+  lendingPoolLiquidationManager: Bytes
+  lendingPoolDataProvider: Bytes
+  proxyPriceProvider: Bytes
+  lendingRateOracle: Bytes
+  feeProvider: Bytes
+  timestamp: Int!
+}
+
+input PoolConfigurationHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  lendingPool: Bytes
+  lendingPool_not: Bytes
+  lendingPool_in: [Bytes!]
+  lendingPool_not_in: [Bytes!]
+  lendingPool_contains: Bytes
+  lendingPool_not_contains: Bytes
+  lendingPoolCore: Bytes
+  lendingPoolCore_not: Bytes
+  lendingPoolCore_in: [Bytes!]
+  lendingPoolCore_not_in: [Bytes!]
+  lendingPoolCore_contains: Bytes
+  lendingPoolCore_not_contains: Bytes
+  lendingPoolParametersProvider: Bytes
+  lendingPoolParametersProvider_not: Bytes
+  lendingPoolParametersProvider_in: [Bytes!]
+  lendingPoolParametersProvider_not_in: [Bytes!]
+  lendingPoolParametersProvider_contains: Bytes
+  lendingPoolParametersProvider_not_contains: Bytes
+  lendingPoolManager: Bytes
+  lendingPoolManager_not: Bytes
+  lendingPoolManager_in: [Bytes!]
+  lendingPoolManager_not_in: [Bytes!]
+  lendingPoolManager_contains: Bytes
+  lendingPoolManager_not_contains: Bytes
+  lendingPoolConfigurator: Bytes
+  lendingPoolConfigurator_not: Bytes
+  lendingPoolConfigurator_in: [Bytes!]
+  lendingPoolConfigurator_not_in: [Bytes!]
+  lendingPoolConfigurator_contains: Bytes
+  lendingPoolConfigurator_not_contains: Bytes
+  lendingPoolLiquidationManager: Bytes
+  lendingPoolLiquidationManager_not: Bytes
+  lendingPoolLiquidationManager_in: [Bytes!]
+  lendingPoolLiquidationManager_not_in: [Bytes!]
+  lendingPoolLiquidationManager_contains: Bytes
+  lendingPoolLiquidationManager_not_contains: Bytes
+  lendingPoolDataProvider: Bytes
+  lendingPoolDataProvider_not: Bytes
+  lendingPoolDataProvider_in: [Bytes!]
+  lendingPoolDataProvider_not_in: [Bytes!]
+  lendingPoolDataProvider_contains: Bytes
+  lendingPoolDataProvider_not_contains: Bytes
+  proxyPriceProvider: Bytes
+  proxyPriceProvider_not: Bytes
+  proxyPriceProvider_in: [Bytes!]
+  proxyPriceProvider_not_in: [Bytes!]
+  proxyPriceProvider_contains: Bytes
+  proxyPriceProvider_not_contains: Bytes
+  lendingRateOracle: Bytes
+  lendingRateOracle_not: Bytes
+  lendingRateOracle_in: [Bytes!]
+  lendingRateOracle_not_in: [Bytes!]
+  lendingRateOracle_contains: Bytes
+  lendingRateOracle_not_contains: Bytes
+  feeProvider: Bytes
+  feeProvider_not: Bytes
+  feeProvider_in: [Bytes!]
+  feeProvider_not_in: [Bytes!]
+  feeProvider_contains: Bytes
+  feeProvider_not_contains: Bytes
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum PoolConfigurationHistoryItem_orderBy {
+  id
+  pool
+  lendingPool
+  lendingPoolCore
+  lendingPoolParametersProvider
+  lendingPoolManager
+  lendingPoolConfigurator
+  lendingPoolLiquidationManager
+  lendingPoolDataProvider
+  proxyPriceProvider
+  lendingRateOracle
+  feeProvider
+  timestamp
+}
+
+input Pool_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  protocol: String
+  protocol_not: String
+  protocol_gt: String
+  protocol_lt: String
+  protocol_gte: String
+  protocol_lte: String
+  protocol_in: [String!]
+  protocol_not_in: [String!]
+  protocol_contains: String
+  protocol_not_contains: String
+  protocol_starts_with: String
+  protocol_not_starts_with: String
+  protocol_ends_with: String
+  protocol_not_ends_with: String
+  lendingPool: Bytes
+  lendingPool_not: Bytes
+  lendingPool_in: [Bytes!]
+  lendingPool_not_in: [Bytes!]
+  lendingPool_contains: Bytes
+  lendingPool_not_contains: Bytes
+  lendingPoolCore: Bytes
+  lendingPoolCore_not: Bytes
+  lendingPoolCore_in: [Bytes!]
+  lendingPoolCore_not_in: [Bytes!]
+  lendingPoolCore_contains: Bytes
+  lendingPoolCore_not_contains: Bytes
+  lendingPoolParametersProvider: Bytes
+  lendingPoolParametersProvider_not: Bytes
+  lendingPoolParametersProvider_in: [Bytes!]
+  lendingPoolParametersProvider_not_in: [Bytes!]
+  lendingPoolParametersProvider_contains: Bytes
+  lendingPoolParametersProvider_not_contains: Bytes
+  lendingPoolManager: Bytes
+  lendingPoolManager_not: Bytes
+  lendingPoolManager_in: [Bytes!]
+  lendingPoolManager_not_in: [Bytes!]
+  lendingPoolManager_contains: Bytes
+  lendingPoolManager_not_contains: Bytes
+  lendingPoolConfigurator: Bytes
+  lendingPoolConfigurator_not: Bytes
+  lendingPoolConfigurator_in: [Bytes!]
+  lendingPoolConfigurator_not_in: [Bytes!]
+  lendingPoolConfigurator_contains: Bytes
+  lendingPoolConfigurator_not_contains: Bytes
+  lendingPoolLiquidationManager: Bytes
+  lendingPoolLiquidationManager_not: Bytes
+  lendingPoolLiquidationManager_in: [Bytes!]
+  lendingPoolLiquidationManager_not_in: [Bytes!]
+  lendingPoolLiquidationManager_contains: Bytes
+  lendingPoolLiquidationManager_not_contains: Bytes
+  lendingPoolDataProvider: Bytes
+  lendingPoolDataProvider_not: Bytes
+  lendingPoolDataProvider_in: [Bytes!]
+  lendingPoolDataProvider_not_in: [Bytes!]
+  lendingPoolDataProvider_contains: Bytes
+  lendingPoolDataProvider_not_contains: Bytes
+  proxyPriceProvider: Bytes
+  proxyPriceProvider_not: Bytes
+  proxyPriceProvider_in: [Bytes!]
+  proxyPriceProvider_not_in: [Bytes!]
+  proxyPriceProvider_contains: Bytes
+  proxyPriceProvider_not_contains: Bytes
+  lendingRateOracle: Bytes
+  lendingRateOracle_not: Bytes
+  lendingRateOracle_in: [Bytes!]
+  lendingRateOracle_not_in: [Bytes!]
+  lendingRateOracle_contains: Bytes
+  lendingRateOracle_not_contains: Bytes
+  feeProvider: Bytes
+  feeProvider_not: Bytes
+  feeProvider_in: [Bytes!]
+  feeProvider_not_in: [Bytes!]
+  feeProvider_contains: Bytes
+  feeProvider_not_contains: Bytes
+  lastUpdateTimestamp: Int
+  lastUpdateTimestamp_not: Int
+  lastUpdateTimestamp_gt: Int
+  lastUpdateTimestamp_lt: Int
+  lastUpdateTimestamp_gte: Int
+  lastUpdateTimestamp_lte: Int
+  lastUpdateTimestamp_in: [Int!]
+  lastUpdateTimestamp_not_in: [Int!]
+}
+
+enum Pool_orderBy {
+  id
+  protocol
+  lendingPool
+  lendingPoolCore
+  lendingPoolParametersProvider
+  lendingPoolManager
+  lendingPoolConfigurator
+  lendingPoolLiquidationManager
+  lendingPoolDataProvider
+  proxyPriceProvider
+  lendingRateOracle
+  feeProvider
+  history
+  lastUpdateTimestamp
+  reserves
+  depositHistory
+  redeemUnderlyingHistory
+  borrowHistory
+  swapHistory
+  usageAsCollateralHistory
+  rebalanceStableBorrowRateHistory
+  repayHistory
+  flashLoanHistory
+  liquidationCallHistory
+  originationFeeLiquidationHistory
+}
+
+type PriceHistoryItem {
+  id: ID!
+  asset: PriceOracleAsset!
+  price: BigInt!
+  timestamp: Int!
+}
+
+input PriceHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  asset: String
+  asset_not: String
+  asset_gt: String
+  asset_lt: String
+  asset_gte: String
+  asset_lte: String
+  asset_in: [String!]
+  asset_not_in: [String!]
+  asset_contains: String
+  asset_not_contains: String
+  asset_starts_with: String
+  asset_not_starts_with: String
+  asset_ends_with: String
+  asset_not_ends_with: String
+  price: BigInt
+  price_not: BigInt
+  price_gt: BigInt
+  price_lt: BigInt
+  price_gte: BigInt
+  price_lte: BigInt
+  price_in: [BigInt!]
+  price_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum PriceHistoryItem_orderBy {
+  id
+  asset
+  price
+  timestamp
+}
+
+type PriceOracle {
+  id: ID!
+  proxyPriceProvider: Bytes!
+  usdPriceEth: BigInt!
+  usdPriceEthMainSource: Bytes!
+  usdPriceEthFallbackRequired: Boolean!
+  fallbackPriceOracle: Bytes!
+  tokens(skip: Int = 0, first: Int = 100, orderBy: PriceOracleAsset_orderBy, orderDirection: OrderDirection, where: PriceOracleAsset_filter): [PriceOracleAsset!]!
+  usdPriceEthHistory(skip: Int = 0, first: Int = 100, orderBy: UsdEthPriceHistoryItem_orderBy, orderDirection: OrderDirection, where: UsdEthPriceHistoryItem_filter): [UsdEthPriceHistoryItem!]!
+  tokensWithFallback(skip: Int = 0, first: Int = 100, orderBy: PriceOracleAsset_orderBy, orderDirection: OrderDirection, where: PriceOracleAsset_filter): [PriceOracleAsset!]!
+  lastUpdateTimestamp: Int!
+}
+
+type PriceOracleAsset {
+  id: ID!
+  oracle: PriceOracle!
+  priceInEth: BigInt!
+  priceSource: Bytes!
+  isFallbackRequired: Boolean!
+  type: PriceOracleAssetType!
+  platform: PriceOracleAssetPlatform!
+  dependentAssets(skip: Int = 0, first: Int = 100, orderBy: PriceOracleAsset_orderBy, orderDirection: OrderDirection, where: PriceOracleAsset_filter): [PriceOracleAsset!]!
+  lastUpdateTimestamp: Int!
+  priceHistory(skip: Int = 0, first: Int = 100, orderBy: PriceHistoryItem_orderBy, orderDirection: OrderDirection, where: PriceHistoryItem_filter): [PriceHistoryItem!]!
+  fromChainlinkSourcesRegistry: Boolean!
+}
+
+enum PriceOracleAssetPlatform {
+  Simple
+  Uniswap
+}
+
+enum PriceOracleAssetType {
+  Simple
+  Composite
+}
+
+input PriceOracleAsset_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  oracle: String
+  oracle_not: String
+  oracle_gt: String
+  oracle_lt: String
+  oracle_gte: String
+  oracle_lte: String
+  oracle_in: [String!]
+  oracle_not_in: [String!]
+  oracle_contains: String
+  oracle_not_contains: String
+  oracle_starts_with: String
+  oracle_not_starts_with: String
+  oracle_ends_with: String
+  oracle_not_ends_with: String
+  priceInEth: BigInt
+  priceInEth_not: BigInt
+  priceInEth_gt: BigInt
+  priceInEth_lt: BigInt
+  priceInEth_gte: BigInt
+  priceInEth_lte: BigInt
+  priceInEth_in: [BigInt!]
+  priceInEth_not_in: [BigInt!]
+  priceSource: Bytes
+  priceSource_not: Bytes
+  priceSource_in: [Bytes!]
+  priceSource_not_in: [Bytes!]
+  priceSource_contains: Bytes
+  priceSource_not_contains: Bytes
+  isFallbackRequired: Boolean
+  isFallbackRequired_not: Boolean
+  isFallbackRequired_in: [Boolean!]
+  isFallbackRequired_not_in: [Boolean!]
+  type: PriceOracleAssetType
+  type_not: PriceOracleAssetType
+  platform: PriceOracleAssetPlatform
+  platform_not: PriceOracleAssetPlatform
+  dependentAssets: [String!]
+  dependentAssets_not: [String!]
+  dependentAssets_contains: [String!]
+  dependentAssets_not_contains: [String!]
+  lastUpdateTimestamp: Int
+  lastUpdateTimestamp_not: Int
+  lastUpdateTimestamp_gt: Int
+  lastUpdateTimestamp_lt: Int
+  lastUpdateTimestamp_gte: Int
+  lastUpdateTimestamp_lte: Int
+  lastUpdateTimestamp_in: [Int!]
+  lastUpdateTimestamp_not_in: [Int!]
+  fromChainlinkSourcesRegistry: Boolean
+  fromChainlinkSourcesRegistry_not: Boolean
+  fromChainlinkSourcesRegistry_in: [Boolean!]
+  fromChainlinkSourcesRegistry_not_in: [Boolean!]
+}
+
+enum PriceOracleAsset_orderBy {
+  id
+  oracle
+  priceInEth
+  priceSource
+  isFallbackRequired
+  type
+  platform
+  dependentAssets
+  lastUpdateTimestamp
+  priceHistory
+  fromChainlinkSourcesRegistry
+}
+
+input PriceOracle_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  proxyPriceProvider: Bytes
+  proxyPriceProvider_not: Bytes
+  proxyPriceProvider_in: [Bytes!]
+  proxyPriceProvider_not_in: [Bytes!]
+  proxyPriceProvider_contains: Bytes
+  proxyPriceProvider_not_contains: Bytes
+  usdPriceEth: BigInt
+  usdPriceEth_not: BigInt
+  usdPriceEth_gt: BigInt
+  usdPriceEth_lt: BigInt
+  usdPriceEth_gte: BigInt
+  usdPriceEth_lte: BigInt
+  usdPriceEth_in: [BigInt!]
+  usdPriceEth_not_in: [BigInt!]
+  usdPriceEthMainSource: Bytes
+  usdPriceEthMainSource_not: Bytes
+  usdPriceEthMainSource_in: [Bytes!]
+  usdPriceEthMainSource_not_in: [Bytes!]
+  usdPriceEthMainSource_contains: Bytes
+  usdPriceEthMainSource_not_contains: Bytes
+  usdPriceEthFallbackRequired: Boolean
+  usdPriceEthFallbackRequired_not: Boolean
+  usdPriceEthFallbackRequired_in: [Boolean!]
+  usdPriceEthFallbackRequired_not_in: [Boolean!]
+  fallbackPriceOracle: Bytes
+  fallbackPriceOracle_not: Bytes
+  fallbackPriceOracle_in: [Bytes!]
+  fallbackPriceOracle_not_in: [Bytes!]
+  fallbackPriceOracle_contains: Bytes
+  fallbackPriceOracle_not_contains: Bytes
+  tokensWithFallback: [String!]
+  tokensWithFallback_not: [String!]
+  tokensWithFallback_contains: [String!]
+  tokensWithFallback_not_contains: [String!]
+  lastUpdateTimestamp: Int
+  lastUpdateTimestamp_not: Int
+  lastUpdateTimestamp_gt: Int
+  lastUpdateTimestamp_lt: Int
+  lastUpdateTimestamp_gte: Int
+  lastUpdateTimestamp_lte: Int
+  lastUpdateTimestamp_in: [Int!]
+  lastUpdateTimestamp_not_in: [Int!]
+}
+
+enum PriceOracle_orderBy {
+  id
+  proxyPriceProvider
+  usdPriceEth
+  usdPriceEthMainSource
+  usdPriceEthFallbackRequired
+  fallbackPriceOracle
+  tokens
+  usdPriceEthHistory
+  tokensWithFallback
+  lastUpdateTimestamp
+}
+
+type Protocol {
+  id: ID!
+  pools(skip: Int = 0, first: Int = 100, orderBy: Pool_orderBy, orderDirection: OrderDirection, where: Pool_filter): [Pool!]!
+}
+
+input Protocol_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+}
+
+enum Protocol_orderBy {
+  id
+  pools
+}
+
+type Query {
+  protocol(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Protocol
+  protocols(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Protocol_orderBy
+    orderDirection: OrderDirection
+    where: Protocol_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Protocol!]!
+  contractToPoolMapping(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ContractToPoolMapping
+  contractToPoolMappings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ContractToPoolMapping_orderBy
+    orderDirection: OrderDirection
+    where: ContractToPoolMapping_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ContractToPoolMapping!]!
+  poolConfigurationHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PoolConfigurationHistoryItem
+  poolConfigurationHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PoolConfigurationHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: PoolConfigurationHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PoolConfigurationHistoryItem!]!
+  pool(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Pool
+  pools(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Pool_orderBy
+    orderDirection: OrderDirection
+    where: Pool_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Pool!]!
+  priceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceHistoryItem
+  priceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: PriceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceHistoryItem!]!
+  usdEthPriceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UsdEthPriceHistoryItem
+  usdEthPriceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UsdEthPriceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: UsdEthPriceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UsdEthPriceHistoryItem!]!
+  chainlinkAggregator(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ChainlinkAggregator
+  chainlinkAggregators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ChainlinkAggregator_orderBy
+    orderDirection: OrderDirection
+    where: ChainlinkAggregator_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ChainlinkAggregator!]!
+  priceOracleAsset(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceOracleAsset
+  priceOracleAssets(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceOracleAsset_orderBy
+    orderDirection: OrderDirection
+    where: PriceOracleAsset_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceOracleAsset!]!
+  priceOracle(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceOracle
+  priceOracles(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceOracle_orderBy
+    orderDirection: OrderDirection
+    where: PriceOracle_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceOracle!]!
+  atoken(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): AToken
+  atokens(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: AToken_orderBy
+    orderDirection: OrderDirection
+    where: AToken_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [AToken!]!
+  referrer(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Referrer
+  referrers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Referrer_orderBy
+    orderDirection: OrderDirection
+    where: Referrer_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Referrer!]!
+  deposit(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Deposit
+  deposits(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Deposit_orderBy
+    orderDirection: OrderDirection
+    where: Deposit_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Deposit!]!
+  redeemUnderlying(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): RedeemUnderlying
+  redeemUnderlyings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: RedeemUnderlying_orderBy
+    orderDirection: OrderDirection
+    where: RedeemUnderlying_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [RedeemUnderlying!]!
+  borrow(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Borrow
+  borrows(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Borrow_orderBy
+    orderDirection: OrderDirection
+    where: Borrow_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Borrow!]!
+  swap(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Swap
+  swaps(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Swap_orderBy
+    orderDirection: OrderDirection
+    where: Swap_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Swap!]!
+  usageAsCollateral(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UsageAsCollateral
+  usageAsCollaterals(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UsageAsCollateral_orderBy
+    orderDirection: OrderDirection
+    where: UsageAsCollateral_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UsageAsCollateral!]!
+  rebalanceStableBorrowRate(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): RebalanceStableBorrowRate
+  rebalanceStableBorrowRates(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: RebalanceStableBorrowRate_orderBy
+    orderDirection: OrderDirection
+    where: RebalanceStableBorrowRate_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [RebalanceStableBorrowRate!]!
+  repay(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Repay
+  repays(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Repay_orderBy
+    orderDirection: OrderDirection
+    where: Repay_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Repay!]!
+  flashLoan(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): FlashLoan
+  flashLoans(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FlashLoan_orderBy
+    orderDirection: OrderDirection
+    where: FlashLoan_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [FlashLoan!]!
+  liquidationCall(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): LiquidationCall
+  liquidationCalls(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LiquidationCall_orderBy
+    orderDirection: OrderDirection
+    where: LiquidationCall_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [LiquidationCall!]!
+  originationFeeLiquidation(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): OriginationFeeLiquidation
+  originationFeeLiquidations(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: OriginationFeeLiquidation_orderBy
+    orderDirection: OrderDirection
+    where: OriginationFeeLiquidation_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [OriginationFeeLiquidation!]!
+  reserveConfigurationHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ReserveConfigurationHistoryItem
+  reserveConfigurationHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ReserveConfigurationHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ReserveConfigurationHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ReserveConfigurationHistoryItem!]!
+  reserveParamsHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ReserveParamsHistoryItem
+  reserveParamsHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ReserveParamsHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ReserveParamsHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ReserveParamsHistoryItem!]!
+  reserve(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Reserve
+  reserves(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Reserve_orderBy
+    orderDirection: OrderDirection
+    where: Reserve_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Reserve!]!
+  atokenBalanceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ATokenBalanceHistoryItem
+  atokenBalanceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ATokenBalanceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ATokenBalanceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ATokenBalanceHistoryItem!]!
+  userBorrowHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserBorrowHistoryItem
+  userBorrowHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserBorrowHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: UserBorrowHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserBorrowHistoryItem!]!
+  userReserve(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserReserve
+  userReserves(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserReserve_orderBy
+    orderDirection: OrderDirection
+    where: UserReserve_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserReserve!]!
+  user(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): User
+  users(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: User_orderBy
+    orderDirection: OrderDirection
+    where: User_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [User!]!
+  userTransaction(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserTransaction
+  userTransactions(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserTransaction_orderBy
+    orderDirection: OrderDirection
+    where: UserTransaction_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserTransaction!]!
+
+  """Access to subgraph metadata"""
+  _meta(block: Block_height): _Meta_
+}
+
+type RebalanceStableBorrowRate implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  borrowRateFrom: BigInt!
+  borrowRateTo: BigInt!
+  accruedBorrowInterest: BigInt!
+  timestamp: Int!
+}
+
+input RebalanceStableBorrowRate_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  borrowRateFrom: BigInt
+  borrowRateFrom_not: BigInt
+  borrowRateFrom_gt: BigInt
+  borrowRateFrom_lt: BigInt
+  borrowRateFrom_gte: BigInt
+  borrowRateFrom_lte: BigInt
+  borrowRateFrom_in: [BigInt!]
+  borrowRateFrom_not_in: [BigInt!]
+  borrowRateTo: BigInt
+  borrowRateTo_not: BigInt
+  borrowRateTo_gt: BigInt
+  borrowRateTo_lt: BigInt
+  borrowRateTo_gte: BigInt
+  borrowRateTo_lte: BigInt
+  borrowRateTo_in: [BigInt!]
+  borrowRateTo_not_in: [BigInt!]
+  accruedBorrowInterest: BigInt
+  accruedBorrowInterest_not: BigInt
+  accruedBorrowInterest_gt: BigInt
+  accruedBorrowInterest_lt: BigInt
+  accruedBorrowInterest_gte: BigInt
+  accruedBorrowInterest_lte: BigInt
+  accruedBorrowInterest_in: [BigInt!]
+  accruedBorrowInterest_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum RebalanceStableBorrowRate_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  borrowRateFrom
+  borrowRateTo
+  accruedBorrowInterest
+  timestamp
+}
+
+type RedeemUnderlying implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  amount: BigInt!
+  timestamp: Int!
+}
+
+input RedeemUnderlying_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum RedeemUnderlying_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  amount
+  timestamp
+}
+
+type Referrer {
+  id: ID!
+  deposits(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+  borrows(skip: Int = 0, first: Int = 100, orderBy: Borrow_orderBy, orderDirection: OrderDirection, where: Borrow_filter): [Borrow!]!
+}
+
+input Referrer_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+}
+
+enum Referrer_orderBy {
+  id
+  deposits
+  borrows
+}
+
+type Repay implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  amountAfterFee: BigInt!
+  fee: BigInt!
+  timestamp: Int!
+}
+
+input Repay_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  amountAfterFee: BigInt
+  amountAfterFee_not: BigInt
+  amountAfterFee_gt: BigInt
+  amountAfterFee_lt: BigInt
+  amountAfterFee_gte: BigInt
+  amountAfterFee_lte: BigInt
+  amountAfterFee_in: [BigInt!]
+  amountAfterFee_not_in: [BigInt!]
+  fee: BigInt
+  fee_not: BigInt
+  fee_gt: BigInt
+  fee_lt: BigInt
+  fee_gte: BigInt
+  fee_lte: BigInt
+  fee_in: [BigInt!]
+  fee_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum Repay_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  amountAfterFee
+  fee
+  timestamp
+}
+
+type Reserve {
+  """
+  Reserve address
+  
+  """
+  id: ID!
+  underlyingAsset: Bytes!
+  pool: Pool!
+  symbol: String!
+  name: String!
+  decimals: Int!
+  usageAsCollateralEnabled: Boolean!
+  borrowingEnabled: Boolean!
+  stableBorrowRateEnabled: Boolean!
+  isActive: Boolean!
+  isFreezed: Boolean!
+  price: PriceOracleAsset!
+  reserveInterestRateStrategy: Bytes!
+  optimalUtilisationRate: BigInt!
+  variableRateSlope1: BigInt!
+  variableRateSlope2: BigInt!
+  stableRateSlope1: BigInt!
+  stableRateSlope2: BigInt!
+  baseVariableBorrowRate: BigInt!
+  baseLTVasCollateral: BigInt!
+  reserveLiquidationThreshold: BigInt!
+  reserveLiquidationBonus: BigInt!
+  utilizationRate: BigDecimal!
+  totalLiquidity: BigInt!
+  totalLiquidityAsCollateral: BigInt!
+  availableLiquidity: BigInt!
+  totalBorrows: BigInt!
+  totalBorrowsStable: BigInt!
+  totalBorrowsVariable: BigInt!
+  liquidityRate: BigInt!
+  variableBorrowRate: BigInt!
+  stableBorrowRate: BigInt!
+  averageStableBorrowRate: BigInt!
+  liquidityIndex: BigInt!
+  variableBorrowIndex: BigInt!
+  aToken: AToken!
+  lastUpdateTimestamp: Int!
+  lifetimeDepositorsInterestEarned: BigInt!
+  aTokenTotalSupply: BigInt!
+  lifetimeLiquidity: BigInt!
+  lifetimeBorrows: BigInt!
+  lifetimeBorrowsStable: BigInt!
+  lifetimeBorrowsVariable: BigInt!
+  lifetimeRepayments: BigInt!
+  lifetimeWithdrawals: BigInt!
+  lifetimeLiquidated: BigInt!
+  lifetimeFeeOriginated: BigInt!
+  lifetimeFeeCollected: BigInt!
+  lifetimeFlashLoans: BigInt!
+  lifetimeFlashloanDepositorsFee: BigInt!
+  lifetimeFlashloanProtocolFee: BigInt!
+  userReserves(skip: Int = 0, first: Int = 100, orderBy: UserReserve_orderBy, orderDirection: OrderDirection, where: UserReserve_filter): [UserReserve!]!
+  depositHistory(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+  redeemUnderlyingHistory(skip: Int = 0, first: Int = 100, orderBy: RedeemUnderlying_orderBy, orderDirection: OrderDirection, where: RedeemUnderlying_filter): [RedeemUnderlying!]!
+  borrowHistory(skip: Int = 0, first: Int = 100, orderBy: Borrow_orderBy, orderDirection: OrderDirection, where: Borrow_filter): [Borrow!]!
+  usageAsCollateralHistory(skip: Int = 0, first: Int = 100, orderBy: UsageAsCollateral_orderBy, orderDirection: OrderDirection, where: UsageAsCollateral_filter): [UsageAsCollateral!]!
+  swapHistory(skip: Int = 0, first: Int = 100, orderBy: Swap_orderBy, orderDirection: OrderDirection, where: Swap_filter): [Swap!]!
+  rebalanceStableBorrowRateHistory(skip: Int = 0, first: Int = 100, orderBy: RebalanceStableBorrowRate_orderBy, orderDirection: OrderDirection, where: RebalanceStableBorrowRate_filter): [RebalanceStableBorrowRate!]!
+  repayHistory(skip: Int = 0, first: Int = 100, orderBy: Repay_orderBy, orderDirection: OrderDirection, where: Repay_filter): [Repay!]!
+  flashLoanHistory(skip: Int = 0, first: Int = 100, orderBy: FlashLoan_orderBy, orderDirection: OrderDirection, where: FlashLoan_filter): [FlashLoan!]!
+  liquidationCallHistory(skip: Int = 0, first: Int = 100, orderBy: LiquidationCall_orderBy, orderDirection: OrderDirection, where: LiquidationCall_filter): [LiquidationCall!]!
+  originationFeeLiquidationHistory(skip: Int = 0, first: Int = 100, orderBy: OriginationFeeLiquidation_orderBy, orderDirection: OrderDirection, where: OriginationFeeLiquidation_filter): [OriginationFeeLiquidation!]!
+  paramsHistory(skip: Int = 0, first: Int = 100, orderBy: ReserveParamsHistoryItem_orderBy, orderDirection: OrderDirection, where: ReserveParamsHistoryItem_filter): [ReserveParamsHistoryItem!]!
+  configurationHistory(skip: Int = 0, first: Int = 100, orderBy: ReserveConfigurationHistoryItem_orderBy, orderDirection: OrderDirection, where: ReserveConfigurationHistoryItem_filter): [ReserveConfigurationHistoryItem!]!
+  deposits(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+}
+
+type ReserveConfigurationHistoryItem {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  reserve: Reserve!
+  usageAsCollateralEnabled: Boolean!
+  borrowingEnabled: Boolean!
+  stableBorrowRateEnabled: Boolean!
+  isActive: Boolean!
+  isFreezed: Boolean!
+  reserveInterestRateStrategy: Bytes!
+  baseLTVasCollateral: BigInt!
+  reserveLiquidationThreshold: BigInt!
+  reserveLiquidationBonus: BigInt!
+  timestamp: Int!
+}
+
+input ReserveConfigurationHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  usageAsCollateralEnabled: Boolean
+  usageAsCollateralEnabled_not: Boolean
+  usageAsCollateralEnabled_in: [Boolean!]
+  usageAsCollateralEnabled_not_in: [Boolean!]
+  borrowingEnabled: Boolean
+  borrowingEnabled_not: Boolean
+  borrowingEnabled_in: [Boolean!]
+  borrowingEnabled_not_in: [Boolean!]
+  stableBorrowRateEnabled: Boolean
+  stableBorrowRateEnabled_not: Boolean
+  stableBorrowRateEnabled_in: [Boolean!]
+  stableBorrowRateEnabled_not_in: [Boolean!]
+  isActive: Boolean
+  isActive_not: Boolean
+  isActive_in: [Boolean!]
+  isActive_not_in: [Boolean!]
+  isFreezed: Boolean
+  isFreezed_not: Boolean
+  isFreezed_in: [Boolean!]
+  isFreezed_not_in: [Boolean!]
+  reserveInterestRateStrategy: Bytes
+  reserveInterestRateStrategy_not: Bytes
+  reserveInterestRateStrategy_in: [Bytes!]
+  reserveInterestRateStrategy_not_in: [Bytes!]
+  reserveInterestRateStrategy_contains: Bytes
+  reserveInterestRateStrategy_not_contains: Bytes
+  baseLTVasCollateral: BigInt
+  baseLTVasCollateral_not: BigInt
+  baseLTVasCollateral_gt: BigInt
+  baseLTVasCollateral_lt: BigInt
+  baseLTVasCollateral_gte: BigInt
+  baseLTVasCollateral_lte: BigInt
+  baseLTVasCollateral_in: [BigInt!]
+  baseLTVasCollateral_not_in: [BigInt!]
+  reserveLiquidationThreshold: BigInt
+  reserveLiquidationThreshold_not: BigInt
+  reserveLiquidationThreshold_gt: BigInt
+  reserveLiquidationThreshold_lt: BigInt
+  reserveLiquidationThreshold_gte: BigInt
+  reserveLiquidationThreshold_lte: BigInt
+  reserveLiquidationThreshold_in: [BigInt!]
+  reserveLiquidationThreshold_not_in: [BigInt!]
+  reserveLiquidationBonus: BigInt
+  reserveLiquidationBonus_not: BigInt
+  reserveLiquidationBonus_gt: BigInt
+  reserveLiquidationBonus_lt: BigInt
+  reserveLiquidationBonus_gte: BigInt
+  reserveLiquidationBonus_lte: BigInt
+  reserveLiquidationBonus_in: [BigInt!]
+  reserveLiquidationBonus_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum ReserveConfigurationHistoryItem_orderBy {
+  id
+  reserve
+  usageAsCollateralEnabled
+  borrowingEnabled
+  stableBorrowRateEnabled
+  isActive
+  isFreezed
+  reserveInterestRateStrategy
+  baseLTVasCollateral
+  reserveLiquidationThreshold
+  reserveLiquidationBonus
+  timestamp
+}
+
+type ReserveParamsHistoryItem {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  reserve: Reserve!
+  variableBorrowRate: BigInt!
+  variableBorrowIndex: BigInt!
+  utilizationRate: BigDecimal!
+  stableBorrowRate: BigInt!
+  averageStableBorrowRate: BigInt!
+  liquidityIndex: BigInt!
+  liquidityRate: BigInt!
+  totalLiquidity: BigInt!
+  totalLiquidityAsCollateral: BigInt!
+  availableLiquidity: BigInt!
+  totalBorrows: BigInt!
+  totalBorrowsVariable: BigInt!
+  totalBorrowsStable: BigInt!
+  priceInEth: BigInt!
+  priceInUsd: BigDecimal!
+  timestamp: Int!
+  lifetimeFlashloanDepositorsFee: BigInt!
+  lifetimeFlashloanProtocolFee: BigInt!
+  lifetimeOriginationFee: BigInt!
+  lifetimeDepositorsInterestEarned: BigInt!
+  aTokenTotalSupply: BigInt!
+  lifetimeRepayments: BigInt!
+  lifetimeWithdrawals: BigInt!
+  lifetimeLiquidity: BigInt!
+  lifetimeBorrows: BigInt!
+}
+
+input ReserveParamsHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  variableBorrowRate: BigInt
+  variableBorrowRate_not: BigInt
+  variableBorrowRate_gt: BigInt
+  variableBorrowRate_lt: BigInt
+  variableBorrowRate_gte: BigInt
+  variableBorrowRate_lte: BigInt
+  variableBorrowRate_in: [BigInt!]
+  variableBorrowRate_not_in: [BigInt!]
+  variableBorrowIndex: BigInt
+  variableBorrowIndex_not: BigInt
+  variableBorrowIndex_gt: BigInt
+  variableBorrowIndex_lt: BigInt
+  variableBorrowIndex_gte: BigInt
+  variableBorrowIndex_lte: BigInt
+  variableBorrowIndex_in: [BigInt!]
+  variableBorrowIndex_not_in: [BigInt!]
+  utilizationRate: BigDecimal
+  utilizationRate_not: BigDecimal
+  utilizationRate_gt: BigDecimal
+  utilizationRate_lt: BigDecimal
+  utilizationRate_gte: BigDecimal
+  utilizationRate_lte: BigDecimal
+  utilizationRate_in: [BigDecimal!]
+  utilizationRate_not_in: [BigDecimal!]
+  stableBorrowRate: BigInt
+  stableBorrowRate_not: BigInt
+  stableBorrowRate_gt: BigInt
+  stableBorrowRate_lt: BigInt
+  stableBorrowRate_gte: BigInt
+  stableBorrowRate_lte: BigInt
+  stableBorrowRate_in: [BigInt!]
+  stableBorrowRate_not_in: [BigInt!]
+  averageStableBorrowRate: BigInt
+  averageStableBorrowRate_not: BigInt
+  averageStableBorrowRate_gt: BigInt
+  averageStableBorrowRate_lt: BigInt
+  averageStableBorrowRate_gte: BigInt
+  averageStableBorrowRate_lte: BigInt
+  averageStableBorrowRate_in: [BigInt!]
+  averageStableBorrowRate_not_in: [BigInt!]
+  liquidityIndex: BigInt
+  liquidityIndex_not: BigInt
+  liquidityIndex_gt: BigInt
+  liquidityIndex_lt: BigInt
+  liquidityIndex_gte: BigInt
+  liquidityIndex_lte: BigInt
+  liquidityIndex_in: [BigInt!]
+  liquidityIndex_not_in: [BigInt!]
+  liquidityRate: BigInt
+  liquidityRate_not: BigInt
+  liquidityRate_gt: BigInt
+  liquidityRate_lt: BigInt
+  liquidityRate_gte: BigInt
+  liquidityRate_lte: BigInt
+  liquidityRate_in: [BigInt!]
+  liquidityRate_not_in: [BigInt!]
+  totalLiquidity: BigInt
+  totalLiquidity_not: BigInt
+  totalLiquidity_gt: BigInt
+  totalLiquidity_lt: BigInt
+  totalLiquidity_gte: BigInt
+  totalLiquidity_lte: BigInt
+  totalLiquidity_in: [BigInt!]
+  totalLiquidity_not_in: [BigInt!]
+  totalLiquidityAsCollateral: BigInt
+  totalLiquidityAsCollateral_not: BigInt
+  totalLiquidityAsCollateral_gt: BigInt
+  totalLiquidityAsCollateral_lt: BigInt
+  totalLiquidityAsCollateral_gte: BigInt
+  totalLiquidityAsCollateral_lte: BigInt
+  totalLiquidityAsCollateral_in: [BigInt!]
+  totalLiquidityAsCollateral_not_in: [BigInt!]
+  availableLiquidity: BigInt
+  availableLiquidity_not: BigInt
+  availableLiquidity_gt: BigInt
+  availableLiquidity_lt: BigInt
+  availableLiquidity_gte: BigInt
+  availableLiquidity_lte: BigInt
+  availableLiquidity_in: [BigInt!]
+  availableLiquidity_not_in: [BigInt!]
+  totalBorrows: BigInt
+  totalBorrows_not: BigInt
+  totalBorrows_gt: BigInt
+  totalBorrows_lt: BigInt
+  totalBorrows_gte: BigInt
+  totalBorrows_lte: BigInt
+  totalBorrows_in: [BigInt!]
+  totalBorrows_not_in: [BigInt!]
+  totalBorrowsVariable: BigInt
+  totalBorrowsVariable_not: BigInt
+  totalBorrowsVariable_gt: BigInt
+  totalBorrowsVariable_lt: BigInt
+  totalBorrowsVariable_gte: BigInt
+  totalBorrowsVariable_lte: BigInt
+  totalBorrowsVariable_in: [BigInt!]
+  totalBorrowsVariable_not_in: [BigInt!]
+  totalBorrowsStable: BigInt
+  totalBorrowsStable_not: BigInt
+  totalBorrowsStable_gt: BigInt
+  totalBorrowsStable_lt: BigInt
+  totalBorrowsStable_gte: BigInt
+  totalBorrowsStable_lte: BigInt
+  totalBorrowsStable_in: [BigInt!]
+  totalBorrowsStable_not_in: [BigInt!]
+  priceInEth: BigInt
+  priceInEth_not: BigInt
+  priceInEth_gt: BigInt
+  priceInEth_lt: BigInt
+  priceInEth_gte: BigInt
+  priceInEth_lte: BigInt
+  priceInEth_in: [BigInt!]
+  priceInEth_not_in: [BigInt!]
+  priceInUsd: BigDecimal
+  priceInUsd_not: BigDecimal
+  priceInUsd_gt: BigDecimal
+  priceInUsd_lt: BigDecimal
+  priceInUsd_gte: BigDecimal
+  priceInUsd_lte: BigDecimal
+  priceInUsd_in: [BigDecimal!]
+  priceInUsd_not_in: [BigDecimal!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+  lifetimeFlashloanDepositorsFee: BigInt
+  lifetimeFlashloanDepositorsFee_not: BigInt
+  lifetimeFlashloanDepositorsFee_gt: BigInt
+  lifetimeFlashloanDepositorsFee_lt: BigInt
+  lifetimeFlashloanDepositorsFee_gte: BigInt
+  lifetimeFlashloanDepositorsFee_lte: BigInt
+  lifetimeFlashloanDepositorsFee_in: [BigInt!]
+  lifetimeFlashloanDepositorsFee_not_in: [BigInt!]
+  lifetimeFlashloanProtocolFee: BigInt
+  lifetimeFlashloanProtocolFee_not: BigInt
+  lifetimeFlashloanProtocolFee_gt: BigInt
+  lifetimeFlashloanProtocolFee_lt: BigInt
+  lifetimeFlashloanProtocolFee_gte: BigInt
+  lifetimeFlashloanProtocolFee_lte: BigInt
+  lifetimeFlashloanProtocolFee_in: [BigInt!]
+  lifetimeFlashloanProtocolFee_not_in: [BigInt!]
+  lifetimeOriginationFee: BigInt
+  lifetimeOriginationFee_not: BigInt
+  lifetimeOriginationFee_gt: BigInt
+  lifetimeOriginationFee_lt: BigInt
+  lifetimeOriginationFee_gte: BigInt
+  lifetimeOriginationFee_lte: BigInt
+  lifetimeOriginationFee_in: [BigInt!]
+  lifetimeOriginationFee_not_in: [BigInt!]
+  lifetimeDepositorsInterestEarned: BigInt
+  lifetimeDepositorsInterestEarned_not: BigInt
+  lifetimeDepositorsInterestEarned_gt: BigInt
+  lifetimeDepositorsInterestEarned_lt: BigInt
+  lifetimeDepositorsInterestEarned_gte: BigInt
+  lifetimeDepositorsInterestEarned_lte: BigInt
+  lifetimeDepositorsInterestEarned_in: [BigInt!]
+  lifetimeDepositorsInterestEarned_not_in: [BigInt!]
+  aTokenTotalSupply: BigInt
+  aTokenTotalSupply_not: BigInt
+  aTokenTotalSupply_gt: BigInt
+  aTokenTotalSupply_lt: BigInt
+  aTokenTotalSupply_gte: BigInt
+  aTokenTotalSupply_lte: BigInt
+  aTokenTotalSupply_in: [BigInt!]
+  aTokenTotalSupply_not_in: [BigInt!]
+  lifetimeRepayments: BigInt
+  lifetimeRepayments_not: BigInt
+  lifetimeRepayments_gt: BigInt
+  lifetimeRepayments_lt: BigInt
+  lifetimeRepayments_gte: BigInt
+  lifetimeRepayments_lte: BigInt
+  lifetimeRepayments_in: [BigInt!]
+  lifetimeRepayments_not_in: [BigInt!]
+  lifetimeWithdrawals: BigInt
+  lifetimeWithdrawals_not: BigInt
+  lifetimeWithdrawals_gt: BigInt
+  lifetimeWithdrawals_lt: BigInt
+  lifetimeWithdrawals_gte: BigInt
+  lifetimeWithdrawals_lte: BigInt
+  lifetimeWithdrawals_in: [BigInt!]
+  lifetimeWithdrawals_not_in: [BigInt!]
+  lifetimeLiquidity: BigInt
+  lifetimeLiquidity_not: BigInt
+  lifetimeLiquidity_gt: BigInt
+  lifetimeLiquidity_lt: BigInt
+  lifetimeLiquidity_gte: BigInt
+  lifetimeLiquidity_lte: BigInt
+  lifetimeLiquidity_in: [BigInt!]
+  lifetimeLiquidity_not_in: [BigInt!]
+  lifetimeBorrows: BigInt
+  lifetimeBorrows_not: BigInt
+  lifetimeBorrows_gt: BigInt
+  lifetimeBorrows_lt: BigInt
+  lifetimeBorrows_gte: BigInt
+  lifetimeBorrows_lte: BigInt
+  lifetimeBorrows_in: [BigInt!]
+  lifetimeBorrows_not_in: [BigInt!]
+}
+
+enum ReserveParamsHistoryItem_orderBy {
+  id
+  reserve
+  variableBorrowRate
+  variableBorrowIndex
+  utilizationRate
+  stableBorrowRate
+  averageStableBorrowRate
+  liquidityIndex
+  liquidityRate
+  totalLiquidity
+  totalLiquidityAsCollateral
+  availableLiquidity
+  totalBorrows
+  totalBorrowsVariable
+  totalBorrowsStable
+  priceInEth
+  priceInUsd
+  timestamp
+  lifetimeFlashloanDepositorsFee
+  lifetimeFlashloanProtocolFee
+  lifetimeOriginationFee
+  lifetimeDepositorsInterestEarned
+  aTokenTotalSupply
+  lifetimeRepayments
+  lifetimeWithdrawals
+  lifetimeLiquidity
+  lifetimeBorrows
+}
+
+input Reserve_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  underlyingAsset: Bytes
+  underlyingAsset_not: Bytes
+  underlyingAsset_in: [Bytes!]
+  underlyingAsset_not_in: [Bytes!]
+  underlyingAsset_contains: Bytes
+  underlyingAsset_not_contains: Bytes
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  symbol: String
+  symbol_not: String
+  symbol_gt: String
+  symbol_lt: String
+  symbol_gte: String
+  symbol_lte: String
+  symbol_in: [String!]
+  symbol_not_in: [String!]
+  symbol_contains: String
+  symbol_not_contains: String
+  symbol_starts_with: String
+  symbol_not_starts_with: String
+  symbol_ends_with: String
+  symbol_not_ends_with: String
+  name: String
+  name_not: String
+  name_gt: String
+  name_lt: String
+  name_gte: String
+  name_lte: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  decimals: Int
+  decimals_not: Int
+  decimals_gt: Int
+  decimals_lt: Int
+  decimals_gte: Int
+  decimals_lte: Int
+  decimals_in: [Int!]
+  decimals_not_in: [Int!]
+  usageAsCollateralEnabled: Boolean
+  usageAsCollateralEnabled_not: Boolean
+  usageAsCollateralEnabled_in: [Boolean!]
+  usageAsCollateralEnabled_not_in: [Boolean!]
+  borrowingEnabled: Boolean
+  borrowingEnabled_not: Boolean
+  borrowingEnabled_in: [Boolean!]
+  borrowingEnabled_not_in: [Boolean!]
+  stableBorrowRateEnabled: Boolean
+  stableBorrowRateEnabled_not: Boolean
+  stableBorrowRateEnabled_in: [Boolean!]
+  stableBorrowRateEnabled_not_in: [Boolean!]
+  isActive: Boolean
+  isActive_not: Boolean
+  isActive_in: [Boolean!]
+  isActive_not_in: [Boolean!]
+  isFreezed: Boolean
+  isFreezed_not: Boolean
+  isFreezed_in: [Boolean!]
+  isFreezed_not_in: [Boolean!]
+  price: String
+  price_not: String
+  price_gt: String
+  price_lt: String
+  price_gte: String
+  price_lte: String
+  price_in: [String!]
+  price_not_in: [String!]
+  price_contains: String
+  price_not_contains: String
+  price_starts_with: String
+  price_not_starts_with: String
+  price_ends_with: String
+  price_not_ends_with: String
+  reserveInterestRateStrategy: Bytes
+  reserveInterestRateStrategy_not: Bytes
+  reserveInterestRateStrategy_in: [Bytes!]
+  reserveInterestRateStrategy_not_in: [Bytes!]
+  reserveInterestRateStrategy_contains: Bytes
+  reserveInterestRateStrategy_not_contains: Bytes
+  optimalUtilisationRate: BigInt
+  optimalUtilisationRate_not: BigInt
+  optimalUtilisationRate_gt: BigInt
+  optimalUtilisationRate_lt: BigInt
+  optimalUtilisationRate_gte: BigInt
+  optimalUtilisationRate_lte: BigInt
+  optimalUtilisationRate_in: [BigInt!]
+  optimalUtilisationRate_not_in: [BigInt!]
+  variableRateSlope1: BigInt
+  variableRateSlope1_not: BigInt
+  variableRateSlope1_gt: BigInt
+  variableRateSlope1_lt: BigInt
+  variableRateSlope1_gte: BigInt
+  variableRateSlope1_lte: BigInt
+  variableRateSlope1_in: [BigInt!]
+  variableRateSlope1_not_in: [BigInt!]
+  variableRateSlope2: BigInt
+  variableRateSlope2_not: BigInt
+  variableRateSlope2_gt: BigInt
+  variableRateSlope2_lt: BigInt
+  variableRateSlope2_gte: BigInt
+  variableRateSlope2_lte: BigInt
+  variableRateSlope2_in: [BigInt!]
+  variableRateSlope2_not_in: [BigInt!]
+  stableRateSlope1: BigInt
+  stableRateSlope1_not: BigInt
+  stableRateSlope1_gt: BigInt
+  stableRateSlope1_lt: BigInt
+  stableRateSlope1_gte: BigInt
+  stableRateSlope1_lte: BigInt
+  stableRateSlope1_in: [BigInt!]
+  stableRateSlope1_not_in: [BigInt!]
+  stableRateSlope2: BigInt
+  stableRateSlope2_not: BigInt
+  stableRateSlope2_gt: BigInt
+  stableRateSlope2_lt: BigInt
+  stableRateSlope2_gte: BigInt
+  stableRateSlope2_lte: BigInt
+  stableRateSlope2_in: [BigInt!]
+  stableRateSlope2_not_in: [BigInt!]
+  baseVariableBorrowRate: BigInt
+  baseVariableBorrowRate_not: BigInt
+  baseVariableBorrowRate_gt: BigInt
+  baseVariableBorrowRate_lt: BigInt
+  baseVariableBorrowRate_gte: BigInt
+  baseVariableBorrowRate_lte: BigInt
+  baseVariableBorrowRate_in: [BigInt!]
+  baseVariableBorrowRate_not_in: [BigInt!]
+  baseLTVasCollateral: BigInt
+  baseLTVasCollateral_not: BigInt
+  baseLTVasCollateral_gt: BigInt
+  baseLTVasCollateral_lt: BigInt
+  baseLTVasCollateral_gte: BigInt
+  baseLTVasCollateral_lte: BigInt
+  baseLTVasCollateral_in: [BigInt!]
+  baseLTVasCollateral_not_in: [BigInt!]
+  reserveLiquidationThreshold: BigInt
+  reserveLiquidationThreshold_not: BigInt
+  reserveLiquidationThreshold_gt: BigInt
+  reserveLiquidationThreshold_lt: BigInt
+  reserveLiquidationThreshold_gte: BigInt
+  reserveLiquidationThreshold_lte: BigInt
+  reserveLiquidationThreshold_in: [BigInt!]
+  reserveLiquidationThreshold_not_in: [BigInt!]
+  reserveLiquidationBonus: BigInt
+  reserveLiquidationBonus_not: BigInt
+  reserveLiquidationBonus_gt: BigInt
+  reserveLiquidationBonus_lt: BigInt
+  reserveLiquidationBonus_gte: BigInt
+  reserveLiquidationBonus_lte: BigInt
+  reserveLiquidationBonus_in: [BigInt!]
+  reserveLiquidationBonus_not_in: [BigInt!]
+  utilizationRate: BigDecimal
+  utilizationRate_not: BigDecimal
+  utilizationRate_gt: BigDecimal
+  utilizationRate_lt: BigDecimal
+  utilizationRate_gte: BigDecimal
+  utilizationRate_lte: BigDecimal
+  utilizationRate_in: [BigDecimal!]
+  utilizationRate_not_in: [BigDecimal!]
+  totalLiquidity: BigInt
+  totalLiquidity_not: BigInt
+  totalLiquidity_gt: BigInt
+  totalLiquidity_lt: BigInt
+  totalLiquidity_gte: BigInt
+  totalLiquidity_lte: BigInt
+  totalLiquidity_in: [BigInt!]
+  totalLiquidity_not_in: [BigInt!]
+  totalLiquidityAsCollateral: BigInt
+  totalLiquidityAsCollateral_not: BigInt
+  totalLiquidityAsCollateral_gt: BigInt
+  totalLiquidityAsCollateral_lt: BigInt
+  totalLiquidityAsCollateral_gte: BigInt
+  totalLiquidityAsCollateral_lte: BigInt
+  totalLiquidityAsCollateral_in: [BigInt!]
+  totalLiquidityAsCollateral_not_in: [BigInt!]
+  availableLiquidity: BigInt
+  availableLiquidity_not: BigInt
+  availableLiquidity_gt: BigInt
+  availableLiquidity_lt: BigInt
+  availableLiquidity_gte: BigInt
+  availableLiquidity_lte: BigInt
+  availableLiquidity_in: [BigInt!]
+  availableLiquidity_not_in: [BigInt!]
+  totalBorrows: BigInt
+  totalBorrows_not: BigInt
+  totalBorrows_gt: BigInt
+  totalBorrows_lt: BigInt
+  totalBorrows_gte: BigInt
+  totalBorrows_lte: BigInt
+  totalBorrows_in: [BigInt!]
+  totalBorrows_not_in: [BigInt!]
+  totalBorrowsStable: BigInt
+  totalBorrowsStable_not: BigInt
+  totalBorrowsStable_gt: BigInt
+  totalBorrowsStable_lt: BigInt
+  totalBorrowsStable_gte: BigInt
+  totalBorrowsStable_lte: BigInt
+  totalBorrowsStable_in: [BigInt!]
+  totalBorrowsStable_not_in: [BigInt!]
+  totalBorrowsVariable: BigInt
+  totalBorrowsVariable_not: BigInt
+  totalBorrowsVariable_gt: BigInt
+  totalBorrowsVariable_lt: BigInt
+  totalBorrowsVariable_gte: BigInt
+  totalBorrowsVariable_lte: BigInt
+  totalBorrowsVariable_in: [BigInt!]
+  totalBorrowsVariable_not_in: [BigInt!]
+  liquidityRate: BigInt
+  liquidityRate_not: BigInt
+  liquidityRate_gt: BigInt
+  liquidityRate_lt: BigInt
+  liquidityRate_gte: BigInt
+  liquidityRate_lte: BigInt
+  liquidityRate_in: [BigInt!]
+  liquidityRate_not_in: [BigInt!]
+  variableBorrowRate: BigInt
+  variableBorrowRate_not: BigInt
+  variableBorrowRate_gt: BigInt
+  variableBorrowRate_lt: BigInt
+  variableBorrowRate_gte: BigInt
+  variableBorrowRate_lte: BigInt
+  variableBorrowRate_in: [BigInt!]
+  variableBorrowRate_not_in: [BigInt!]
+  stableBorrowRate: BigInt
+  stableBorrowRate_not: BigInt
+  stableBorrowRate_gt: BigInt
+  stableBorrowRate_lt: BigInt
+  stableBorrowRate_gte: BigInt
+  stableBorrowRate_lte: BigInt
+  stableBorrowRate_in: [BigInt!]
+  stableBorrowRate_not_in: [BigInt!]
+  averageStableBorrowRate: BigInt
+  averageStableBorrowRate_not: BigInt
+  averageStableBorrowRate_gt: BigInt
+  averageStableBorrowRate_lt: BigInt
+  averageStableBorrowRate_gte: BigInt
+  averageStableBorrowRate_lte: BigInt
+  averageStableBorrowRate_in: [BigInt!]
+  averageStableBorrowRate_not_in: [BigInt!]
+  liquidityIndex: BigInt
+  liquidityIndex_not: BigInt
+  liquidityIndex_gt: BigInt
+  liquidityIndex_lt: BigInt
+  liquidityIndex_gte: BigInt
+  liquidityIndex_lte: BigInt
+  liquidityIndex_in: [BigInt!]
+  liquidityIndex_not_in: [BigInt!]
+  variableBorrowIndex: BigInt
+  variableBorrowIndex_not: BigInt
+  variableBorrowIndex_gt: BigInt
+  variableBorrowIndex_lt: BigInt
+  variableBorrowIndex_gte: BigInt
+  variableBorrowIndex_lte: BigInt
+  variableBorrowIndex_in: [BigInt!]
+  variableBorrowIndex_not_in: [BigInt!]
+  aToken: String
+  aToken_not: String
+  aToken_gt: String
+  aToken_lt: String
+  aToken_gte: String
+  aToken_lte: String
+  aToken_in: [String!]
+  aToken_not_in: [String!]
+  aToken_contains: String
+  aToken_not_contains: String
+  aToken_starts_with: String
+  aToken_not_starts_with: String
+  aToken_ends_with: String
+  aToken_not_ends_with: String
+  lastUpdateTimestamp: Int
+  lastUpdateTimestamp_not: Int
+  lastUpdateTimestamp_gt: Int
+  lastUpdateTimestamp_lt: Int
+  lastUpdateTimestamp_gte: Int
+  lastUpdateTimestamp_lte: Int
+  lastUpdateTimestamp_in: [Int!]
+  lastUpdateTimestamp_not_in: [Int!]
+  lifetimeDepositorsInterestEarned: BigInt
+  lifetimeDepositorsInterestEarned_not: BigInt
+  lifetimeDepositorsInterestEarned_gt: BigInt
+  lifetimeDepositorsInterestEarned_lt: BigInt
+  lifetimeDepositorsInterestEarned_gte: BigInt
+  lifetimeDepositorsInterestEarned_lte: BigInt
+  lifetimeDepositorsInterestEarned_in: [BigInt!]
+  lifetimeDepositorsInterestEarned_not_in: [BigInt!]
+  aTokenTotalSupply: BigInt
+  aTokenTotalSupply_not: BigInt
+  aTokenTotalSupply_gt: BigInt
+  aTokenTotalSupply_lt: BigInt
+  aTokenTotalSupply_gte: BigInt
+  aTokenTotalSupply_lte: BigInt
+  aTokenTotalSupply_in: [BigInt!]
+  aTokenTotalSupply_not_in: [BigInt!]
+  lifetimeLiquidity: BigInt
+  lifetimeLiquidity_not: BigInt
+  lifetimeLiquidity_gt: BigInt
+  lifetimeLiquidity_lt: BigInt
+  lifetimeLiquidity_gte: BigInt
+  lifetimeLiquidity_lte: BigInt
+  lifetimeLiquidity_in: [BigInt!]
+  lifetimeLiquidity_not_in: [BigInt!]
+  lifetimeBorrows: BigInt
+  lifetimeBorrows_not: BigInt
+  lifetimeBorrows_gt: BigInt
+  lifetimeBorrows_lt: BigInt
+  lifetimeBorrows_gte: BigInt
+  lifetimeBorrows_lte: BigInt
+  lifetimeBorrows_in: [BigInt!]
+  lifetimeBorrows_not_in: [BigInt!]
+  lifetimeBorrowsStable: BigInt
+  lifetimeBorrowsStable_not: BigInt
+  lifetimeBorrowsStable_gt: BigInt
+  lifetimeBorrowsStable_lt: BigInt
+  lifetimeBorrowsStable_gte: BigInt
+  lifetimeBorrowsStable_lte: BigInt
+  lifetimeBorrowsStable_in: [BigInt!]
+  lifetimeBorrowsStable_not_in: [BigInt!]
+  lifetimeBorrowsVariable: BigInt
+  lifetimeBorrowsVariable_not: BigInt
+  lifetimeBorrowsVariable_gt: BigInt
+  lifetimeBorrowsVariable_lt: BigInt
+  lifetimeBorrowsVariable_gte: BigInt
+  lifetimeBorrowsVariable_lte: BigInt
+  lifetimeBorrowsVariable_in: [BigInt!]
+  lifetimeBorrowsVariable_not_in: [BigInt!]
+  lifetimeRepayments: BigInt
+  lifetimeRepayments_not: BigInt
+  lifetimeRepayments_gt: BigInt
+  lifetimeRepayments_lt: BigInt
+  lifetimeRepayments_gte: BigInt
+  lifetimeRepayments_lte: BigInt
+  lifetimeRepayments_in: [BigInt!]
+  lifetimeRepayments_not_in: [BigInt!]
+  lifetimeWithdrawals: BigInt
+  lifetimeWithdrawals_not: BigInt
+  lifetimeWithdrawals_gt: BigInt
+  lifetimeWithdrawals_lt: BigInt
+  lifetimeWithdrawals_gte: BigInt
+  lifetimeWithdrawals_lte: BigInt
+  lifetimeWithdrawals_in: [BigInt!]
+  lifetimeWithdrawals_not_in: [BigInt!]
+  lifetimeLiquidated: BigInt
+  lifetimeLiquidated_not: BigInt
+  lifetimeLiquidated_gt: BigInt
+  lifetimeLiquidated_lt: BigInt
+  lifetimeLiquidated_gte: BigInt
+  lifetimeLiquidated_lte: BigInt
+  lifetimeLiquidated_in: [BigInt!]
+  lifetimeLiquidated_not_in: [BigInt!]
+  lifetimeFeeOriginated: BigInt
+  lifetimeFeeOriginated_not: BigInt
+  lifetimeFeeOriginated_gt: BigInt
+  lifetimeFeeOriginated_lt: BigInt
+  lifetimeFeeOriginated_gte: BigInt
+  lifetimeFeeOriginated_lte: BigInt
+  lifetimeFeeOriginated_in: [BigInt!]
+  lifetimeFeeOriginated_not_in: [BigInt!]
+  lifetimeFeeCollected: BigInt
+  lifetimeFeeCollected_not: BigInt
+  lifetimeFeeCollected_gt: BigInt
+  lifetimeFeeCollected_lt: BigInt
+  lifetimeFeeCollected_gte: BigInt
+  lifetimeFeeCollected_lte: BigInt
+  lifetimeFeeCollected_in: [BigInt!]
+  lifetimeFeeCollected_not_in: [BigInt!]
+  lifetimeFlashLoans: BigInt
+  lifetimeFlashLoans_not: BigInt
+  lifetimeFlashLoans_gt: BigInt
+  lifetimeFlashLoans_lt: BigInt
+  lifetimeFlashLoans_gte: BigInt
+  lifetimeFlashLoans_lte: BigInt
+  lifetimeFlashLoans_in: [BigInt!]
+  lifetimeFlashLoans_not_in: [BigInt!]
+  lifetimeFlashloanDepositorsFee: BigInt
+  lifetimeFlashloanDepositorsFee_not: BigInt
+  lifetimeFlashloanDepositorsFee_gt: BigInt
+  lifetimeFlashloanDepositorsFee_lt: BigInt
+  lifetimeFlashloanDepositorsFee_gte: BigInt
+  lifetimeFlashloanDepositorsFee_lte: BigInt
+  lifetimeFlashloanDepositorsFee_in: [BigInt!]
+  lifetimeFlashloanDepositorsFee_not_in: [BigInt!]
+  lifetimeFlashloanProtocolFee: BigInt
+  lifetimeFlashloanProtocolFee_not: BigInt
+  lifetimeFlashloanProtocolFee_gt: BigInt
+  lifetimeFlashloanProtocolFee_lt: BigInt
+  lifetimeFlashloanProtocolFee_gte: BigInt
+  lifetimeFlashloanProtocolFee_lte: BigInt
+  lifetimeFlashloanProtocolFee_in: [BigInt!]
+  lifetimeFlashloanProtocolFee_not_in: [BigInt!]
+}
+
+enum Reserve_orderBy {
+  id
+  underlyingAsset
+  pool
+  symbol
+  name
+  decimals
+  usageAsCollateralEnabled
+  borrowingEnabled
+  stableBorrowRateEnabled
+  isActive
+  isFreezed
+  price
+  reserveInterestRateStrategy
+  optimalUtilisationRate
+  variableRateSlope1
+  variableRateSlope2
+  stableRateSlope1
+  stableRateSlope2
+  baseVariableBorrowRate
+  baseLTVasCollateral
+  reserveLiquidationThreshold
+  reserveLiquidationBonus
+  utilizationRate
+  totalLiquidity
+  totalLiquidityAsCollateral
+  availableLiquidity
+  totalBorrows
+  totalBorrowsStable
+  totalBorrowsVariable
+  liquidityRate
+  variableBorrowRate
+  stableBorrowRate
+  averageStableBorrowRate
+  liquidityIndex
+  variableBorrowIndex
+  aToken
+  lastUpdateTimestamp
+  lifetimeDepositorsInterestEarned
+  aTokenTotalSupply
+  lifetimeLiquidity
+  lifetimeBorrows
+  lifetimeBorrowsStable
+  lifetimeBorrowsVariable
+  lifetimeRepayments
+  lifetimeWithdrawals
+  lifetimeLiquidated
+  lifetimeFeeOriginated
+  lifetimeFeeCollected
+  lifetimeFlashLoans
+  lifetimeFlashloanDepositorsFee
+  lifetimeFlashloanProtocolFee
+  userReserves
+  depositHistory
+  redeemUnderlyingHistory
+  borrowHistory
+  usageAsCollateralHistory
+  swapHistory
+  rebalanceStableBorrowRateHistory
+  repayHistory
+  flashLoanHistory
+  liquidationCallHistory
+  originationFeeLiquidationHistory
+  paramsHistory
+  configurationHistory
+  deposits
+}
+
+type Subscription {
+  protocol(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Protocol
+  protocols(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Protocol_orderBy
+    orderDirection: OrderDirection
+    where: Protocol_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Protocol!]!
+  contractToPoolMapping(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ContractToPoolMapping
+  contractToPoolMappings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ContractToPoolMapping_orderBy
+    orderDirection: OrderDirection
+    where: ContractToPoolMapping_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ContractToPoolMapping!]!
+  poolConfigurationHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PoolConfigurationHistoryItem
+  poolConfigurationHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PoolConfigurationHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: PoolConfigurationHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PoolConfigurationHistoryItem!]!
+  pool(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Pool
+  pools(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Pool_orderBy
+    orderDirection: OrderDirection
+    where: Pool_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Pool!]!
+  priceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceHistoryItem
+  priceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: PriceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceHistoryItem!]!
+  usdEthPriceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UsdEthPriceHistoryItem
+  usdEthPriceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UsdEthPriceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: UsdEthPriceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UsdEthPriceHistoryItem!]!
+  chainlinkAggregator(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ChainlinkAggregator
+  chainlinkAggregators(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ChainlinkAggregator_orderBy
+    orderDirection: OrderDirection
+    where: ChainlinkAggregator_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ChainlinkAggregator!]!
+  priceOracleAsset(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceOracleAsset
+  priceOracleAssets(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceOracleAsset_orderBy
+    orderDirection: OrderDirection
+    where: PriceOracleAsset_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceOracleAsset!]!
+  priceOracle(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): PriceOracle
+  priceOracles(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: PriceOracle_orderBy
+    orderDirection: OrderDirection
+    where: PriceOracle_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [PriceOracle!]!
+  atoken(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): AToken
+  atokens(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: AToken_orderBy
+    orderDirection: OrderDirection
+    where: AToken_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [AToken!]!
+  referrer(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Referrer
+  referrers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Referrer_orderBy
+    orderDirection: OrderDirection
+    where: Referrer_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Referrer!]!
+  deposit(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Deposit
+  deposits(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Deposit_orderBy
+    orderDirection: OrderDirection
+    where: Deposit_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Deposit!]!
+  redeemUnderlying(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): RedeemUnderlying
+  redeemUnderlyings(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: RedeemUnderlying_orderBy
+    orderDirection: OrderDirection
+    where: RedeemUnderlying_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [RedeemUnderlying!]!
+  borrow(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Borrow
+  borrows(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Borrow_orderBy
+    orderDirection: OrderDirection
+    where: Borrow_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Borrow!]!
+  swap(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Swap
+  swaps(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Swap_orderBy
+    orderDirection: OrderDirection
+    where: Swap_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Swap!]!
+  usageAsCollateral(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UsageAsCollateral
+  usageAsCollaterals(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UsageAsCollateral_orderBy
+    orderDirection: OrderDirection
+    where: UsageAsCollateral_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UsageAsCollateral!]!
+  rebalanceStableBorrowRate(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): RebalanceStableBorrowRate
+  rebalanceStableBorrowRates(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: RebalanceStableBorrowRate_orderBy
+    orderDirection: OrderDirection
+    where: RebalanceStableBorrowRate_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [RebalanceStableBorrowRate!]!
+  repay(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Repay
+  repays(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Repay_orderBy
+    orderDirection: OrderDirection
+    where: Repay_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Repay!]!
+  flashLoan(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): FlashLoan
+  flashLoans(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: FlashLoan_orderBy
+    orderDirection: OrderDirection
+    where: FlashLoan_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [FlashLoan!]!
+  liquidationCall(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): LiquidationCall
+  liquidationCalls(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: LiquidationCall_orderBy
+    orderDirection: OrderDirection
+    where: LiquidationCall_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [LiquidationCall!]!
+  originationFeeLiquidation(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): OriginationFeeLiquidation
+  originationFeeLiquidations(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: OriginationFeeLiquidation_orderBy
+    orderDirection: OrderDirection
+    where: OriginationFeeLiquidation_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [OriginationFeeLiquidation!]!
+  reserveConfigurationHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ReserveConfigurationHistoryItem
+  reserveConfigurationHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ReserveConfigurationHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ReserveConfigurationHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ReserveConfigurationHistoryItem!]!
+  reserveParamsHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ReserveParamsHistoryItem
+  reserveParamsHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ReserveParamsHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ReserveParamsHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ReserveParamsHistoryItem!]!
+  reserve(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Reserve
+  reserves(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Reserve_orderBy
+    orderDirection: OrderDirection
+    where: Reserve_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Reserve!]!
+  atokenBalanceHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ATokenBalanceHistoryItem
+  atokenBalanceHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ATokenBalanceHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: ATokenBalanceHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ATokenBalanceHistoryItem!]!
+  userBorrowHistoryItem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserBorrowHistoryItem
+  userBorrowHistoryItems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserBorrowHistoryItem_orderBy
+    orderDirection: OrderDirection
+    where: UserBorrowHistoryItem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserBorrowHistoryItem!]!
+  userReserve(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserReserve
+  userReserves(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserReserve_orderBy
+    orderDirection: OrderDirection
+    where: UserReserve_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserReserve!]!
+  user(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): User
+  users(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: User_orderBy
+    orderDirection: OrderDirection
+    where: User_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [User!]!
+  userTransaction(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): UserTransaction
+  userTransactions(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: UserTransaction_orderBy
+    orderDirection: OrderDirection
+    where: UserTransaction_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [UserTransaction!]!
+
+  """Access to subgraph metadata"""
+  _meta(block: Block_height): _Meta_
+}
+
+type Swap implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  borrowRateFrom: BigInt!
+  borrowRateModeFrom: BorrowRateMode!
+  borrowRateTo: BigInt!
+  borrowRateModeTo: BorrowRateMode!
+  accruedBorrowInterest: BigInt!
+  timestamp: Int!
+}
+
+input Swap_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  borrowRateFrom: BigInt
+  borrowRateFrom_not: BigInt
+  borrowRateFrom_gt: BigInt
+  borrowRateFrom_lt: BigInt
+  borrowRateFrom_gte: BigInt
+  borrowRateFrom_lte: BigInt
+  borrowRateFrom_in: [BigInt!]
+  borrowRateFrom_not_in: [BigInt!]
+  borrowRateModeFrom: BorrowRateMode
+  borrowRateModeFrom_not: BorrowRateMode
+  borrowRateTo: BigInt
+  borrowRateTo_not: BigInt
+  borrowRateTo_gt: BigInt
+  borrowRateTo_lt: BigInt
+  borrowRateTo_gte: BigInt
+  borrowRateTo_lte: BigInt
+  borrowRateTo_in: [BigInt!]
+  borrowRateTo_not_in: [BigInt!]
+  borrowRateModeTo: BorrowRateMode
+  borrowRateModeTo_not: BorrowRateMode
+  accruedBorrowInterest: BigInt
+  accruedBorrowInterest_not: BigInt
+  accruedBorrowInterest_gt: BigInt
+  accruedBorrowInterest_lt: BigInt
+  accruedBorrowInterest_gte: BigInt
+  accruedBorrowInterest_lte: BigInt
+  accruedBorrowInterest_in: [BigInt!]
+  accruedBorrowInterest_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum Swap_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  borrowRateFrom
+  borrowRateModeFrom
+  borrowRateTo
+  borrowRateModeTo
+  accruedBorrowInterest
+  timestamp
+}
+
+type UsageAsCollateral implements UserTransaction {
+  """
+  tx hash
+  
+  """
+  id: ID!
+  pool: Pool!
+  user: User!
+  reserve: Reserve!
+  userReserve: UserReserve!
+  fromState: Boolean!
+  toState: Boolean!
+  timestamp: Int!
+}
+
+input UsageAsCollateral_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  fromState: Boolean
+  fromState_not: Boolean
+  fromState_in: [Boolean!]
+  fromState_not_in: [Boolean!]
+  toState: Boolean
+  toState_not: Boolean
+  toState_in: [Boolean!]
+  toState_not_in: [Boolean!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum UsageAsCollateral_orderBy {
+  id
+  pool
+  user
+  reserve
+  userReserve
+  fromState
+  toState
+  timestamp
+}
+
+type UsdEthPriceHistoryItem {
+  id: ID!
+  oracle: PriceOracle!
+  price: BigInt!
+  timestamp: Int!
+}
+
+input UsdEthPriceHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  oracle: String
+  oracle_not: String
+  oracle_gt: String
+  oracle_lt: String
+  oracle_gte: String
+  oracle_lte: String
+  oracle_in: [String!]
+  oracle_not_in: [String!]
+  oracle_contains: String
+  oracle_not_contains: String
+  oracle_starts_with: String
+  oracle_not_starts_with: String
+  oracle_ends_with: String
+  oracle_not_ends_with: String
+  price: BigInt
+  price_not: BigInt
+  price_gt: BigInt
+  price_lt: BigInt
+  price_gte: BigInt
+  price_lte: BigInt
+  price_in: [BigInt!]
+  price_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum UsdEthPriceHistoryItem_orderBy {
+  id
+  oracle
+  price
+  timestamp
+}
+
+type User {
+  """
+  user address
+  
+  """
+  id: ID!
+  borrowedReservesCount: Int!
+  reserves(skip: Int = 0, first: Int = 100, orderBy: UserReserve_orderBy, orderDirection: OrderDirection, where: UserReserve_filter): [UserReserve!]!
+  depositHistory(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+  redeemUnderlyingHistory(skip: Int = 0, first: Int = 100, orderBy: RedeemUnderlying_orderBy, orderDirection: OrderDirection, where: RedeemUnderlying_filter): [RedeemUnderlying!]!
+  usageAsCollateralHistory(skip: Int = 0, first: Int = 100, orderBy: UsageAsCollateral_orderBy, orderDirection: OrderDirection, where: UsageAsCollateral_filter): [UsageAsCollateral!]!
+  borrowHistory(skip: Int = 0, first: Int = 100, orderBy: Borrow_orderBy, orderDirection: OrderDirection, where: Borrow_filter): [Borrow!]!
+  swapHistory(skip: Int = 0, first: Int = 100, orderBy: Swap_orderBy, orderDirection: OrderDirection, where: Swap_filter): [Swap!]!
+  rebalanceStableBorrowRateHistory(skip: Int = 0, first: Int = 100, orderBy: RebalanceStableBorrowRate_orderBy, orderDirection: OrderDirection, where: RebalanceStableBorrowRate_filter): [RebalanceStableBorrowRate!]!
+  repayHistory(skip: Int = 0, first: Int = 100, orderBy: Repay_orderBy, orderDirection: OrderDirection, where: Repay_filter): [Repay!]!
+  liquidationCallHistory(skip: Int = 0, first: Int = 100, orderBy: LiquidationCall_orderBy, orderDirection: OrderDirection, where: LiquidationCall_filter): [LiquidationCall!]!
+  originationFeeLiquidationHistory(skip: Int = 0, first: Int = 100, orderBy: OriginationFeeLiquidation_orderBy, orderDirection: OrderDirection, where: OriginationFeeLiquidation_filter): [OriginationFeeLiquidation!]!
+}
+
+type UserBorrowHistoryItem {
+  """
+  userReserve + txHash
+  
+  """
+  id: ID!
+  userReserve: UserReserve!
+  totalBorrows: BigInt!
+  borrowRate: BigInt!
+  borrowRateMode: BorrowRateMode!
+  originationFee: BigInt!
+  timestamp: Int!
+}
+
+input UserBorrowHistoryItem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  userReserve: String
+  userReserve_not: String
+  userReserve_gt: String
+  userReserve_lt: String
+  userReserve_gte: String
+  userReserve_lte: String
+  userReserve_in: [String!]
+  userReserve_not_in: [String!]
+  userReserve_contains: String
+  userReserve_not_contains: String
+  userReserve_starts_with: String
+  userReserve_not_starts_with: String
+  userReserve_ends_with: String
+  userReserve_not_ends_with: String
+  totalBorrows: BigInt
+  totalBorrows_not: BigInt
+  totalBorrows_gt: BigInt
+  totalBorrows_lt: BigInt
+  totalBorrows_gte: BigInt
+  totalBorrows_lte: BigInt
+  totalBorrows_in: [BigInt!]
+  totalBorrows_not_in: [BigInt!]
+  borrowRate: BigInt
+  borrowRate_not: BigInt
+  borrowRate_gt: BigInt
+  borrowRate_lt: BigInt
+  borrowRate_gte: BigInt
+  borrowRate_lte: BigInt
+  borrowRate_in: [BigInt!]
+  borrowRate_not_in: [BigInt!]
+  borrowRateMode: BorrowRateMode
+  borrowRateMode_not: BorrowRateMode
+  originationFee: BigInt
+  originationFee_not: BigInt
+  originationFee_gt: BigInt
+  originationFee_lt: BigInt
+  originationFee_gte: BigInt
+  originationFee_lte: BigInt
+  originationFee_in: [BigInt!]
+  originationFee_not_in: [BigInt!]
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum UserBorrowHistoryItem_orderBy {
+  id
+  userReserve
+  totalBorrows
+  borrowRate
+  borrowRateMode
+  originationFee
+  timestamp
+}
+
+type UserReserve {
+  """
+  user address + reserve address
+  
+  """
+  id: ID!
+  pool: Pool!
+  reserve: Reserve!
+  user: User!
+  usageAsCollateralEnabledOnUser: Boolean!
+  userBalanceIndex: BigInt!
+  principalATokenBalance: BigInt!
+  redirectedBalance: BigInt!
+  interestRedirectionAddress: Bytes!
+  interestRedirectionAllowance: Bytes!
+  principalBorrows: BigInt!
+  borrowRate: BigInt!
+  borrowRateMode: BorrowRateMode!
+  variableBorrowIndex: BigInt!
+
+  """
+  Amount in currency units included as fee
+  
+  """
+  originationFee: BigInt!
+  lastUpdateTimestamp: Int!
+  aTokenBalanceHistory(skip: Int = 0, first: Int = 100, orderBy: ATokenBalanceHistoryItem_orderBy, orderDirection: OrderDirection, where: ATokenBalanceHistoryItem_filter): [ATokenBalanceHistoryItem!]!
+  borrowStateHistory(skip: Int = 0, first: Int = 100, orderBy: UserBorrowHistoryItem_orderBy, orderDirection: OrderDirection, where: UserBorrowHistoryItem_filter): [UserBorrowHistoryItem!]!
+  usageAsCollateralHistory(skip: Int = 0, first: Int = 100, orderBy: UsageAsCollateral_orderBy, orderDirection: OrderDirection, where: UsageAsCollateral_filter): [UsageAsCollateral!]!
+  depositHistory(skip: Int = 0, first: Int = 100, orderBy: Deposit_orderBy, orderDirection: OrderDirection, where: Deposit_filter): [Deposit!]!
+  redeemUnderlyingHistory(skip: Int = 0, first: Int = 100, orderBy: RedeemUnderlying_orderBy, orderDirection: OrderDirection, where: RedeemUnderlying_filter): [RedeemUnderlying!]!
+  borrowHistory(skip: Int = 0, first: Int = 100, orderBy: Borrow_orderBy, orderDirection: OrderDirection, where: Borrow_filter): [Borrow!]!
+  swapHistory(skip: Int = 0, first: Int = 100, orderBy: Swap_orderBy, orderDirection: OrderDirection, where: Swap_filter): [Swap!]!
+  rebalanceStableBorrowRateHistory(skip: Int = 0, first: Int = 100, orderBy: RebalanceStableBorrowRate_orderBy, orderDirection: OrderDirection, where: RebalanceStableBorrowRate_filter): [RebalanceStableBorrowRate!]!
+  repayHistory(skip: Int = 0, first: Int = 100, orderBy: Repay_orderBy, orderDirection: OrderDirection, where: Repay_filter): [Repay!]!
+  liquidationCallHistory(skip: Int = 0, first: Int = 100, orderBy: LiquidationCall_orderBy, orderDirection: OrderDirection, where: LiquidationCall_filter): [LiquidationCall!]!
+  originationFeeLiquidationHistory(skip: Int = 0, first: Int = 100, orderBy: OriginationFeeLiquidation_orderBy, orderDirection: OrderDirection, where: OriginationFeeLiquidation_filter): [OriginationFeeLiquidation!]!
+}
+
+input UserReserve_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  reserve: String
+  reserve_not: String
+  reserve_gt: String
+  reserve_lt: String
+  reserve_gte: String
+  reserve_lte: String
+  reserve_in: [String!]
+  reserve_not_in: [String!]
+  reserve_contains: String
+  reserve_not_contains: String
+  reserve_starts_with: String
+  reserve_not_starts_with: String
+  reserve_ends_with: String
+  reserve_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  usageAsCollateralEnabledOnUser: Boolean
+  usageAsCollateralEnabledOnUser_not: Boolean
+  usageAsCollateralEnabledOnUser_in: [Boolean!]
+  usageAsCollateralEnabledOnUser_not_in: [Boolean!]
+  userBalanceIndex: BigInt
+  userBalanceIndex_not: BigInt
+  userBalanceIndex_gt: BigInt
+  userBalanceIndex_lt: BigInt
+  userBalanceIndex_gte: BigInt
+  userBalanceIndex_lte: BigInt
+  userBalanceIndex_in: [BigInt!]
+  userBalanceIndex_not_in: [BigInt!]
+  principalATokenBalance: BigInt
+  principalATokenBalance_not: BigInt
+  principalATokenBalance_gt: BigInt
+  principalATokenBalance_lt: BigInt
+  principalATokenBalance_gte: BigInt
+  principalATokenBalance_lte: BigInt
+  principalATokenBalance_in: [BigInt!]
+  principalATokenBalance_not_in: [BigInt!]
+  redirectedBalance: BigInt
+  redirectedBalance_not: BigInt
+  redirectedBalance_gt: BigInt
+  redirectedBalance_lt: BigInt
+  redirectedBalance_gte: BigInt
+  redirectedBalance_lte: BigInt
+  redirectedBalance_in: [BigInt!]
+  redirectedBalance_not_in: [BigInt!]
+  interestRedirectionAddress: Bytes
+  interestRedirectionAddress_not: Bytes
+  interestRedirectionAddress_in: [Bytes!]
+  interestRedirectionAddress_not_in: [Bytes!]
+  interestRedirectionAddress_contains: Bytes
+  interestRedirectionAddress_not_contains: Bytes
+  interestRedirectionAllowance: Bytes
+  interestRedirectionAllowance_not: Bytes
+  interestRedirectionAllowance_in: [Bytes!]
+  interestRedirectionAllowance_not_in: [Bytes!]
+  interestRedirectionAllowance_contains: Bytes
+  interestRedirectionAllowance_not_contains: Bytes
+  principalBorrows: BigInt
+  principalBorrows_not: BigInt
+  principalBorrows_gt: BigInt
+  principalBorrows_lt: BigInt
+  principalBorrows_gte: BigInt
+  principalBorrows_lte: BigInt
+  principalBorrows_in: [BigInt!]
+  principalBorrows_not_in: [BigInt!]
+  borrowRate: BigInt
+  borrowRate_not: BigInt
+  borrowRate_gt: BigInt
+  borrowRate_lt: BigInt
+  borrowRate_gte: BigInt
+  borrowRate_lte: BigInt
+  borrowRate_in: [BigInt!]
+  borrowRate_not_in: [BigInt!]
+  borrowRateMode: BorrowRateMode
+  borrowRateMode_not: BorrowRateMode
+  variableBorrowIndex: BigInt
+  variableBorrowIndex_not: BigInt
+  variableBorrowIndex_gt: BigInt
+  variableBorrowIndex_lt: BigInt
+  variableBorrowIndex_gte: BigInt
+  variableBorrowIndex_lte: BigInt
+  variableBorrowIndex_in: [BigInt!]
+  variableBorrowIndex_not_in: [BigInt!]
+  originationFee: BigInt
+  originationFee_not: BigInt
+  originationFee_gt: BigInt
+  originationFee_lt: BigInt
+  originationFee_gte: BigInt
+  originationFee_lte: BigInt
+  originationFee_in: [BigInt!]
+  originationFee_not_in: [BigInt!]
+  lastUpdateTimestamp: Int
+  lastUpdateTimestamp_not: Int
+  lastUpdateTimestamp_gt: Int
+  lastUpdateTimestamp_lt: Int
+  lastUpdateTimestamp_gte: Int
+  lastUpdateTimestamp_lte: Int
+  lastUpdateTimestamp_in: [Int!]
+  lastUpdateTimestamp_not_in: [Int!]
+}
+
+enum UserReserve_orderBy {
+  id
+  pool
+  reserve
+  user
+  usageAsCollateralEnabledOnUser
+  userBalanceIndex
+  principalATokenBalance
+  redirectedBalance
+  interestRedirectionAddress
+  interestRedirectionAllowance
+  principalBorrows
+  borrowRate
+  borrowRateMode
+  variableBorrowIndex
+  originationFee
+  lastUpdateTimestamp
+  aTokenBalanceHistory
+  borrowStateHistory
+  usageAsCollateralHistory
+  depositHistory
+  redeemUnderlyingHistory
+  borrowHistory
+  swapHistory
+  rebalanceStableBorrowRateHistory
+  repayHistory
+  liquidationCallHistory
+  originationFeeLiquidationHistory
+}
+
+interface UserTransaction {
+  id: ID!
+  pool: Pool!
+  user: User!
+  timestamp: Int!
+}
+
+input UserTransaction_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  pool: String
+  pool_not: String
+  pool_gt: String
+  pool_lt: String
+  pool_gte: String
+  pool_lte: String
+  pool_in: [String!]
+  pool_not_in: [String!]
+  pool_contains: String
+  pool_not_contains: String
+  pool_starts_with: String
+  pool_not_starts_with: String
+  pool_ends_with: String
+  pool_not_ends_with: String
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  timestamp: Int
+  timestamp_not: Int
+  timestamp_gt: Int
+  timestamp_lt: Int
+  timestamp_gte: Int
+  timestamp_lte: Int
+  timestamp_in: [Int!]
+  timestamp_not_in: [Int!]
+}
+
+enum UserTransaction_orderBy {
+  id
+  pool
+  user
+  timestamp
+}
+
+input User_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  borrowedReservesCount: Int
+  borrowedReservesCount_not: Int
+  borrowedReservesCount_gt: Int
+  borrowedReservesCount_lt: Int
+  borrowedReservesCount_gte: Int
+  borrowedReservesCount_lte: Int
+  borrowedReservesCount_in: [Int!]
+  borrowedReservesCount_not_in: [Int!]
+}
+
+enum User_orderBy {
+  id
+  borrowedReservesCount
+  reserves
+  depositHistory
+  redeemUnderlyingHistory
+  usageAsCollateralHistory
+  borrowHistory
+  swapHistory
+  rebalanceStableBorrowRateHistory
+  repayHistory
+  liquidationCallHistory
+  originationFeeLiquidationHistory
+}
+
+type _Block_ {
+  """The hash of the block"""
+  hash: Bytes
+
+  """The block number"""
+  number: Int!
+}
+
+"""The type for the top-level _meta field"""
+type _Meta_ {
+  """
+  Information about a specific subgraph block. The hash of the block
+  will be null if the _meta field has a block constraint that asks for
+  a block number. It will be filled if the _meta field has no block constraint
+  and therefore asks for the latest  block
+  
+  """
+  block: _Block_!
+
+  """The deployment ID"""
+  deployment: String!
+
+  """If `true`, the subgraph encountered indexing errors at some past block"""
+  hasIndexingErrors: Boolean!
+}
+
+enum _SubgraphErrorPolicy_ {
+  """Data will be returned even if the subgraph has indexing errors"""
+  allow
+
+  """
+  If the subgraph has indexing errors, data will be omitted. The default.
+  """
+  deny
+}

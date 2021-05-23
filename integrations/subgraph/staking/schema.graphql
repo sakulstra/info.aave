@@ -1,0 +1,998 @@
+directive @entity on OBJECT
+
+directive @derivedFrom(field: String) on FIELD_DEFINITION
+
+directive @subgraphId(id: String) on OBJECT
+
+scalar BigDecimal
+
+scalar BigInt
+
+input Block_height {
+  hash: Bytes
+  number: Int
+}
+
+scalar Bytes
+
+type ClaimReward {
+  """
+  Tx hash
+  """
+  id: ID!
+  stakeToken: StakeToken!
+  from: String!
+  to: String!
+  amount: BigInt!
+  stakePosition: StakePosition!
+}
+
+input ClaimReward_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stakeToken: String
+  stakeToken_not: String
+  stakeToken_gt: String
+  stakeToken_lt: String
+  stakeToken_gte: String
+  stakeToken_lte: String
+  stakeToken_in: [String!]
+  stakeToken_not_in: [String!]
+  stakeToken_contains: String
+  stakeToken_not_contains: String
+  stakeToken_starts_with: String
+  stakeToken_not_starts_with: String
+  stakeToken_ends_with: String
+  stakeToken_not_ends_with: String
+  from: String
+  from_not: String
+  from_gt: String
+  from_lt: String
+  from_gte: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_starts_with: String
+  from_not_starts_with: String
+  from_ends_with: String
+  from_not_ends_with: String
+  to: String
+  to_not: String
+  to_gt: String
+  to_lt: String
+  to_gte: String
+  to_lte: String
+  to_in: [String!]
+  to_not_in: [String!]
+  to_contains: String
+  to_not_contains: String
+  to_starts_with: String
+  to_not_starts_with: String
+  to_ends_with: String
+  to_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  stakePosition: String
+  stakePosition_not: String
+  stakePosition_gt: String
+  stakePosition_lt: String
+  stakePosition_gte: String
+  stakePosition_lte: String
+  stakePosition_in: [String!]
+  stakePosition_not_in: [String!]
+  stakePosition_contains: String
+  stakePosition_not_contains: String
+  stakePosition_starts_with: String
+  stakePosition_not_starts_with: String
+  stakePosition_ends_with: String
+  stakePosition_not_ends_with: String
+}
+
+enum ClaimReward_orderBy {
+  id
+  stakeToken
+  from
+  to
+  amount
+  stakePosition
+}
+
+enum OrderDirection {
+  asc
+  desc
+}
+
+type Query {
+  stake(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Stake
+  stakes(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Stake_orderBy
+    orderDirection: OrderDirection
+    where: Stake_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Stake!]!
+  redeem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Redeem
+  redeems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Redeem_orderBy
+    orderDirection: OrderDirection
+    where: Redeem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Redeem!]!
+  claimReward(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ClaimReward
+  claimRewards(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ClaimReward_orderBy
+    orderDirection: OrderDirection
+    where: ClaimReward_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ClaimReward!]!
+  transfer(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Transfer
+  transfers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Transfer_orderBy
+    orderDirection: OrderDirection
+    where: Transfer_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Transfer!]!
+  stakePosition(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): StakePosition
+  stakePositions(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakePosition_orderBy
+    orderDirection: OrderDirection
+    where: StakePosition_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [StakePosition!]!
+  stakeToken(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): StakeToken
+  stakeTokens(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakeToken_orderBy
+    orderDirection: OrderDirection
+    where: StakeToken_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [StakeToken!]!
+
+  """
+  Access to subgraph metadata
+  """
+  _meta(block: Block_height): _Meta_
+}
+
+type Redeem {
+  """
+  Tx hash
+  """
+  id: ID!
+  stakeToken: StakeToken!
+  from: String!
+  to: String!
+  amount: BigInt!
+  stakePosition: StakePosition!
+}
+
+input Redeem_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stakeToken: String
+  stakeToken_not: String
+  stakeToken_gt: String
+  stakeToken_lt: String
+  stakeToken_gte: String
+  stakeToken_lte: String
+  stakeToken_in: [String!]
+  stakeToken_not_in: [String!]
+  stakeToken_contains: String
+  stakeToken_not_contains: String
+  stakeToken_starts_with: String
+  stakeToken_not_starts_with: String
+  stakeToken_ends_with: String
+  stakeToken_not_ends_with: String
+  from: String
+  from_not: String
+  from_gt: String
+  from_lt: String
+  from_gte: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_starts_with: String
+  from_not_starts_with: String
+  from_ends_with: String
+  from_not_ends_with: String
+  to: String
+  to_not: String
+  to_gt: String
+  to_lt: String
+  to_gte: String
+  to_lte: String
+  to_in: [String!]
+  to_not_in: [String!]
+  to_contains: String
+  to_not_contains: String
+  to_starts_with: String
+  to_not_starts_with: String
+  to_ends_with: String
+  to_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  stakePosition: String
+  stakePosition_not: String
+  stakePosition_gt: String
+  stakePosition_lt: String
+  stakePosition_gte: String
+  stakePosition_lte: String
+  stakePosition_in: [String!]
+  stakePosition_not_in: [String!]
+  stakePosition_contains: String
+  stakePosition_not_contains: String
+  stakePosition_starts_with: String
+  stakePosition_not_starts_with: String
+  stakePosition_ends_with: String
+  stakePosition_not_ends_with: String
+}
+
+enum Redeem_orderBy {
+  id
+  stakeToken
+  from
+  to
+  amount
+  stakePosition
+}
+
+type Stake {
+  """
+  Tx hash
+  """
+  id: ID!
+  stakeToken: StakeToken!
+  from: String!
+  onBehalfOf: String!
+  amount: BigInt!
+  stakePosition: StakePosition!
+}
+
+type StakePosition {
+  """
+  User Wallet address : StakeToken ID
+  """
+  id: ID!
+  positionBalance: BigInt!
+  rewardsClaimed: BigInt!
+  user: String!
+  stakeToken: StakeToken!
+  stakeHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Stake_orderBy
+    orderDirection: OrderDirection
+    where: Stake_filter
+  ): [Stake!]!
+  redeemHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Redeem_orderBy
+    orderDirection: OrderDirection
+    where: Redeem_filter
+  ): [Redeem!]!
+  transferHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Transfer_orderBy
+    orderDirection: OrderDirection
+    where: Transfer_filter
+  ): [Transfer!]!
+}
+
+input StakePosition_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  positionBalance: BigInt
+  positionBalance_not: BigInt
+  positionBalance_gt: BigInt
+  positionBalance_lt: BigInt
+  positionBalance_gte: BigInt
+  positionBalance_lte: BigInt
+  positionBalance_in: [BigInt!]
+  positionBalance_not_in: [BigInt!]
+  rewardsClaimed: BigInt
+  rewardsClaimed_not: BigInt
+  rewardsClaimed_gt: BigInt
+  rewardsClaimed_lt: BigInt
+  rewardsClaimed_gte: BigInt
+  rewardsClaimed_lte: BigInt
+  rewardsClaimed_in: [BigInt!]
+  rewardsClaimed_not_in: [BigInt!]
+  user: String
+  user_not: String
+  user_gt: String
+  user_lt: String
+  user_gte: String
+  user_lte: String
+  user_in: [String!]
+  user_not_in: [String!]
+  user_contains: String
+  user_not_contains: String
+  user_starts_with: String
+  user_not_starts_with: String
+  user_ends_with: String
+  user_not_ends_with: String
+  stakeToken: String
+  stakeToken_not: String
+  stakeToken_gt: String
+  stakeToken_lt: String
+  stakeToken_gte: String
+  stakeToken_lte: String
+  stakeToken_in: [String!]
+  stakeToken_not_in: [String!]
+  stakeToken_contains: String
+  stakeToken_not_contains: String
+  stakeToken_starts_with: String
+  stakeToken_not_starts_with: String
+  stakeToken_ends_with: String
+  stakeToken_not_ends_with: String
+}
+
+enum StakePosition_orderBy {
+  id
+  positionBalance
+  rewardsClaimed
+  user
+  stakeToken
+  stakeHistory
+  redeemHistory
+  transferHistory
+}
+
+type StakeToken {
+  """
+  Address of the stk Token
+  """
+  id: ID!
+
+  """
+  Stake token contract information
+  """
+  stakedToken: String!
+  rewardToken: String!
+  name: String!
+  symbol: String!
+  decimals: Int!
+  cooldownSeconds: BigInt!
+  unstakeWindow: BigInt!
+  currentStakedBalance: BigInt!
+  lifetimeRewardsDistributed: BigInt!
+  lifetimeStakedBalance: BigInt!
+  lifetimeRedeemedBalance: BigInt!
+  stakeHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Stake_orderBy
+    orderDirection: OrderDirection
+    where: Stake_filter
+  ): [Stake!]!
+  redeemHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Redeem_orderBy
+    orderDirection: OrderDirection
+    where: Redeem_filter
+  ): [Redeem!]!
+  transferHistory(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Transfer_orderBy
+    orderDirection: OrderDirection
+    where: Transfer_filter
+  ): [Transfer!]!
+  stakePositions(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakePosition_orderBy
+    orderDirection: OrderDirection
+    where: StakePosition_filter
+  ): [StakePosition!]!
+}
+
+input StakeToken_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stakedToken: String
+  stakedToken_not: String
+  stakedToken_gt: String
+  stakedToken_lt: String
+  stakedToken_gte: String
+  stakedToken_lte: String
+  stakedToken_in: [String!]
+  stakedToken_not_in: [String!]
+  stakedToken_contains: String
+  stakedToken_not_contains: String
+  stakedToken_starts_with: String
+  stakedToken_not_starts_with: String
+  stakedToken_ends_with: String
+  stakedToken_not_ends_with: String
+  rewardToken: String
+  rewardToken_not: String
+  rewardToken_gt: String
+  rewardToken_lt: String
+  rewardToken_gte: String
+  rewardToken_lte: String
+  rewardToken_in: [String!]
+  rewardToken_not_in: [String!]
+  rewardToken_contains: String
+  rewardToken_not_contains: String
+  rewardToken_starts_with: String
+  rewardToken_not_starts_with: String
+  rewardToken_ends_with: String
+  rewardToken_not_ends_with: String
+  name: String
+  name_not: String
+  name_gt: String
+  name_lt: String
+  name_gte: String
+  name_lte: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  symbol: String
+  symbol_not: String
+  symbol_gt: String
+  symbol_lt: String
+  symbol_gte: String
+  symbol_lte: String
+  symbol_in: [String!]
+  symbol_not_in: [String!]
+  symbol_contains: String
+  symbol_not_contains: String
+  symbol_starts_with: String
+  symbol_not_starts_with: String
+  symbol_ends_with: String
+  symbol_not_ends_with: String
+  decimals: Int
+  decimals_not: Int
+  decimals_gt: Int
+  decimals_lt: Int
+  decimals_gte: Int
+  decimals_lte: Int
+  decimals_in: [Int!]
+  decimals_not_in: [Int!]
+  cooldownSeconds: BigInt
+  cooldownSeconds_not: BigInt
+  cooldownSeconds_gt: BigInt
+  cooldownSeconds_lt: BigInt
+  cooldownSeconds_gte: BigInt
+  cooldownSeconds_lte: BigInt
+  cooldownSeconds_in: [BigInt!]
+  cooldownSeconds_not_in: [BigInt!]
+  unstakeWindow: BigInt
+  unstakeWindow_not: BigInt
+  unstakeWindow_gt: BigInt
+  unstakeWindow_lt: BigInt
+  unstakeWindow_gte: BigInt
+  unstakeWindow_lte: BigInt
+  unstakeWindow_in: [BigInt!]
+  unstakeWindow_not_in: [BigInt!]
+  currentStakedBalance: BigInt
+  currentStakedBalance_not: BigInt
+  currentStakedBalance_gt: BigInt
+  currentStakedBalance_lt: BigInt
+  currentStakedBalance_gte: BigInt
+  currentStakedBalance_lte: BigInt
+  currentStakedBalance_in: [BigInt!]
+  currentStakedBalance_not_in: [BigInt!]
+  lifetimeRewardsDistributed: BigInt
+  lifetimeRewardsDistributed_not: BigInt
+  lifetimeRewardsDistributed_gt: BigInt
+  lifetimeRewardsDistributed_lt: BigInt
+  lifetimeRewardsDistributed_gte: BigInt
+  lifetimeRewardsDistributed_lte: BigInt
+  lifetimeRewardsDistributed_in: [BigInt!]
+  lifetimeRewardsDistributed_not_in: [BigInt!]
+  lifetimeStakedBalance: BigInt
+  lifetimeStakedBalance_not: BigInt
+  lifetimeStakedBalance_gt: BigInt
+  lifetimeStakedBalance_lt: BigInt
+  lifetimeStakedBalance_gte: BigInt
+  lifetimeStakedBalance_lte: BigInt
+  lifetimeStakedBalance_in: [BigInt!]
+  lifetimeStakedBalance_not_in: [BigInt!]
+  lifetimeRedeemedBalance: BigInt
+  lifetimeRedeemedBalance_not: BigInt
+  lifetimeRedeemedBalance_gt: BigInt
+  lifetimeRedeemedBalance_lt: BigInt
+  lifetimeRedeemedBalance_gte: BigInt
+  lifetimeRedeemedBalance_lte: BigInt
+  lifetimeRedeemedBalance_in: [BigInt!]
+  lifetimeRedeemedBalance_not_in: [BigInt!]
+}
+
+enum StakeToken_orderBy {
+  id
+  stakedToken
+  rewardToken
+  name
+  symbol
+  decimals
+  cooldownSeconds
+  unstakeWindow
+  currentStakedBalance
+  lifetimeRewardsDistributed
+  lifetimeStakedBalance
+  lifetimeRedeemedBalance
+  stakeHistory
+  redeemHistory
+  transferHistory
+  stakePositions
+}
+
+input Stake_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stakeToken: String
+  stakeToken_not: String
+  stakeToken_gt: String
+  stakeToken_lt: String
+  stakeToken_gte: String
+  stakeToken_lte: String
+  stakeToken_in: [String!]
+  stakeToken_not_in: [String!]
+  stakeToken_contains: String
+  stakeToken_not_contains: String
+  stakeToken_starts_with: String
+  stakeToken_not_starts_with: String
+  stakeToken_ends_with: String
+  stakeToken_not_ends_with: String
+  from: String
+  from_not: String
+  from_gt: String
+  from_lt: String
+  from_gte: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_starts_with: String
+  from_not_starts_with: String
+  from_ends_with: String
+  from_not_ends_with: String
+  onBehalfOf: String
+  onBehalfOf_not: String
+  onBehalfOf_gt: String
+  onBehalfOf_lt: String
+  onBehalfOf_gte: String
+  onBehalfOf_lte: String
+  onBehalfOf_in: [String!]
+  onBehalfOf_not_in: [String!]
+  onBehalfOf_contains: String
+  onBehalfOf_not_contains: String
+  onBehalfOf_starts_with: String
+  onBehalfOf_not_starts_with: String
+  onBehalfOf_ends_with: String
+  onBehalfOf_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  stakePosition: String
+  stakePosition_not: String
+  stakePosition_gt: String
+  stakePosition_lt: String
+  stakePosition_gte: String
+  stakePosition_lte: String
+  stakePosition_in: [String!]
+  stakePosition_not_in: [String!]
+  stakePosition_contains: String
+  stakePosition_not_contains: String
+  stakePosition_starts_with: String
+  stakePosition_not_starts_with: String
+  stakePosition_ends_with: String
+  stakePosition_not_ends_with: String
+}
+
+enum Stake_orderBy {
+  id
+  stakeToken
+  from
+  onBehalfOf
+  amount
+  stakePosition
+}
+
+type Subscription {
+  stake(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Stake
+  stakes(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Stake_orderBy
+    orderDirection: OrderDirection
+    where: Stake_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Stake!]!
+  redeem(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Redeem
+  redeems(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Redeem_orderBy
+    orderDirection: OrderDirection
+    where: Redeem_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Redeem!]!
+  claimReward(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): ClaimReward
+  claimRewards(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: ClaimReward_orderBy
+    orderDirection: OrderDirection
+    where: ClaimReward_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [ClaimReward!]!
+  transfer(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): Transfer
+  transfers(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: Transfer_orderBy
+    orderDirection: OrderDirection
+    where: Transfer_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [Transfer!]!
+  stakePosition(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): StakePosition
+  stakePositions(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakePosition_orderBy
+    orderDirection: OrderDirection
+    where: StakePosition_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [StakePosition!]!
+  stakeToken(
+    id: ID!
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): StakeToken
+  stakeTokens(
+    skip: Int = 0
+    first: Int = 100
+    orderBy: StakeToken_orderBy
+    orderDirection: OrderDirection
+    where: StakeToken_filter
+
+    """
+    The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted.
+    """
+    block: Block_height
+  ): [StakeToken!]!
+
+  """
+  Access to subgraph metadata
+  """
+  _meta(block: Block_height): _Meta_
+}
+
+type Transfer {
+  """
+  Tx hash
+  """
+  id: ID!
+  stakeToken: StakeToken!
+  from: String!
+  to: String!
+  amount: BigInt!
+  stakePosition: StakePosition!
+}
+
+input Transfer_filter {
+  id: ID
+  id_not: ID
+  id_gt: ID
+  id_lt: ID
+  id_gte: ID
+  id_lte: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  stakeToken: String
+  stakeToken_not: String
+  stakeToken_gt: String
+  stakeToken_lt: String
+  stakeToken_gte: String
+  stakeToken_lte: String
+  stakeToken_in: [String!]
+  stakeToken_not_in: [String!]
+  stakeToken_contains: String
+  stakeToken_not_contains: String
+  stakeToken_starts_with: String
+  stakeToken_not_starts_with: String
+  stakeToken_ends_with: String
+  stakeToken_not_ends_with: String
+  from: String
+  from_not: String
+  from_gt: String
+  from_lt: String
+  from_gte: String
+  from_lte: String
+  from_in: [String!]
+  from_not_in: [String!]
+  from_contains: String
+  from_not_contains: String
+  from_starts_with: String
+  from_not_starts_with: String
+  from_ends_with: String
+  from_not_ends_with: String
+  to: String
+  to_not: String
+  to_gt: String
+  to_lt: String
+  to_gte: String
+  to_lte: String
+  to_in: [String!]
+  to_not_in: [String!]
+  to_contains: String
+  to_not_contains: String
+  to_starts_with: String
+  to_not_starts_with: String
+  to_ends_with: String
+  to_not_ends_with: String
+  amount: BigInt
+  amount_not: BigInt
+  amount_gt: BigInt
+  amount_lt: BigInt
+  amount_gte: BigInt
+  amount_lte: BigInt
+  amount_in: [BigInt!]
+  amount_not_in: [BigInt!]
+  stakePosition: String
+  stakePosition_not: String
+  stakePosition_gt: String
+  stakePosition_lt: String
+  stakePosition_gte: String
+  stakePosition_lte: String
+  stakePosition_in: [String!]
+  stakePosition_not_in: [String!]
+  stakePosition_contains: String
+  stakePosition_not_contains: String
+  stakePosition_starts_with: String
+  stakePosition_not_starts_with: String
+  stakePosition_ends_with: String
+  stakePosition_not_ends_with: String
+}
+
+enum Transfer_orderBy {
+  id
+  stakeToken
+  from
+  to
+  amount
+  stakePosition
+}
+
+type _Block_ {
+  """
+  The hash of the block
+  """
+  hash: Bytes
+
+  """
+  The block number
+  """
+  number: Int!
+}
+
+"""
+The type for the top-level _meta field
+"""
+type _Meta_ {
+  """
+  Information about a specific subgraph block. The hash of the block
+  will be null if the _meta field has a block constraint that asks for
+  a block number. It will be filled if the _meta field has no block constraint
+  and therefore asks for the latest  block
+  """
+  block: _Block_!
+
+  """
+  The deployment ID
+  """
+  deployment: String!
+
+  """
+  If `true`, the subgraph encountered indexing errors at some past block
+  """
+  hasIndexingErrors: Boolean!
+}
+
+enum _SubgraphErrorPolicy_ {
+  """
+  Data will be returned even if the subgraph has indexing errors
+  """
+  allow
+
+  """
+  If the subgraph has indexing errors, data will be omitted. The default.
+  """
+  deny
+}
