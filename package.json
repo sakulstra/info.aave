@@ -53,7 +53,7 @@
     "ethers": "5.1.0",
     "graphql": "15.5.0",
     "lodash": "4.17.21",
-    "mongodb": "3.6.6",
+    "mongodb": "3.6.8",
     "node-cron": "3.0.0",
     "prisma": "2.23.0",
     "react": "0.0.0-experimental-3310209d0",
