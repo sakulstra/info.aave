@@ -47,6 +47,7 @@
     "@material-ui/icons": "5.0.0-alpha.28",
     "@material-ui/lab": "5.0.0-alpha.29",
     "@prisma/client": "2.23.0",
+    "@sakulstra/aave-rs": "0.0.2",
     "blitz": "0.35.0",
     "clsx": "1.1.1",
     "dayjs": "1.10.4",

@@ -9,13 +9,8 @@ import { getFormattedUsers } from "./updateUsers"
 import * as z from "zod"
 
 async function updateUsers(gqlSdk: typeof gqlSdkV2, poolId: string) {
-  const MIN_HF = 1.2
+  const MIN_HF = 1.5
   const { db } = await getMongoClient()
-  try {
-    await fetchNextUserReserves(addresses.ADDRESS_PROVIDERS.MATIC.AAVE, gqlSdk)
-  } catch (e) {
-    console.log("matic fetch failed")
-  }
   const userIds = await prisma.aaveUser.findMany({
     where: { poolId: poolId, healthFactor: { lte: MIN_HF } },
     select: { userId: true, poolId: true },
@@ -45,7 +40,10 @@ async function updateUsers(gqlSdk: typeof gqlSdkV2, poolId: string) {
     .toArray()
   console.log(`USERS BELOW ${MIN_HF}:`, users.length)
   const { reserves, usdPriceEth } = await getOnChainReserves(poolId)
-  return getFormattedUsers(poolId, users, usdPriceEth, reserves)
+  console.time("formatting")
+  const formattedUsers = getFormattedUsers(poolId, users, usdPriceEth, reserves)
+  console.timeEnd("formatting")
+  return formattedUsers
 }
 
 export const LiquidatableUsers = z.object({

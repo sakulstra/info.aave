@@ -2,30 +2,56 @@ import {
   v2,
   valueToBigNumber,
   valueToZDBigNumber,
-  calculateHealthFactorFromBalances,
-  getEthAndUsdBalance,
   BigNumberValue,
   BigNumber,
-  USD_DECIMALS,
   getCompoundedStableBalance,
-  pow10,
-  rayToWad,
-  rayMul,
   wadToRay,
+  HALF_RAY,
+  RAY,
+  WAD_RAY_RATIO,
   calculateCompoundedInterest,
   getReserveNormalizedIncome,
+  pow10,
+  LTV_PRECISION,
 } from "@aave/protocol-js"
+// import {} from "@sakulstra/aave-rs"
 import { Reserve } from "db"
 
+const halfRatio = WAD_RAY_RATIO.div(2)
+
+export function rayMul(a: BigNumber, b: BigNumberValue): BigNumber {
+  return HALF_RAY.plus(a.multipliedBy(b)).div(RAY)
+}
+
+export function rayToWad(a: BigNumberValue): BigNumber {
+  return halfRatio.plus(a).div(WAD_RAY_RATIO)
+}
+
+export function normalize(n: BigNumber, decimals: number): BigNumber {
+  return n.dividedBy(pow10(decimals))
+}
+
+export function calculateHealthFactorFromBalances(
+  collateralBalanceETH: BigNumber,
+  borrowBalanceETH: BigNumber,
+  currentLiquidationThreshold: BigNumber
+): BigNumber {
+  if (borrowBalanceETH.eq(0)) {
+    return valueToBigNumber("-1") // invalid number
+  }
+  return collateralBalanceETH
+    .multipliedBy(currentLiquidationThreshold)
+    .dividedBy(pow10(LTV_PRECISION))
+    .div(borrowBalanceETH)
+}
+
 export function getEthBalance(
-  balance: BigNumberValue,
+  balance: BigNumber,
   priceInEth: BigNumberValue,
   decimals: number
-) {
-  const balanceInEth = valueToZDBigNumber(balance)
-    .multipliedBy(priceInEth)
-    .dividedBy(pow10(decimals))
-  return balanceInEth.toString()
+): BigNumber {
+  const balanceInEth = normalize(balance.multipliedBy(priceInEth), decimals)
+  return balanceInEth
 }
 
 export function getCumulatedInterest(
@@ -75,34 +101,34 @@ export function computeUserReserveData(
   const underlyingBalance = getLinearBalance(
     userReserve.scaledATokenBalance,
     poolReserve.reserveNormalizedIncome
-  ).toString()
+  )
+
   const underlyingBalanceETH = getEthBalance(underlyingBalance, priceInEth, decimals)
 
   const variableBorrows = getCompoundedBalance(
     userReserve.scaledVariableDebt,
     poolReserve.cumulatedInterest
-  ).toString()
+  )
 
   const variableBorrowsETH = getEthBalance(variableBorrows, priceInEth, decimals)
-
   const stableBorrows = getCompoundedStableBalance(
     userReserve.principalStableDebt,
     userReserve.stableBorrowRate,
     userReserve.stableBorrowLastUpdateTimestamp,
     currentTimestamp
-  ).toString()
+  )
 
   const stableBorrowsETH = getEthBalance(stableBorrows, priceInEth, decimals)
 
   return {
     ...userReserve,
-    underlyingBalance,
+    underlyingBalance: underlyingBalance.toString(),
     underlyingBalanceETH,
-    variableBorrows,
+    variableBorrows: variableBorrows.toString(),
     variableBorrowsETH,
-    stableBorrows,
+    stableBorrows: stableBorrows.toString(),
     stableBorrowsETH,
-    totalBorrows: valueToZDBigNumber(variableBorrows).plus(stableBorrows).toString(),
+    totalBorrows: variableBorrows.plus(stableBorrows).toString(),
     totalBorrowsETH: valueToZDBigNumber(variableBorrowsETH).plus(stableBorrowsETH).toString(),
   }
 }
@@ -140,12 +166,10 @@ export function computeRawUserSummaryDataOptimized(
     if (poolReserve.usageAsCollateralEnabled && userReserve.usageAsCollateralEnabledOnUser) {
       totalCollateralETH = totalCollateralETH.plus(computedUserReserve.underlyingBalanceETH)
       currentLtv = currentLtv.plus(
-        valueToBigNumber(computedUserReserve.underlyingBalanceETH).multipliedBy(
-          poolReserve.baseLTVasCollateral
-        )
+        computedUserReserve.underlyingBalanceETH.multipliedBy(poolReserve.baseLTVasCollateral)
       )
       currentLiquidationThreshold = currentLiquidationThreshold.plus(
-        valueToBigNumber(computedUserReserve.underlyingBalanceETH).multipliedBy(
+        computedUserReserve.underlyingBalanceETH.multipliedBy(
           poolReserve.reserveLiquidationThreshold
         )
       )
@@ -183,6 +207,7 @@ export function computeRawUserSummaryDataOptimized(
 export const formatReserves = (reserves: Reserve[], now: number) => {
   return reserves.map((r) => ({
     ...r,
+    decimals: Number(r.decimals),
     aTokenAddress: r.aTokenId,
     stableDebtTokenAddress: r.sTokenId,
     variableDebtTokenAddress: r.vTokenId,
