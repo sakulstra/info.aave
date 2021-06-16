@@ -1,6 +1,6 @@
 import React from "react"
 import { Document, Html, Main, BlitzScript, DocumentContext, DocumentHead } from "blitz"
-import { ServerStyleSheets } from "@material-ui/core/styles"
+import { ServerStyleSheets } from "@material-ui/styles"
 import createEmotionServer from "@emotion/server/create-instance"
 import { cache } from "./_app"
 import theme from "app/core/layouts/theme"

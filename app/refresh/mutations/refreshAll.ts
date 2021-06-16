@@ -1,9 +1,7 @@
-import { addresses, CHAINS } from "app/core/constants"
+import { addresses } from "app/core/constants"
 import { updateUsers } from "app/users/mutations/updateUsers"
 import { resolver } from "blitz"
-import { getMongoClient } from "db/mongo"
 import { gqlSdkMatic, gqlSdkV2 } from "integrations/subgraph"
-import { fetchReserveParamsHistoryItems } from "../_updateReserveParamsHistoryItems"
 import { updateReserves } from "../_updateReserves"
 import {
   fetchNextBorrows,
@@ -29,6 +27,7 @@ export async function refreshAll() {
           fetchNextRepays(poolId, gqlSdkV2),
           fetchNextWithdrawals(poolId, gqlSdkV2),
           fetchNextFlashLoans(poolId, gqlSdkV2),
+          fetchNextUserReserves(poolId, gqlSdkV2),
         ]
       })
       .flat(),
@@ -41,6 +40,7 @@ export async function refreshAll() {
           fetchNextRepays(poolId, gqlSdkMatic),
           fetchNextWithdrawals(poolId, gqlSdkMatic),
           fetchNextFlashLoans(poolId, gqlSdkMatic),
+          fetchNextUserReserves(poolId, gqlSdkMatic),
         ]
       })
       .flat(),
@@ -48,21 +48,13 @@ export async function refreshAll() {
     // fetchReserveParamsHistoryItems(CHAINS.MATIC, gqlSdkMatic),
   ])
   console.log("txnUpdates", promises)
-  await Promise.all([
-    ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) =>
-      fetchNextUserReserves(poolId, gqlSdkV2)
-    ),
-    ...Object.values(addresses.ADDRESS_PROVIDERS.MATIC).map((poolId) =>
-      fetchNextUserReserves(poolId, gqlSdkMatic)
-    ),
-  ])
   for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]) {
     //await fetchNextUserReserves(poolId, gqlSdkMatic)
-    await updateUsers(gqlSdkMatic, poolId)
+    await updateUsers(poolId)
   }
   for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]) {
     //await fetchNextUserReserves(poolId, gqlSdkV2)
-    await updateUsers(gqlSdkV2, poolId)
+    await updateUsers(poolId)
   }
 }
 

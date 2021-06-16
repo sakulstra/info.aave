@@ -3,7 +3,7 @@ import TableHead from "@material-ui/core/TableHead"
 import TableRow from "@material-ui/core/TableRow"
 import TableSortLabel from "@material-ui/core/TableSortLabel"
 import TableContainer from "@material-ui/core/TableContainer"
-import { Box, makeStyles, Paper, Table, TableBody, Toolbar, Typography } from "@material-ui/core"
+import { Paper, Table, TableBody, Toolbar, Typography, styled } from "@material-ui/core"
 import Link from "app/core/components/Link"
 import { useRouter } from "blitz"
 import { Fragment, ReactNode } from "react"
@@ -25,7 +25,7 @@ type EnhancedTableHeadProps = {
   detailView?: boolean
 }
 
-const useHeaderStyles = makeStyles((theme) => ({
+const CustomHeader = styled("span")(({ theme }) => ({
   visuallyHidden: {
     border: 0,
     clip: "rect(0 0 0 0)",
@@ -40,7 +40,6 @@ const useHeaderStyles = makeStyles((theme) => ({
 }))
 
 export function EnhancedTableHead({ cells, disableSorting, detailView }: EnhancedTableHeadProps) {
-  const classes = useHeaderStyles()
   const { push, query } = useRouter()
   const { order, orderBy } = query as { order: "asc" | "desc"; orderBy: string }
   const createSortHandler = (property) => (event) => {
@@ -69,9 +68,9 @@ export function EnhancedTableHead({ cells, disableSorting, detailView }: Enhance
                 >
                   {headCell.label}
                   {orderBy === headCell.id ? (
-                    <span className={classes.visuallyHidden}>
+                    <CustomHeader>
                       {order === "desc" ? "sorted descending" : "sorted ascending"}
-                    </span>
+                    </CustomHeader>
                   ) : null}
                 </TableSortLabel>
               ) : (

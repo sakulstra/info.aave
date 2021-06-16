@@ -1,6 +1,6 @@
 import { useQuery, useRouter } from "blitz"
 import uniqBy from "lodash/uniqBy"
-import { makeStyles } from "@material-ui/core/styles"
+import { styled } from "@material-ui/styles"
 import InputLabel from "@material-ui/core/InputLabel"
 import MenuItem from "@material-ui/core/MenuItem"
 import FormControl from "@material-ui/core/FormControl"
@@ -8,11 +8,9 @@ import Select from "@material-ui/core/Select"
 import getReserveSymbols from "app/reserves/queries/getReserveSymbols"
 import { useEffect } from "react"
 
-const useStyles = makeStyles((theme) => ({
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
+const CustomFormControl = styled(FormControl)(({ theme }) => ({
+  margin: theme.spacing(1),
+  minWidth: 120,
 }))
 
 type ReserveFilterProps = {
@@ -21,7 +19,6 @@ type ReserveFilterProps = {
 }
 
 export function ReserveFilter({ fieldName = "reserveId", label = "Reserve" }: ReserveFilterProps) {
-  const classes = useStyles()
   const [data] = useQuery(getReserveSymbols, {}, { cacheTime: 100000 })
   const { push, query } = useRouter()
 
@@ -52,7 +49,7 @@ export function ReserveFilter({ fieldName = "reserveId", label = "Reserve" }: Re
   }, [currentAsset])
 
   return (
-    <FormControl variant="outlined" className={classes.formControl}>
+    <CustomFormControl variant="outlined">
       <InputLabel id="reserves-label">{label}</InputLabel>
       <Select
         labelId="reserves-label"
@@ -70,6 +67,6 @@ export function ReserveFilter({ fieldName = "reserveId", label = "Reserve" }: Re
           </MenuItem>
         ))}
       </Select>
-    </FormControl>
+    </CustomFormControl>
   )
 }
