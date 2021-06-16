@@ -8,7 +8,7 @@ import Select from "@material-ui/core/Select"
 import getReserveSymbols from "app/reserves/queries/getReserveSymbols"
 import { useEffect } from "react"
 
-const CustomFormControl = styled(FormControl)(({ theme }) => ({
+const CustomFormControl = styled(FormControl)(({ theme }: any) => ({
   margin: theme.spacing(1),
   minWidth: 120,
 }))

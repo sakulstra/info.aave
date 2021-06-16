@@ -65,7 +65,7 @@ export function WithdrawalsTable({
       <EnhancedTable groups={groups} cells={cells} title="Withdrawals" {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}

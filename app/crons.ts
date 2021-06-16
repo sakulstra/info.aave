@@ -4,7 +4,9 @@ import cron from "node-cron"
 // import "./bot/main"
 import { refreshAll } from "./refresh/mutations/refreshAll"
 
-cron.schedule("*/10 * * * *", () => {
+refreshAll()
+
+cron.schedule("*/30 * * * *", () => {
   console.log("refresh")
   refreshAll()
 })

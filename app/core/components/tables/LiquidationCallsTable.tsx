@@ -89,7 +89,7 @@ export function LiquidationCallsTable({
       <EnhancedTable groups={groups} cells={cells} title="Liquidations" {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}
