@@ -17,6 +17,7 @@ import {
 // import {} from "@sakulstra/aave-rs"
 import { Reserve } from "db"
 
+const minusOne = valueToBigNumber("-1")
 const halfRatio = WAD_RAY_RATIO.div(2)
 
 export function rayMul(a: BigNumber, b: BigNumberValue): BigNumber {
@@ -37,9 +38,9 @@ export function calculateHealthFactorFromBalances(
   currentLiquidationThreshold: BigNumber
 ): BigNumber {
   if (borrowBalanceETH.eq(0)) {
-    return valueToBigNumber("-1") // invalid number
+    return minusOne
   }
-  return collateralBalanceETH
+  return valueToBigNumber(collateralBalanceETH)
     .multipliedBy(currentLiquidationThreshold)
     .dividedBy(pow10(LTV_PRECISION))
     .div(borrowBalanceETH)
@@ -129,7 +130,7 @@ export function computeUserReserveData(
     stableBorrows: stableBorrows.toString(),
     stableBorrowsETH,
     totalBorrows: variableBorrows.plus(stableBorrows).toString(),
-    totalBorrowsETH: valueToZDBigNumber(variableBorrowsETH).plus(stableBorrowsETH).toString(),
+    totalBorrowsETH: variableBorrowsETH.plus(stableBorrowsETH).toString(),
   }
 }
 
@@ -142,7 +143,6 @@ export function computeRawUserSummaryDataOptimized(
   },
   rawUserReserves: v2.UserReserveData[],
   userId: string,
-  usdPriceEth: BigNumberValue,
   currentTimestamp: number
 ) {
   let totalLiquidityETH = valueToZDBigNumber("0")

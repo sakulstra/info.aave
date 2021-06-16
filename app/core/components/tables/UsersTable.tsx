@@ -75,7 +75,7 @@ export function UsersTable({ where, orderBy, ...rest }: AaveUsersTableProps) {
       <EnhancedTable groups={groups} cells={cells} title={"AaveUsers"} {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}

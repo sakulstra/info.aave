@@ -71,7 +71,7 @@ export function FlashLoansTable({
       <EnhancedTable groups={groups} cells={cells} title="Flash loans" {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}

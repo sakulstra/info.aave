@@ -91,7 +91,7 @@ export function FormattedUserReservesTable({
       <EnhancedTable groups={groups} cells={cells} {...rest} title="User Reserves" />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}

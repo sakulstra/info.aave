@@ -8,41 +8,44 @@ import { getMongoClient } from "db/mongo"
 import { getFormattedUsers } from "./updateUsers"
 import * as z from "zod"
 
-async function updateUsers(gqlSdk: typeof gqlSdkV2, poolId: string) {
-  const MIN_HF = 1.5
+async function updateUsers(poolId: string) {
+  const MIN_HF = 1.4
   const { db } = await getMongoClient()
   const userIds = await prisma.aaveUser.findMany({
-    where: { poolId: poolId, healthFactor: { lte: MIN_HF } },
-    select: { userId: true, poolId: true },
+    where: { poolId, healthFactor: { lte: MIN_HF }, totalBorrowsETH: { gte: 0.00001 } },
+    select: { userId: true },
   })
-  const users = await db
-    .collection("UserReserve")
-    .aggregate([
-      {
-        $match: {
-          userId: { $in: userIds.map((u) => u.userId) },
-          poolId,
-          $or: [
-            { currentTotalDebt: { $ne: "0" } },
-            { scaledATokenBalance: { $ne: "0" }, usageAsCollateralEnabledOnUser: true },
-          ],
-        },
-      },
-      {
-        $group: {
-          _id: "$userId",
-          reserves: {
-            $push: "$$ROOT",
+  const [users, { reserves }] = await Promise.all([
+    db
+      .collection("UserReserve")
+      .aggregate(
+        [
+          {
+            $match: {
+              userId: { $in: userIds.map((u) => u.userId) },
+              poolId,
+              $or: [
+                { currentTotalDebt: { $ne: "0" } },
+                { scaledATokenBalance: { $ne: "0" }, usageAsCollateralEnabledOnUser: true },
+              ],
+            },
           },
-        },
-      },
-    ])
-    .toArray()
+          {
+            $group: {
+              _id: "$userId",
+              reserves: {
+                $push: "$$ROOT",
+              },
+            },
+          },
+        ],
+        { allowDiskUse: true }
+      )
+      .toArray(),
+    getOnChainReserves(poolId),
+  ])
   console.log(`USERS BELOW ${MIN_HF}:`, users.length)
-  const { reserves, usdPriceEth } = await getOnChainReserves(poolId)
-  console.time("formatting")
-  const formattedUsers = getFormattedUsers(poolId, users, usdPriceEth, reserves)
-  console.timeEnd("formatting")
+  const formattedUsers = getFormattedUsers(poolId, users, reserves)
   return formattedUsers
 }
 
@@ -50,17 +53,21 @@ export const LiquidatableUsers = z.object({
   poolId: z.string(),
 })
 
-export default resolver.pipe(resolver.zod(LiquidatableUsers), async ({ poolId }) => {
+export async function liquidatableByPoolId(poolId: string) {
   if ((Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]).includes(poolId)) {
-    await fetchNextUserReserves(poolId, gqlSdkMatic)
-    return (await updateUsers(gqlSdkMatic, poolId)).filter(
-      (u) => u.healthFactor !== -1 && u.healthFactor < 1
+    await fetchNextUserReserves(poolId, gqlSdkMatic).catch((e) =>
+      console.log("error fetching data")
+    )
+    return (await updateUsers(poolId)).filter(
+      (u) => u.healthFactor !== -1 && u.healthFactor < 1.000001
     )
   }
   if ((Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]).includes(poolId)) {
-    await fetchNextUserReserves(poolId, gqlSdkV2)
-    return (await updateUsers(gqlSdkV2, poolId)).filter(
-      (u) => u.healthFactor !== -1 && u.healthFactor < 1
-    )
+    await fetchNextUserReserves(poolId, gqlSdkV2).catch((e) => console.log("error fetching data"))
+    return (await updateUsers(poolId)).filter((u) => u.healthFactor !== -1 && u.healthFactor < 1)
   }
+}
+
+export default resolver.pipe(resolver.zod(LiquidatableUsers), async ({ poolId }) => {
+  return await liquidatableByPoolId(poolId)
 })

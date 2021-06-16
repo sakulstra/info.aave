@@ -1,6 +1,5 @@
 import { resolver } from "blitz"
 import * as z from "zod"
-import { gqlSdkV2, gqlSdkMatic } from "integrations/subgraph"
 import { addresses } from "app/core/constants"
 import { getMongoClient } from "db/mongo"
 import { AaveUser, Reserve, UserReserve } from "db"
@@ -12,7 +11,6 @@ import { computeRawUserSummaryDataOptimized, formatReserves } from "app/core/uti
 export function getUser(
   reserveMap: { [key: string]: any },
   userReserves: UserReserve[],
-  usdPriceEth: string,
   userId: string,
   poolId: string,
   now: number
@@ -24,7 +22,6 @@ export function getUser(
       reserve: reserveMap[`${userReserve.reserveId}${userReserve.poolId}`],
     })),
     userId,
-    usdPriceEth,
     now
   )
   const record: Omit<AaveUser, "id"> & { reservesData: v2.ComputedUserReserve[] } = {
@@ -52,7 +49,6 @@ export function getUser(
 export function getFormattedUsers(
   poolId: string,
   users: { _id: string; reserves: UserReserve[] }[],
-  usdPriceEth: string,
   reserves: Reserve[]
 ) {
   const now = dayjs().unix()
@@ -63,17 +59,16 @@ export function getFormattedUsers(
     return acc
   }, {} as { [key: string]: Reserve })
   return users.map((user) => {
-    return getUser(reserveMap, user.reserves, usdPriceEth, user._id, poolId, now)
+    return getUser(reserveMap, user.reserves, user._id, poolId, now)
   })
 }
 
 export async function refreshUsers(
   poolId: string,
   _users: { _id: string; reserves: UserReserve[] }[],
-  usdPriceEth: string,
   reserves: Reserve[]
 ) {
-  const users = await getFormattedUsers(poolId, _users, usdPriceEth, reserves)
+  const users = getFormattedUsers(poolId, _users, reserves)
   const { db } = await getMongoClient()
   await db.collection("AaveUser").bulkWrite(
     users.map(({ reservesData, ...user }) => ({
@@ -88,31 +83,34 @@ export async function refreshUsers(
   return users
 }
 
-export async function updateUsers(gqlSdk: typeof gqlSdkV2, poolId: string) {
+export async function updateUsers(poolId: string) {
   const { db } = await getMongoClient()
-  const [{ usdPriceEth, reserves }, users] = await Promise.all([
+  const [{ reserves }, users] = await Promise.all([
     getOnChainReserves(poolId),
     db
       .collection("UserReserve")
-      .aggregate([
-        {
-          $match: {
-            poolId,
-          },
-        },
-        {
-          $group: {
-            _id: "$userId",
-            reserves: {
-              $push: "$$ROOT",
+      .aggregate(
+        [
+          {
+            $match: {
+              poolId,
             },
           },
-        },
-      ])
+          {
+            $group: {
+              _id: "$userId",
+              reserves: {
+                $push: "$$ROOT",
+              },
+            },
+          },
+        ],
+        { allowDiskUse: true }
+      )
       .toArray(),
   ])
   console.log("USERS", users.length)
-  await refreshUsers(poolId, users, usdPriceEth, reserves)
+  refreshUsers(poolId, users, reserves)
 }
 
 export const UpdateUsers = z.object({
@@ -122,10 +120,10 @@ export const UpdateUsers = z.object({
 export default resolver.pipe(resolver.zod(UpdateUsers), async ({ poolId }) => {
   if ((Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]).includes(poolId)) {
     //await fetchNextUserReserves(poolId, gqlSdkMatic)
-    return await updateUsers(gqlSdkMatic, poolId)
+    return await updateUsers(poolId)
   }
   if ((Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]).includes(poolId)) {
     //await fetchNextUserReserves(poolId, gqlSdkV2)
-    return await updateUsers(gqlSdkV2, poolId)
+    return await updateUsers(poolId)
   }
 })

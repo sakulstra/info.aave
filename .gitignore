@@ -54,3 +54,4 @@ lib-cov
 .vercel
 
 docker-compose.yml
+app/bot

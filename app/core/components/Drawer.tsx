@@ -6,13 +6,9 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import TwitterIcon from "@material-ui/icons/Twitter"
-import { makeStyles } from "@material-ui/core/styles"
 import Link from "app/core/components/Link"
 import { useRouter } from "blitz"
-
-const useStyles = makeStyles((theme) => ({
-  toolbar: theme.mixins.toolbar,
-}))
+import Toolbar from "@material-ui/core/Toolbar"
 
 const LINKS = [
   { href: "/", icon: InboxIcon, text: "Dashboard" },
@@ -32,11 +28,10 @@ type ResponsiveDrawerProps = {
 }
 
 export function ResponsiveDrawer({ handleClose }: ResponsiveDrawerProps) {
-  const classes = useStyles()
   const { route } = useRouter()
   return (
     <div>
-      <div className={classes.toolbar} />
+      <Toolbar />
       <Divider />
       <List>
         {LINKS.map((link) => (

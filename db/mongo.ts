@@ -15,6 +15,10 @@ export async function getMongoClient() {
       .createIndex({ userId: 1, poolId: 1 }, { unique: true, background: true })
     mongoClient
       .db("aave")
+      .collection("AaveUser")
+      .createIndex({ healthFactor: 1, poolId: 1 }, { background: true })
+    mongoClient
+      .db("aave")
       .collection("UserReserve")
       .createIndex({ userId: 1, poolId: 1, reserveId: 1 }, { unique: true, background: true })
     mongoClient.db("aave").collection("UserReserve").createIndex({ currentTotalDebt: 1 })

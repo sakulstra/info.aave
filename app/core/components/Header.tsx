@@ -1,21 +1,18 @@
-import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { useTheme } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import Typography from "@material-ui/core/Typography"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
-import Hidden from "@material-ui/core/Hidden"
 import Drawer from "@material-ui/core/Drawer"
 import { ResponsiveDrawer } from "./Drawer"
 import { useState } from "react"
-import { Container } from "@material-ui/core"
+import { Box, Container } from "@material-ui/core"
+import { makeStyles } from "@material-ui/styles"
 
 const drawerWidth = 240
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
+const useStyles = makeStyles((theme: any) => ({
   appBar: {
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -60,7 +57,7 @@ export function Header({ children }) {
   }
 
   return (
-    <div className={classes.root}>
+    <Box sx={{ display: "flex" }}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -78,33 +75,31 @@ export function Header({ children }) {
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
-        <Hidden smUp implementation="css">
-          <Drawer
-            variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            <ResponsiveDrawer handleClose={handleDrawerToggle} />
-          </Drawer>
-        </Hidden>
-        <Hidden smDown implementation="css">
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            open
-          >
-            <ResponsiveDrawer />
-          </Drawer>
-        </Hidden>
+        <Drawer
+          sx={{ display: { xs: "block", md: "none" } }}
+          variant="temporary"
+          anchor={theme.direction === "rtl" ? "right" : "left"}
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+        >
+          <ResponsiveDrawer handleClose={handleDrawerToggle} />
+        </Drawer>
+        <Drawer
+          sx={{ display: { md: "block", xs: "none" } }}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          variant="permanent"
+          open
+        >
+          <ResponsiveDrawer />
+        </Drawer>
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
@@ -112,6 +107,6 @@ export function Header({ children }) {
           {children}
         </Container>
       </main>
-    </div>
+    </Box>
   )
 }

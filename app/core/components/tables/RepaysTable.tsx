@@ -61,7 +61,7 @@ export function RepaysTable({ where, orderBy = { timestamp: "desc" }, ...rest }:
       <EnhancedTable groups={groups} cells={cells} title="Repays" {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
-        pending={isFetching}
+        loading={isFetching}
         onClick={() => fetchNextPage()}
         variant="outlined"
         disabled={!hasNextPage || !!isFetchingNextPage}

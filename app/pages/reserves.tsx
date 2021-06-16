@@ -1,7 +1,7 @@
 import { BlitzPage, useQuery, useRouterQuery } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getReserves from "app/reserves/queries/getReserves"
-import { makeStyles, Paper, Table, TableBody } from "@material-ui/core"
+import { Paper, styled, Table, TableBody } from "@material-ui/core"
 import { CellConfig, EnhancedTableHead, EnhancedTableRow } from "app/core/components/Table"
 import { PoolFilter, POOL_NAME_MAP } from "app/core/components/PoolFilter"
 
@@ -79,15 +79,14 @@ const cells: CellConfig<QueryResult["reserves"][0]>[] = [
   },
 ]
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
+const CustomPaper = styled(Paper)(({ theme }) => ({
+  root: {
     width: "100%",
     marginBottom: theme.spacing(2),
   },
 }))
 
 const Reserves: BlitzPage = () => {
-  const classes = useStyles()
   const { order = "desc", orderBy = "liquidityRate", poolId } = useRouterQuery() as {
     order: "asc" | "desc"
     orderBy: string
@@ -97,7 +96,7 @@ const Reserves: BlitzPage = () => {
   return (
     <div>
       <PoolFilter />
-      <Paper className={classes.paper}>
+      <CustomPaper>
         <Table
           // className={classes.table}
           aria-labelledby="tableTitle"
@@ -121,7 +120,7 @@ const Reserves: BlitzPage = () => {
               ))}
           </TableBody>
         </Table>
-      </Paper>
+      </CustomPaper>
     </div>
   )
 }
