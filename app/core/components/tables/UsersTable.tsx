@@ -1,12 +1,12 @@
 import { useInfiniteQuery } from "blitz"
 import getUsers from "app/users/queries/getUsers"
 import LoadingButton from "@material-ui/lab/LoadingButton"
-import { AaveUser, Prisma, Reserve as ReserveType } from "@prisma/client"
+import { User, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
 import { IconButton, Paper } from "@material-ui/core"
 import Person from "@material-ui/icons/Person"
 
-const cells: CellConfig<AaveUser & { reserve: ReserveType }>[] = [
+const cells: CellConfig<User & { reserve: ReserveType }>[] = [
   {
     id: "lastUpdateTimestamp",
     sortable: true,
@@ -53,12 +53,12 @@ const cells: CellConfig<AaveUser & { reserve: ReserveType }>[] = [
   },
 ]
 
-type AaveUsersTableProps = {
-  where?: Prisma.AaveUserWhereInput
-  orderBy?: Prisma.AaveUserOrderByInput
+type UsersTableProps = {
+  where?: Prisma.UserWhereInput
+  orderBy?: Prisma.UserOrderByInput
 } & Partial<EnhancedTableProps>
 
-export function UsersTable({ where, orderBy, ...rest }: AaveUsersTableProps) {
+export function UsersTable({ where, orderBy, ...rest }: UsersTableProps) {
   const [groups, { isFetching, isFetchingNextPage, fetchNextPage, hasNextPage }] = useInfiniteQuery(
     getUsers,
     (page = { take: 30, skip: 0 }) => ({
@@ -72,7 +72,7 @@ export function UsersTable({ where, orderBy, ...rest }: AaveUsersTableProps) {
   )
   return (
     <Paper sx={{ marginBottom: 2 }}>
-      <EnhancedTable groups={groups} cells={cells} title={"AaveUsers"} {...rest} />
+      <EnhancedTable groups={groups} cells={cells} title={"Users"} {...rest} />
       <LoadingButton
         sx={{ mx: 2, my: 2 }}
         loading={isFetching}

@@ -1,11 +1,11 @@
 import { resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetAaveUserInput
-  extends Pick<Prisma.AaveUserFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
+interface GetUserInput
+  extends Pick<Prisma.UserFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
-export default resolver.pipe(async ({ where, orderBy }: GetAaveUserInput) => {
+export default resolver.pipe(async ({ where, orderBy }: GetUserInput) => {
   return {
-    items: await db.aaveUser.findMany({ where, orderBy }),
+    items: await db.user.findMany({ where, orderBy }),
   }
 })

@@ -9,7 +9,7 @@ import { Prisma } from "@prisma/client"
 import { MinMaxInput } from "app/core/components/MinMaxInput"
 
 type UserStatsProps = {
-  where?: Prisma.AaveUserWhereInput
+  where?: Prisma.UserWhereInput
 }
 
 function UserStats({ where }: UserStatsProps) {

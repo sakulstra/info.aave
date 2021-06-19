@@ -11,7 +11,7 @@ import { z } from "zod"
 async function updateUsers(poolId: string) {
   const MIN_HF = 1.4
   const { db } = await getMongoClient()
-  const userIds = await prisma.aaveUser.findMany({
+  const userIds = await prisma.user.findMany({
     where: { poolId, healthFactor: { lte: MIN_HF }, totalBorrowsETH: { gte: 0.00001 } },
     select: { userId: true },
   })

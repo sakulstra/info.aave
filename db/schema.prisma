@@ -39,7 +39,7 @@ model UserReserve {
   @@index([currentTotalDebt])
 }
 
-model AaveUser {
+model User {
   id                          String @id @default(dbgenerated()) @map("_id") @db.ObjectId
   userId                      String
   poolId                      String
@@ -58,26 +58,6 @@ model AaveUser {
   @@unique([userId, poolId])
   @@index([lastUpdateTimestamp])
   @@index([healthFactor])
-}
-
-model FormattedUserReserve {
-  id                              String  @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  userId                          String
-  poolId                          String
-  reserve                         Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
-  reserveId                       String
-  principalStableDebt             Float
-  scaledATokenBalance             Float
-  scaledVariableDebt              Float
-  currentTotalDebt                Float
-  stableBorrowRate                Float
-  variableBorrowIndex             String
-  lastUpdateTimestamp             Int
-  stableBorrowLastUpdateTimestamp Int
-  usageAsCollateralEnabledOnUser  Boolean
-
-  @@unique([userId, poolId, reserveId])
-  @@index([lastUpdateTimestamp])
 }
 
 model Reserve {

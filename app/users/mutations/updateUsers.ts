@@ -2,7 +2,7 @@ import { resolver } from "blitz"
 import { z } from "zod"
 import { addresses } from "app/core/constants"
 import { getMongoClient } from "db/mongo"
-import { AaveUser, Reserve, UserReserve } from "db"
+import { User, Reserve, UserReserve } from "db"
 import { normalize, v2 } from "@aave/protocol-js"
 import dayjs from "dayjs"
 import { getOnChainReserves } from "integrations/conracts/poolDataProvider"
@@ -24,7 +24,7 @@ export function getUser(
     userId,
     now
   )
-  const record: Omit<AaveUser, "id"> & { reservesData: v2.ComputedUserReserve[] } = {
+  const record: Omit<User, "id"> & { reservesData: v2.ComputedUserReserve[] } = {
     userId,
     poolId,
     healthFactor: Number(result.healthFactor),
@@ -70,7 +70,7 @@ export async function refreshUsers(
 ) {
   const users = getFormattedUsers(poolId, _users, reserves)
   const { db } = await getMongoClient()
-  await db.collection("AaveUser").bulkWrite(
+  await db.collection("User").bulkWrite(
     users.map(({ reservesData, ...user }) => ({
       replaceOne: {
         filter: { userId: user.userId, poolId: poolId },

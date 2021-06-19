@@ -1,21 +1,21 @@
 import { resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetAaveUserReservesInput extends Pick<Prisma.AaveUserFindManyArgs, "where"> {}
+interface GetUserReservesInput extends Pick<Prisma.UserFindManyArgs, "where"> {}
 
-export default resolver.pipe(async ({ where }: GetAaveUserReservesInput) => {
+export default resolver.pipe(async ({ where }: GetUserReservesInput) => {
   const [total, borrowers, liquidityProviders, hfDangerZone, abandoned] = await Promise.all([
-    db.aaveUser.count({ where }),
-    db.aaveUser.count({
+    db.user.count({ where }),
+    db.user.count({
       where: { totalBorrowsETH: { gt: 0 }, ...where },
     }),
-    db.aaveUser.count({
+    db.user.count({
       where: { totalLiquidityETH: { gt: 0 }, ...where },
     }),
-    db.aaveUser.count({
+    db.user.count({
       where: { healthFactor: { gt: 1, lte: 1.2 }, ...where },
     }),
-    db.aaveUser.count({
+    db.user.count({
       where: { totalLiquidityETH: { equals: 0 }, ...where },
     }),
   ])
