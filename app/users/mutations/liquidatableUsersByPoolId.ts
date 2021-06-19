@@ -6,7 +6,7 @@ import { addresses } from "app/core/constants"
 import { fetchNextUserReserves } from "app/refresh/_updateUserReserve"
 import { getMongoClient } from "db/mongo"
 import { getFormattedUsers } from "./updateUsers"
-import * as z from "zod"
+import { z } from "zod"
 
 async function updateUsers(poolId: string) {
   const MIN_HF = 1.4

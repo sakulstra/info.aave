@@ -6,7 +6,7 @@ import {
   Head,
   useQueryErrorResetBoundary,
 } from "blitz"
-import { ErrorBoundary } from "react-error-boundary"
+import { ErrorBoundary } from "blitz"
 import { ThemeProvider } from "@material-ui/core/styles"
 import { CacheProvider } from "@emotion/react"
 import CssBaseline from "@material-ui/core/CssBaseline"

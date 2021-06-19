@@ -1,5 +1,5 @@
 import { resolver } from "blitz"
-import * as z from "zod"
+import { z } from "zod"
 import { addresses } from "app/core/constants"
 import { getMongoClient } from "db/mongo"
 import { AaveUser, Reserve, UserReserve } from "db"
