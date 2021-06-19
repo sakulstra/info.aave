@@ -2,7 +2,7 @@ import { ChainId } from "@aave/protocol-js"
 
 export const CHAINS = {
   ETHEREUM: "ETHEREUM",
-  MATIC: "MATIC",
+  POLYGON: "POLYGON",
 } as const
 
 export const addresses = {
@@ -10,7 +10,7 @@ export const addresses = {
   THEGRAPH_PROTOCOL: {
     V1: "https://api.thegraph.com/subgraphs/name/aave/protocol-multy-raw",
     V2: "https://api.thegraph.com/subgraphs/name/aave/protocol-v2",
-    MATIC: "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic",
+    POLYGON: "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic",
   },
   ADDRESS_PROVIDERS: {
     V1: {
@@ -21,7 +21,7 @@ export const addresses = {
       AAVE: "0xb53c1a33016b2dc2ff3653530bff1848a515c8c5",
       AMM: "0xacc030ef66f9dfeae9cbb0cd1b25654b82cfa8d5",
     },
-    MATIC: {
+    POLYGON: {
       AAVE: "0xd05e3e715d945b59290df0ae8ef85c1bdb684744",
     },
   },

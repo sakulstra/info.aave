@@ -106,7 +106,6 @@ model Reserve {
   liquidators                      LiquidationCall[] @relation("principalReserve")
 
   UserReserve          UserReserve[]
-  FormattedUserReserve FormattedUserReserve[]
   Deposit              Deposit[]
   Borrow               Borrow[]
   Repay                Repay[]

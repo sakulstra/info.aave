@@ -7,7 +7,7 @@ import { addresses } from "app/core/constants"
 
 export const POOL_NAME_MAP = {
   [addresses.ADDRESS_PROVIDERS.V2.AAVE]: "Proto",
-  [addresses.ADDRESS_PROVIDERS.MATIC.AAVE]: "Proto (Matic)",
+  [addresses.ADDRESS_PROVIDERS.POLYGON.AAVE]: "Proto (Matic)",
   [addresses.ADDRESS_PROVIDERS.V2.AMM]: "AMM",
 }
 

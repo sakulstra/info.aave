@@ -118,7 +118,7 @@ export const UpdateUsers = z.object({
 })
 
 export default resolver.pipe(resolver.zod(UpdateUsers), async ({ poolId }) => {
-  if ((Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]).includes(poolId)) {
+  if ((Object.values(addresses.ADDRESS_PROVIDERS.POLYGON) as string[]).includes(poolId)) {
     //await fetchNextUserReserves(poolId, gqlSdkMatic)
     return await updateUsers(poolId)
   }

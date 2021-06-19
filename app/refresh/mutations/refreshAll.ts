@@ -1,7 +1,8 @@
-import { addresses } from "app/core/constants"
+import { addresses, CHAINS } from "app/core/constants"
 import { updateUsers } from "app/users/mutations/updateUsers"
 import { resolver } from "blitz"
 import { gqlSdkMatic, gqlSdkV2 } from "integrations/subgraph"
+import { fetchReserveParamsHistoryItems } from "../_updateReserveParamsHistoryItems"
 import { updateReserves } from "../_updateReserves"
 import {
   fetchNextBorrows,
@@ -17,7 +18,7 @@ export async function refreshAll() {
   const promises = await Promise.all([
     updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AAVE),
     updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AMM),
-    updateReserves(gqlSdkMatic, addresses.ADDRESS_PROVIDERS.MATIC.AAVE),
+    updateReserves(gqlSdkMatic, addresses.ADDRESS_PROVIDERS.POLYGON.AAVE),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V2)
       .map((poolId) => {
         return [
@@ -31,7 +32,7 @@ export async function refreshAll() {
         ]
       })
       .flat(),
-    ...Object.values(addresses.ADDRESS_PROVIDERS.MATIC)
+    ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON)
       .map((poolId) => {
         return [
           fetchNextLiquidations(poolId, gqlSdkMatic),
@@ -44,11 +45,11 @@ export async function refreshAll() {
         ]
       })
       .flat(),
-    // fetchReserveParamsHistoryItems(CHAINS.ETHEREUM, gqlSdkV2),
-    // fetchReserveParamsHistoryItems(CHAINS.MATIC, gqlSdkMatic),
+    fetchReserveParamsHistoryItems(CHAINS.ETHEREUM, gqlSdkV2),
+    fetchReserveParamsHistoryItems(CHAINS.POLYGON, gqlSdkMatic),
   ])
   console.log("txnUpdates", promises)
-  for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]) {
+  for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.POLYGON) as string[]) {
     //await fetchNextUserReserves(poolId, gqlSdkMatic)
     await updateUsers(poolId)
   }

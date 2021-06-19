@@ -54,7 +54,7 @@ export const LiquidatableUsers = z.object({
 })
 
 export async function liquidatableByPoolId(poolId: string) {
-  if ((Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]).includes(poolId)) {
+  if ((Object.values(addresses.ADDRESS_PROVIDERS.POLYGON) as string[]).includes(poolId)) {
     await fetchNextUserReserves(poolId, gqlSdkMatic).catch((e) =>
       console.log("error fetching data")
     )
