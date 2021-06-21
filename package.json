@@ -48,7 +48,7 @@
     "@material-ui/lab": "5.0.0-alpha.37",
     "@material-ui/styles": "5.0.0-alpha.35",
     "@prisma/client": "2.25.0",
-    "blitz": "0.38.0",
+    "blitz": "0.38.1",
     "clsx": "1.1.1",
     "dayjs": "1.10.5",
     "ethers": "5.3.1",
