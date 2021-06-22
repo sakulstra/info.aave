@@ -70,7 +70,7 @@ export async function refreshAll() {
       fetchNextUserReserves(poolId, gqlSdkMatic)
     )
   )
-  await promises
+  await Promise.all(promises)
   console.log("txnUpdates", promises)
   await Promise.all([
     ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) => updateUsers(poolId)),
