@@ -3,19 +3,18 @@ services:
   app:
     hostname: app
     restart: always
-    image: "node:14"
-    working_dir: /home/node/app
+    image: "ghcr.io/sakulstra/info.aave:main"
     environment:
       SESSION_SECRET_KEY: 9246f37d0faa30d65744463743ca1ade
       NODE_ENV: production
-      DATABASE_UR: mongodb://localhost:27017/aave?replicaSet=rs0
-      POLYGON_RPC: <polygon rpc>
+      DATABASE_URL: mongodb://localhost:27017/aave?replicaSet=rs0
+      POLYGON_RPC: <polgon rpc>
       MAINNET_RPC: <mainnet rpc>
       PORT: 3004
-    volumes:
-      - ./:/home/node/app
-    command: npm run start
-    network_mode: host
+      # when this flag is set it will skip all syncing that is not needed for calculating the heaelth factors
+      # MODE: "BOT"
+    # if you're running a bot against the api it might make sense running in host mode so you can access he service from outside
+    # network_mode: host
   #liquidator:
   #  restart: always
   #  depends_on:
