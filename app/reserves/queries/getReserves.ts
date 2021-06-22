@@ -2,6 +2,7 @@ import { calculateAverageRate, v2 } from "@aave/protocol-js"
 import { resolver } from "blitz"
 import dayjs from "dayjs"
 import db, { Prisma } from "db"
+import { getMongoClient } from "db/mongo"
 
 const getAverageRates = <T extends string>(
   name: T,
@@ -40,16 +41,102 @@ const getAverageRates = <T extends string>(
   }
 }
 
-interface GetReservesInput extends Pick<Prisma.ReserveFindManyArgs, "where"> {}
+export interface GetReservesInput extends Pick<Prisma.ReserveFindManyArgs, "where"> {}
 
 export default resolver.pipe(async ({ where }: GetReservesInput) => {
+  // const { db } = await getMongoClient()
+  // might be a solution with mongo 5, but not right now as on 4.4 $expr doesn't use indexes...
+  /*const reserves2 = await db
+    .collection("Reserve")
+    .aggregate([
+      {
+        $lookup: {
+          from: "ReserveHistoryItem",
+          let: {
+            reserveId: "$_id",
+          },
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $and: [
+                    {
+                      $eq: ["$reserveId", "$$reserveId"],
+                    },
+                    {
+                      $lte: ["$timestamp", dayjs().unix() - 30 * 24 * 60 * 60],
+                    },
+                  ],
+                },
+              },
+            },
+            {
+              $sort: {
+                timestamp: -1,
+              },
+            },
+            {
+              $limit: 1,
+            },
+          ],
+          as: "ago30d",
+        },
+      },
+      {
+        $lookup: {
+          from: "ReserveHistoryItem",
+          let: {
+            reserveId: "$_id",
+          },
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $and: [
+                    {
+                      $eq: ["$reserveId", "$$reserveId"],
+                    },
+                    {
+                      $lte: ["$timestamp", dayjs().unix() - 90 * 24 * 60 * 60],
+                    },
+                  ],
+                },
+              },
+            },
+            {
+              $sort: {
+                timestamp: -1,
+              },
+            },
+            {
+              $limit: 1,
+            },
+          ],
+          as: "ago90d",
+        },
+      },
+      {
+        $unwind: {
+          path: "$ago30d",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+      {
+        $unwind: {
+          path: "$ago90d",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+    ])
+    .toArray()
+    */
+
   const reserves = await db.reserve.findMany({ where })
   const historyItems30dAgo = await Promise.all(
     reserves.map((reserve) =>
       db.reserveHistoryItem.findFirst({
         where: {
-          reserveId: reserve.underlyingAsset,
-          poolId: reserve.poolId,
+          reserveId: reserve.id,
           timestamp: { lte: dayjs().unix() - 30 * 24 * 60 * 60 },
         },
         orderBy: { timestamp: "desc" },
@@ -60,8 +147,7 @@ export default resolver.pipe(async ({ where }: GetReservesInput) => {
     reserves.map((reserve) =>
       db.reserveHistoryItem.findFirst({
         where: {
-          reserveId: reserve.underlyingAsset,
-          poolId: reserve.poolId,
+          reserveId: reserve.id,
           timestamp: { lte: dayjs().unix() - 90 * 24 * 60 * 60 },
         },
         orderBy: { timestamp: "desc" },
@@ -76,12 +162,12 @@ export default resolver.pipe(async ({ where }: GetReservesInput) => {
           ...getAverageRates<"avg30Days">(
             "avg30Days",
             { ...reserve, timestamp: reserve.lastUpdateTimestamp },
-            historyItems30dAgo[ix]
+            historyItems30dAgo[ix] //reserve.ago30d
           ),
           ...getAverageRates<"avg90Days">(
             "avg90Days",
             { ...reserve, timestamp: reserve.lastUpdateTimestamp },
-            historyItems90dAgo[ix]
+            historyItems90dAgo[ix] //reserve.ago90d
           ),
         }
       }),

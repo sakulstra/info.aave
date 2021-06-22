@@ -47,8 +47,11 @@
     "@material-ui/icons": "5.0.0-alpha.37",
     "@material-ui/lab": "5.0.0-alpha.37",
     "@material-ui/styles": "5.0.0-alpha.35",
+    "@mikro-orm/cli": "4.5.6",
+    "@mikro-orm/core": "4.5.6",
+    "@mikro-orm/mongodb": "4.5.6",
     "@prisma/client": "2.25.0",
-    "blitz": "0.38.0",
+    "blitz": "0.38.1",
     "clsx": "1.1.1",
     "dayjs": "1.10.5",
     "ethers": "5.3.1",
@@ -63,11 +66,15 @@
     "zod": "3.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-decorators": "7.14.5",
     "@genql/cli": "2.6.0",
+    "@mikro-orm/reflection": "4.5.6",
     "@types/mongodb": "3.6.18",
     "@types/node-cron": "2.0.3",
     "@types/preview-email": "2.0.0",
     "@types/react": "17.0.11",
+    "babel-plugin-transform-typescript-metadata": "0.3.2",
     "eslint": "7.29.0",
     "husky": "^6.0.0",
     "lint-staged": "11.0.0",
@@ -76,6 +83,7 @@
     "prettier-plugin-prisma": "0.12.1",
     "pretty-quick": "3.1.1",
     "preview-email": "3.0.4",
+    "ts-node": "10.0.0",
     "typescript": "4.3.4"
   },
   "private": true

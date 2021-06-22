@@ -6,7 +6,7 @@ import { refreshAll } from "./refresh/mutations/refreshAll"
 
 refreshAll()
 
-cron.schedule("*/30 * * * *", () => {
+cron.schedule("*/5 * * * *", () => {
   console.log("refresh")
   refreshAll()
 })

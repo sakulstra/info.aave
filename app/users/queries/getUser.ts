@@ -1,7 +1,7 @@
 import { resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetUserInput
+export interface GetUserInput
   extends Pick<Prisma.UserFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
 export default resolver.pipe(async ({ where, orderBy }: GetUserInput) => {

@@ -20,8 +20,9 @@ model UserReserve {
   userId                          String
   // user                            AaveUser @relation(fields: [userId], references: [id])
   poolId                          String
-  reserve                         Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  reserve                         Reserve @relation(fields: [reserveId], references: [id])
   reserveId                       String
+  underlyingAsset                 String
   principalStableDebt             String
   scaledATokenBalance             String
   scaledVariableDebt              String
@@ -117,6 +118,7 @@ model Reserve {
 model ReserveHistoryItem {
   id                               String @id @map("_id")
   reserveId                        String
+  underlyingAsset                  String
   poolId                           String
   totalLiquidity                   String
   availableLiquidity               String
@@ -149,10 +151,12 @@ model LiquidationCall {
   liquidatorId        String
   poolId              String
   collateralReserveId String
-  collateralReserve   Reserve @relation("collateralReserve", fields: [collateralReserveId, poolId], references: [underlyingAsset, poolId])
+  collateralUnderlyingAsset String
+  collateralReserve   Reserve @relation("collateralReserve", fields: [collateralReserveId], references: [id])
   collateralAmount    Float
   principalReserveId  String
-  principalReserve    Reserve @relation("principalReserve", fields: [principalReserveId, poolId], references: [underlyingAsset, poolId])
+  principalUnderlyingAsset String
+  principalReserve    Reserve @relation("principalReserve", fields: [principalReserveId], references: [id])
   principalAmount     Float
   timestamp           Int
 }
@@ -161,8 +165,9 @@ model Deposit {
   id           String  @id @map("_id")
   userId       String
   poolId       String
-  reserveId    String
-  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  reserveId                        String
+  underlyingAsset                  String
+  reserve      Reserve @relation(fields: [reserveId], references: [id])
   onBehalfOfId String
   referrerId   String?
   amount       Float
@@ -173,8 +178,9 @@ model Borrow {
   id             String  @id @map("_id")
   userId         String
   poolId         String
-  reserveId      String
-  reserve        Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  reserveId                        String
+  underlyingAsset                  String
+  reserve        Reserve @relation(fields: [reserveId], references: [id])
   onBehalfOfId   String
   referrerId     String?
   amount         Float
@@ -187,7 +193,8 @@ model Repay {
   userId       String
   poolId       String
   reserveId    String
-  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  underlyingAsset                  String
+  reserve      Reserve @relation(fields: [reserveId], references: [id])
   onBehalfOfId String
   amount       Float
   timestamp    Int
@@ -198,7 +205,8 @@ model Withdrawal {
   userId       String
   poolId       String
   reserveId    String
-  reserve      Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  underlyingAsset                  String
+  reserve      Reserve @relation(fields: [reserveId], references: [id])
   onBehalfOfId String
   amount       Float
   timestamp    Int
@@ -209,7 +217,8 @@ model FlashLoan {
   initiatorId String
   poolId      String
   reserveId   String
-  reserve     Reserve @relation(fields: [reserveId, poolId], references: [underlyingAsset, poolId])
+  underlyingAsset                  String
+  reserve     Reserve @relation(fields: [reserveId], references: [id])
   amount      Float
   totalFee    Float
   timestamp   Int

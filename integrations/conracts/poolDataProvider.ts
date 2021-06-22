@@ -39,7 +39,7 @@ const contracts = {
 
 export async function getOnChainReserves(poolId) {
   let chain = ChainId.polygon
-  if ((Object.values(addresses.ADDRESS_PROVIDERS.MATIC) as string[]).includes(poolId)) {
+  if ((Object.values(addresses.ADDRESS_PROVIDERS.POLYGON) as string[]).includes(poolId)) {
     chain = ChainId.polygon
   }
   if ((Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]).includes(poolId)) {

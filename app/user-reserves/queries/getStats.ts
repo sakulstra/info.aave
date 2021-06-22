@@ -2,7 +2,7 @@ import { resolver } from "blitz"
 import dayjs from "dayjs"
 import db, { Prisma } from "db"
 
-interface GetUserReservesInput extends Pick<Prisma.UserReserveFindManyArgs, "where"> {}
+export interface GetUserReservesInput extends Pick<Prisma.UserReserveFindManyArgs, "where"> {}
 
 export default resolver.pipe(async ({ where }: GetUserReservesInput) => {
   const [reserves, emptyReserves, activeReserves24h, activeReserves30d] = await Promise.all([

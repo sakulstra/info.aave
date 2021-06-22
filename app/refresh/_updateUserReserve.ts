@@ -47,13 +47,14 @@ export const fetchNextUserReserves = async (poolId: string, gqlSdk: typeof gqlSd
     // user + reserve + pool
     const ids = id.split("0x")
     const userId = `0x${ids[1]}`
-    const reserveId = `0x${ids[2]}`
+    const underlyingAsset = `0x${ids[2]}`
     const poolId = `0x${ids[3]}`
     const record = {
       ...rest,
       userId,
       poolId,
-      reserveId,
+      reserveId: reserve.id,
+      underlyingAsset,
       decimals: reserve.decimals,
     }
     return record
@@ -64,12 +65,9 @@ export const fetchNextUserReserves = async (poolId: string, gqlSdk: typeof gqlSd
     const { db } = await getMongoClient()
     const bulk = db.collection("UserReserve").initializeOrderedBulkOp()
     requests.map((request) => {
-      bulk
-        .find({ userId: request.userId, poolId: request.poolId, reserveId: request.reserveId })
-        .upsert()
-        .updateOne({
-          $set: request,
-        })
+      bulk.find({ userId: request.userId, reserveId: request.reserveId }).upsert().updateOne({
+        $set: request,
+      })
     })
     if (bulk.length) await bulk.execute()
   }

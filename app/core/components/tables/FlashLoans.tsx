@@ -27,7 +27,7 @@ const cells: CellConfig<FlashLoan & { reserve: ReserveType }>[] = [
     label: "Fee",
   },
   {
-    id: "reserveId",
+    id: "underlyingAsset",
     label: "Symbol",
     sortable: true,
     getValue: (obj) => obj.reserve.symbol,

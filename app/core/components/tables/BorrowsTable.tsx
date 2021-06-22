@@ -21,7 +21,7 @@ const cells: CellConfig<Borrow & { reserve: ReserveType }>[] = [
     label: "Amount",
   },
   {
-    id: "reserveId",
+    id: "underlyingAsset",
     label: "Symbol",
     sortable: true,
     getValue: (obj) => obj.reserve.symbol,

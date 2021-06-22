@@ -1,13 +1,13 @@
 import { useInfiniteQuery } from "blitz"
 import getUserReserves from "app/user-reserves/queries/getUserReserves"
 import LoadingButton from "@material-ui/lab/LoadingButton"
-import { FormattedUserReserve, Prisma, Reserve as ReserveType } from "@prisma/client"
+import { UserReserve, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
 import { IconButton, Paper } from "@material-ui/core"
 import Person from "@material-ui/icons/Person"
 import { POOL_NAME_MAP } from "../PoolFilter"
 
-const cells: CellConfig<FormattedUserReserve & { reserve: ReserveType }>[] = [
+const cells: CellConfig<UserReserve & { reserve: ReserveType }>[] = [
   {
     id: "lastUpdateTimestamp",
     sortable: true,
@@ -46,7 +46,7 @@ const cells: CellConfig<FormattedUserReserve & { reserve: ReserveType }>[] = [
     label: "Balance",
   },
   {
-    id: "reserveId",
+    id: "underlyingAsset",
     label: "Symbol",
     sortable: true,
     getValue: (obj) => obj.reserve.symbol,
@@ -65,16 +65,16 @@ const cells: CellConfig<FormattedUserReserve & { reserve: ReserveType }>[] = [
   },
 ]
 
-type FormattedUserReservesTableProps = {
-  where?: Prisma.FormattedUserReserveWhereInput
-  orderBy?: Prisma.FormattedUserReserveOrderByInput
+type UserReservesTableProps = {
+  where?: Prisma.UserReserveWhereInput
+  orderBy?: Prisma.UserReserveOrderByInput
 } & Partial<EnhancedTableProps>
 
-export function FormattedUserReservesTable({
+export function UserReservesTable({
   where,
   orderBy = { lastUpdateTimestamp: "desc" },
   ...rest
-}: FormattedUserReservesTableProps) {
+}: UserReservesTableProps) {
   const [groups, { isFetching, isFetchingNextPage, fetchNextPage, hasNextPage }] = useInfiniteQuery(
     getUserReserves,
     (page = { take: 30, skip: 0 }) => ({

@@ -1,22 +1,26 @@
 import { normalize } from "@aave/protocol-js"
+import { ReserveFilter } from "app/core/components/ReserveFilter"
 import db, { Borrow, Deposit, FlashLoan, LiquidationCall, Repay, Withdrawal } from "db"
-import { gqlSdkV2 } from "integrations/subgraph"
+import { gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
 
 const LIMIT = 1000
 
 const reserveIdToPoolReserve = (rawReserveId: string) => {
-  const [, reserveId, poolId] = rawReserveId.split("0x")
-  return { reserveId: `0x${reserveId}`, poolId: `0x${poolId}` }
+  const [, underlyingAsset, poolId] = rawReserveId.split("0x")
+  return { underlyingAsset: `0x${underlyingAsset}`, poolId: `0x${poolId}` }
 }
 
-export const fetchNextLiquidations = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+export const fetchNextLiquidations = async (
+  poolId: string,
+  gqlClient: typeof gqlSdkV2 | typeof gqlSdkV1
+) => {
   const liquidationCall = await db.liquidationCall.findFirst({
     where: { poolId },
     select: { timestamp: true },
     orderBy: { timestamp: "desc" },
   })
 
-  const result = await gqlClient.query({
+  const result = await (gqlClient as typeof gqlSdkV2).query({
     liquidationCalls: [
       {
         first: LIMIT,
@@ -56,18 +60,22 @@ export const fetchNextLiquidations = async (poolId: string, gqlClient: typeof gq
       principalAmount,
       ...rest
     }) => {
-      const { reserveId: collateralReserveId, poolId } = reserveIdToPoolReserve(
+      const { underlyingAsset: collateralUnderlyingAsset, poolId } = reserveIdToPoolReserve(
         collateralReserve.id
       )
-      const { reserveId: principalReserveId } = reserveIdToPoolReserve(principalReserve.id)
+      const { underlyingAsset: principalUnderlyingAsset } = reserveIdToPoolReserve(
+        principalReserve.id
+      )
       // user + reserve + pool
       const record: LiquidationCall = {
         ...rest,
         userId: user.id,
         poolId,
         liquidatorId: liquidator,
-        collateralReserveId,
-        principalReserveId,
+        collateralUnderlyingAsset,
+        collateralReserveId: collateralReserve.id,
+        principalUnderlyingAsset,
+        principalReserveId: principalReserve.id,
         collateralAmount: Number(normalize(collateralAmount, collateralReserve.decimals)),
         principalAmount: Number(normalize(principalAmount, principalReserve.decimals)),
       }
@@ -126,13 +134,14 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   })
   const requests = result.deposits.map(
     ({ user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
-      const { reserveId, poolId } = reserveIdToPoolReserve(reserve.id)
+      const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Deposit = {
         ...rest,
         userId: user.id,
         poolId,
-        reserveId,
+        reserveId: reserve.id,
+        underlyingAsset,
         onBehalfOfId: onBehalfOf.id,
         referrerId: referrer?.id ?? null,
         amount: Number(normalize(amount, reserve.decimals)),
@@ -193,13 +202,14 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   })
   const requests = result.borrows.map(
     ({ user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
-      const { reserveId, poolId } = reserveIdToPoolReserve(reserve.id)
+      const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Borrow = {
         ...rest,
         userId: user.id,
         poolId,
-        reserveId,
+        underlyingAsset,
+        reserveId: reserve.id,
         onBehalfOfId: onBehalfOf.id,
         referrerId: referrer?.id ?? null,
         amount: Number(normalize(amount, reserve.decimals)),
@@ -255,13 +265,14 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
     ],
   })
   const requests = result.repays.map(({ user, onBehalfOf, reserve, amount, ...rest }) => {
-    const { reserveId, poolId } = reserveIdToPoolReserve(reserve.id)
+    const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
     // user + reserve + pool
     const record: Repay = {
       ...rest,
       userId: user.id,
       poolId,
-      reserveId,
+      underlyingAsset,
+      reserveId: reserve.id,
       onBehalfOfId: onBehalfOf.id,
       amount: Number(normalize(amount, reserve.decimals)),
     }
@@ -316,13 +327,14 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   })
   const requests = result.redeemUnderlyings.map(
     ({ user, onBehalfOf, reserve, amount, ...rest }) => {
-      const { reserveId, poolId } = reserveIdToPoolReserve(reserve.id)
+      const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Withdrawal = {
         ...rest,
         userId: user.id,
         poolId,
-        reserveId,
+        underlyingAsset,
+        reserveId: reserve.id,
         onBehalfOfId: onBehalfOf.id,
         amount: Number(normalize(amount, reserve.decimals)),
       }
@@ -375,13 +387,14 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
     ],
   })
   const requests = result.flashLoans.map(({ initiator, reserve, amount, totalFee, ...rest }) => {
-    const { reserveId, poolId } = reserveIdToPoolReserve(reserve.id)
+    const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
     // user + reserve + pool
     const record: FlashLoan = {
       ...rest,
       initiatorId: initiator.id,
       poolId,
-      reserveId,
+      reserveId: reserve.id,
+      underlyingAsset,
       amount: Number(normalize(amount, reserve.decimals)),
       totalFee: Number(normalize(totalFee, reserve.decimals)),
     }

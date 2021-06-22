@@ -5,12 +5,12 @@ import { Box, Grid } from "@material-ui/core"
 import { ReserveFilter } from "app/core/components/ReserveFilter"
 import { StatBox } from "app/core/components/StatBox"
 import { PoolFilter } from "app/core/components/PoolFilter"
-import { FormattedUserReservesTable } from "app/core/components/tables/UserReservesTable"
+import { UserReservesTable } from "app/core/components/tables/UserReservesTable"
 import { FromToInput } from "app/core/components/FromToInput"
 import { Prisma } from "@prisma/client"
 
 type UserReservesStatsProps = {
-  where?: Prisma.FormattedUserReserveWhereInput
+  where?: Prisma.UserReserveWhereInput
 }
 
 function UserReservesStats({ where }: UserReservesStatsProps) {
@@ -39,14 +39,14 @@ const UserReserves: BlitzPage = () => {
   const {
     order,
     orderBy,
-    reserveId,
+    underlyingAsset,
     poolId,
     fromlastUpdateTimestamp,
     tolastUpdateTimestamp,
   } = useRouterQuery() as {
     order: "asc" | "desc" | undefined
     orderBy: string | undefined
-    reserveId: string | undefined
+    underlyingAsset: string | undefined
     poolId: string | undefined
     fromlastUpdateTimestamp: string | number
     tolastUpdateTimestamp: string | number
@@ -56,19 +56,19 @@ const UserReserves: BlitzPage = () => {
     <div>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <PoolFilter />
-        <ReserveFilter fieldName="reserveId" />
+        <ReserveFilter fieldName="underlyingAsset" />
         <FromToInput fieldName="lastUpdateTimestamp" />
       </Box>
       <UserReservesStats
         where={{
           poolId,
-          reserveId,
+          underlyingAsset,
         }}
       />
-      <FormattedUserReservesTable
+      <UserReservesTable
         where={{
           poolId,
-          reserveId,
+          underlyingAsset,
           lastUpdateTimestamp: {
             ...(fromlastUpdateTimestamp ? { gte: Number(fromlastUpdateTimestamp) } : {}),
             ...(tolastUpdateTimestamp ? { lte: Number(tolastUpdateTimestamp) } : {}),

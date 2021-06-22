@@ -1,7 +1,7 @@
 import { paginate, resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetFlashLoansInput
+export interface GetFlashLoansInput
   extends Pick<Prisma.FlashLoanFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
 export default resolver.pipe(

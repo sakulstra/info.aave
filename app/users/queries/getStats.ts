@@ -1,7 +1,7 @@
 import { resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetUserReservesInput extends Pick<Prisma.UserFindManyArgs, "where"> {}
+export interface GetUserReservesInput extends Pick<Prisma.UserFindManyArgs, "where"> {}
 
 export default resolver.pipe(async ({ where }: GetUserReservesInput) => {
   const [total, borrowers, liquidityProviders, hfDangerZone, abandoned] = await Promise.all([

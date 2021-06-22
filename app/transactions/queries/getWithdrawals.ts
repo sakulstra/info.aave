@@ -1,7 +1,7 @@
 import { paginate, resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetWithdrawalInput
+export interface GetWithdrawalInput
   extends Pick<Prisma.WithdrawalFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
 export default resolver.pipe(

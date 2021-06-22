@@ -19,7 +19,7 @@ export function getUser(
     reserveMap,
     userReserves.map((userReserve) => ({
       ...userReserve,
-      reserve: reserveMap[`${userReserve.reserveId}${userReserve.poolId}`],
+      reserve: reserveMap[userReserve.reserveId],
     })),
     userId,
     now

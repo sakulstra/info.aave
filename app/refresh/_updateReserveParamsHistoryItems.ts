@@ -5,8 +5,8 @@ import { gqlSdkV2 } from "integrations/subgraph"
 const LIMIT = 1000
 
 const reserveParamsIdToPoolReserve = (rawReserveId: string) => {
-  const [, , reserveId, poolId] = rawReserveId.split("0x")
-  return { reserveId: `0x${reserveId}`, poolId: `0x${poolId}` }
+  const [, , underlyingAsset, poolId] = rawReserveId.split("0x")
+  return { underlyingAsset: `0x${underlyingAsset}`, poolId: `0x${poolId}` }
 }
 
 export const fetchReserveParamsHistoryItems = async (
@@ -52,8 +52,8 @@ export const fetchReserveParamsHistoryItems = async (
     ],
   })
   const requests = result.reserveParamsHistoryItems.map((record) => {
-    const { reserveId, poolId } = reserveParamsIdToPoolReserve(record.id)
-    return { ...record, chain, reserveId, poolId }
+    const { underlyingAsset, poolId } = reserveParamsIdToPoolReserve(record.id)
+    return { ...record, chain, underlyingAsset, poolId, reserveId: `${underlyingAsset}${poolId}` }
   })
   console.log(`writing ${requests.length} reserveParamsHistoryItems`)
   if (requests?.length) {

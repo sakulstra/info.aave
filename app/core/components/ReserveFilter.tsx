@@ -18,7 +18,10 @@ type ReserveFilterProps = {
   label?: string
 }
 
-export function ReserveFilter({ fieldName = "reserveId", label = "Reserve" }: ReserveFilterProps) {
+export function ReserveFilter({
+  fieldName = "underlyingAsset",
+  label = "Reserve",
+}: ReserveFilterProps) {
   const [data] = useQuery(getReserveSymbols, {}, { cacheTime: 100000 })
   const { push, query } = useRouter()
 

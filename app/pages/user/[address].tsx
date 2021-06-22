@@ -7,7 +7,7 @@ import { BorrowsTable } from "app/core/components/tables/BorrowsTable"
 import { RepaysTable } from "app/core/components/tables/RepaysTable"
 import { LiquidationCallsTable } from "app/core/components/tables/LiquidationCallsTable"
 import { FlashLoansTable } from "app/core/components/tables/FlashLoans"
-import { FormattedUserReservesTable } from "app/core/components/tables/UserReservesTable"
+import { UserReservesTable } from "app/core/components/tables/UserReservesTable"
 import getUser from "app/users/queries/getUser"
 import { POOL_NAME_MAP } from "app/core/components/PoolFilter"
 import Link from "app/core/components/Link"
@@ -50,7 +50,7 @@ const User: BlitzPage = () => {
         </Grid>
       ))}
       <Grid item xs={12}>
-        <FormattedUserReservesTable where={{ userId: address }} disableSorting detailView />
+        <UserReservesTable where={{ userId: address }} disableSorting detailView />
       </Grid>
       <Grid item xs={12} md={6}>
         <DepositsTable where={{ userId: address }} disableSorting detailView />

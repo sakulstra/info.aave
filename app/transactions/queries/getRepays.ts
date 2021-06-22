@@ -1,7 +1,7 @@
 import { paginate, resolver } from "blitz"
 import db, { Prisma } from "db"
 
-interface GetRepayInput
+export interface GetRepayInput
   extends Pick<Prisma.RepayFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
 
 export default resolver.pipe(async ({ where, orderBy, skip = 0, take = 100 }: GetRepayInput) => {

@@ -5,11 +5,11 @@ import { PoolFilter } from "app/core/components/PoolFilter"
 import { DepositsTable } from "app/core/components/tables/DepositsTable"
 
 const Deposits: BlitzPage = () => {
-  const { order, orderBy, poolId, reserveId } = useRouterQuery() as {
+  const { order, orderBy, poolId, underlyingAsset } = useRouterQuery() as {
     order: "asc" | "desc" | undefined
     orderBy: string | undefined
     poolId: string | undefined
-    reserveId: string | undefined
+    underlyingAsset: string | undefined
   }
 
   return (
@@ -17,7 +17,7 @@ const Deposits: BlitzPage = () => {
       <PoolFilter />
       <ReserveFilter />
       <DepositsTable
-        where={{ poolId, reserveId }}
+        where={{ poolId, underlyingAsset }}
         orderBy={{ [orderBy || "timestamp"]: order || "desc" }}
       />
     </div>
