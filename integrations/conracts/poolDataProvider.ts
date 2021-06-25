@@ -7,8 +7,8 @@ export const unPrefixSymbol = (symbol: string, prefix: string) => {
   return symbol.toUpperCase().replace(new RegExp(`^(${prefix[0]}?${prefix.slice(1)})`), "")
 }
 
-function formatObjectWithBNFields(obj: object): any {
-  return Object.keys(obj).reduce((acc, key) => {
+function formatObjectWithBNFields<T extends { [key: string]: any }>(obj: T) {
+  return Object.keys(obj).reduce((acc, key: keyof T) => {
     if (isNaN(Number(key))) {
       // @ts-ignore
       let value = obj[key]
@@ -18,7 +18,7 @@ function formatObjectWithBNFields(obj: object): any {
       acc[key] = value
     }
     return acc
-  }, {} as any)
+  }, {} as { [key in keyof T]: number | string })
 }
 
 const PROVIDERS = {
@@ -54,11 +54,13 @@ export async function getOnChainReserves(poolId) {
   } = await helperContract.getReservesData(poolId, API_ETH_MOCK_ADDRESS)
 
   const formattedReservesData = rawReservesData.map((rawReserve) => {
-    const formattedReserve = formatObjectWithBNFields(rawReserve)
+    const formattedReserve = {
+      ...formatObjectWithBNFields(rawReserve),
+      id: (rawReserve.underlyingAsset + poolId).toLowerCase(),
+      price: { priceInEth: rawReserve.priceInEth.toString() },
+    }
     formattedReserve.symbol = rawReserve.symbol.toUpperCase()
-    formattedReserve.id = (rawReserve.underlyingAsset + poolId).toLowerCase()
     formattedReserve.underlyingAsset = rawReserve.underlyingAsset.toLowerCase()
-    formattedReserve.price = { priceInEth: rawReserve.priceInEth.toString() }
     formattedReserve.symbol = unPrefixSymbol(rawReserve.symbol, "AM")
     return formattedReserve
   })

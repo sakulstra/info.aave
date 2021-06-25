@@ -15,7 +15,7 @@ import {
 import { fetchNextUserReserves } from "../_updateUserReserve"
 
 export async function refreshAll() {
-  const promises: Promise<any>[] = []
+  const promises: Promise<number>[] = []
   if (process.env.MODE !== "BOT") {
     promises.push(
       updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AAVE),
@@ -70,7 +70,7 @@ export async function refreshAll() {
       fetchNextUserReserves(poolId, gqlSdkMatic)
     )
   )
-  await Promise.all(promises)
+  await Promise.all(promises.flat())
   console.log("txnUpdates", promises)
   await Promise.all([
     ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) => updateUsers(poolId)),

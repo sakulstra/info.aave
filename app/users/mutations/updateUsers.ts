@@ -110,7 +110,8 @@ export async function updateUsers(poolId: string) {
       .toArray(),
   ])
   console.log("USERS", users.length)
-  refreshUsers(poolId, users, reserves)
+  // TODO: debug if this type conflict is a problem
+  refreshUsers(poolId, users, reserves as any)
 }
 
 export const UpdateUsers = z.object({

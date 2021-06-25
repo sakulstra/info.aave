@@ -45,7 +45,8 @@ async function updateUsers(poolId: string) {
     getOnChainReserves(poolId),
   ])
   console.log(`USERS BELOW ${MIN_HF}:`, users.length)
-  const formattedUsers = getFormattedUsers(poolId, users, reserves)
+  // TODO: check type mismatch
+  const formattedUsers = getFormattedUsers(poolId, users, reserves as any)
   return formattedUsers
 }
 
