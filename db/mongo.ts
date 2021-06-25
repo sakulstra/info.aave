@@ -1,9 +1,4 @@
-import "reflect-metadata"
-import { MikroORM, ReflectMetadataProvider } from "@mikro-orm/core"
 import { MongoClient } from "mongodb"
-import { LiquidationCall } from "./entities/LiquidationCall"
-import { Reserve } from "./entities/Reserve"
-import { UserReserve } from "./entities/UserReserve"
 
 export const mongoClient = new MongoClient(process.env.DATABASE_URL as string, {
   useUnifiedTopology: true,
@@ -46,19 +41,4 @@ export async function getMongoClient() {
       .createIndex({ poolId: 1, timestamp: -1 })
   }
   return { client: mongoClient, db: mongoClient.db("aave") }
-}
-
-let orm: MikroORM
-
-export async function getOrm() {
-  if (!orm) {
-    orm = await MikroORM.init({
-      entities: [LiquidationCall, Reserve, UserReserve],
-      dbName: "aave",
-      type: "mongo",
-      metadataProvider: ReflectMetadataProvider,
-      clientUrl: process.env.DATABASE_URL as string,
-    })
-  }
-  return orm
 }

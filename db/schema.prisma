@@ -150,13 +150,13 @@ model LiquidationCall {
   userId              String
   liquidatorId        String
   poolId              String
-  collateralReserveId String
+  collateralReserveId String?
   collateralUnderlyingAsset String
-  collateralReserve   Reserve @relation("collateralReserve", fields: [collateralReserveId], references: [id])
+  collateralReserve   Reserve? @relation("collateralReserve", fields: [collateralReserveId], references: [id])
   collateralAmount    Float
-  principalReserveId  String
+  principalReserveId  String?
   principalUnderlyingAsset String
-  principalReserve    Reserve @relation("principalReserve", fields: [principalReserveId], references: [id])
+  principalReserve    Reserve? @relation("principalReserve", fields: [principalReserveId], references: [id])
   principalAmount     Float
   timestamp           Int
 }

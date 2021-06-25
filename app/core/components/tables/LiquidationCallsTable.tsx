@@ -26,7 +26,7 @@ const cells: CellConfig<
     id: "principalReserveId",
     label: "Symbol",
     sortable: true,
-    getValue: (obj) => obj.principalReserve.symbol,
+    getValue: (obj) => obj.principalReserve?.symbol,
   },
   {
     id: "collateralAmount",
@@ -38,7 +38,7 @@ const cells: CellConfig<
     id: "collateralReserveId",
     label: "Symbol",
     sortable: true,
-    getValue: (obj) => obj.collateralReserve.symbol,
+    getValue: (obj) => obj.collateralReserve?.symbol,
   },
   {
     id: "liquidatorId",
