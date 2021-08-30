@@ -71,7 +71,7 @@
     "eslint": "7.29.0",
     "husky": "^6.0.0",
     "lint-staged": "11.0.0",
-    "prettier": "2.3.1",
+    "prettier": "2.3.2",
     "prettier-plugin-prisma": "0.12.1",
     "pretty-quick": "3.1.1",
     "preview-email": "3.0.4",
