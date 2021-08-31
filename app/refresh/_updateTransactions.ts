@@ -86,7 +86,7 @@ export const fetchNextLiquidations = async (
   if (requests?.length) {
     await db.liquidationCall.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.liquidationCalls.length === LIMIT) {
@@ -153,7 +153,7 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   if (requests?.length) {
     await db.deposit.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.deposits.length === LIMIT) {
@@ -221,7 +221,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   if (requests?.length) {
     await db.borrow.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.borrows.length === LIMIT) {
@@ -282,7 +282,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   if (requests?.length) {
     await db.repay.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.repays.length === LIMIT) {
@@ -345,7 +345,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   if (requests?.length) {
     await db.withdrawal.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.redeemUnderlyings.length === LIMIT) {
@@ -404,7 +404,7 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
   if (requests?.length) {
     await db.flashLoan.createMany({
       data: requests,
-      skipDuplicates: true,
+      // skipDuplicates: true,
     })
   }
   if (result.flashLoans.length === LIMIT) {
