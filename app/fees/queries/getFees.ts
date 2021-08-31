@@ -19,20 +19,14 @@ type V1Reserve = {
 
 function calculateV1Fees({
   reserves,
-  reservesOneDayAgo,
+  reservesOneDayAgo = [],
 }: {
   reserves: V1Reserve[]
   reservesOneDayAgo: V1Reserve[]
 }) {
   return reserves.reduce((acc, reserve) => {
     const oneDayAgo = reservesOneDayAgo.find((r) => r.reserve.symbol === reserve.reserve.symbol)
-    toUsd(
-      new BigNumber(reserve.lifetimeDepositorsInterestEarned).minus(
-        oneDayAgo?.lifetimeDepositorsInterestEarned || 0
-      ),
-      reserve.reserve.decimals,
-      reserve.priceInUsd
-    )
+    if (!oneDayAgo) return new BigNumber(0)
     return acc
       .plus(
         toUsd(
@@ -143,14 +137,14 @@ function toUsd(value, decimals, usdPrice) {
 
 function calculateV2Fees({
   reserves,
-  reservesOneDayAgo,
+  reservesOneDayAgo = [],
 }: {
   reserves: V2Reserve[]
   reservesOneDayAgo: V2Reserve[]
 }) {
   return reserves.reduce((acc, reserve) => {
     const oneDayAgo = reservesOneDayAgo.find((r) => r.reserve.symbol === reserve.reserve.symbol)
-    if (!oneDayAgo) return 0
+    if (!oneDayAgo) return new BigNumber(0)
     return acc
       .plus(
         toUsd(
@@ -287,6 +281,7 @@ export default resolver.pipe(
         oneDayAgo,
         forceRefresh
       )
+      if (!mainnetV2_1d || !mainnetV2) console.log(mainnetV2_1d, mainnetV2)
       return {
         last24hFees: calculateV2Fees({
           reserves: mainnetV2,

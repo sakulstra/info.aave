@@ -43,6 +43,8 @@ export async function getMongoClient() {
       .db("aave")
       .collection("RatesHistoryCache")
       .createIndex({ poolId: 1, timestamp: 1, network: 1 })
+  } else {
+    console.log("connection recycled")
   }
   return { client: mongoClient, db: mongoClient.db("aave") }
 }
