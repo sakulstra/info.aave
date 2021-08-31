@@ -26,53 +26,48 @@ function calculateV1Fees({
 }) {
   return reserves.reduce((acc, reserve) => {
     const oneDayAgo = reservesOneDayAgo.find((r) => r.reserve.symbol === reserve.reserve.symbol)
+    toUsd(
+      new BigNumber(reserve.lifetimeDepositorsInterestEarned).minus(
+        oneDayAgo?.lifetimeDepositorsInterestEarned || 0
+      ),
+      reserve.reserve.decimals,
+      reserve.priceInUsd
+    )
     return acc
       .plus(
         toUsd(
-          reserve.lifetimeDepositorsInterestEarned,
+          new BigNumber(reserve.lifetimeDepositorsInterestEarned).minus(
+            oneDayAgo?.lifetimeDepositorsInterestEarned || 0
+          ),
           reserve.reserve.decimals,
           reserve.priceInUsd
-        ).minus(
-          toUsd(
-            oneDayAgo?.lifetimeDepositorsInterestEarned || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
-        )
-      )
-      .plus(
-        toUsd(reserve.lifetimeOriginationFee, reserve.reserve.decimals, reserve.priceInUsd).minus(
-          toUsd(
-            oneDayAgo?.lifetimeOriginationFee || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
         )
       )
       .plus(
         toUsd(
-          reserve.lifetimeFlashloanDepositorsFee,
+          new BigNumber(reserve.lifetimeOriginationFee).minus(
+            oneDayAgo?.lifetimeOriginationFee || 0
+          ),
           reserve.reserve.decimals,
           reserve.priceInUsd
-        ).minus(
-          toUsd(
-            oneDayAgo?.lifetimeFlashloanDepositorsFee || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
         )
       )
       .plus(
         toUsd(
-          reserve.lifetimeFlashloanProtocolFee,
+          new BigNumber(reserve.lifetimeFlashloanDepositorsFee).minus(
+            oneDayAgo?.lifetimeFlashloanDepositorsFee || 0
+          ),
           reserve.reserve.decimals,
           reserve.priceInUsd
-        ).minus(
-          toUsd(
-            oneDayAgo?.lifetimeFlashloanProtocolFee || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
+        )
+      )
+      .plus(
+        toUsd(
+          new BigNumber(reserve.lifetimeFlashloanProtocolFee).minus(
+            oneDayAgo?.lifetimeFlashloanProtocolFee || 0
+          ),
+          reserve.reserve.decimals,
+          reserve.priceInUsd
         )
       )
   }, new BigNumber(0))
@@ -159,37 +154,29 @@ function calculateV2Fees({
     return acc
       .plus(
         toUsd(
-          reserve.lifetimeDepositorsInterestEarned,
+          new BigNumber(reserve.lifetimeDepositorsInterestEarned).minus(
+            oneDayAgo?.lifetimeDepositorsInterestEarned || 0
+          ),
           reserve.reserve.decimals,
           reserve.priceInUsd
-        ).minus(
-          toUsd(
-            oneDayAgo?.lifetimeDepositorsInterestEarned || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
-        )
-      )
-      .plus(
-        toUsd(reserve.lifetimeFlashLoanPremium, reserve.reserve.decimals, reserve.priceInUsd).minus(
-          toUsd(
-            oneDayAgo?.lifetimeFlashLoanPremium || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
         )
       )
       .plus(
         toUsd(
-          reserve.lifetimeReserveFactorAccrued,
+          new BigNumber(reserve.lifetimeFlashLoanPremium).minus(
+            oneDayAgo?.lifetimeFlashLoanPremium || 0
+          ),
           reserve.reserve.decimals,
           reserve.priceInUsd
-        ).minus(
-          toUsd(
-            oneDayAgo?.lifetimeReserveFactorAccrued || 0,
-            reserve.reserve.decimals,
-            reserve.priceInUsd
-          )
+        )
+      )
+      .plus(
+        toUsd(
+          new BigNumber(reserve.lifetimeReserveFactorAccrued).minus(
+            oneDayAgo?.lifetimeReserveFactorAccrued || 0
+          ),
+          reserve.reserve.decimals,
+          reserve.priceInUsd
         )
       )
   }, new BigNumber(0))
@@ -259,6 +246,8 @@ export const GetFees = z.object({
 export default resolver.pipe(
   resolver.zod(GetFees),
   async ({ timestamp, forceRefresh = false, poolId }) => {
+    if (timestamp > Math.floor(new Date().getTime() / 1000))
+      throw new Error(`Can't query future fees`)
     const oneDayAgo = timestamp - 24 * 60 * 60
 
     if ((Object.values(addresses.ADDRESS_PROVIDERS.V1) as string[]).includes(poolId)) {
