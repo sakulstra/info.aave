@@ -109,7 +109,7 @@ async function getV1ReservesSnapshot(
       },
     ],
   })
-  const reserves = result.reserves.map((r) => r.paramsHistory[0])
+  const reserves = result.reserves.map((r) => r.paramsHistory[0]).filter((r) => r)
   await db
     .collection("RatesHistoryCache")
     .updateOne(
@@ -220,7 +220,7 @@ async function getV2ReservesSnapshot(
       },
     ],
   })
-  const reserves = result.reserves.map((r) => r.paramsHistory[0])
+  const reserves = result.reserves.map((r) => r.paramsHistory[0]).filter((r) => r)
   await db
     .collection("RatesHistoryCache")
     .updateOne(
@@ -281,7 +281,6 @@ export default resolver.pipe(
         oneDayAgo,
         forceRefresh
       )
-      if (!mainnetV2_1d || !mainnetV2) console.log(mainnetV2_1d, mainnetV2)
       return {
         last24hFees: calculateV2Fees({
           reserves: mainnetV2,
