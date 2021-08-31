@@ -32,7 +32,7 @@ function UserStats({ where }: UserStatsProps) {
   )
 }
 
-const Borrows: BlitzPage = () => {
+const Users: BlitzPage = () => {
   const { query } = useRouter()
   const { order, orderBy, poolId, minhealthFactor, maxhealthFactor } = query as {
     order: "asc" | "desc"
@@ -63,7 +63,7 @@ const Borrows: BlitzPage = () => {
   )
 }
 
-// Borrows.suppressFirstRenderFlicker = true
-Borrows.getLayout = (page) => <Layout title="Home">{page}</Layout>
+// Users.suppressFirstRenderFlicker = true
+Users.getLayout = (page) => <Layout title="Home">{page}</Layout>
 
-export default Borrows
+export default Users

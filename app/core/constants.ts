@@ -12,6 +12,7 @@ export const addresses = {
     V2: "https://api.thegraph.com/subgraphs/name/aave/protocol-v2",
     POLYGON: "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic",
   },
+  // need to be lowercase for the graph
   ADDRESS_PROVIDERS: {
     V1: {
       AAVE: "0x24a42fd28c976a61df5d00d0599c34c4f90748c8",

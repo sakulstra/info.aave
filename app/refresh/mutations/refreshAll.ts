@@ -2,7 +2,6 @@ import { addresses, CHAINS } from "app/core/constants"
 import { updateUsers } from "app/users/mutations/updateUsers"
 import { resolver } from "blitz"
 import { gqlSdkMatic, gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
-import { fetchReserveParamsHistoryItems } from "../_updateReserveParamsHistoryItems"
 import { updateReserves } from "../_updateReserves"
 import {
   fetchNextBorrows,
@@ -57,9 +56,7 @@ export async function refreshAll() {
             fetchNextFlashLoans(poolId, gqlSdkMatic),
           ]
         })
-        .flat(),
-      fetchReserveParamsHistoryItems(CHAINS.ETHEREUM, gqlSdkV2),
-      fetchReserveParamsHistoryItems(CHAINS.POLYGON, gqlSdkMatic)
+        .flat()
     )
   }
   promises.push(

@@ -39,6 +39,10 @@ export async function getMongoClient() {
       .db("aave")
       .collection("ReserveHistoryItem")
       .createIndex({ poolId: 1, timestamp: -1 })
+    mongoClient
+      .db("aave")
+      .collection("RatesHistoryCache")
+      .createIndex({ poolId: 1, timestamp: 1, network: 1 })
   }
   return { client: mongoClient, db: mongoClient.db("aave") }
 }

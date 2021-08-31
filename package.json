@@ -47,8 +47,8 @@
     "@material-ui/icons": "5.0.0-alpha.37",
     "@material-ui/lab": "5.0.0-alpha.37",
     "@material-ui/styles": "5.0.0-alpha.35",
-    "@prisma/client": "2.25.0",
-    "blitz": "0.38.1",
+    "@prisma/client": "2.30.0",
+    "blitz": "0.39.0",
     "clsx": "1.1.1",
     "dayjs": "1.10.5",
     "ethers": "5.4.0",
@@ -56,11 +56,11 @@
     "lodash": "4.17.21",
     "mongodb": "3.6.9",
     "node-cron": "3.0.0",
-    "prisma": "2.25.0",
+    "prisma": "2.30.0",
     "react": "0.0.0-experimental-3310209d0",
     "react-dom": "0.0.0-experimental-3310209d0",
     "tslib": "2.3.0",
-    "zod": "3.2.0"
+    "zod": "3.8.1"
   },
   "devDependencies": {
     "@genql/cli": "2.6.0",
@@ -76,7 +76,7 @@
     "pretty-quick": "3.1.1",
     "preview-email": "3.0.4",
     "ts-node": "10.0.0",
-    "typescript": "4.3.4"
+    "typescript": "4.4.2"
   },
   "private": true
 }
