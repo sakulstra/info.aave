@@ -46,7 +46,7 @@ async function updateUsers(poolId: string) {
   ])
   console.log(`USERS BELOW ${MIN_HF}:`, users.length)
   // TODO: check type mismatch
-  const formattedUsers = getFormattedUsers(poolId, users, reserves as any)
+  const formattedUsers = getFormattedUsers(poolId, users as any, reserves as any)
   return formattedUsers
 }
 
