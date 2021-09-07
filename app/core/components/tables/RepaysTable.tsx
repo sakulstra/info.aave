@@ -41,7 +41,7 @@ const cells: CellConfig<Repay & { reserve: ReserveType }>[] = [
 
 type RepaysTableProps = {
   where?: Prisma.RepayWhereInput
-  orderBy?: Prisma.RepayOrderByInput
+  orderBy?: Prisma.RepayOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function RepaysTable({ where, orderBy = { timestamp: "desc" }, ...rest }: RepaysTableProps) {

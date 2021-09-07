@@ -41,7 +41,7 @@ const cells: CellConfig<Borrow & { reserve: ReserveType }>[] = [
 
 type BorrowsTableProps = {
   where?: Prisma.BorrowWhereInput
-  orderBy?: Prisma.BorrowOrderByInput
+  orderBy?: Prisma.BorrowOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function BorrowsTable({

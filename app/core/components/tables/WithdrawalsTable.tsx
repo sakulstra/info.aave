@@ -41,7 +41,7 @@ const cells: CellConfig<Withdrawal & { reserve: ReserveType }>[] = [
 
 type WithdrawalsTableProps = {
   where?: Prisma.WithdrawalWhereInput
-  orderBy?: Prisma.WithdrawalOrderByInput
+  orderBy?: Prisma.WithdrawalOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function WithdrawalsTable({

@@ -47,7 +47,7 @@ const cells: CellConfig<FlashLoan & { reserve: ReserveType }>[] = [
 
 type FlashLoansTableProps = {
   where?: Prisma.FlashLoanWhereInput
-  orderBy?: Prisma.FlashLoanOrderByInput
+  orderBy?: Prisma.FlashLoanOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function FlashLoansTable({

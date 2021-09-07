@@ -67,7 +67,7 @@ const cells: CellConfig<UserReserve & { reserve: ReserveType }>[] = [
 
 type UserReservesTableProps = {
   where?: Prisma.UserReserveWhereInput
-  orderBy?: Prisma.UserReserveOrderByInput
+  orderBy?: Prisma.UserReserveOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function UserReservesTable({

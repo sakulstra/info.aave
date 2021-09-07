@@ -41,7 +41,7 @@ const cells: CellConfig<Deposit & { reserve: ReserveType }>[] = [
 
 type DepositsTableProps = {
   where?: Prisma.DepositWhereInput
-  orderBy?: Prisma.DepositOrderByInput
+  orderBy?: Prisma.DepositOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function DepositsTable({

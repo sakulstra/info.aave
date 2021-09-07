@@ -65,7 +65,7 @@ const cells: CellConfig<
 
 type LiquidationCallsTableProps = {
   where?: Prisma.LiquidationCallWhereInput
-  orderBy?: Prisma.LiquidationCallOrderByInput
+  orderBy?: Prisma.LiquidationCallOrderByWithRelationInput
 } & Partial<EnhancedTableProps>
 
 export function LiquidationCallsTable({

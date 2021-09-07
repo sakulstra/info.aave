@@ -69,7 +69,7 @@ export const fetchNextUserReserves = async (poolId: string, gqlSdk: typeof gqlSd
         $set: request,
       })
     })
-    if (bulk.length) await bulk.execute()
+    await bulk.execute()
   }
   if (result.userReserves.length === LIMIT) {
     return result.userReserves.length + (await fetchNextUserReserves(poolId, gqlSdk))
