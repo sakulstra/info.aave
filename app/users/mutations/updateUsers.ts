@@ -111,7 +111,7 @@ export async function updateUsers(poolId: string) {
   ])
   console.log("USERS", users.length)
   // TODO: debug if this type conflict is a problem
-  refreshUsers(poolId, users, reserves as any)
+  refreshUsers(poolId, users as any, reserves as any)
 }
 
 export const UpdateUsers = z.object({
