@@ -79,7 +79,6 @@ export async function updateReserves(gqlSdk: typeof gqlSdkV2, poolId: string) {
     const poolId = `0x${ids[2]}`
     const record = {
       ...rest,
-      id,
       aTokenId: aToken.id,
       vTokenId: vToken.id,
       sTokenId: sToken.id,
@@ -91,7 +90,7 @@ export async function updateReserves(gqlSdk: typeof gqlSdkV2, poolId: string) {
       where: {
         underlyingAsset_poolId: { poolId, underlyingAsset: rest.underlyingAsset },
       },
-      create: record,
+      create: { id, ...record },
       update: record,
     })
   })

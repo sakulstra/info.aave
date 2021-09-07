@@ -68,7 +68,9 @@ export async function refreshAll() {
     )
   )
   await Promise.all(promises.flat())
-  console.log("txnUpdates", promises)
+}
+
+export async function refreshUsers() {
   await Promise.all([
     ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) => updateUsers(poolId)),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) => updateUsers(poolId)),

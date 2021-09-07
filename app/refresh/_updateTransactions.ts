@@ -1,6 +1,6 @@
 import { normalize } from "@aave/protocol-js"
-import { ReserveFilter } from "app/core/components/ReserveFilter"
 import db, { Borrow, Deposit, FlashLoan, LiquidationCall, Repay, Withdrawal } from "db"
+import { getMongoClient } from "db/mongo"
 import { gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
 
 const LIMIT = 1000
@@ -14,6 +14,7 @@ export const fetchNextLiquidations = async (
   poolId: string,
   gqlClient: typeof gqlSdkV2 | typeof gqlSdkV1
 ) => {
+  const { db: nativeDb } = await getMongoClient()
   const liquidationCall = await db.liquidationCall.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -84,10 +85,7 @@ export const fetchNextLiquidations = async (
   )
   console.log(`writing ${requests.length} liquidations`)
   if (requests?.length) {
-    await db.liquidationCall.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("LiquidationCall").insertMany(requests, { ordered: false }).catch()
   }
   if (result.liquidationCalls.length === LIMIT) {
     return result.liquidationCalls.length + (await fetchNextLiquidations(poolId, gqlClient))
@@ -96,6 +94,7 @@ export const fetchNextLiquidations = async (
 }
 
 export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+  const { db: nativeDb } = await getMongoClient()
   const deposit = await db.deposit.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -151,10 +150,7 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   )
   console.log(`writing ${requests.length} deposits`)
   if (requests?.length) {
-    await db.deposit.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("Deposit").insertMany(requests, { ordered: false }).catch()
   }
   if (result.deposits.length === LIMIT) {
     return result.deposits.length + (await fetchNextDeposits(poolId, gqlClient))
@@ -163,6 +159,7 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
 }
 
 export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+  const { db: nativeDb } = await getMongoClient()
   const borrow = await db.borrow.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -219,10 +216,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   )
   console.log(`writing ${requests.length} borrows`)
   if (requests?.length) {
-    await db.borrow.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("Borrow").insertMany(requests, { ordered: false }).catch()
   }
   if (result.borrows.length === LIMIT) {
     return result.borrows.length + (await fetchNextBorrows(poolId, gqlClient))
@@ -231,6 +225,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
 }
 
 export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+  const { db: nativeDb } = await getMongoClient()
   const repay = await db.repay.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -280,10 +275,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   })
   console.log(`writing ${requests.length} repays`)
   if (requests?.length) {
-    await db.repay.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("Repay").insertMany(requests, { ordered: false }).catch()
   }
   if (result.repays.length === LIMIT) {
     return result.repays.length + (await fetchNextRepays(poolId, gqlClient))
@@ -292,6 +284,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
 }
 
 export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+  const { db: nativeDb } = await getMongoClient()
   const repay = await db.withdrawal.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -343,10 +336,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   )
   console.log(`writing ${requests.length} redeems`)
   if (requests?.length) {
-    await db.withdrawal.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("Withdrawal").insertMany(requests, { ordered: false }).catch()
   }
   if (result.redeemUnderlyings.length === LIMIT) {
     return result.redeemUnderlyings.length + (await fetchNextWithdrawals(poolId, gqlClient))
@@ -355,6 +345,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
 }
 
 export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
+  const { db: nativeDb } = await getMongoClient()
   const repay = await db.flashLoan.findFirst({
     where: { poolId },
     select: { timestamp: true },
@@ -402,10 +393,7 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
   })
   console.log(`writing ${requests.length} flashs`)
   if (requests?.length) {
-    await db.flashLoan.createMany({
-      data: requests,
-      // skipDuplicates: true,
-    })
+    await nativeDb.collection("FlashLoan").insertMany(requests, { ordered: false }).catch()
   }
   if (result.flashLoans.length === LIMIT) {
     return result.flashLoans.length + (await fetchNextFlashLoans(poolId, gqlClient))
