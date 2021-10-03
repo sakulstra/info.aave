@@ -16,10 +16,10 @@ import { fetchNextUserReserves } from "../_updateUserReserve"
 export async function refreshAll() {
   const promises: Promise<number>[] = []
   promises.push(
-    // updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AAVE),
-    // updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AMM),
-    // updateReserves(gqlSdkMatic, addresses.ADDRESS_PROVIDERS.POLYGON.AAVE),
-    // updateReserves(gqlSdkAvalanche, addresses.ADDRESS_PROVIDERS.AVALANCHE.AAVE),
+    updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AAVE),
+    updateReserves(gqlSdkV2, addresses.ADDRESS_PROVIDERS.V2.AMM),
+    updateReserves(gqlSdkMatic, addresses.ADDRESS_PROVIDERS.POLYGON.AAVE),
+    updateReserves(gqlSdkAvalanche, addresses.ADDRESS_PROVIDERS.AVALANCHE.AAVE),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V1)
       .map((poolId) => {
         return [
@@ -32,55 +32,55 @@ export async function refreshAll() {
           //fetchNextUserReserves(poolId, gqlSdkV2),
         ]
       })
+      .flat(),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.V2)
+      .map((poolId) => {
+        return [
+          fetchNextLiquidations(poolId, gqlSdkV2),
+          fetchNextDeposits(poolId, gqlSdkV2),
+          fetchNextBorrows(poolId, gqlSdkV2),
+          fetchNextRepays(poolId, gqlSdkV2),
+          fetchNextWithdrawals(poolId, gqlSdkV2),
+          fetchNextFlashLoans(poolId, gqlSdkV2),
+        ]
+      })
+      .flat(),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON)
+      .map((poolId) => {
+        return [
+          fetchNextLiquidations(poolId, gqlSdkMatic),
+          fetchNextDeposits(poolId, gqlSdkMatic),
+          fetchNextBorrows(poolId, gqlSdkMatic),
+          fetchNextRepays(poolId, gqlSdkMatic),
+          fetchNextWithdrawals(poolId, gqlSdkMatic),
+          fetchNextFlashLoans(poolId, gqlSdkMatic),
+        ]
+      })
+      .flat(),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE)
+      .map((poolId) => {
+        return [
+          fetchNextLiquidations(poolId, gqlSdkAvalanche),
+          fetchNextDeposits(poolId, gqlSdkAvalanche),
+          fetchNextBorrows(poolId, gqlSdkAvalanche),
+          fetchNextRepays(poolId, gqlSdkAvalanche),
+          fetchNextWithdrawals(poolId, gqlSdkAvalanche),
+          fetchNextFlashLoans(poolId, gqlSdkAvalanche),
+        ]
+      })
       .flat()
-    // ...Object.values(addresses.ADDRESS_PROVIDERS.V2)
-    //   .map((poolId) => {
-    //     return [
-    //       fetchNextLiquidations(poolId, gqlSdkV2),
-    //       fetchNextDeposits(poolId, gqlSdkV2),
-    //       fetchNextBorrows(poolId, gqlSdkV2),
-    //       fetchNextRepays(poolId, gqlSdkV2),
-    //       fetchNextWithdrawals(poolId, gqlSdkV2),
-    //       fetchNextFlashLoans(poolId, gqlSdkV2),
-    //     ]
-    //   })
-    //   .flat(),
-    // ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON)
-    //   .map((poolId) => {
-    //     return [
-    //       fetchNextLiquidations(poolId, gqlSdkMatic),
-    //       fetchNextDeposits(poolId, gqlSdkMatic),
-    //       fetchNextBorrows(poolId, gqlSdkMatic),
-    //       fetchNextRepays(poolId, gqlSdkMatic),
-    //       fetchNextWithdrawals(poolId, gqlSdkMatic),
-    //       fetchNextFlashLoans(poolId, gqlSdkMatic),
-    //     ]
-    //   })
-    //   .flat(),
-    // ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE)
-    //   .map((poolId) => {
-    //     return [
-    //       fetchNextLiquidations(poolId, gqlSdkAvalanche),
-    //       fetchNextDeposits(poolId, gqlSdkAvalanche),
-    //       fetchNextBorrows(poolId, gqlSdkAvalanche),
-    //       fetchNextRepays(poolId, gqlSdkAvalanche),
-    //       fetchNextWithdrawals(poolId, gqlSdkAvalanche),
-    //       fetchNextFlashLoans(poolId, gqlSdkAvalanche),
-    //     ]
-    //   })
-    //   .flat()
   )
-  // promises.push(
-  //   ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) =>
-  //     fetchNextUserReserves(poolId, gqlSdkV2)
-  //   ),
-  //   ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) =>
-  //     fetchNextUserReserves(poolId, gqlSdkMatic)
-  //   ),
-  //   ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE).map((poolId) =>
-  //     fetchNextUserReserves(poolId, gqlSdkAvalanche)
-  //   )
-  // )
+  promises.push(
+    ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) =>
+      fetchNextUserReserves(poolId, gqlSdkV2)
+    ),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) =>
+      fetchNextUserReserves(poolId, gqlSdkMatic)
+    ),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE).map((poolId) =>
+      fetchNextUserReserves(poolId, gqlSdkAvalanche)
+    )
+  )
   await Promise.all(promises.flat())
 }
 
