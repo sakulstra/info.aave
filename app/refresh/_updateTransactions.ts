@@ -85,10 +85,7 @@ export const fetchNextLiquidations = async (
   )
   console.log(`writing ${requests.length} liquidations`)
   if (requests?.length) {
-    await nativeDb
-      .collection("LiquidationCall")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("LiquidationCall").insertMany(requests, { ordered: false }).catch()
   }
   if (result.liquidationCalls.length === LIMIT) {
     return result.liquidationCalls.length + (await fetchNextLiquidations(poolId, gqlClient))
@@ -153,10 +150,7 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   )
   console.log(`writing ${requests.length} deposits`)
   if (requests?.length) {
-    await nativeDb
-      .collection("Deposit")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("Deposit").insertMany(requests, { ordered: false }).catch()
   }
   if (result.deposits.length === LIMIT) {
     return result.deposits.length + (await fetchNextDeposits(poolId, gqlClient))
@@ -222,10 +216,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   )
   console.log(`writing ${requests.length} borrows`)
   if (requests?.length) {
-    await nativeDb
-      .collection("Borrow")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("Borrow").insertMany(requests, { ordered: false }).catch()
   }
   if (result.borrows.length === LIMIT) {
     return result.borrows.length + (await fetchNextBorrows(poolId, gqlClient))
@@ -284,10 +275,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   })
   console.log(`writing ${requests.length} repays`)
   if (requests?.length) {
-    await nativeDb
-      .collection("Repay")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("Repay").insertMany(requests, { ordered: false }).catch()
   }
   if (result.repays.length === LIMIT) {
     return result.repays.length + (await fetchNextRepays(poolId, gqlClient))
@@ -348,10 +336,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   )
   console.log(`writing ${requests.length} redeems`)
   if (requests?.length) {
-    await nativeDb
-      .collection("Withdrawal")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("Withdrawal").insertMany(requests, { ordered: false }).catch()
   }
   if (result.redeemUnderlyings.length === LIMIT) {
     return result.redeemUnderlyings.length + (await fetchNextWithdrawals(poolId, gqlClient))
@@ -408,10 +393,7 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
   })
   console.log(`writing ${requests.length} flashs`)
   if (requests?.length) {
-    await nativeDb
-      .collection("FlashLoan")
-      .insertMany(requests.map((r) => ({ ...r, _id: r.id })) as any, { ordered: false })
-      .catch()
+    await nativeDb.collection("FlashLoan").insertMany(requests, { ordered: false }).catch()
   }
   if (result.flashLoans.length === LIMIT) {
     return result.flashLoans.length + (await fetchNextFlashLoans(poolId, gqlClient))
