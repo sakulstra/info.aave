@@ -1,7 +1,7 @@
 import { BlitzPage, useQuery, useRouterQuery } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getStats from "app/user-reserves/queries/getStats"
-import { Box, Grid } from "@material-ui/core"
+import { Box, Grid } from "@mui/material"
 import { ReserveFilter } from "app/core/components/ReserveFilter"
 import { StatBox } from "app/core/components/StatBox"
 import { PoolFilter } from "app/core/components/PoolFilter"

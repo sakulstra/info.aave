@@ -1,10 +1,10 @@
 import { useInfiniteQuery } from "blitz"
 import getRepays from "app/transactions/queries/getRepays"
-import LoadingButton from "@material-ui/lab/LoadingButton"
+import LoadingButton from "@mui/lab/LoadingButton"
 import { Repay, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
-import { IconButton, Paper } from "@material-ui/core"
-import Person from "@material-ui/icons/Person"
+import { IconButton, Paper } from "@mui/material"
+import Person from "@mui/icons-material/Person"
 
 const cells: CellConfig<Repay & { reserve: ReserveType }>[] = [
   {

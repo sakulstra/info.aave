@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
-import TextField from "@material-ui/core/TextField"
-import DatePicker from "@material-ui/lab/DatePicker"
+import TextField from "@mui/material/TextField"
+import DatePicker from "@mui/lab/DatePicker"
 import { useRouter } from "blitz"
-import { Box } from "@material-ui/core"
+import { Box } from "@mui/material"
+import dayjs from "dayjs"
 
 export function FromToInput({ fieldName }) {
   const { replace, query } = useRouter()
@@ -19,28 +20,32 @@ export function FromToInput({ fieldName }) {
   }
 
   useEffect(() => {
-    const from = (query[`from${fieldName}`] as unknown) as number
-    const to = (query[`to${fieldName}`] as unknown) as number
+    const from = query[`from${fieldName}`] as unknown as number
+    const to = query[`to${fieldName}`] as unknown as number
     from && setMinValue(new Date(from * 1000))
     to && setMaxValue(new Date(to * 1000))
   }, [])
 
   return (
     <>
-      <Box sx={{ marginTop: "22px" }}>
+      <Box>
         <DatePicker
           label="From"
           value={minValue}
           onChange={(newValue: any) => {
             setMinValue(newValue)
+            if (maxValue && newValue > maxValue) {
+              setMaxValue(null)
+              handleChange(`to${fieldName}`)(undefined)
+            }
             handleChange(`from${fieldName}`)(newValue?.startOf("day").unix())
           }}
           renderInput={(params) => <TextField {...params} />}
-          maxDate={new Date()}
+          maxDate={dayjs()}
           disableMaskedInput
         />
       </Box>
-      <Box sx={{ marginTop: "22px" }}>
+      <Box>
         <DatePicker
           label="To"
           value={maxValue}
@@ -49,8 +54,8 @@ export function FromToInput({ fieldName }) {
             handleChange(`to${fieldName}`)(newValue?.endOf("day").unix())
           }}
           renderInput={(params) => <TextField {...params} />}
-          minDate={minValue}
-          maxDate={new Date()}
+          minDate={minValue || undefined}
+          maxDate={dayjs()}
         />
       </Box>
     </>

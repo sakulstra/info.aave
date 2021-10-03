@@ -7,14 +7,14 @@ import {
   useQueryErrorResetBoundary,
 } from "blitz"
 import { ErrorBoundary } from "blitz"
-import { ThemeProvider } from "@material-ui/core/styles"
+import { ThemeProvider } from "@mui/material/styles"
 import { CacheProvider } from "@emotion/react"
-import CssBaseline from "@material-ui/core/CssBaseline"
+import CssBaseline from "@mui/material/CssBaseline"
 import createCache from "@emotion/cache"
 import { useEffect } from "react"
 import { getTheme } from "app/core/layouts/theme"
-import AdapterDayjs from "@material-ui/lab/AdapterDayjs"
-import LocalizationProvider from "@material-ui/lab/LocalizationProvider"
+import AdapterDayjs from "@mui/lab/AdapterDayjs"
+import LocalizationProvider from "@mui/lab/LocalizationProvider"
 // import useDarkMode from "use-dark-mode"
 
 export const cache = createCache({ key: "css", prepend: true })

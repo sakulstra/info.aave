@@ -4,10 +4,11 @@ import Layout from "app/core/layouts/Layout"
 const Home: BlitzPage = () => {
   return (
     <div>
-      Gr8, you're here. This app is super incomplete, but please have a look around. The data
-      doesn't sync automatically yet, so you might want to press the refresh button :D
+      Gr8, you are here. This app is super incomplete, but please have a look around. Aavewatch was
+      out of date and I didn&apos;t have the time to maintain it.
       <br />
-      Only contains v2 proto pool atm.
+      This app contains all the transactions from aave v2 mainnet/polygon/avalanche similar to
+      aavewatch, but without the charts &amp; the stats.
       <br />
     </div>
   )

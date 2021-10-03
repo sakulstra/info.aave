@@ -1,14 +1,15 @@
 import { useRouter } from "blitz"
-import InputLabel from "@material-ui/core/InputLabel"
-import MenuItem from "@material-ui/core/MenuItem"
-import FormControl from "@material-ui/core/FormControl"
-import Select from "@material-ui/core/Select"
+import InputLabel from "@mui/material/InputLabel"
+import MenuItem from "@mui/material/MenuItem"
+import FormControl from "@mui/material/FormControl"
+import Select from "@mui/material/Select"
 import { addresses } from "app/core/constants"
 
 export const POOL_NAME_MAP = {
   [addresses.ADDRESS_PROVIDERS.V2.AAVE]: "Proto",
   [addresses.ADDRESS_PROVIDERS.POLYGON.AAVE]: "Proto (Matic)",
   [addresses.ADDRESS_PROVIDERS.V2.AMM]: "AMM",
+  [addresses.ADDRESS_PROVIDERS.AVALANCHE.AAVE]: "Proto (Avalanche)",
 }
 
 type ReserveFilterProps = {

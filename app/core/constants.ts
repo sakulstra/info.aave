@@ -11,6 +11,7 @@ export const addresses = {
     V1: "https://api.thegraph.com/subgraphs/name/aave/protocol-multy-raw",
     V2: "https://api.thegraph.com/subgraphs/name/aave/protocol-v2",
     POLYGON: "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic",
+    AVALANCHE: "https://api.thegraph.com/subgraphs/name/aave/protocol-v2-avalanche",
   },
   // need to be lowercase for the graph
   ADDRESS_PROVIDERS: {
@@ -25,9 +26,13 @@ export const addresses = {
     POLYGON: {
       AAVE: "0xd05e3e715d945b59290df0ae8ef85c1bdb684744",
     },
+    AVALANCHE: {
+      AAVE: "0xb6a86025f0fe1862b372cb0ca18ce3ede02a318f",
+    },
   },
   BATCH_PROVIDERS: {
-    [ChainId.mainnet]: "0x48d164699f0C95AA0dC4097D74413EA216564F97",
-    [ChainId.polygon]: "0x68cf9d517cb57291FEb67dBb10044c1E3e4d4F2d",
+    [ChainId.mainnet]: "0xf49670C78794b6a604f3B49393d8eE951713339F",
+    [ChainId.polygon]: "0x3b4108475a8092967225564C05a1E74e9F7A45D6",
+    // [ChainId.avalanche]: "0x51c4eC68ebDbE196394c4E10bC73Fc132941d36d"
   },
 } as const

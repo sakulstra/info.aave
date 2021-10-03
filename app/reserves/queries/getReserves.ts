@@ -132,46 +132,8 @@ export default resolver.pipe(async ({ where }: GetReservesInput) => {
     */
 
   const reserves = await db.reserve.findMany({ where })
-  const historyItems30dAgo = await Promise.all(
-    reserves.map((reserve) =>
-      db.reserveHistoryItem.findFirst({
-        where: {
-          reserveId: reserve.id,
-          timestamp: { lte: dayjs().unix() - 30 * 24 * 60 * 60 },
-        },
-        orderBy: { timestamp: "desc" },
-      })
-    )
-  )
-  const historyItems90dAgo = await Promise.all(
-    reserves.map((reserve) =>
-      db.reserveHistoryItem.findFirst({
-        where: {
-          reserveId: reserve.id,
-          timestamp: { lte: dayjs().unix() - 90 * 24 * 60 * 60 },
-        },
-        orderBy: { timestamp: "desc" },
-      })
-    )
-  )
+
   return {
-    reserves: v2.formatReserves(
-      reserves.map((reserve, ix) => {
-        return {
-          ...reserve,
-          ...getAverageRates<"avg30Days">(
-            "avg30Days",
-            { ...reserve, timestamp: reserve.lastUpdateTimestamp },
-            historyItems30dAgo[ix] //reserve.ago30d
-          ),
-          ...getAverageRates<"avg90Days">(
-            "avg90Days",
-            { ...reserve, timestamp: reserve.lastUpdateTimestamp },
-            historyItems90dAgo[ix] //reserve.ago90d
-          ),
-        }
-      }),
-      dayjs().unix()
-    ),
+    reserves: v2.formatReserves(reserves, dayjs().unix()),
   }
 })

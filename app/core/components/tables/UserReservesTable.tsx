@@ -1,10 +1,10 @@
 import { useInfiniteQuery } from "blitz"
 import getUserReserves from "app/user-reserves/queries/getUserReserves"
-import LoadingButton from "@material-ui/lab/LoadingButton"
+import LoadingButton from "@mui/lab/LoadingButton"
 import { UserReserve, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
-import { IconButton, Paper } from "@material-ui/core"
-import Person from "@material-ui/icons/Person"
+import { IconButton, Paper } from "@mui/material"
+import Person from "@mui/icons-material/Person"
 import { POOL_NAME_MAP } from "../PoolFilter"
 
 const cells: CellConfig<UserReserve & { reserve: ReserveType }>[] = [

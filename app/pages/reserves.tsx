@@ -1,7 +1,7 @@
 import { BlitzPage, useQuery, useRouterQuery } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getReserves from "app/reserves/queries/getReserves"
-import { Paper, styled, Table, TableBody } from "@material-ui/core"
+import { Paper, styled, Table, TableBody } from "@mui/material"
 import { CellConfig, EnhancedTableHead, EnhancedTableRow } from "app/core/components/Table"
 import { PoolFilter, POOL_NAME_MAP } from "app/core/components/PoolFilter"
 
@@ -20,6 +20,7 @@ const cells: CellConfig<QueryResult["reserves"][0]>[] = [
     id: "symbol",
     label: "Symbol",
     sortable: true,
+    getLink: (obj) => `/reserve/${obj.poolId}/${obj.underlyingAsset}`,
   },
   {
     id: "poolId",
@@ -45,37 +46,41 @@ const cells: CellConfig<QueryResult["reserves"][0]>[] = [
     sortable: true,
     label: "Stable rate (now/avg)",
     getValue: (obj) =>
-      `${renderPercent(obj.stableBorrowRate)} / ${(
-        Number(obj.averageStableRate) /
-        10 ** 25
-      ).toLocaleString("en")}`,
+      obj.stableBorrowRateEnabled
+        ? `${renderPercent(obj.stableBorrowRate)} / ${(
+            Number(obj.averageStableRate) /
+            10 ** 25
+          ).toLocaleString("en")}`
+        : "disabled",
   },
   {
     id: "variableBorrowRate",
     numeric: true,
     sortable: true,
-    label: "Variable rate % (now/30d/90d)",
-    getValue: (obj) =>
+    label: "Variable rate % (now)", // /30d/90d
+    getValue: (obj) => renderPercent(obj.variableBorrowRate),
+    /*getValue: (obj) =>
       `${renderPercent(obj.variableBorrowRate)} / ${renderPercent(
         obj.avg30DaysVariableBorrowRate
-      )} / ${renderPercent(obj.avg90DaysVariableBorrowRate)}`,
+      )} / ${renderPercent(obj.avg90DaysVariableBorrowRate)}`,*/
   },
   {
     id: "liquidityRate",
     numeric: true,
     sortable: true,
-    label: "Liquidity rate % (now/30d/90d)",
-    getValue: (obj) =>
+    label: "Liquidity rate % (now)", // /30d/90d
+    getValue: (obj) => renderPercent(obj.liquidityRate),
+    /*getValue: (obj) =>
       `${renderPercent(obj.liquidityRate)} / ${renderPercent(
         obj.avg30DaysLiquidityRate
-      )}  / ${renderPercent(obj.avg90DaysLiquidityRate)}`,
+      )}  / ${renderPercent(obj.avg90DaysLiquidityRate)}`,*/
   },
   {
     id: "lastUpdateTimestamp",
     sortable: true,
     numeric: true,
     label: "Last updated",
-    getValue: (obj) => new Date(obj.lastUpdateTimestamp * 1000).toLocaleTimeString("en-GB"),
+    getValue: (obj) => new Date(obj.lastUpdateTimestamp * 1000).toLocaleString("en-GB"),
   },
 ]
 
@@ -87,7 +92,11 @@ const CustomPaper = styled(Paper)(({ theme }) => ({
 }))
 
 const Reserves: BlitzPage = () => {
-  const { order = "desc", orderBy = "liquidityRate", poolId } = useRouterQuery() as {
+  const {
+    order = "desc",
+    orderBy = "liquidityRate",
+    poolId,
+  } = useRouterQuery() as {
     order: "asc" | "desc"
     orderBy: string
     poolId: string | undefined
@@ -126,6 +135,6 @@ const Reserves: BlitzPage = () => {
 }
 
 Reserves.suppressFirstRenderFlicker = true
-Reserves.getLayout = (page) => <Layout title="Home">{page}</Layout>
+Reserves.getLayout = (page) => <Layout title="Reserves">{page}</Layout>
 
 export default Reserves

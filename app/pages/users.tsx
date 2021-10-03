@@ -1,5 +1,5 @@
 import { BlitzPage, useRouter, useQuery } from "blitz"
-import { Box, Grid } from "@material-ui/core"
+import { Box, Grid } from "@mui/material"
 import Layout from "app/core/layouts/Layout"
 import getStats from "app/users/queries/getStats"
 import { StatBox } from "app/core/components/StatBox"
