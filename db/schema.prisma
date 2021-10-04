@@ -115,36 +115,6 @@ model Reserve {
   @@unique([underlyingAsset, poolId])
 }
 
-model ReserveHistoryItem {
-  id                               String @id @map("_id")
-  reserveId                        String
-  underlyingAsset                  String
-  poolId                           String
-  totalLiquidity                   String
-  availableLiquidity               String
-  liquidityIndex                   String
-  liquidityRate                    String
-  variableBorrowIndex              String
-  variableBorrowRate               String
-  priceInEth                       String
-  priceInUsd                       String
-  utilizationRate                  String
-  stableBorrowRate                 String
-  lifetimeFlashLoanPremium         String
-  lifetimeReserveFactorAccrued     String
-  lifetimeDepositorsInterestEarned String
-  lifetimeFlashLoans               String
-  lifetimeScaledVariableDebt       String
-  lifetimePrincipalStableDebt      String
-  lifetimeCurrentVariableDebt      String
-  timestamp                        Int
-  chain                            String
-
-  @@index([timestamp])
-  @@index([timestamp, reserveId, poolId])
-  @@index([chain])
-}
-
 model LiquidationCall {
   id                  String  @id @map("_id")
   userId              String
