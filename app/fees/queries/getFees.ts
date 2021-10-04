@@ -1,8 +1,9 @@
-import { Network, BigNumber, pow10 } from "@aave/protocol-js"
+import { BigNumber, pow10 } from "@aave/protocol-js"
+import { Network } from "@aave/math-utils"
 import { addresses } from "app/core/constants"
 import { resolver } from "blitz"
 import { getMongoClient } from "db/mongo"
-import { gqlSdkMatic, gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
+import { gqlSdkAvalanche, gqlSdkMatic, gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
 import { z } from "zod"
 
 type V1Reserve = {
@@ -69,7 +70,7 @@ function calculateV1Fees({
 
 async function getV1ReservesSnapshot(
   gqlClient: typeof gqlSdkV1,
-  network: string,
+  network: Network,
   poolId: string,
   timestamp: number,
   forceRefresh: boolean
@@ -178,10 +179,11 @@ function calculateV2Fees({
 
 async function getV2ReservesSnapshot(
   gqlClient: typeof gqlSdkV2,
-  network: string,
+  network: Network,
   poolId: string,
   timestamp: number,
-  forceRefresh: boolean
+  forceRefresh: boolean,
+  usdFeed?: boolean
 ) {
   const { db } = await getMongoClient()
   const cache = await db.collection("RatesHistoryCache").findOne({ timestamp, network, poolId })
@@ -207,6 +209,7 @@ async function getV2ReservesSnapshot(
           {
             id: true,
             timestamp: true,
+            priceInEth: true,
             priceInUsd: true,
             reserve: {
               decimals: true,
@@ -220,7 +223,12 @@ async function getV2ReservesSnapshot(
       },
     ],
   })
-  const reserves = result.reserves.map((r) => r.paramsHistory[0]).filter((r) => r)
+  const reserves = result.reserves
+    .map((r) => r.paramsHistory[0])
+    .filter(({ priceInEth, priceInUsd, ...r }) => ({
+      ...r,
+      priceInUsd: usdFeed ? priceInEth : priceInUsd,
+    }))
   await db
     .collection("RatesHistoryCache")
     .updateOne(
@@ -302,6 +310,30 @@ export default resolver.pipe(
         poolId,
         oneDayAgo,
         forceRefresh
+      )
+      return {
+        last24hFees: calculateV2Fees({
+          reserves: polygonV2,
+          reservesOneDayAgo: polygonV2_1d,
+        }).toString(),
+      }
+    }
+    if ((Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE) as string[]).includes(poolId)) {
+      const polygonV2 = await getV2ReservesSnapshot(
+        gqlSdkAvalanche,
+        Network.avalanche,
+        poolId,
+        timestamp,
+        forceRefresh,
+        true
+      )
+      const polygonV2_1d = await getV2ReservesSnapshot(
+        gqlSdkAvalanche,
+        Network.avalanche,
+        poolId,
+        oneDayAgo,
+        forceRefresh,
+        true
       )
       return {
         last24hFees: calculateV2Fees({

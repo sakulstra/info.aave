@@ -2,6 +2,19 @@
 # yarn lockfile v1
 
 
+"@aave/contract-helpers@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@aave/contract-helpers/-/contract-helpers-0.10.0.tgz#b668786bbb5166e9128ff417928bbbaa251c3b6a"
+  integrity sha512-QPUN6YJNM9eKi2YvceRFXFTx7n9bt+SC7Wb0eZBwiSoYD8NFZ+9dEFfnlqpquqjAoZH2Uizc0vsDLrmjTAouQw==
+
+"@aave/math-utils@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@aave/math-utils/-/math-utils-0.10.0.tgz#a984ce664fa8da6d9bfb0a168f9212ec63e27efb"
+  integrity sha512-Cz/Qk9y9NIGCpvk7t+/vs5F85ErV8jSSxbco53oINSetr2BZDI0GXL56U4MZXffSpLJcAVBYEojUfnu1YQLPzg==
+  dependencies:
+    bignumber.js "^9.0.1"
+    tslib "^1.10.0"
+
 "@aave/protocol-js@2.7.3-6f5d7ec539a34b2f5c8943145151b1d0646a45fe.0":
   version "2.7.3-6f5d7ec539a34b2f5c8943145151b1d0646a45fe.0"
   resolved "https://registry.npmjs.org/@aave/protocol-js/-/protocol-js-2.7.3-6f5d7ec539a34b2f5c8943145151b1d0646a45fe.0.tgz"
