@@ -16,10 +16,16 @@ export async function getMongoClient() {
   db.collection("UserReserve").createIndex({ usageAsCollateralEnabledOnUser: 1 })
   db.collection("Deposit").createIndex({ poolId: 1, timestamp: -1 })
   db.collection("Withdrawal").createIndex({ poolId: 1, timestamp: -1 })
+  db.collection("LiquidationCall").createIndex({ poolId: 1, timestamp: -1 })
   db.collection("Borrow").createIndex({ poolId: 1, timestamp: -1 })
   db.collection("Repay").createIndex({ poolId: 1, timestamp: -1 })
   db.collection("UserReserve").createIndex({ poolId: 1, lastUpdateTimestamp: -1 })
-  db.collection("ReserveHistoryItem").createIndex({ poolId: 1, timestamp: -1 })
   db.collection("RatesHistoryCache").createIndex({ poolId: 1, timestamp: 1, network: 1 })
   return { client: mongoClient, db }
 }
+
+export enum ORDER {
+  ASC = 1,
+  DESC = -1,
+}
+

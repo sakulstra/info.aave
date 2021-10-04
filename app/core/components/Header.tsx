@@ -1,14 +1,14 @@
-import { useTheme } from "@material-ui/core/styles"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import Drawer from "@material-ui/core/Drawer"
+import { useTheme } from "@mui/material/styles"
+import AppBar from "@mui/material/AppBar"
+import Toolbar from "@mui/material/Toolbar"
+import Typography from "@mui/material/Typography"
+import IconButton from "@mui/material/IconButton"
+import MenuIcon from "@mui/icons-material/Menu"
+import Drawer from "@mui/material/Drawer"
 import { ResponsiveDrawer } from "./Drawer"
 import { useState } from "react"
-import { Box, Container } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles"
+import { Box, Container } from "@mui/material"
+import { makeStyles } from "@mui/styles"
 
 const drawerWidth = 240
 

@@ -11,10 +11,13 @@ import { z } from "zod"
 async function updateUsers(poolId: string) {
   const MIN_HF = 1.4
   const { db } = await getMongoClient()
-  const userIds = await prisma.user.findMany({
-    where: { poolId, healthFactor: { lte: MIN_HF }, totalBorrowsETH: { gte: 0.00001 } },
-    select: { userId: true },
-  })
+  const userIds = await db
+    .collection("User")
+    .find(
+      { poolId, healthFactor: { $lte: MIN_HF }, totalBorrowsETH: { $gte: 0.00001 } },
+      { projection: { userId: 1 } }
+    )
+    .toArray()
   const [users, { reserves }] = await Promise.all([
     db
       .collection("UserReserve")

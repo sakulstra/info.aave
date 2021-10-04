@@ -3,7 +3,7 @@ import * as React from "react"
 import clsx from "clsx"
 import { useRouter } from "next/router"
 import NextLink, { LinkProps as NextLinkProps } from "next/link"
-import MuiLink, { LinkProps as MuiLinkProps } from "@material-ui/core/Link"
+import MuiLink, { LinkProps as MuiLinkProps } from "@mui/material/Link"
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
@@ -15,18 +15,8 @@ interface NextLinkComposedProps
 
 export const NextLinkComposed = React.forwardRef<HTMLAnchorElement, NextLinkComposedProps>(
   function NextLinkComposed(props, ref) {
-    const {
-      to,
-      linkAs,
-      href,
-      replace,
-      scroll,
-      passHref,
-      shallow,
-      prefetch,
-      locale,
-      ...other
-    } = props
+    const { to, linkAs, href, replace, scroll, passHref, shallow, prefetch, locale, ...other } =
+      props
 
     return (
       <NextLink

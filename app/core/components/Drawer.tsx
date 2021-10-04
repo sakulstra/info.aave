@@ -1,14 +1,14 @@
 import * as React from "react"
-import Divider from "@material-ui/core/Divider"
-import InboxIcon from "@material-ui/icons/MoveToInbox"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
-import TwitterIcon from "@material-ui/icons/Twitter"
+import Divider from "@mui/material/Divider"
+import InboxIcon from "@mui/icons-material/MoveToInbox"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemIcon from "@mui/material/ListItemIcon"
+import ListItemText from "@mui/material/ListItemText"
+import TwitterIcon from "@mui/icons-material/Twitter"
 import Link from "app/core/components/Link"
 import { useRouter } from "blitz"
-import Toolbar from "@material-ui/core/Toolbar"
+import Toolbar from "@mui/material/Toolbar"
 
 const LINKS = [
   { href: "/", icon: InboxIcon, text: "Dashboard" },

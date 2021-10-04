@@ -1,7 +1,7 @@
 import { BlitzPage, useParams, useQuery } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { DepositsTable } from "app/core/components/tables/DepositsTable"
-import { Grid, Typography, Paper } from "@material-ui/core"
+import { Grid, Typography, Paper } from "@mui/material"
 import { WithdrawalsTable } from "app/core/components/tables/WithdrawalsTable"
 import { BorrowsTable } from "app/core/components/tables/BorrowsTable"
 import { RepaysTable } from "app/core/components/tables/RepaysTable"
@@ -11,7 +11,7 @@ import { UserReservesTable } from "app/core/components/tables/UserReservesTable"
 import getUser from "app/users/queries/getUser"
 import { POOL_NAME_MAP } from "app/core/components/PoolFilter"
 import Link from "app/core/components/Link"
-import LinkIcon from "@material-ui/icons/Link"
+import LinkIcon from "@mui/icons-material/Link"
 
 const User: BlitzPage = () => {
   const { address } = useParams() as { address: string }

@@ -1,10 +1,10 @@
 import { useInfiniteQuery } from "blitz"
 import getBorrows from "app/transactions/queries/getBorrows"
-import LoadingButton from "@material-ui/lab/LoadingButton"
+import LoadingButton from "@mui/lab/LoadingButton"
 import { Borrow, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
-import { IconButton, Paper, Toolbar, Typography } from "@material-ui/core"
-import Person from "@material-ui/icons/Person"
+import { IconButton, Paper, Toolbar, Typography } from "@mui/material"
+import Person from "@mui/icons-material/Person"
 
 const cells: CellConfig<Borrow & { reserve: ReserveType }>[] = [
   {

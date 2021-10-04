@@ -1,4 +1,4 @@
-import { Theme } from "@material-ui/core/styles"
+import { Theme } from "@mui/material/styles"
 
 declare module "*.module.scss" {
   const content: { [className: string]: string }
@@ -10,7 +10,7 @@ declare module "*.module.css" {
   export default content
 }
 
-declare module "@material-ui/styles" {
+declare module "@mui/styles" {
   interface DefaultTheme extends Theme {
     breakpoints: any
   }

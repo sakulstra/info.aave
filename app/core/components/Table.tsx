@@ -1,9 +1,10 @@
-import TableCell from "@material-ui/core/TableCell"
-import TableHead from "@material-ui/core/TableHead"
-import TableRow from "@material-ui/core/TableRow"
-import TableSortLabel from "@material-ui/core/TableSortLabel"
-import TableContainer from "@material-ui/core/TableContainer"
-import { Paper, Table, TableBody, Toolbar, Typography, styled } from "@material-ui/core"
+import TableCell from "@mui/material/TableCell"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import TableSortLabel from "@mui/material/TableSortLabel"
+import TableContainer from "@mui/material/TableContainer"
+import { Paper, Table, TableBody, Toolbar, Typography, Box } from "@mui/material"
+import { visuallyHidden } from "@mui/utils"
 import Link from "app/core/components/Link"
 import { useRouter } from "blitz"
 import { Fragment, ReactNode } from "react"
@@ -24,20 +25,6 @@ type EnhancedTableHeadProps = {
   disableSorting?: boolean
   detailView?: boolean
 }
-
-const CustomHeader = styled("span")(({ theme }) => ({
-  visuallyHidden: {
-    border: 0,
-    clip: "rect(0 0 0 0)",
-    height: 1,
-    margin: -1,
-    overflow: "hidden",
-    padding: 0,
-    position: "absolute",
-    top: 20,
-    width: 1,
-  },
-}))
 
 export function EnhancedTableHead({ cells, disableSorting, detailView }: EnhancedTableHeadProps) {
   const { push, query } = useRouter()
@@ -68,9 +55,9 @@ export function EnhancedTableHead({ cells, disableSorting, detailView }: Enhance
                 >
                   {headCell.label}
                   {orderBy === headCell.id ? (
-                    <CustomHeader>
+                    <Box component="span" sx={visuallyHidden as any}>
                       {order === "desc" ? "sorted descending" : "sorted ascending"}
-                    </CustomHeader>
+                    </Box>
                   ) : null}
                 </TableSortLabel>
               ) : (
@@ -145,7 +132,7 @@ export function EnhancedTable({
           <Typography variant="button">Count {groups?.[0]?.count || "?"}</Typography>
         </Toolbar>
       )}
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ maxHeight: detailView ? "350px" : undefined }}>
         <Table aria-labelledby="tableTitle" size={"small"} aria-label="enhanced table">
           <EnhancedTableHead
             cells={cells}

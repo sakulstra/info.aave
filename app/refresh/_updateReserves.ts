@@ -84,7 +84,7 @@ export async function updateReserves(gqlSdk: typeof gqlSdkV2, poolId: string) {
       sTokenId: sToken.id,
       poolId,
       priceInEth: price.priceInEth,
-      symbol: fixSymbol(rest.symbol),
+      // symbol: fixSymbol(rest.symbol),
     }
     return db.reserve.upsert({
       where: {

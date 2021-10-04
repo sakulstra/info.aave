@@ -11,4 +11,5 @@ export enum Version {
 export const gqlSdkV1 = createClientV1({ url: addresses.THEGRAPH_PROTOCOL[Version.V1] })
 export const gqlSdkV2 = createClientV2({ url: addresses.THEGRAPH_PROTOCOL[Version.V2] })
 export const gqlSdkMatic = createClientV2({ url: addresses.THEGRAPH_PROTOCOL.POLYGON })
+export const gqlSdkAvalanche = createClientV2({ url: addresses.THEGRAPH_PROTOCOL.AVALANCHE })
 export const gqlSdkStake = createClientStaking({ url: addresses.THEGRAPH_STAKE })

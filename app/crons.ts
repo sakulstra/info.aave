@@ -1,15 +1,14 @@
 import cron from "node-cron"
 // import { addresses } from "./core/constants"
 // import { updateUsers } from "./users/mutations/updateUsers"
-// import "./bot/main"
 import { refreshAll, refreshUsers } from "./refresh/mutations/refreshAll"
 
-refreshAll()
-
-cron.schedule("*/5 * * * *", () => {
+// fetch all new transactions
+cron.schedule("*/15 * * * *", () => {
   refreshAll()
 })
 
-cron.schedule("*/20 * * * *", () => {
+// update users (calculation & db intensive)
+cron.schedule("*/30 * * * *", () => {
   refreshUsers()
 })
