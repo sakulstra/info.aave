@@ -37,6 +37,8 @@
     ]
   },
   "dependencies": {
+    "@aave/contract-helpers": "0.10.0",
+    "@aave/math-utils": "0.10.0",
     "@aave/protocol-js": "2.7.3-6f5d7ec539a34b2f5c8943145151b1d0646a45fe.0",
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
@@ -69,7 +71,7 @@
     "@types/react": "17.0.27",
     "eslint": "7.32.0",
     "husky": "^6.0.0",
-    "lint-staged": "11.0.0",
+    "lint-staged": "11.2.0",
     "prettier": "2.3.2",
     "prettier-plugin-prisma": "3.1.1",
     "pretty-quick": "3.1.1",
