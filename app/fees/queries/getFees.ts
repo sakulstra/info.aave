@@ -1,5 +1,5 @@
 import { BigNumber, pow10 } from "@aave/protocol-js"
-import { Network } from "@aave/math-utils"
+import { Network, normalize } from "@aave/math-utils"
 import { addresses } from "app/core/constants"
 import { resolver } from "blitz"
 import { getMongoClient } from "db/mongo"
@@ -139,13 +139,17 @@ function toUsd(value, decimals, usdPrice) {
 function calculateV2Fees({
   reserves,
   reservesOneDayAgo = [],
+  usdPriceFeed,
 }: {
   reserves: V2Reserve[]
   reservesOneDayAgo: V2Reserve[]
+  usdPriceFeed?: boolean
 }) {
   return reserves.reduce((acc, reserve) => {
     const oneDayAgo = reservesOneDayAgo.find((r) => r.reserve.symbol === reserve.reserve.symbol)
-    if (!oneDayAgo) return new BigNumber(0)
+    const priceInUsd = usdPriceFeed
+      ? new BigNumber(reserve.priceInUsd).dividedBy(10 ** 8)
+      : reserve.priceInUsd
     return acc
       .plus(
         toUsd(
@@ -153,7 +157,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeDepositorsInterestEarned || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
       .plus(
@@ -162,7 +166,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeFlashLoanPremium || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
       .plus(
@@ -171,7 +175,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeReserveFactorAccrued || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
   }, new BigNumber(0))
@@ -209,8 +213,8 @@ async function getV2ReservesSnapshot(
           {
             id: true,
             timestamp: true,
-            priceInEth: true,
-            priceInUsd: true,
+            priceInEth: usdFeed,
+            priceInUsd: !usdFeed,
             reserve: {
               decimals: true,
               symbol: true,
@@ -225,7 +229,8 @@ async function getV2ReservesSnapshot(
   })
   const reserves = result.reserves
     .map((r) => r.paramsHistory[0])
-    .filter(({ priceInEth, priceInUsd, ...r }) => ({
+    .filter((r) => r)
+    .map(({ priceInEth, priceInUsd, ...r }) => ({
       ...r,
       priceInUsd: usdFeed ? priceInEth : priceInUsd,
     }))
@@ -319,7 +324,7 @@ export default resolver.pipe(
       }
     }
     if ((Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE) as string[]).includes(poolId)) {
-      const polygonV2 = await getV2ReservesSnapshot(
+      const avalancheV2 = await getV2ReservesSnapshot(
         gqlSdkAvalanche,
         Network.avalanche,
         poolId,
@@ -327,7 +332,8 @@ export default resolver.pipe(
         forceRefresh,
         true
       )
-      const polygonV2_1d = await getV2ReservesSnapshot(
+      console.log(avalancheV2)
+      const avalancheV2_1d = await getV2ReservesSnapshot(
         gqlSdkAvalanche,
         Network.avalanche,
         poolId,
@@ -337,8 +343,9 @@ export default resolver.pipe(
       )
       return {
         last24hFees: calculateV2Fees({
-          reserves: polygonV2,
-          reservesOneDayAgo: polygonV2_1d,
+          reserves: avalancheV2,
+          reservesOneDayAgo: avalancheV2_1d,
+          usdPriceFeed: true,
         }).toString(),
       }
     }
