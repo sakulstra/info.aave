@@ -28,13 +28,6 @@ const useStyles = makeStyles((theme: any) => ({
   title: {
     flexGrow: 1,
   },
-  drawer: {
-    [theme.breakpoints.up("sm")]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-  toolbar: theme.mixins.toolbar,
   drawerPaper: {
     boxSizing: "border-box",
     width: drawerWidth,
@@ -74,16 +67,20 @@ export function Header({ children }) {
           </Typography>
         </Toolbar>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <Box
+        component="nav"
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        aria-label="mailbox folders"
+      >
         <Drawer
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+          }}
           variant="temporary"
           anchor={theme.direction === "rtl" ? "right" : "left"}
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          classes={{
-            paper: classes.drawerPaper,
-          }}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
@@ -91,22 +88,22 @@ export function Header({ children }) {
           <ResponsiveDrawer handleClose={handleDrawerToggle} />
         </Drawer>
         <Drawer
-          sx={{ display: { md: "block", xs: "none" } }}
-          classes={{
-            paper: classes.drawerPaper,
+          sx={{
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
           }}
           variant="permanent"
           open
         >
           <ResponsiveDrawer />
         </Drawer>
-      </nav>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
+      </Box>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Toolbar />
         <Container maxWidth="xl" disableGutters>
           {children}
         </Container>
-      </main>
+      </Box>
     </Box>
   )
 }
