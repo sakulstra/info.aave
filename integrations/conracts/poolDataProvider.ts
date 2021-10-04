@@ -1,6 +1,7 @@
 import { providers } from "ethers"
 import { IUiPoolDataProviderFactory } from "./IUiPoolDataProviderFactory"
-import { API_ETH_MOCK_ADDRESS, BigNumber, ChainId } from "@aave/protocol-js"
+import { API_ETH_MOCK_ADDRESS, BigNumber } from "@aave/protocol-js"
+import { Network } from "@aave/math-utils"
 import { addresses } from "app/core/constants"
 
 export const unPrefixSymbol = (symbol: string, prefix: string) => {
@@ -22,28 +23,28 @@ function formatObjectWithBNFields<T extends { [key: string]: any }>(obj: T) {
 }
 
 const PROVIDERS = {
-  [ChainId.polygon]: new providers.JsonRpcProvider(process.env.POLYGON_RPC, ChainId.polygon),
-  [ChainId.mainnet]: new providers.JsonRpcProvider(process.env.MAINNET_RPC),
+  [Network.polygon]: new providers.JsonRpcProvider(process.env.POLYGON_RPC, Network.polygon),
+  [Network.mainnet]: new providers.JsonRpcProvider(process.env.MAINNET_RPC),
 }
 
 const contracts = {
-  [ChainId.polygon]: IUiPoolDataProviderFactory.connect(
-    addresses.BATCH_PROVIDERS[ChainId.polygon], // TODO: make chain independant
-    PROVIDERS[ChainId.polygon]
+  [Network.polygon]: IUiPoolDataProviderFactory.connect(
+    addresses.BATCH_PROVIDERS[Network.polygon], // TODO: make chain independant
+    PROVIDERS[Network.polygon]
   ),
-  [ChainId.mainnet]: IUiPoolDataProviderFactory.connect(
-    addresses.BATCH_PROVIDERS[ChainId.mainnet], // TODO: make chain independant
-    PROVIDERS[ChainId.mainnet]
+  [Network.mainnet]: IUiPoolDataProviderFactory.connect(
+    addresses.BATCH_PROVIDERS[Network.mainnet], // TODO: make chain independant
+    PROVIDERS[Network.mainnet]
   ),
 }
 
 export async function getOnChainReserves(poolId) {
-  let chain = ChainId.polygon
+  let chain = Network.polygon
   if ((Object.values(addresses.ADDRESS_PROVIDERS.POLYGON) as string[]).includes(poolId)) {
-    chain = ChainId.polygon
+    chain = Network.polygon
   }
   if ((Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]).includes(poolId)) {
-    chain = ChainId.mainnet
+    chain = Network.mainnet
   }
   const helperContract = contracts[chain]
   const {

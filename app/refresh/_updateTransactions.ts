@@ -1,4 +1,4 @@
-import { normalize } from "@aave/protocol-js"
+import { normalize } from "@aave/math-utils"
 import db from "db"
 import { LiquidationCall } from "db/models/LiquidationCall"
 import { Deposit } from "db/models/Deposit"

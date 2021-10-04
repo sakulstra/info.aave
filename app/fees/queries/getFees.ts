@@ -1,8 +1,9 @@
-import { Network, BigNumber, pow10 } from "@aave/protocol-js"
+import { BigNumber, pow10 } from "@aave/protocol-js"
+import { Network, normalize } from "@aave/math-utils"
 import { addresses } from "app/core/constants"
 import { resolver } from "blitz"
 import { getMongoClient } from "db/mongo"
-import { gqlSdkMatic, gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
+import { gqlSdkAvalanche, gqlSdkMatic, gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
 import { z } from "zod"
 
 type V1Reserve = {
@@ -69,7 +70,7 @@ function calculateV1Fees({
 
 async function getV1ReservesSnapshot(
   gqlClient: typeof gqlSdkV1,
-  network: string,
+  network: Network,
   poolId: string,
   timestamp: number,
   forceRefresh: boolean
@@ -138,13 +139,17 @@ function toUsd(value, decimals, usdPrice) {
 function calculateV2Fees({
   reserves,
   reservesOneDayAgo = [],
+  usdPriceFeed,
 }: {
   reserves: V2Reserve[]
   reservesOneDayAgo: V2Reserve[]
+  usdPriceFeed?: boolean
 }) {
   return reserves.reduce((acc, reserve) => {
     const oneDayAgo = reservesOneDayAgo.find((r) => r.reserve.symbol === reserve.reserve.symbol)
-    if (!oneDayAgo) return new BigNumber(0)
+    const priceInUsd = usdPriceFeed
+      ? new BigNumber(reserve.priceInUsd).dividedBy(10 ** 8)
+      : reserve.priceInUsd
     return acc
       .plus(
         toUsd(
@@ -152,7 +157,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeDepositorsInterestEarned || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
       .plus(
@@ -161,7 +166,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeFlashLoanPremium || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
       .plus(
@@ -170,7 +175,7 @@ function calculateV2Fees({
             oneDayAgo?.lifetimeReserveFactorAccrued || 0
           ),
           reserve.reserve.decimals,
-          reserve.priceInUsd
+          priceInUsd
         )
       )
   }, new BigNumber(0))
@@ -178,10 +183,11 @@ function calculateV2Fees({
 
 async function getV2ReservesSnapshot(
   gqlClient: typeof gqlSdkV2,
-  network: string,
+  network: Network,
   poolId: string,
   timestamp: number,
-  forceRefresh: boolean
+  forceRefresh: boolean,
+  usdFeed?: boolean
 ) {
   const { db } = await getMongoClient()
   const cache = await db.collection("RatesHistoryCache").findOne({ timestamp, network, poolId })
@@ -207,7 +213,8 @@ async function getV2ReservesSnapshot(
           {
             id: true,
             timestamp: true,
-            priceInUsd: true,
+            priceInEth: usdFeed,
+            priceInUsd: !usdFeed,
             reserve: {
               decimals: true,
               symbol: true,
@@ -220,7 +227,13 @@ async function getV2ReservesSnapshot(
       },
     ],
   })
-  const reserves = result.reserves.map((r) => r.paramsHistory[0]).filter((r) => r)
+  const reserves = result.reserves
+    .map((r) => r.paramsHistory[0])
+    .filter((r) => r)
+    .map(({ priceInEth, priceInUsd, ...r }) => ({
+      ...r,
+      priceInUsd: usdFeed ? priceInEth : priceInUsd,
+    }))
   await db
     .collection("RatesHistoryCache")
     .updateOne(
@@ -307,6 +320,32 @@ export default resolver.pipe(
         last24hFees: calculateV2Fees({
           reserves: polygonV2,
           reservesOneDayAgo: polygonV2_1d,
+        }).toString(),
+      }
+    }
+    if ((Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE) as string[]).includes(poolId)) {
+      const avalancheV2 = await getV2ReservesSnapshot(
+        gqlSdkAvalanche,
+        Network.avalanche,
+        poolId,
+        timestamp,
+        forceRefresh,
+        true
+      )
+      console.log(avalancheV2)
+      const avalancheV2_1d = await getV2ReservesSnapshot(
+        gqlSdkAvalanche,
+        Network.avalanche,
+        poolId,
+        oneDayAgo,
+        forceRefresh,
+        true
+      )
+      return {
+        last24hFees: calculateV2Fees({
+          reserves: avalancheV2,
+          reservesOneDayAgo: avalancheV2_1d,
+          usdPriceFeed: true,
         }).toString(),
       }
     }

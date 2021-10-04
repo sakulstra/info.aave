@@ -4,7 +4,7 @@ import cron from "node-cron"
 import { refreshAll, refreshUsers } from "./refresh/mutations/refreshAll"
 
 // fetch all new transactions
-cron.schedule("*/15 * * * *", () => {
+cron.schedule("*/5 * * * *", () => {
   refreshAll()
 })
 
