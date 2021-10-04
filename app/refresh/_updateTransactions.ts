@@ -235,7 +235,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   console.log(`writing ${requests.length} borrows`)
   if (requests?.length) {
     await nativeDb
-      .collection("Borrow")
+      .collection<Borrow>("Borrow")
       .insertMany(requests, { ordered: false })
       .catch((e) => console.log("ignore write error"))
   }
@@ -298,7 +298,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   console.log(`writing ${requests.length} repays`)
   if (requests?.length) {
     await nativeDb
-      .collection("Repay")
+      .collection<Repay>("Repay")
       .insertMany(requests, { ordered: false })
       .catch((e) => console.log("ignore write error"))
   }
@@ -363,7 +363,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   console.log(`writing ${requests.length} redeems`)
   if (requests?.length) {
     await nativeDb
-      .collection("Withdrawal")
+      .collection<Withdrawal>("Withdrawal")
       .insertMany(requests, { ordered: false })
       .catch((e) => console.log("ignore write error"))
   }
@@ -426,7 +426,7 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
   console.log(`writing ${requests.length} flashs`)
   if (requests?.length) {
     await nativeDb
-      .collection("FlashLoan")
+      .collection<FlashLoan>("FlashLoan")
       .insertMany(requests, { ordered: false })
       .catch((e) => console.log("ignore write error"))
   }
