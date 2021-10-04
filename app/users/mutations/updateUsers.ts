@@ -70,16 +70,18 @@ export async function refreshUsers(
 ) {
   const users = getFormattedUsers(poolId, _users, reserves)
   const { db } = await getMongoClient()
-  await db.collection("User").bulkWrite(
-    users.map(({ reservesData, ...user }) => ({
-      replaceOne: {
-        filter: { userId: user.userId, poolId: poolId },
-        replacement: user,
-        upsert: true,
-      },
-    })),
-    { ordered: false }
-  )
+  if (users.length) {
+    await db.collection("User").bulkWrite(
+      users.map(({ reservesData, ...user }) => ({
+        replaceOne: {
+          filter: { userId: user.userId, poolId: poolId },
+          replacement: user,
+          upsert: true,
+        },
+      })),
+      { ordered: false }
+    )
+  }
   return users
 }
 

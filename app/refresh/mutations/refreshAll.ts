@@ -22,15 +22,7 @@ export async function refreshAll() {
     updateReserves(gqlSdkAvalanche, addresses.ADDRESS_PROVIDERS.AVALANCHE.AAVE),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V1)
       .map((poolId) => {
-        return [
-          fetchNextLiquidations(poolId, gqlSdkV1),
-          //fetchNextDeposits(poolId, gqlSdkV2),
-          //fetchNextBorrows(poolId, gqlSdkV2),
-          //fetchNextRepays(poolId, gqlSdkV2),
-          //fetchNextWithdrawals(poolId, gqlSdkV2),
-          //fetchNextFlashLoans(poolId, gqlSdkV2),
-          //fetchNextUserReserves(poolId, gqlSdkV2),
-        ]
+        return [fetchNextLiquidations(poolId, gqlSdkV1)]
       })
       .flat(),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V2)

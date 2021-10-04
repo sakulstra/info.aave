@@ -1,6 +1,12 @@
 import { normalize } from "@aave/protocol-js"
-import db, { Borrow, Deposit, FlashLoan, LiquidationCall, Repay, Withdrawal } from "db"
-import { getMongoClient } from "db/mongo"
+import db from "db"
+import { LiquidationCall } from "db/models/LiquidationCall"
+import { Deposit } from "db/models/Deposit"
+import { Borrow } from "db/models/Borrow"
+import { FlashLoan } from "db/models/FlashLoan"
+import { Repay } from "db/models/Repay"
+import { Withdrawal } from "db/models/Withdrawal"
+import { getMongoClient, ORDER } from "db/mongo"
 import { gqlSdkV1, gqlSdkV2 } from "integrations/subgraph"
 
 const LIMIT = 1000
@@ -15,11 +21,12 @@ export const fetchNextLiquidations = async (
   gqlClient: typeof gqlSdkV2 | typeof gqlSdkV1
 ) => {
   const { db: nativeDb } = await getMongoClient()
-  const liquidationCall = await db.liquidationCall.findFirst({
-    where: { poolId },
-    select: { timestamp: true },
-    orderBy: { timestamp: "desc" },
-  })
+  const liquidationCall = await nativeDb.collection<LiquidationCall>("LiquidationCall").findOne(
+    {
+      poolId,
+    },
+    { sort: { timestamp: ORDER.DESC } }
+  )
 
   const result = await (gqlClient as typeof gqlSdkV2).query({
     liquidationCalls: [
@@ -53,6 +60,7 @@ export const fetchNextLiquidations = async (
   })
   const requests = result.liquidationCalls.map(
     ({
+      id,
       user,
       collateralReserve,
       principalReserve,
@@ -70,6 +78,7 @@ export const fetchNextLiquidations = async (
       // user + reserve + pool
       const record: LiquidationCall = {
         ...rest,
+        _id: id,
         userId: user.id,
         poolId,
         liquidatorId: liquidator,
@@ -85,7 +94,10 @@ export const fetchNextLiquidations = async (
   )
   console.log(`writing ${requests.length} liquidations`)
   if (requests?.length) {
-    await nativeDb.collection("LiquidationCall").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection<LiquidationCall>("LiquidationCall")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.liquidationCalls.length === LIMIT) {
     return result.liquidationCalls.length + (await fetchNextLiquidations(poolId, gqlClient))
@@ -95,11 +107,12 @@ export const fetchNextLiquidations = async (
 
 export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdkV2) => {
   const { db: nativeDb } = await getMongoClient()
-  const deposit = await db.deposit.findFirst({
-    where: { poolId },
-    select: { timestamp: true },
-    orderBy: { timestamp: "desc" },
-  })
+  const deposit = await nativeDb.collection<Deposit>("Deposit").findOne(
+    {
+      poolId,
+    },
+    { sort: { timestamp: ORDER.DESC } }
+  )
 
   const result = await gqlClient.query({
     deposits: [
@@ -132,11 +145,12 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
     ],
   })
   const requests = result.deposits.map(
-    ({ user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
+    ({ id, user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
       const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Deposit = {
         ...rest,
+        _id: id,
         userId: user.id,
         poolId,
         reserveId: reserve.id,
@@ -150,7 +164,10 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   )
   console.log(`writing ${requests.length} deposits`)
   if (requests?.length) {
-    await nativeDb.collection("Deposit").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection<Deposit>("Deposit")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.deposits.length === LIMIT) {
     return result.deposits.length + (await fetchNextDeposits(poolId, gqlClient))
@@ -198,11 +215,12 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
     ],
   })
   const requests = result.borrows.map(
-    ({ user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
+    ({ id, user, onBehalfOf, reserve, referrer, amount, ...rest }) => {
       const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Borrow = {
         ...rest,
+        _id: id,
         userId: user.id,
         poolId,
         underlyingAsset,
@@ -216,7 +234,10 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   )
   console.log(`writing ${requests.length} borrows`)
   if (requests?.length) {
-    await nativeDb.collection("Borrow").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection("Borrow")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.borrows.length === LIMIT) {
     return result.borrows.length + (await fetchNextBorrows(poolId, gqlClient))
@@ -259,11 +280,12 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
       },
     ],
   })
-  const requests = result.repays.map(({ user, onBehalfOf, reserve, amount, ...rest }) => {
+  const requests = result.repays.map(({ id, user, onBehalfOf, reserve, amount, ...rest }) => {
     const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
     // user + reserve + pool
     const record: Repay = {
       ...rest,
+      _id: id,
       userId: user.id,
       poolId,
       underlyingAsset,
@@ -275,7 +297,10 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   })
   console.log(`writing ${requests.length} repays`)
   if (requests?.length) {
-    await nativeDb.collection("Repay").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection("Repay")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.repays.length === LIMIT) {
     return result.repays.length + (await fetchNextRepays(poolId, gqlClient))
@@ -319,11 +344,12 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
     ],
   })
   const requests = result.redeemUnderlyings.map(
-    ({ user, onBehalfOf, reserve, amount, ...rest }) => {
+    ({ id, user, onBehalfOf, reserve, amount, ...rest }) => {
       const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
       // user + reserve + pool
       const record: Withdrawal = {
         ...rest,
+        _id: id,
         userId: user.id,
         poolId,
         underlyingAsset,
@@ -336,7 +362,10 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   )
   console.log(`writing ${requests.length} redeems`)
   if (requests?.length) {
-    await nativeDb.collection("Withdrawal").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection("Withdrawal")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.redeemUnderlyings.length === LIMIT) {
     return result.redeemUnderlyings.length + (await fetchNextWithdrawals(poolId, gqlClient))
@@ -377,23 +406,29 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
       },
     ],
   })
-  const requests = result.flashLoans.map(({ initiator, reserve, amount, totalFee, ...rest }) => {
-    const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
-    // user + reserve + pool
-    const record: FlashLoan = {
-      ...rest,
-      initiatorId: initiator.id,
-      poolId,
-      reserveId: reserve.id,
-      underlyingAsset,
-      amount: Number(normalize(amount, reserve.decimals)),
-      totalFee: Number(normalize(totalFee, reserve.decimals)),
+  const requests = result.flashLoans.map(
+    ({ id, initiator, reserve, amount, totalFee, ...rest }) => {
+      const { underlyingAsset, poolId } = reserveIdToPoolReserve(reserve.id)
+      // user + reserve + pool
+      const record: FlashLoan = {
+        ...rest,
+        _id: id,
+        initiatorId: initiator.id,
+        poolId,
+        reserveId: reserve.id,
+        underlyingAsset,
+        amount: Number(normalize(amount, reserve.decimals)),
+        totalFee: Number(normalize(totalFee, reserve.decimals)),
+      }
+      return record
     }
-    return record
-  })
+  )
   console.log(`writing ${requests.length} flashs`)
   if (requests?.length) {
-    await nativeDb.collection("FlashLoan").insertMany(requests, { ordered: false }).catch()
+    await nativeDb
+      .collection("FlashLoan")
+      .insertMany(requests, { ordered: false })
+      .catch((e) => console.log("ignore write error"))
   }
   if (result.flashLoans.length === LIMIT) {
     return result.flashLoans.length + (await fetchNextFlashLoans(poolId, gqlClient))
