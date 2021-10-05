@@ -77,12 +77,15 @@ export async function refreshAll() {
 }
 
 export async function refreshUsers() {
-  await Promise.all([
-    ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) => updateUsers(poolId)),
-    ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) => updateUsers(poolId)),
-    ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE).map((poolId) => updateUsers(poolId)),
-
-  ])
+  for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE)) {
+    await updateUsers(poolId)
+  }
+  for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.V2)) {
+    await updateUsers(poolId)
+  }
+  for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.POLYGON)) {
+    await updateUsers(poolId)
+  }
 }
 
 export default resolver.pipe(async () => {
