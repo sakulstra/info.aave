@@ -33,6 +33,6 @@ export const addresses = {
   BATCH_PROVIDERS: {
     [Network.mainnet]: "0xf49670C78794b6a604f3B49393d8eE951713339F",
     [Network.polygon]: "0x3b4108475a8092967225564C05a1E74e9F7A45D6",
-    [Network.avalanche]: "0x51c4eC68ebDbE196394c4E10bC73Fc132941d36d",
+    [Network.avalanche]: "0x7d9d970CaE574912221d25107A6728f0d17Cb901",
   },
 } as const

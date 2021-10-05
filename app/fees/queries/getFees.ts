@@ -332,7 +332,6 @@ export default resolver.pipe(
         forceRefresh,
         true
       )
-      console.log(avalancheV2)
       const avalancheV2_1d = await getV2ReservesSnapshot(
         gqlSdkAvalanche,
         Network.avalanche,

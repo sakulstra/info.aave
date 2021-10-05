@@ -130,4 +130,8 @@ export default resolver.pipe(resolver.zod(UpdateUsers), async ({ poolId }) => {
     //await fetchNextUserReserves(poolId, gqlSdkV2)
     return await updateUsers(poolId)
   }
+  if ((Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE) as string[]).includes(poolId)) {
+    //await fetchNextUserReserves(poolId, gqlSdkV2)
+    return await updateUsers(poolId)
+  }
 })

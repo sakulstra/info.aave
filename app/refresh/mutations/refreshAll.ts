@@ -80,6 +80,8 @@ export async function refreshUsers() {
   await Promise.all([
     ...Object.values(addresses.ADDRESS_PROVIDERS.POLYGON).map((poolId) => updateUsers(poolId)),
     ...Object.values(addresses.ADDRESS_PROVIDERS.V2).map((poolId) => updateUsers(poolId)),
+    ...Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE).map((poolId) => updateUsers(poolId)),
+
   ])
 }
 

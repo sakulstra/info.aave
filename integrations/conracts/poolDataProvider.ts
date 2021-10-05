@@ -25,6 +25,10 @@ function formatObjectWithBNFields<T extends { [key: string]: any }>(obj: T) {
 const PROVIDERS = {
   [Network.polygon]: new providers.JsonRpcProvider(process.env.POLYGON_RPC, Network.polygon),
   [Network.mainnet]: new providers.JsonRpcProvider(process.env.MAINNET_RPC),
+  [Network.avalanche]: new providers.JsonRpcProvider(
+    "https://api.avax.network/ext/bc/C/rpc",
+    Network.avalanche
+  ),
 }
 
 const contracts = {
@@ -36,6 +40,10 @@ const contracts = {
     addresses.BATCH_PROVIDERS[Network.mainnet], // TODO: make chain independant
     PROVIDERS[Network.mainnet]
   ),
+  [Network.avalanche]: IUiPoolDataProviderFactory.connect(
+    addresses.BATCH_PROVIDERS[Network.avalanche], // TODO: make chain independant
+    PROVIDERS[Network.avalanche]
+  ),
 }
 
 export async function getOnChainReserves(poolId) {
@@ -45,6 +53,9 @@ export async function getOnChainReserves(poolId) {
   }
   if ((Object.values(addresses.ADDRESS_PROVIDERS.V2) as string[]).includes(poolId)) {
     chain = Network.mainnet
+  }
+  if ((Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE) as string[]).includes(poolId)) {
+    chain = Network.avalanche
   }
   const helperContract = contracts[chain]
   const {
