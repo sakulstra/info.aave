@@ -69,7 +69,7 @@ export async function getOnChainReserves(poolId) {
     const formattedReserve = {
       ...formatObjectWithBNFields(rawReserve),
       id: (rawReserve.underlyingAsset + poolId).toLowerCase(),
-      price: { priceInEth: rawReserve.priceInEth.toString() },
+      priceInMarketReferenceCurrency: rawReserve.priceInEth.toString(),
     }
     formattedReserve.symbol = rawReserve.symbol.toUpperCase()
     formattedReserve.underlyingAsset = rawReserve.underlyingAsset.toLowerCase()

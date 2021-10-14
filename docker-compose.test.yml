@@ -11,19 +11,3 @@ services:
       POLYGON_RPC: <polgon rpc>
       MAINNET_RPC: <mainnet rpc>
       PORT: 3004
-      # when this flag is set it will skip all syncing that is not needed for calculating the heaelth factors
-      # MODE: "BOT"
-    # if you're running a bot against the api it might make sense running in host mode so you can access he service from outside
-    # network_mode: host
-  #liquidator:
-  #  restart: always
-  #  depends_on:
-  #    - app
-  #  image: "node:14"
-  #  working_dir: /home/node/app
-  #  volumes:
-  #    - ../liquidationbot:/home/node/app
-  #  command: npm run dev
-  #  network_mode: host
-  #  environment:
-  #    PORT: 3004

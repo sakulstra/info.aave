@@ -1,7 +1,7 @@
 import { BlitzPage, useRouter, useQuery } from "blitz"
 import { Box, Grid } from "@mui/material"
 import Layout from "app/core/layouts/Layout"
-import getStats from "app/users/queries/getStats"
+import getStats from "app/users/queries/getUserStats"
 import { StatBox } from "app/core/components/StatBox"
 import { PoolFilter } from "app/core/components/PoolFilter"
 import { UsersTable } from "app/core/components/tables/UsersTable"

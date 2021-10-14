@@ -6,6 +6,7 @@ import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/componen
 import { IconButton, Paper } from "@mui/material"
 import Person from "@mui/icons-material/Person"
 import { POOL_NAME_MAP } from "../PoolFilter"
+import { explorerLink } from "app/core/utils/explorerLinkBuilder"
 
 const cells: CellConfig<UserReserve & { reserve: ReserveType }>[] = [
   {
@@ -13,7 +14,7 @@ const cells: CellConfig<UserReserve & { reserve: ReserveType }>[] = [
     sortable: true,
     label: "Last updated",
     getValue: (obj) => new Date(obj.lastUpdateTimestamp * 1000).toLocaleString("en-GB"),
-    getLink: (obj) => `https://etherscan.io/address/${obj.userId}`,
+    getLink: (obj) => explorerLink({ poolId: obj.poolId, tx: obj.id }),
   },
   {
     id: "poolId",

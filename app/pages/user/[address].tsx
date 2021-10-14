@@ -19,13 +19,6 @@ const User: BlitzPage = () => {
 
   return (
     <Grid container spacing={2} sx={{ position: "relative" }}>
-      <Link
-        href={`https://etherscan.io/address/${address}`}
-        target="__BLANK"
-        sx={{ position: "absolute", right: 0, top: 0, display: "flex", alignItems: "center" }}
-      >
-        <span>Etherscan</span> <LinkIcon fontSize="small" sx={{ mx: 1 }} />
-      </Link>
       {data.items.map((user) => (
         <Grid item xs={12} md={4} lg={3} key={user.poolId}>
           <Paper square sx={{ p: 2 }}>
