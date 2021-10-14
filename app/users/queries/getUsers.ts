@@ -19,9 +19,9 @@ export default resolver.pipe(
           select: {
             lastUpdateTimestamp: true,
             healthFactor: true,
-            totalBorrowsETH: true,
-            totalCollateralETH: true,
-            totalLiquidityETH: true,
+            totalBorrowsUSD: true,
+            totalCollateralUSD: true,
+            totalLiquidityUSD: true,
             userId: true,
             poolId: true,
             id: true,

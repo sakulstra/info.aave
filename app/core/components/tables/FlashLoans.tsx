@@ -5,6 +5,7 @@ import { FlashLoan, Prisma, Reserve as ReserveType } from "@prisma/client"
 import { CellConfig, EnhancedTable, EnhancedTableProps } from "app/core/components/Table"
 import { IconButton, Paper } from "@mui/material"
 import Person from "@mui/icons-material/Person"
+import { explorerLink } from "app/core/utils/explorerLinkBuilder"
 
 const cells: CellConfig<FlashLoan & { reserve: ReserveType }>[] = [
   {
@@ -12,7 +13,7 @@ const cells: CellConfig<FlashLoan & { reserve: ReserveType }>[] = [
     sortable: true,
     label: "Date",
     getValue: (obj) => new Date(obj.timestamp * 1000).toLocaleString("en-GB"),
-    getLink: (obj) => `https://etherscan.io/tx/${obj.id.replace(/:.*/, "")}`,
+    getLink: (obj) => explorerLink({ poolId: obj.poolId, tx: obj.id }),
   },
   {
     id: "amount",

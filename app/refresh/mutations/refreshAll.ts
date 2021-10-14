@@ -78,13 +78,13 @@ export async function refreshAll() {
 
 export async function refreshUsers() {
   for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.AVALANCHE)) {
-    await updateUsers(poolId)
+  await updateUsers(poolId, 8)
   }
   for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.V2)) {
-    await updateUsers(poolId)
+    await updateUsers(poolId, 18)
   }
   for (const poolId of Object.values(addresses.ADDRESS_PROVIDERS.POLYGON)) {
-    await updateUsers(poolId)
+    await updateUsers(poolId, 18)
   }
 }
 

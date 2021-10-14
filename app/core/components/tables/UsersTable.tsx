@@ -20,25 +20,25 @@ const cells: CellConfig<User & { reserve: ReserveType }>[] = [
     getValue: (obj) => obj.healthFactor,
   },
   {
-    id: "totalBorrowsETH",
+    id: "totalBorrowsUSD",
     numeric: true,
     sortable: true,
     label: "Total Borrows",
-    suffix: "ETH",
+    suffix: "USD",
   },
   {
-    id: "totalCollateralETH",
+    id: "totalCollateralUSD",
     numeric: true,
     sortable: true,
     label: "Total Collateral",
-    suffix: "ETH",
+    suffix: "USD",
   },
   {
-    id: "totalLiquidityETH",
+    id: "totalLiquidityUSD",
     numeric: true,
     sortable: true,
     label: "Total Liquidity",
-    suffix: "ETH",
+    suffix: "USD",
   },
   {
     id: "userId",
@@ -49,7 +49,7 @@ const cells: CellConfig<User & { reserve: ReserveType }>[] = [
         <Person color="primary" fontSize="inherit" />
       </IconButton>
     ),*/
-    // getLink: (obj) => `https://etherscan.io/address/${obj.userId}`, //`/user/${obj.userId}`,
+    // getLink: (obj) => explorerLink({ poolId: obj.poolId, tx: obj.userId }), //`/user/${obj.userId}`,
   },
 ]
 
