@@ -39,7 +39,7 @@
   "dependencies": {
     "@aave/contract-helpers": "0.15.1",
     "@aave/math-utils": "0.15.1",
-    "@aave/protocol-js": "2.7.3-6f5d7ec539a34b2f5c8943145151b1d0646a45fe.0",
+    "@aave/protocol-js": "4.1.0",
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
     "@emotion/server": "11.4.0",
