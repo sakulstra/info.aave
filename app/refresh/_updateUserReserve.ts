@@ -17,6 +17,7 @@ export const fetchNextUserReserves = async (poolId: string, gqlSdk: typeof gqlSd
   const result = await gqlSdk.query({
     userReserves: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "lastUpdateTimestamp",
         orderDirection: "asc",

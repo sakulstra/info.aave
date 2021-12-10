@@ -31,6 +31,7 @@ export const fetchNextLiquidations = async (
   const result = await (gqlClient as typeof gqlSdkV2).query({
     liquidationCalls: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {
@@ -117,6 +118,7 @@ export const fetchNextDeposits = async (poolId: string, gqlClient: typeof gqlSdk
   const result = await gqlClient.query({
     deposits: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {
@@ -186,6 +188,7 @@ export const fetchNextBorrows = async (poolId: string, gqlClient: typeof gqlSdkV
   const result = await gqlClient.query({
     borrows: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {
@@ -256,6 +259,7 @@ export const fetchNextRepays = async (poolId: string, gqlClient: typeof gqlSdkV2
   const result = await gqlClient.query({
     repays: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {
@@ -319,6 +323,7 @@ export const fetchNextWithdrawals = async (poolId: string, gqlClient: typeof gql
   const result = await gqlClient.query({
     redeemUnderlyings: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {
@@ -384,6 +389,7 @@ export const fetchNextFlashLoans = async (poolId: string, gqlClient: typeof gqlS
   const result = await gqlClient.query({
     flashLoans: [
       {
+        subgraphError: "deny",
         first: LIMIT,
         orderBy: "timestamp",
         where: {

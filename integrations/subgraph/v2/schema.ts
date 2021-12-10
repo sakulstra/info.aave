@@ -1090,7 +1090,7 @@ export interface ATokenBalanceHistoryItem_filter {id?: (Scalars['ID'] | null),id
 
 export interface AToken_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),pool?: (Scalars['String'] | null),pool_not?: (Scalars['String'] | null),pool_gt?: (Scalars['String'] | null),pool_lt?: (Scalars['String'] | null),pool_gte?: (Scalars['String'] | null),pool_lte?: (Scalars['String'] | null),pool_in?: (Scalars['String'][] | null),pool_not_in?: (Scalars['String'][] | null),pool_contains?: (Scalars['String'] | null),pool_not_contains?: (Scalars['String'] | null),pool_starts_with?: (Scalars['String'] | null),pool_not_starts_with?: (Scalars['String'] | null),pool_ends_with?: (Scalars['String'] | null),pool_not_ends_with?: (Scalars['String'] | null),underlyingAssetAddress?: (Scalars['Bytes'] | null),underlyingAssetAddress_not?: (Scalars['Bytes'] | null),underlyingAssetAddress_in?: (Scalars['Bytes'][] | null),underlyingAssetAddress_not_in?: (Scalars['Bytes'][] | null),underlyingAssetAddress_contains?: (Scalars['Bytes'] | null),underlyingAssetAddress_not_contains?: (Scalars['Bytes'] | null),underlyingAssetDecimals?: (Scalars['Int'] | null),underlyingAssetDecimals_not?: (Scalars['Int'] | null),underlyingAssetDecimals_gt?: (Scalars['Int'] | null),underlyingAssetDecimals_lt?: (Scalars['Int'] | null),underlyingAssetDecimals_gte?: (Scalars['Int'] | null),underlyingAssetDecimals_lte?: (Scalars['Int'] | null),underlyingAssetDecimals_in?: (Scalars['Int'][] | null),underlyingAssetDecimals_not_in?: (Scalars['Int'][] | null),tokenContractImpl?: (Scalars['Bytes'] | null),tokenContractImpl_not?: (Scalars['Bytes'] | null),tokenContractImpl_in?: (Scalars['Bytes'][] | null),tokenContractImpl_not_in?: (Scalars['Bytes'][] | null),tokenContractImpl_contains?: (Scalars['Bytes'] | null),tokenContractImpl_not_contains?: (Scalars['Bytes'] | null)}
 
-export interface Block_height {hash?: (Scalars['Bytes'] | null),number?: (Scalars['Int'] | null)}
+export interface Block_height {hash?: (Scalars['Bytes'] | null),number?: (Scalars['Int'] | null),number_gte?: (Scalars['Int'] | null)}
 
 export interface BorrowRequest{
     /**
@@ -1114,7 +1114,7 @@ export interface BorrowRequest{
     __scalar?: boolean | number
 }
 
-export interface Borrow_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),pool?: (Scalars['String'] | null),pool_not?: (Scalars['String'] | null),pool_gt?: (Scalars['String'] | null),pool_lt?: (Scalars['String'] | null),pool_gte?: (Scalars['String'] | null),pool_lte?: (Scalars['String'] | null),pool_in?: (Scalars['String'][] | null),pool_not_in?: (Scalars['String'][] | null),pool_contains?: (Scalars['String'] | null),pool_not_contains?: (Scalars['String'] | null),pool_starts_with?: (Scalars['String'] | null),pool_not_starts_with?: (Scalars['String'] | null),pool_ends_with?: (Scalars['String'] | null),pool_not_ends_with?: (Scalars['String'] | null),user?: (Scalars['String'] | null),user_not?: (Scalars['String'] | null),user_gt?: (Scalars['String'] | null),user_lt?: (Scalars['String'] | null),user_gte?: (Scalars['String'] | null),user_lte?: (Scalars['String'] | null),user_in?: (Scalars['String'][] | null),user_not_in?: (Scalars['String'][] | null),user_contains?: (Scalars['String'] | null),user_not_contains?: (Scalars['String'] | null),user_starts_with?: (Scalars['String'] | null),user_not_starts_with?: (Scalars['String'] | null),user_ends_with?: (Scalars['String'] | null),user_not_ends_with?: (Scalars['String'] | null),onBehalfOf?: (Scalars['String'] | null),onBehalfOf_not?: (Scalars['String'] | null),onBehalfOf_gt?: (Scalars['String'] | null),onBehalfOf_lt?: (Scalars['String'] | null),onBehalfOf_gte?: (Scalars['String'] | null),onBehalfOf_lte?: (Scalars['String'] | null),onBehalfOf_in?: (Scalars['String'][] | null),onBehalfOf_not_in?: (Scalars['String'][] | null),onBehalfOf_contains?: (Scalars['String'] | null),onBehalfOf_not_contains?: (Scalars['String'] | null),onBehalfOf_starts_with?: (Scalars['String'] | null),onBehalfOf_not_starts_with?: (Scalars['String'] | null),onBehalfOf_ends_with?: (Scalars['String'] | null),onBehalfOf_not_ends_with?: (Scalars['String'] | null),reserve?: (Scalars['String'] | null),reserve_not?: (Scalars['String'] | null),reserve_gt?: (Scalars['String'] | null),reserve_lt?: (Scalars['String'] | null),reserve_gte?: (Scalars['String'] | null),reserve_lte?: (Scalars['String'] | null),reserve_in?: (Scalars['String'][] | null),reserve_not_in?: (Scalars['String'][] | null),reserve_contains?: (Scalars['String'] | null),reserve_not_contains?: (Scalars['String'] | null),reserve_starts_with?: (Scalars['String'] | null),reserve_not_starts_with?: (Scalars['String'] | null),reserve_ends_with?: (Scalars['String'] | null),reserve_not_ends_with?: (Scalars['String'] | null),userReserve?: (Scalars['String'] | null),userReserve_not?: (Scalars['String'] | null),userReserve_gt?: (Scalars['String'] | null),userReserve_lt?: (Scalars['String'] | null),userReserve_gte?: (Scalars['String'] | null),userReserve_lte?: (Scalars['String'] | null),userReserve_in?: (Scalars['String'][] | null),userReserve_not_in?: (Scalars['String'][] | null),userReserve_contains?: (Scalars['String'] | null),userReserve_not_contains?: (Scalars['String'] | null),userReserve_starts_with?: (Scalars['String'] | null),userReserve_not_starts_with?: (Scalars['String'] | null),userReserve_ends_with?: (Scalars['String'] | null),userReserve_not_ends_with?: (Scalars['String'] | null),amount?: (Scalars['BigInt'] | null),amount_not?: (Scalars['BigInt'] | null),amount_gt?: (Scalars['BigInt'] | null),amount_lt?: (Scalars['BigInt'] | null),amount_gte?: (Scalars['BigInt'] | null),amount_lte?: (Scalars['BigInt'] | null),amount_in?: (Scalars['BigInt'][] | null),amount_not_in?: (Scalars['BigInt'][] | null),borrowRate?: (Scalars['BigInt'] | null),borrowRate_not?: (Scalars['BigInt'] | null),borrowRate_gt?: (Scalars['BigInt'] | null),borrowRate_lt?: (Scalars['BigInt'] | null),borrowRate_gte?: (Scalars['BigInt'] | null),borrowRate_lte?: (Scalars['BigInt'] | null),borrowRate_in?: (Scalars['BigInt'][] | null),borrowRate_not_in?: (Scalars['BigInt'][] | null),borrowRateMode?: (BorrowRateMode | null),borrowRateMode_not?: (BorrowRateMode | null),referrer?: (Scalars['String'] | null),referrer_not?: (Scalars['String'] | null),referrer_gt?: (Scalars['String'] | null),referrer_lt?: (Scalars['String'] | null),referrer_gte?: (Scalars['String'] | null),referrer_lte?: (Scalars['String'] | null),referrer_in?: (Scalars['String'][] | null),referrer_not_in?: (Scalars['String'][] | null),referrer_contains?: (Scalars['String'] | null),referrer_not_contains?: (Scalars['String'] | null),referrer_starts_with?: (Scalars['String'] | null),referrer_not_starts_with?: (Scalars['String'] | null),referrer_ends_with?: (Scalars['String'] | null),referrer_not_ends_with?: (Scalars['String'] | null),timestamp?: (Scalars['Int'] | null),timestamp_not?: (Scalars['Int'] | null),timestamp_gt?: (Scalars['Int'] | null),timestamp_lt?: (Scalars['Int'] | null),timestamp_gte?: (Scalars['Int'] | null),timestamp_lte?: (Scalars['Int'] | null),timestamp_in?: (Scalars['Int'][] | null),timestamp_not_in?: (Scalars['Int'][] | null),stableTokenDebt?: (Scalars['BigInt'] | null),stableTokenDebt_not?: (Scalars['BigInt'] | null),stableTokenDebt_gt?: (Scalars['BigInt'] | null),stableTokenDebt_lt?: (Scalars['BigInt'] | null),stableTokenDebt_gte?: (Scalars['BigInt'] | null),stableTokenDebt_lte?: (Scalars['BigInt'] | null),stableTokenDebt_in?: (Scalars['BigInt'][] | null),stableTokenDebt_not_in?: (Scalars['BigInt'][] | null),variableTokenDebt?: (Scalars['BigInt'] | null),variableTokenDebt_not?: (Scalars['BigInt'] | null),variableTokenDebt_gt?: (Scalars['BigInt'] | null),variableTokenDebt_lt?: (Scalars['BigInt'] | null),variableTokenDebt_gte?: (Scalars['BigInt'] | null),variableTokenDebt_lte?: (Scalars['BigInt'] | null),variableTokenDebt_in?: (Scalars['BigInt'][] | null),variableTokenDebt_not_in?: (Scalars['BigInt'][] | null)}
+export interface Borrow_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),pool?: (Scalars['String'] | null),pool_not?: (Scalars['String'] | null),pool_gt?: (Scalars['String'] | null),pool_lt?: (Scalars['String'] | null),pool_gte?: (Scalars['String'] | null),pool_lte?: (Scalars['String'] | null),pool_in?: (Scalars['String'][] | null),pool_not_in?: (Scalars['String'][] | null),pool_contains?: (Scalars['String'] | null),pool_not_contains?: (Scalars['String'] | null),pool_starts_with?: (Scalars['String'] | null),pool_not_starts_with?: (Scalars['String'] | null),pool_ends_with?: (Scalars['String'] | null),pool_not_ends_with?: (Scalars['String'] | null),user?: (Scalars['String'] | null),user_not?: (Scalars['String'] | null),user_gt?: (Scalars['String'] | null),user_lt?: (Scalars['String'] | null),user_gte?: (Scalars['String'] | null),user_lte?: (Scalars['String'] | null),user_in?: (Scalars['String'][] | null),user_not_in?: (Scalars['String'][] | null),user_contains?: (Scalars['String'] | null),user_not_contains?: (Scalars['String'] | null),user_starts_with?: (Scalars['String'] | null),user_not_starts_with?: (Scalars['String'] | null),user_ends_with?: (Scalars['String'] | null),user_not_ends_with?: (Scalars['String'] | null),onBehalfOf?: (Scalars['String'] | null),onBehalfOf_not?: (Scalars['String'] | null),onBehalfOf_gt?: (Scalars['String'] | null),onBehalfOf_lt?: (Scalars['String'] | null),onBehalfOf_gte?: (Scalars['String'] | null),onBehalfOf_lte?: (Scalars['String'] | null),onBehalfOf_in?: (Scalars['String'][] | null),onBehalfOf_not_in?: (Scalars['String'][] | null),onBehalfOf_contains?: (Scalars['String'] | null),onBehalfOf_not_contains?: (Scalars['String'] | null),onBehalfOf_starts_with?: (Scalars['String'] | null),onBehalfOf_not_starts_with?: (Scalars['String'] | null),onBehalfOf_ends_with?: (Scalars['String'] | null),onBehalfOf_not_ends_with?: (Scalars['String'] | null),reserve?: (Scalars['String'] | null),reserve_not?: (Scalars['String'] | null),reserve_gt?: (Scalars['String'] | null),reserve_lt?: (Scalars['String'] | null),reserve_gte?: (Scalars['String'] | null),reserve_lte?: (Scalars['String'] | null),reserve_in?: (Scalars['String'][] | null),reserve_not_in?: (Scalars['String'][] | null),reserve_contains?: (Scalars['String'] | null),reserve_not_contains?: (Scalars['String'] | null),reserve_starts_with?: (Scalars['String'] | null),reserve_not_starts_with?: (Scalars['String'] | null),reserve_ends_with?: (Scalars['String'] | null),reserve_not_ends_with?: (Scalars['String'] | null),userReserve?: (Scalars['String'] | null),userReserve_not?: (Scalars['String'] | null),userReserve_gt?: (Scalars['String'] | null),userReserve_lt?: (Scalars['String'] | null),userReserve_gte?: (Scalars['String'] | null),userReserve_lte?: (Scalars['String'] | null),userReserve_in?: (Scalars['String'][] | null),userReserve_not_in?: (Scalars['String'][] | null),userReserve_contains?: (Scalars['String'] | null),userReserve_not_contains?: (Scalars['String'] | null),userReserve_starts_with?: (Scalars['String'] | null),userReserve_not_starts_with?: (Scalars['String'] | null),userReserve_ends_with?: (Scalars['String'] | null),userReserve_not_ends_with?: (Scalars['String'] | null),amount?: (Scalars['BigInt'] | null),amount_not?: (Scalars['BigInt'] | null),amount_gt?: (Scalars['BigInt'] | null),amount_lt?: (Scalars['BigInt'] | null),amount_gte?: (Scalars['BigInt'] | null),amount_lte?: (Scalars['BigInt'] | null),amount_in?: (Scalars['BigInt'][] | null),amount_not_in?: (Scalars['BigInt'][] | null),borrowRate?: (Scalars['BigInt'] | null),borrowRate_not?: (Scalars['BigInt'] | null),borrowRate_gt?: (Scalars['BigInt'] | null),borrowRate_lt?: (Scalars['BigInt'] | null),borrowRate_gte?: (Scalars['BigInt'] | null),borrowRate_lte?: (Scalars['BigInt'] | null),borrowRate_in?: (Scalars['BigInt'][] | null),borrowRate_not_in?: (Scalars['BigInt'][] | null),borrowRateMode?: (BorrowRateMode | null),borrowRateMode_not?: (BorrowRateMode | null),borrowRateMode_in?: (BorrowRateMode[] | null),borrowRateMode_not_in?: (BorrowRateMode[] | null),referrer?: (Scalars['String'] | null),referrer_not?: (Scalars['String'] | null),referrer_gt?: (Scalars['String'] | null),referrer_lt?: (Scalars['String'] | null),referrer_gte?: (Scalars['String'] | null),referrer_lte?: (Scalars['String'] | null),referrer_in?: (Scalars['String'][] | null),referrer_not_in?: (Scalars['String'][] | null),referrer_contains?: (Scalars['String'] | null),referrer_not_contains?: (Scalars['String'] | null),referrer_starts_with?: (Scalars['String'] | null),referrer_not_starts_with?: (Scalars['String'] | null),referrer_ends_with?: (Scalars['String'] | null),referrer_not_ends_with?: (Scalars['String'] | null),timestamp?: (Scalars['Int'] | null),timestamp_not?: (Scalars['Int'] | null),timestamp_gt?: (Scalars['Int'] | null),timestamp_lt?: (Scalars['Int'] | null),timestamp_gte?: (Scalars['Int'] | null),timestamp_lte?: (Scalars['Int'] | null),timestamp_in?: (Scalars['Int'][] | null),timestamp_not_in?: (Scalars['Int'][] | null),stableTokenDebt?: (Scalars['BigInt'] | null),stableTokenDebt_not?: (Scalars['BigInt'] | null),stableTokenDebt_gt?: (Scalars['BigInt'] | null),stableTokenDebt_lt?: (Scalars['BigInt'] | null),stableTokenDebt_gte?: (Scalars['BigInt'] | null),stableTokenDebt_lte?: (Scalars['BigInt'] | null),stableTokenDebt_in?: (Scalars['BigInt'][] | null),stableTokenDebt_not_in?: (Scalars['BigInt'][] | null),variableTokenDebt?: (Scalars['BigInt'] | null),variableTokenDebt_not?: (Scalars['BigInt'] | null),variableTokenDebt_gt?: (Scalars['BigInt'] | null),variableTokenDebt_lt?: (Scalars['BigInt'] | null),variableTokenDebt_gte?: (Scalars['BigInt'] | null),variableTokenDebt_lte?: (Scalars['BigInt'] | null),variableTokenDebt_in?: (Scalars['BigInt'][] | null),variableTokenDebt_not_in?: (Scalars['BigInt'][] | null)}
 
 export interface ChainlinkAggregatorRequest{
     id?: boolean | number
@@ -1395,7 +1395,7 @@ export interface PriceOracleAssetRequest{
     __scalar?: boolean | number
 }
 
-export interface PriceOracleAsset_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),oracle?: (Scalars['String'] | null),oracle_not?: (Scalars['String'] | null),oracle_gt?: (Scalars['String'] | null),oracle_lt?: (Scalars['String'] | null),oracle_gte?: (Scalars['String'] | null),oracle_lte?: (Scalars['String'] | null),oracle_in?: (Scalars['String'][] | null),oracle_not_in?: (Scalars['String'][] | null),oracle_contains?: (Scalars['String'] | null),oracle_not_contains?: (Scalars['String'] | null),oracle_starts_with?: (Scalars['String'] | null),oracle_not_starts_with?: (Scalars['String'] | null),oracle_ends_with?: (Scalars['String'] | null),oracle_not_ends_with?: (Scalars['String'] | null),priceInEth?: (Scalars['BigInt'] | null),priceInEth_not?: (Scalars['BigInt'] | null),priceInEth_gt?: (Scalars['BigInt'] | null),priceInEth_lt?: (Scalars['BigInt'] | null),priceInEth_gte?: (Scalars['BigInt'] | null),priceInEth_lte?: (Scalars['BigInt'] | null),priceInEth_in?: (Scalars['BigInt'][] | null),priceInEth_not_in?: (Scalars['BigInt'][] | null),priceSource?: (Scalars['Bytes'] | null),priceSource_not?: (Scalars['Bytes'] | null),priceSource_in?: (Scalars['Bytes'][] | null),priceSource_not_in?: (Scalars['Bytes'][] | null),priceSource_contains?: (Scalars['Bytes'] | null),priceSource_not_contains?: (Scalars['Bytes'] | null),isFallbackRequired?: (Scalars['Boolean'] | null),isFallbackRequired_not?: (Scalars['Boolean'] | null),isFallbackRequired_in?: (Scalars['Boolean'][] | null),isFallbackRequired_not_in?: (Scalars['Boolean'][] | null),type?: (PriceOracleAssetType | null),type_not?: (PriceOracleAssetType | null),platform?: (PriceOracleAssetPlatform | null),platform_not?: (PriceOracleAssetPlatform | null),dependentAssets?: (Scalars['String'][] | null),dependentAssets_not?: (Scalars['String'][] | null),dependentAssets_contains?: (Scalars['String'][] | null),dependentAssets_not_contains?: (Scalars['String'][] | null),lastUpdateTimestamp?: (Scalars['Int'] | null),lastUpdateTimestamp_not?: (Scalars['Int'] | null),lastUpdateTimestamp_gt?: (Scalars['Int'] | null),lastUpdateTimestamp_lt?: (Scalars['Int'] | null),lastUpdateTimestamp_gte?: (Scalars['Int'] | null),lastUpdateTimestamp_lte?: (Scalars['Int'] | null),lastUpdateTimestamp_in?: (Scalars['Int'][] | null),lastUpdateTimestamp_not_in?: (Scalars['Int'][] | null),fromChainlinkSourcesRegistry?: (Scalars['Boolean'] | null),fromChainlinkSourcesRegistry_not?: (Scalars['Boolean'] | null),fromChainlinkSourcesRegistry_in?: (Scalars['Boolean'][] | null),fromChainlinkSourcesRegistry_not_in?: (Scalars['Boolean'][] | null)}
+export interface PriceOracleAsset_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),oracle?: (Scalars['String'] | null),oracle_not?: (Scalars['String'] | null),oracle_gt?: (Scalars['String'] | null),oracle_lt?: (Scalars['String'] | null),oracle_gte?: (Scalars['String'] | null),oracle_lte?: (Scalars['String'] | null),oracle_in?: (Scalars['String'][] | null),oracle_not_in?: (Scalars['String'][] | null),oracle_contains?: (Scalars['String'] | null),oracle_not_contains?: (Scalars['String'] | null),oracle_starts_with?: (Scalars['String'] | null),oracle_not_starts_with?: (Scalars['String'] | null),oracle_ends_with?: (Scalars['String'] | null),oracle_not_ends_with?: (Scalars['String'] | null),priceInEth?: (Scalars['BigInt'] | null),priceInEth_not?: (Scalars['BigInt'] | null),priceInEth_gt?: (Scalars['BigInt'] | null),priceInEth_lt?: (Scalars['BigInt'] | null),priceInEth_gte?: (Scalars['BigInt'] | null),priceInEth_lte?: (Scalars['BigInt'] | null),priceInEth_in?: (Scalars['BigInt'][] | null),priceInEth_not_in?: (Scalars['BigInt'][] | null),priceSource?: (Scalars['Bytes'] | null),priceSource_not?: (Scalars['Bytes'] | null),priceSource_in?: (Scalars['Bytes'][] | null),priceSource_not_in?: (Scalars['Bytes'][] | null),priceSource_contains?: (Scalars['Bytes'] | null),priceSource_not_contains?: (Scalars['Bytes'] | null),isFallbackRequired?: (Scalars['Boolean'] | null),isFallbackRequired_not?: (Scalars['Boolean'] | null),isFallbackRequired_in?: (Scalars['Boolean'][] | null),isFallbackRequired_not_in?: (Scalars['Boolean'][] | null),type?: (PriceOracleAssetType | null),type_not?: (PriceOracleAssetType | null),type_in?: (PriceOracleAssetType[] | null),type_not_in?: (PriceOracleAssetType[] | null),platform?: (PriceOracleAssetPlatform | null),platform_not?: (PriceOracleAssetPlatform | null),platform_in?: (PriceOracleAssetPlatform[] | null),platform_not_in?: (PriceOracleAssetPlatform[] | null),dependentAssets?: (Scalars['String'][] | null),dependentAssets_not?: (Scalars['String'][] | null),dependentAssets_contains?: (Scalars['String'][] | null),dependentAssets_not_contains?: (Scalars['String'][] | null),lastUpdateTimestamp?: (Scalars['Int'] | null),lastUpdateTimestamp_not?: (Scalars['Int'] | null),lastUpdateTimestamp_gt?: (Scalars['Int'] | null),lastUpdateTimestamp_lt?: (Scalars['Int'] | null),lastUpdateTimestamp_gte?: (Scalars['Int'] | null),lastUpdateTimestamp_lte?: (Scalars['Int'] | null),lastUpdateTimestamp_in?: (Scalars['Int'][] | null),lastUpdateTimestamp_not_in?: (Scalars['Int'][] | null),fromChainlinkSourcesRegistry?: (Scalars['Boolean'] | null),fromChainlinkSourcesRegistry_not?: (Scalars['Boolean'] | null),fromChainlinkSourcesRegistry_in?: (Scalars['Boolean'][] | null),fromChainlinkSourcesRegistry_not_in?: (Scalars['Boolean'][] | null)}
 
 export interface PriceOracle_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),proxyPriceProvider?: (Scalars['Bytes'] | null),proxyPriceProvider_not?: (Scalars['Bytes'] | null),proxyPriceProvider_in?: (Scalars['Bytes'][] | null),proxyPriceProvider_not_in?: (Scalars['Bytes'][] | null),proxyPriceProvider_contains?: (Scalars['Bytes'] | null),proxyPriceProvider_not_contains?: (Scalars['Bytes'] | null),usdPriceEth?: (Scalars['BigInt'] | null),usdPriceEth_not?: (Scalars['BigInt'] | null),usdPriceEth_gt?: (Scalars['BigInt'] | null),usdPriceEth_lt?: (Scalars['BigInt'] | null),usdPriceEth_gte?: (Scalars['BigInt'] | null),usdPriceEth_lte?: (Scalars['BigInt'] | null),usdPriceEth_in?: (Scalars['BigInt'][] | null),usdPriceEth_not_in?: (Scalars['BigInt'][] | null),usdPriceEthMainSource?: (Scalars['Bytes'] | null),usdPriceEthMainSource_not?: (Scalars['Bytes'] | null),usdPriceEthMainSource_in?: (Scalars['Bytes'][] | null),usdPriceEthMainSource_not_in?: (Scalars['Bytes'][] | null),usdPriceEthMainSource_contains?: (Scalars['Bytes'] | null),usdPriceEthMainSource_not_contains?: (Scalars['Bytes'] | null),usdPriceEthFallbackRequired?: (Scalars['Boolean'] | null),usdPriceEthFallbackRequired_not?: (Scalars['Boolean'] | null),usdPriceEthFallbackRequired_in?: (Scalars['Boolean'][] | null),usdPriceEthFallbackRequired_not_in?: (Scalars['Boolean'][] | null),usdDependentAssets?: (Scalars['String'][] | null),usdDependentAssets_not?: (Scalars['String'][] | null),usdDependentAssets_contains?: (Scalars['String'][] | null),usdDependentAssets_not_contains?: (Scalars['String'][] | null),fallbackPriceOracle?: (Scalars['Bytes'] | null),fallbackPriceOracle_not?: (Scalars['Bytes'] | null),fallbackPriceOracle_in?: (Scalars['Bytes'][] | null),fallbackPriceOracle_not_in?: (Scalars['Bytes'][] | null),fallbackPriceOracle_contains?: (Scalars['Bytes'] | null),fallbackPriceOracle_not_contains?: (Scalars['Bytes'] | null),tokensWithFallback?: (Scalars['String'][] | null),tokensWithFallback_not?: (Scalars['String'][] | null),tokensWithFallback_contains?: (Scalars['String'][] | null),tokensWithFallback_not_contains?: (Scalars['String'][] | null),lastUpdateTimestamp?: (Scalars['Int'] | null),lastUpdateTimestamp_not?: (Scalars['Int'] | null),lastUpdateTimestamp_gt?: (Scalars['Int'] | null),lastUpdateTimestamp_lt?: (Scalars['Int'] | null),lastUpdateTimestamp_gte?: (Scalars['Int'] | null),lastUpdateTimestamp_lte?: (Scalars['Int'] | null),lastUpdateTimestamp_in?: (Scalars['Int'][] | null),lastUpdateTimestamp_not_in?: (Scalars['Int'][] | null),version?: (Scalars['Int'] | null),version_not?: (Scalars['Int'] | null),version_gt?: (Scalars['Int'] | null),version_lt?: (Scalars['Int'] | null),version_gte?: (Scalars['Int'] | null),version_lte?: (Scalars['Int'] | null),version_in?: (Scalars['Int'][] | null),version_not_in?: (Scalars['Int'][] | null)}
 
@@ -1410,263 +1410,435 @@ export interface Protocol_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars[
 
 export interface QueryRequest{
     protocol?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ProtocolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ProtocolRequest]
     protocols?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ProtocolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ProtocolRequest]
     contractToPoolMapping?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ContractToPoolMappingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ContractToPoolMappingRequest]
     contractToPoolMappings?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ContractToPoolMappingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ContractToPoolMappingRequest]
     poolConfigurationHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolConfigurationHistoryItemRequest]
     poolConfigurationHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolConfigurationHistoryItemRequest]
     pool?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolRequest]
     pools?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolRequest]
     priceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceHistoryItemRequest]
     priceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceHistoryItemRequest]
     usdEthPriceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsdEthPriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsdEthPriceHistoryItemRequest]
     usdEthPriceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsdEthPriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsdEthPriceHistoryItemRequest]
     chainlinkENS?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkENSRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkENSRequest]
     chainlinkENSs?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkENSRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkENSRequest]
     chainlinkAggregator?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkAggregatorRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkAggregatorRequest]
     chainlinkAggregators?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkAggregatorRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkAggregatorRequest]
     priceOracleAsset?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleAssetRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleAssetRequest]
     priceOracleAssets?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleAssetRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleAssetRequest]
     priceOracle?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleRequest]
     priceOracles?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleRequest]
     stoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenRequest]
     stokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenRequest]
     vtoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenRequest]
     vtokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenRequest]
     atoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenRequest]
     atokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenRequest]
     variableDebtToken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableDebtTokenRequest]
     variableDebtTokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableDebtTokenRequest]
     stableDebtToken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableDebtTokenRequest]
     stableDebtTokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableDebtTokenRequest]
     referrer?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReferrerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReferrerRequest]
     referrers?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReferrerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReferrerRequest]
     deposit?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},DepositRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},DepositRequest]
     deposits?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},DepositRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},DepositRequest]
     redeemUnderlying?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RedeemUnderlyingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RedeemUnderlyingRequest]
     redeemUnderlyings?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RedeemUnderlyingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RedeemUnderlyingRequest]
     borrow?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},BorrowRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},BorrowRequest]
     borrows?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},BorrowRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},BorrowRequest]
     swap?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapRequest]
     swaps?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapRequest]
     usageAsCollateral?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsageAsCollateralRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsageAsCollateralRequest]
     usageAsCollaterals?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsageAsCollateralRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsageAsCollateralRequest]
     rebalanceStableBorrowRate?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RebalanceStableBorrowRateRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RebalanceStableBorrowRateRequest]
     rebalanceStableBorrowRates?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RebalanceStableBorrowRateRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RebalanceStableBorrowRateRequest]
     repay?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RepayRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RepayRequest]
     repays?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RepayRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RepayRequest]
     flashLoan?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},FlashLoanRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},FlashLoanRequest]
     flashLoans?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},FlashLoanRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},FlashLoanRequest]
     liquidationCall?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},LiquidationCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},LiquidationCallRequest]
     liquidationCalls?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},LiquidationCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},LiquidationCallRequest]
     originationFeeLiquidation?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},OriginationFeeLiquidationRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},OriginationFeeLiquidationRequest]
     originationFeeLiquidations?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},OriginationFeeLiquidationRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},OriginationFeeLiquidationRequest]
     reserveConfigurationHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveConfigurationHistoryItemRequest]
     reserveConfigurationHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveConfigurationHistoryItemRequest]
     reserveParamsHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveParamsHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveParamsHistoryItemRequest]
     reserveParamsHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveParamsHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveParamsHistoryItemRequest]
     incentivesController?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivesControllerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivesControllerRequest]
     incentivesControllers?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivesControllerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivesControllerRequest]
     incentivizedAction?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivizedActionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivizedActionRequest]
     incentivizedActions?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivizedActionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivizedActionRequest]
     claimIncentiveCall?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ClaimIncentiveCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ClaimIncentiveCallRequest]
     claimIncentiveCalls?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ClaimIncentiveCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ClaimIncentiveCallRequest]
     mapAssetPool?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},MapAssetPoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},MapAssetPoolRequest]
     mapAssetPools?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},MapAssetPoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},MapAssetPoolRequest]
     reserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveRequest]
     reserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveRequest]
     wethreserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},WETHReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},WETHReserveRequest]
     wethreserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},WETHReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},WETHReserveRequest]
     atokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenBalanceHistoryItemRequest]
     atokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenBalanceHistoryItemRequest]
     vtokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenBalanceHistoryItemRequest]
     vtokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenBalanceHistoryItemRequest]
     stokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenBalanceHistoryItemRequest]
     stokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenBalanceHistoryItemRequest]
     stableTokenDelegatedAllowance?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableTokenDelegatedAllowanceRequest]
     stableTokenDelegatedAllowances?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableTokenDelegatedAllowanceRequest]
     variableTokenDelegatedAllowance?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableTokenDelegatedAllowanceRequest]
     variableTokenDelegatedAllowances?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableTokenDelegatedAllowanceRequest]
     userReserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserReserveRequest]
     userReserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserReserveRequest]
     user?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserRequest]
     users?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserRequest]
     swapHistory?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapHistoryRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapHistoryRequest]
     swapHistories?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapHistoryRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapHistoryRequest]
     userTransaction?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserTransactionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserTransactionRequest]
     userTransactions?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserTransactionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserTransactionRequest]
     /** Access to subgraph metadata */
     _meta?: [{block?: (Block_height | null)},_Meta_Request] | _Meta_Request
     __typename?: boolean | number
@@ -1960,263 +2132,435 @@ export interface StableTokenDelegatedAllowance_filter {id?: (Scalars['ID'] | nul
 
 export interface SubscriptionRequest{
     protocol?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ProtocolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ProtocolRequest]
     protocols?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ProtocolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ProtocolRequest]
     contractToPoolMapping?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ContractToPoolMappingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ContractToPoolMappingRequest]
     contractToPoolMappings?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ContractToPoolMappingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ContractToPoolMappingRequest]
     poolConfigurationHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolConfigurationHistoryItemRequest]
     poolConfigurationHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolConfigurationHistoryItemRequest]
     pool?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolRequest]
     pools?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PoolRequest]
     priceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceHistoryItemRequest]
     priceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceHistoryItemRequest]
     usdEthPriceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsdEthPriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsdEthPriceHistoryItemRequest]
     usdEthPriceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsdEthPriceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsdEthPriceHistoryItemRequest]
     chainlinkENS?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkENSRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkENSRequest]
     chainlinkENSs?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkENSRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkENSRequest]
     chainlinkAggregator?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkAggregatorRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkAggregatorRequest]
     chainlinkAggregators?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ChainlinkAggregatorRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ChainlinkAggregatorRequest]
     priceOracleAsset?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleAssetRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleAssetRequest]
     priceOracleAssets?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleAssetRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleAssetRequest]
     priceOracle?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleRequest]
     priceOracles?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},PriceOracleRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},PriceOracleRequest]
     stoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenRequest]
     stokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenRequest]
     vtoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenRequest]
     vtokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenRequest]
     atoken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenRequest]
     atokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenRequest]
     variableDebtToken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableDebtTokenRequest]
     variableDebtTokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableDebtTokenRequest]
     stableDebtToken?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableDebtTokenRequest]
     stableDebtTokens?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableDebtTokenRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableDebtTokenRequest]
     referrer?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReferrerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReferrerRequest]
     referrers?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReferrerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReferrerRequest]
     deposit?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},DepositRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},DepositRequest]
     deposits?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},DepositRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},DepositRequest]
     redeemUnderlying?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RedeemUnderlyingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RedeemUnderlyingRequest]
     redeemUnderlyings?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RedeemUnderlyingRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RedeemUnderlyingRequest]
     borrow?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},BorrowRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},BorrowRequest]
     borrows?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},BorrowRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},BorrowRequest]
     swap?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapRequest]
     swaps?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapRequest]
     usageAsCollateral?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsageAsCollateralRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsageAsCollateralRequest]
     usageAsCollaterals?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UsageAsCollateralRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UsageAsCollateralRequest]
     rebalanceStableBorrowRate?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RebalanceStableBorrowRateRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RebalanceStableBorrowRateRequest]
     rebalanceStableBorrowRates?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RebalanceStableBorrowRateRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RebalanceStableBorrowRateRequest]
     repay?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RepayRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RepayRequest]
     repays?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},RepayRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},RepayRequest]
     flashLoan?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},FlashLoanRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},FlashLoanRequest]
     flashLoans?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},FlashLoanRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},FlashLoanRequest]
     liquidationCall?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},LiquidationCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},LiquidationCallRequest]
     liquidationCalls?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},LiquidationCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},LiquidationCallRequest]
     originationFeeLiquidation?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},OriginationFeeLiquidationRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},OriginationFeeLiquidationRequest]
     originationFeeLiquidations?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},OriginationFeeLiquidationRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},OriginationFeeLiquidationRequest]
     reserveConfigurationHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveConfigurationHistoryItemRequest]
     reserveConfigurationHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveConfigurationHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveConfigurationHistoryItemRequest]
     reserveParamsHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveParamsHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveParamsHistoryItemRequest]
     reserveParamsHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveParamsHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveParamsHistoryItemRequest]
     incentivesController?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivesControllerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivesControllerRequest]
     incentivesControllers?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivesControllerRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivesControllerRequest]
     incentivizedAction?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivizedActionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivizedActionRequest]
     incentivizedActions?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},IncentivizedActionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},IncentivizedActionRequest]
     claimIncentiveCall?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ClaimIncentiveCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ClaimIncentiveCallRequest]
     claimIncentiveCalls?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ClaimIncentiveCallRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ClaimIncentiveCallRequest]
     mapAssetPool?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},MapAssetPoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},MapAssetPoolRequest]
     mapAssetPools?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},MapAssetPoolRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},MapAssetPoolRequest]
     reserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveRequest]
     reserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ReserveRequest]
     wethreserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},WETHReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},WETHReserveRequest]
     wethreserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},WETHReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},WETHReserveRequest]
     atokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenBalanceHistoryItemRequest]
     atokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},ATokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},ATokenBalanceHistoryItemRequest]
     vtokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenBalanceHistoryItemRequest]
     vtokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VTokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VTokenBalanceHistoryItemRequest]
     stokenBalanceHistoryItem?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenBalanceHistoryItemRequest]
     stokenBalanceHistoryItems?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},STokenBalanceHistoryItemRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},STokenBalanceHistoryItemRequest]
     stableTokenDelegatedAllowance?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableTokenDelegatedAllowanceRequest]
     stableTokenDelegatedAllowances?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},StableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},StableTokenDelegatedAllowanceRequest]
     variableTokenDelegatedAllowance?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableTokenDelegatedAllowanceRequest]
     variableTokenDelegatedAllowances?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},VariableTokenDelegatedAllowanceRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},VariableTokenDelegatedAllowanceRequest]
     userReserve?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserReserveRequest]
     userReserves?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserReserveRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserReserveRequest]
     user?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserRequest]
     users?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserRequest]
     swapHistory?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapHistoryRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapHistoryRequest]
     swapHistories?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},SwapHistoryRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},SwapHistoryRequest]
     userTransaction?: [{id: Scalars['ID'],
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserTransactionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserTransactionRequest]
     userTransactions?: [{skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-    /** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-    block?: (Block_height | null)},UserTransactionRequest]
+    /** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+    block?: (Block_height | null),
+    /** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+    subgraphError: _SubgraphErrorPolicy_},UserTransactionRequest]
     /** Access to subgraph metadata */
     _meta?: [{block?: (Block_height | null)},_Meta_Request] | _Meta_Request
     __typename?: boolean | number
@@ -2259,7 +2603,7 @@ export interface SwapHistoryRequest{
 
 export interface SwapHistory_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),fromAsset?: (Scalars['String'] | null),fromAsset_not?: (Scalars['String'] | null),fromAsset_gt?: (Scalars['String'] | null),fromAsset_lt?: (Scalars['String'] | null),fromAsset_gte?: (Scalars['String'] | null),fromAsset_lte?: (Scalars['String'] | null),fromAsset_in?: (Scalars['String'][] | null),fromAsset_not_in?: (Scalars['String'][] | null),fromAsset_contains?: (Scalars['String'] | null),fromAsset_not_contains?: (Scalars['String'] | null),fromAsset_starts_with?: (Scalars['String'] | null),fromAsset_not_starts_with?: (Scalars['String'] | null),fromAsset_ends_with?: (Scalars['String'] | null),fromAsset_not_ends_with?: (Scalars['String'] | null),toAsset?: (Scalars['String'] | null),toAsset_not?: (Scalars['String'] | null),toAsset_gt?: (Scalars['String'] | null),toAsset_lt?: (Scalars['String'] | null),toAsset_gte?: (Scalars['String'] | null),toAsset_lte?: (Scalars['String'] | null),toAsset_in?: (Scalars['String'][] | null),toAsset_not_in?: (Scalars['String'][] | null),toAsset_contains?: (Scalars['String'] | null),toAsset_not_contains?: (Scalars['String'] | null),toAsset_starts_with?: (Scalars['String'] | null),toAsset_not_starts_with?: (Scalars['String'] | null),toAsset_ends_with?: (Scalars['String'] | null),toAsset_not_ends_with?: (Scalars['String'] | null),fromAmount?: (Scalars['BigInt'] | null),fromAmount_not?: (Scalars['BigInt'] | null),fromAmount_gt?: (Scalars['BigInt'] | null),fromAmount_lt?: (Scalars['BigInt'] | null),fromAmount_gte?: (Scalars['BigInt'] | null),fromAmount_lte?: (Scalars['BigInt'] | null),fromAmount_in?: (Scalars['BigInt'][] | null),fromAmount_not_in?: (Scalars['BigInt'][] | null),receivedAmount?: (Scalars['BigInt'] | null),receivedAmount_not?: (Scalars['BigInt'] | null),receivedAmount_gt?: (Scalars['BigInt'] | null),receivedAmount_lt?: (Scalars['BigInt'] | null),receivedAmount_gte?: (Scalars['BigInt'] | null),receivedAmount_lte?: (Scalars['BigInt'] | null),receivedAmount_in?: (Scalars['BigInt'][] | null),receivedAmount_not_in?: (Scalars['BigInt'][] | null),swapType?: (Scalars['String'] | null),swapType_not?: (Scalars['String'] | null),swapType_gt?: (Scalars['String'] | null),swapType_lt?: (Scalars['String'] | null),swapType_gte?: (Scalars['String'] | null),swapType_lte?: (Scalars['String'] | null),swapType_in?: (Scalars['String'][] | null),swapType_not_in?: (Scalars['String'][] | null),swapType_contains?: (Scalars['String'] | null),swapType_not_contains?: (Scalars['String'] | null),swapType_starts_with?: (Scalars['String'] | null),swapType_not_starts_with?: (Scalars['String'] | null),swapType_ends_with?: (Scalars['String'] | null),swapType_not_ends_with?: (Scalars['String'] | null)}
 
-export interface Swap_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),pool?: (Scalars['String'] | null),pool_not?: (Scalars['String'] | null),pool_gt?: (Scalars['String'] | null),pool_lt?: (Scalars['String'] | null),pool_gte?: (Scalars['String'] | null),pool_lte?: (Scalars['String'] | null),pool_in?: (Scalars['String'][] | null),pool_not_in?: (Scalars['String'][] | null),pool_contains?: (Scalars['String'] | null),pool_not_contains?: (Scalars['String'] | null),pool_starts_with?: (Scalars['String'] | null),pool_not_starts_with?: (Scalars['String'] | null),pool_ends_with?: (Scalars['String'] | null),pool_not_ends_with?: (Scalars['String'] | null),user?: (Scalars['String'] | null),user_not?: (Scalars['String'] | null),user_gt?: (Scalars['String'] | null),user_lt?: (Scalars['String'] | null),user_gte?: (Scalars['String'] | null),user_lte?: (Scalars['String'] | null),user_in?: (Scalars['String'][] | null),user_not_in?: (Scalars['String'][] | null),user_contains?: (Scalars['String'] | null),user_not_contains?: (Scalars['String'] | null),user_starts_with?: (Scalars['String'] | null),user_not_starts_with?: (Scalars['String'] | null),user_ends_with?: (Scalars['String'] | null),user_not_ends_with?: (Scalars['String'] | null),reserve?: (Scalars['String'] | null),reserve_not?: (Scalars['String'] | null),reserve_gt?: (Scalars['String'] | null),reserve_lt?: (Scalars['String'] | null),reserve_gte?: (Scalars['String'] | null),reserve_lte?: (Scalars['String'] | null),reserve_in?: (Scalars['String'][] | null),reserve_not_in?: (Scalars['String'][] | null),reserve_contains?: (Scalars['String'] | null),reserve_not_contains?: (Scalars['String'] | null),reserve_starts_with?: (Scalars['String'] | null),reserve_not_starts_with?: (Scalars['String'] | null),reserve_ends_with?: (Scalars['String'] | null),reserve_not_ends_with?: (Scalars['String'] | null),userReserve?: (Scalars['String'] | null),userReserve_not?: (Scalars['String'] | null),userReserve_gt?: (Scalars['String'] | null),userReserve_lt?: (Scalars['String'] | null),userReserve_gte?: (Scalars['String'] | null),userReserve_lte?: (Scalars['String'] | null),userReserve_in?: (Scalars['String'][] | null),userReserve_not_in?: (Scalars['String'][] | null),userReserve_contains?: (Scalars['String'] | null),userReserve_not_contains?: (Scalars['String'] | null),userReserve_starts_with?: (Scalars['String'] | null),userReserve_not_starts_with?: (Scalars['String'] | null),userReserve_ends_with?: (Scalars['String'] | null),userReserve_not_ends_with?: (Scalars['String'] | null),borrowRateModeFrom?: (BorrowRateMode | null),borrowRateModeFrom_not?: (BorrowRateMode | null),borrowRateModeTo?: (BorrowRateMode | null),borrowRateModeTo_not?: (BorrowRateMode | null),stableBorrowRate?: (Scalars['BigInt'] | null),stableBorrowRate_not?: (Scalars['BigInt'] | null),stableBorrowRate_gt?: (Scalars['BigInt'] | null),stableBorrowRate_lt?: (Scalars['BigInt'] | null),stableBorrowRate_gte?: (Scalars['BigInt'] | null),stableBorrowRate_lte?: (Scalars['BigInt'] | null),stableBorrowRate_in?: (Scalars['BigInt'][] | null),stableBorrowRate_not_in?: (Scalars['BigInt'][] | null),variableBorrowRate?: (Scalars['BigInt'] | null),variableBorrowRate_not?: (Scalars['BigInt'] | null),variableBorrowRate_gt?: (Scalars['BigInt'] | null),variableBorrowRate_lt?: (Scalars['BigInt'] | null),variableBorrowRate_gte?: (Scalars['BigInt'] | null),variableBorrowRate_lte?: (Scalars['BigInt'] | null),variableBorrowRate_in?: (Scalars['BigInt'][] | null),variableBorrowRate_not_in?: (Scalars['BigInt'][] | null),timestamp?: (Scalars['Int'] | null),timestamp_not?: (Scalars['Int'] | null),timestamp_gt?: (Scalars['Int'] | null),timestamp_lt?: (Scalars['Int'] | null),timestamp_gte?: (Scalars['Int'] | null),timestamp_lte?: (Scalars['Int'] | null),timestamp_in?: (Scalars['Int'][] | null),timestamp_not_in?: (Scalars['Int'][] | null)}
+export interface Swap_filter {id?: (Scalars['ID'] | null),id_not?: (Scalars['ID'] | null),id_gt?: (Scalars['ID'] | null),id_lt?: (Scalars['ID'] | null),id_gte?: (Scalars['ID'] | null),id_lte?: (Scalars['ID'] | null),id_in?: (Scalars['ID'][] | null),id_not_in?: (Scalars['ID'][] | null),pool?: (Scalars['String'] | null),pool_not?: (Scalars['String'] | null),pool_gt?: (Scalars['String'] | null),pool_lt?: (Scalars['String'] | null),pool_gte?: (Scalars['String'] | null),pool_lte?: (Scalars['String'] | null),pool_in?: (Scalars['String'][] | null),pool_not_in?: (Scalars['String'][] | null),pool_contains?: (Scalars['String'] | null),pool_not_contains?: (Scalars['String'] | null),pool_starts_with?: (Scalars['String'] | null),pool_not_starts_with?: (Scalars['String'] | null),pool_ends_with?: (Scalars['String'] | null),pool_not_ends_with?: (Scalars['String'] | null),user?: (Scalars['String'] | null),user_not?: (Scalars['String'] | null),user_gt?: (Scalars['String'] | null),user_lt?: (Scalars['String'] | null),user_gte?: (Scalars['String'] | null),user_lte?: (Scalars['String'] | null),user_in?: (Scalars['String'][] | null),user_not_in?: (Scalars['String'][] | null),user_contains?: (Scalars['String'] | null),user_not_contains?: (Scalars['String'] | null),user_starts_with?: (Scalars['String'] | null),user_not_starts_with?: (Scalars['String'] | null),user_ends_with?: (Scalars['String'] | null),user_not_ends_with?: (Scalars['String'] | null),reserve?: (Scalars['String'] | null),reserve_not?: (Scalars['String'] | null),reserve_gt?: (Scalars['String'] | null),reserve_lt?: (Scalars['String'] | null),reserve_gte?: (Scalars['String'] | null),reserve_lte?: (Scalars['String'] | null),reserve_in?: (Scalars['String'][] | null),reserve_not_in?: (Scalars['String'][] | null),reserve_contains?: (Scalars['String'] | null),reserve_not_contains?: (Scalars['String'] | null),reserve_starts_with?: (Scalars['String'] | null),reserve_not_starts_with?: (Scalars['String'] | null),reserve_ends_with?: (Scalars['String'] | null),reserve_not_ends_with?: (Scalars['String'] | null),userReserve?: (Scalars['String'] | null),userReserve_not?: (Scalars['String'] | null),userReserve_gt?: (Scalars['String'] | null),userReserve_lt?: (Scalars['String'] | null),userReserve_gte?: (Scalars['String'] | null),userReserve_lte?: (Scalars['String'] | null),userReserve_in?: (Scalars['String'][] | null),userReserve_not_in?: (Scalars['String'][] | null),userReserve_contains?: (Scalars['String'] | null),userReserve_not_contains?: (Scalars['String'] | null),userReserve_starts_with?: (Scalars['String'] | null),userReserve_not_starts_with?: (Scalars['String'] | null),userReserve_ends_with?: (Scalars['String'] | null),userReserve_not_ends_with?: (Scalars['String'] | null),borrowRateModeFrom?: (BorrowRateMode | null),borrowRateModeFrom_not?: (BorrowRateMode | null),borrowRateModeFrom_in?: (BorrowRateMode[] | null),borrowRateModeFrom_not_in?: (BorrowRateMode[] | null),borrowRateModeTo?: (BorrowRateMode | null),borrowRateModeTo_not?: (BorrowRateMode | null),borrowRateModeTo_in?: (BorrowRateMode[] | null),borrowRateModeTo_not_in?: (BorrowRateMode[] | null),stableBorrowRate?: (Scalars['BigInt'] | null),stableBorrowRate_not?: (Scalars['BigInt'] | null),stableBorrowRate_gt?: (Scalars['BigInt'] | null),stableBorrowRate_lt?: (Scalars['BigInt'] | null),stableBorrowRate_gte?: (Scalars['BigInt'] | null),stableBorrowRate_lte?: (Scalars['BigInt'] | null),stableBorrowRate_in?: (Scalars['BigInt'][] | null),stableBorrowRate_not_in?: (Scalars['BigInt'][] | null),variableBorrowRate?: (Scalars['BigInt'] | null),variableBorrowRate_not?: (Scalars['BigInt'] | null),variableBorrowRate_gt?: (Scalars['BigInt'] | null),variableBorrowRate_lt?: (Scalars['BigInt'] | null),variableBorrowRate_gte?: (Scalars['BigInt'] | null),variableBorrowRate_lte?: (Scalars['BigInt'] | null),variableBorrowRate_in?: (Scalars['BigInt'][] | null),variableBorrowRate_not_in?: (Scalars['BigInt'][] | null),timestamp?: (Scalars['Int'] | null),timestamp_not?: (Scalars['Int'] | null),timestamp_gt?: (Scalars['Int'] | null),timestamp_lt?: (Scalars['Int'] | null),timestamp_gte?: (Scalars['Int'] | null),timestamp_lte?: (Scalars['Int'] | null),timestamp_in?: (Scalars['Int'][] | null),timestamp_not_in?: (Scalars['Int'][] | null)}
 
 export interface UsageAsCollateralRequest{
     /**
@@ -3450,263 +3794,435 @@ export interface ProtocolObservableChain{
 
 export interface QueryPromiseChain{
     protocol: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ProtocolPromiseChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Promise<(FieldsSelection<Protocol, R> | undefined)>}),
-    protocols: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>})&({get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ProtocolPromiseChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Promise<(FieldsSelection<Protocol, R> | undefined)>}),
+    protocols: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>}),
     contractToPoolMapping: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ContractToPoolMappingPromiseChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Promise<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
-    contractToPoolMappings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>})&({get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ContractToPoolMappingPromiseChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Promise<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
+    contractToPoolMappings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>}),
     poolConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolConfigurationHistoryItemPromiseChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
-    poolConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>})&({get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolConfigurationHistoryItemPromiseChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
+    poolConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
     pool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolPromiseChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Promise<(FieldsSelection<Pool, R> | undefined)>}),
-    pools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>})&({get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolPromiseChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Promise<(FieldsSelection<Pool, R> | undefined)>}),
+    pools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>}),
     priceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceHistoryItemPromiseChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
-    priceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>})&({get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceHistoryItemPromiseChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
+    priceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>}),
     usdEthPriceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsdEthPriceHistoryItemPromiseChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
-    usdEthPriceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>})&({get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsdEthPriceHistoryItemPromiseChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
+    usdEthPriceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
     chainlinkENS: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkENSPromiseChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Promise<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
-    chainlinkENSs: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>})&({get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkENSPromiseChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Promise<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
+    chainlinkENSs: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>}),
     chainlinkAggregator: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkAggregatorPromiseChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Promise<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
-    chainlinkAggregators: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>})&({get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkAggregatorPromiseChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Promise<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
+    chainlinkAggregators: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>}),
     priceOracleAsset: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleAssetPromiseChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Promise<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
-    priceOracleAssets: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>})&({get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleAssetPromiseChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Promise<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
+    priceOracleAssets: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>}),
     priceOracle: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOraclePromiseChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Promise<(FieldsSelection<PriceOracle, R> | undefined)>}),
-    priceOracles: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>})&({get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOraclePromiseChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Promise<(FieldsSelection<PriceOracle, R> | undefined)>}),
+    priceOracles: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>}),
     stoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenPromiseChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Promise<(FieldsSelection<SToken, R> | undefined)>}),
-    stokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>})&({get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenPromiseChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Promise<(FieldsSelection<SToken, R> | undefined)>}),
+    stokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>}),
     vtoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenPromiseChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Promise<(FieldsSelection<VToken, R> | undefined)>}),
-    vtokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>})&({get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenPromiseChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Promise<(FieldsSelection<VToken, R> | undefined)>}),
+    vtokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>}),
     atoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenPromiseChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Promise<(FieldsSelection<AToken, R> | undefined)>}),
-    atokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>})&({get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenPromiseChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Promise<(FieldsSelection<AToken, R> | undefined)>}),
+    atokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>}),
     variableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableDebtTokenPromiseChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Promise<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
-    variableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>})&({get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableDebtTokenPromiseChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Promise<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
+    variableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>}),
     stableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableDebtTokenPromiseChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Promise<(FieldsSelection<StableDebtToken, R> | undefined)>}),
-    stableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>})&({get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableDebtTokenPromiseChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Promise<(FieldsSelection<StableDebtToken, R> | undefined)>}),
+    stableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>}),
     referrer: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReferrerPromiseChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Promise<(FieldsSelection<Referrer, R> | undefined)>}),
-    referrers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>})&({get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReferrerPromiseChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Promise<(FieldsSelection<Referrer, R> | undefined)>}),
+    referrers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>}),
     deposit: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => DepositPromiseChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Promise<(FieldsSelection<Deposit, R> | undefined)>}),
-    deposits: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>})&({get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => DepositPromiseChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Promise<(FieldsSelection<Deposit, R> | undefined)>}),
+    deposits: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>}),
     redeemUnderlying: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RedeemUnderlyingPromiseChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Promise<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
-    redeemUnderlyings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>})&({get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RedeemUnderlyingPromiseChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Promise<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
+    redeemUnderlyings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>}),
     borrow: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => BorrowPromiseChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Promise<(FieldsSelection<Borrow, R> | undefined)>}),
-    borrows: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>})&({get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => BorrowPromiseChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Promise<(FieldsSelection<Borrow, R> | undefined)>}),
+    borrows: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>}),
     swap: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapPromiseChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Promise<(FieldsSelection<Swap, R> | undefined)>}),
-    swaps: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>})&({get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapPromiseChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Promise<(FieldsSelection<Swap, R> | undefined)>}),
+    swaps: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>}),
     usageAsCollateral: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsageAsCollateralPromiseChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Promise<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
-    usageAsCollaterals: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>})&({get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsageAsCollateralPromiseChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Promise<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
+    usageAsCollaterals: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>}),
     rebalanceStableBorrowRate: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RebalanceStableBorrowRatePromiseChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Promise<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
-    rebalanceStableBorrowRates: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>})&({get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RebalanceStableBorrowRatePromiseChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Promise<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
+    rebalanceStableBorrowRates: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
     repay: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RepayPromiseChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Promise<(FieldsSelection<Repay, R> | undefined)>}),
-    repays: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>})&({get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RepayPromiseChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Promise<(FieldsSelection<Repay, R> | undefined)>}),
+    repays: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>}),
     flashLoan: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => FlashLoanPromiseChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Promise<(FieldsSelection<FlashLoan, R> | undefined)>}),
-    flashLoans: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>})&({get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => FlashLoanPromiseChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Promise<(FieldsSelection<FlashLoan, R> | undefined)>}),
+    flashLoans: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>}),
     liquidationCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => LiquidationCallPromiseChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Promise<(FieldsSelection<LiquidationCall, R> | undefined)>}),
-    liquidationCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>})&({get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => LiquidationCallPromiseChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Promise<(FieldsSelection<LiquidationCall, R> | undefined)>}),
+    liquidationCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>}),
     originationFeeLiquidation: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => OriginationFeeLiquidationPromiseChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Promise<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
-    originationFeeLiquidations: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>})&({get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => OriginationFeeLiquidationPromiseChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Promise<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
+    originationFeeLiquidations: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
     reserveConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveConfigurationHistoryItemPromiseChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
-    reserveConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>})&({get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveConfigurationHistoryItemPromiseChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
+    reserveConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
     reserveParamsHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveParamsHistoryItemPromiseChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
-    reserveParamsHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>})&({get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveParamsHistoryItemPromiseChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
+    reserveParamsHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
     incentivesController: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivesControllerPromiseChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Promise<(FieldsSelection<IncentivesController, R> | undefined)>}),
-    incentivesControllers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>})&({get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivesControllerPromiseChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Promise<(FieldsSelection<IncentivesController, R> | undefined)>}),
+    incentivesControllers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>}),
     incentivizedAction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivizedActionPromiseChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Promise<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
-    incentivizedActions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>})&({get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivizedActionPromiseChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Promise<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
+    incentivizedActions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>}),
     claimIncentiveCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ClaimIncentiveCallPromiseChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Promise<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
-    claimIncentiveCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>})&({get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ClaimIncentiveCallPromiseChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Promise<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
+    claimIncentiveCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>}),
     mapAssetPool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => MapAssetPoolPromiseChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Promise<(FieldsSelection<MapAssetPool, R> | undefined)>}),
-    mapAssetPools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>})&({get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => MapAssetPoolPromiseChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Promise<(FieldsSelection<MapAssetPool, R> | undefined)>}),
+    mapAssetPools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>}),
     reserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReservePromiseChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Promise<(FieldsSelection<Reserve, R> | undefined)>}),
-    reserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>})&({get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReservePromiseChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Promise<(FieldsSelection<Reserve, R> | undefined)>}),
+    reserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>}),
     wethreserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => WETHReservePromiseChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Promise<(FieldsSelection<WETHReserve, R> | undefined)>}),
-    wethreserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>})&({get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => WETHReservePromiseChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Promise<(FieldsSelection<WETHReserve, R> | undefined)>}),
+    wethreserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>}),
     atokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenBalanceHistoryItemPromiseChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
-    atokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>})&({get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenBalanceHistoryItemPromiseChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
+    atokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
     vtokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenBalanceHistoryItemPromiseChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
-    vtokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>})&({get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenBalanceHistoryItemPromiseChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
+    vtokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
     stokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenBalanceHistoryItemPromiseChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
-    stokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>})&({get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenBalanceHistoryItemPromiseChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
+    stokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
     stableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableTokenDelegatedAllowancePromiseChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
-    stableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>})&({get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableTokenDelegatedAllowancePromiseChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
+    stableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
     variableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableTokenDelegatedAllowancePromiseChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
-    variableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>})&({get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableTokenDelegatedAllowancePromiseChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
+    variableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
     userReserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserReservePromiseChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Promise<(FieldsSelection<UserReserve, R> | undefined)>}),
-    userReserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>})&({get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserReservePromiseChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Promise<(FieldsSelection<UserReserve, R> | undefined)>}),
+    userReserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>}),
     user: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserPromiseChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Promise<(FieldsSelection<User, R> | undefined)>}),
-    users: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>})&({get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserPromiseChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Promise<(FieldsSelection<User, R> | undefined)>}),
+    users: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>}),
     swapHistory: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapHistoryPromiseChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Promise<(FieldsSelection<SwapHistory, R> | undefined)>}),
-    swapHistories: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>})&({get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapHistoryPromiseChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Promise<(FieldsSelection<SwapHistory, R> | undefined)>}),
+    swapHistories: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>}),
     userTransaction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserTransactionPromiseChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Promise<(FieldsSelection<UserTransaction, R> | undefined)>}),
-    userTransactions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>})&({get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserTransactionPromiseChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Promise<(FieldsSelection<UserTransaction, R> | undefined)>}),
+    userTransactions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>}),
     
 /** Access to subgraph metadata */
 _meta: ((args?: {block?: (Block_height | null)}) => _Meta_PromiseChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Promise<(FieldsSelection<_Meta_, R> | undefined)>})&(_Meta_PromiseChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Promise<(FieldsSelection<_Meta_, R> | undefined)>})
@@ -3714,263 +4230,435 @@ _meta: ((args?: {block?: (Block_height | null)}) => _Meta_PromiseChain & {get: <
 
 export interface QueryObservableChain{
     protocol: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ProtocolObservableChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Observable<(FieldsSelection<Protocol, R> | undefined)>}),
-    protocols: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>})&({get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ProtocolObservableChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Observable<(FieldsSelection<Protocol, R> | undefined)>}),
+    protocols: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>}),
     contractToPoolMapping: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ContractToPoolMappingObservableChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Observable<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
-    contractToPoolMappings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>})&({get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ContractToPoolMappingObservableChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Observable<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
+    contractToPoolMappings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>}),
     poolConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolConfigurationHistoryItemObservableChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
-    poolConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>})&({get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolConfigurationHistoryItemObservableChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
+    poolConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
     pool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolObservableChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Observable<(FieldsSelection<Pool, R> | undefined)>}),
-    pools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>})&({get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolObservableChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Observable<(FieldsSelection<Pool, R> | undefined)>}),
+    pools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>}),
     priceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceHistoryItemObservableChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
-    priceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>})&({get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceHistoryItemObservableChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
+    priceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>}),
     usdEthPriceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsdEthPriceHistoryItemObservableChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
-    usdEthPriceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>})&({get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsdEthPriceHistoryItemObservableChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
+    usdEthPriceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
     chainlinkENS: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkENSObservableChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Observable<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
-    chainlinkENSs: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>})&({get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkENSObservableChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Observable<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
+    chainlinkENSs: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>}),
     chainlinkAggregator: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkAggregatorObservableChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Observable<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
-    chainlinkAggregators: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>})&({get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkAggregatorObservableChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Observable<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
+    chainlinkAggregators: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>}),
     priceOracleAsset: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleAssetObservableChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Observable<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
-    priceOracleAssets: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>})&({get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleAssetObservableChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Observable<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
+    priceOracleAssets: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>}),
     priceOracle: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleObservableChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Observable<(FieldsSelection<PriceOracle, R> | undefined)>}),
-    priceOracles: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>})&({get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleObservableChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Observable<(FieldsSelection<PriceOracle, R> | undefined)>}),
+    priceOracles: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>}),
     stoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenObservableChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Observable<(FieldsSelection<SToken, R> | undefined)>}),
-    stokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>})&({get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenObservableChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Observable<(FieldsSelection<SToken, R> | undefined)>}),
+    stokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>}),
     vtoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenObservableChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Observable<(FieldsSelection<VToken, R> | undefined)>}),
-    vtokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>})&({get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenObservableChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Observable<(FieldsSelection<VToken, R> | undefined)>}),
+    vtokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>}),
     atoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenObservableChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Observable<(FieldsSelection<AToken, R> | undefined)>}),
-    atokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>})&({get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenObservableChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Observable<(FieldsSelection<AToken, R> | undefined)>}),
+    atokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>}),
     variableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableDebtTokenObservableChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Observable<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
-    variableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>})&({get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableDebtTokenObservableChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Observable<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
+    variableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>}),
     stableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableDebtTokenObservableChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Observable<(FieldsSelection<StableDebtToken, R> | undefined)>}),
-    stableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>})&({get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableDebtTokenObservableChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Observable<(FieldsSelection<StableDebtToken, R> | undefined)>}),
+    stableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>}),
     referrer: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReferrerObservableChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Observable<(FieldsSelection<Referrer, R> | undefined)>}),
-    referrers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>})&({get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReferrerObservableChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Observable<(FieldsSelection<Referrer, R> | undefined)>}),
+    referrers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>}),
     deposit: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => DepositObservableChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Observable<(FieldsSelection<Deposit, R> | undefined)>}),
-    deposits: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>})&({get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => DepositObservableChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Observable<(FieldsSelection<Deposit, R> | undefined)>}),
+    deposits: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>}),
     redeemUnderlying: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RedeemUnderlyingObservableChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Observable<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
-    redeemUnderlyings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>})&({get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RedeemUnderlyingObservableChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Observable<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
+    redeemUnderlyings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>}),
     borrow: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => BorrowObservableChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Observable<(FieldsSelection<Borrow, R> | undefined)>}),
-    borrows: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>})&({get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => BorrowObservableChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Observable<(FieldsSelection<Borrow, R> | undefined)>}),
+    borrows: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>}),
     swap: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapObservableChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Observable<(FieldsSelection<Swap, R> | undefined)>}),
-    swaps: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>})&({get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapObservableChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Observable<(FieldsSelection<Swap, R> | undefined)>}),
+    swaps: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>}),
     usageAsCollateral: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsageAsCollateralObservableChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Observable<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
-    usageAsCollaterals: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>})&({get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsageAsCollateralObservableChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Observable<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
+    usageAsCollaterals: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>}),
     rebalanceStableBorrowRate: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RebalanceStableBorrowRateObservableChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Observable<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
-    rebalanceStableBorrowRates: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>})&({get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RebalanceStableBorrowRateObservableChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Observable<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
+    rebalanceStableBorrowRates: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
     repay: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RepayObservableChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Observable<(FieldsSelection<Repay, R> | undefined)>}),
-    repays: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>})&({get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RepayObservableChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Observable<(FieldsSelection<Repay, R> | undefined)>}),
+    repays: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>}),
     flashLoan: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => FlashLoanObservableChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Observable<(FieldsSelection<FlashLoan, R> | undefined)>}),
-    flashLoans: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>})&({get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => FlashLoanObservableChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Observable<(FieldsSelection<FlashLoan, R> | undefined)>}),
+    flashLoans: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>}),
     liquidationCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => LiquidationCallObservableChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Observable<(FieldsSelection<LiquidationCall, R> | undefined)>}),
-    liquidationCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>})&({get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => LiquidationCallObservableChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Observable<(FieldsSelection<LiquidationCall, R> | undefined)>}),
+    liquidationCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>}),
     originationFeeLiquidation: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => OriginationFeeLiquidationObservableChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Observable<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
-    originationFeeLiquidations: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>})&({get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => OriginationFeeLiquidationObservableChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Observable<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
+    originationFeeLiquidations: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
     reserveConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveConfigurationHistoryItemObservableChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
-    reserveConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>})&({get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveConfigurationHistoryItemObservableChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
+    reserveConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
     reserveParamsHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveParamsHistoryItemObservableChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
-    reserveParamsHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>})&({get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveParamsHistoryItemObservableChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
+    reserveParamsHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
     incentivesController: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivesControllerObservableChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Observable<(FieldsSelection<IncentivesController, R> | undefined)>}),
-    incentivesControllers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>})&({get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivesControllerObservableChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Observable<(FieldsSelection<IncentivesController, R> | undefined)>}),
+    incentivesControllers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>}),
     incentivizedAction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivizedActionObservableChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Observable<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
-    incentivizedActions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>})&({get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivizedActionObservableChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Observable<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
+    incentivizedActions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>}),
     claimIncentiveCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ClaimIncentiveCallObservableChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Observable<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
-    claimIncentiveCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>})&({get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ClaimIncentiveCallObservableChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Observable<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
+    claimIncentiveCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>}),
     mapAssetPool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => MapAssetPoolObservableChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Observable<(FieldsSelection<MapAssetPool, R> | undefined)>}),
-    mapAssetPools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>})&({get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => MapAssetPoolObservableChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Observable<(FieldsSelection<MapAssetPool, R> | undefined)>}),
+    mapAssetPools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>}),
     reserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveObservableChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Observable<(FieldsSelection<Reserve, R> | undefined)>}),
-    reserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>})&({get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveObservableChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Observable<(FieldsSelection<Reserve, R> | undefined)>}),
+    reserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>}),
     wethreserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => WETHReserveObservableChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Observable<(FieldsSelection<WETHReserve, R> | undefined)>}),
-    wethreserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>})&({get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => WETHReserveObservableChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Observable<(FieldsSelection<WETHReserve, R> | undefined)>}),
+    wethreserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>}),
     atokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenBalanceHistoryItemObservableChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
-    atokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>})&({get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenBalanceHistoryItemObservableChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
+    atokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
     vtokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenBalanceHistoryItemObservableChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
-    vtokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>})&({get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenBalanceHistoryItemObservableChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
+    vtokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
     stokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenBalanceHistoryItemObservableChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
-    stokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>})&({get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenBalanceHistoryItemObservableChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
+    stokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
     stableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableTokenDelegatedAllowanceObservableChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
-    stableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>})&({get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableTokenDelegatedAllowanceObservableChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
+    stableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
     variableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableTokenDelegatedAllowanceObservableChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
-    variableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>})&({get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableTokenDelegatedAllowanceObservableChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
+    variableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
     userReserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserReserveObservableChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Observable<(FieldsSelection<UserReserve, R> | undefined)>}),
-    userReserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>})&({get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserReserveObservableChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Observable<(FieldsSelection<UserReserve, R> | undefined)>}),
+    userReserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>}),
     user: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserObservableChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Observable<(FieldsSelection<User, R> | undefined)>}),
-    users: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>})&({get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserObservableChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Observable<(FieldsSelection<User, R> | undefined)>}),
+    users: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>}),
     swapHistory: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapHistoryObservableChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Observable<(FieldsSelection<SwapHistory, R> | undefined)>}),
-    swapHistories: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>})&({get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapHistoryObservableChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Observable<(FieldsSelection<SwapHistory, R> | undefined)>}),
+    swapHistories: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>}),
     userTransaction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserTransactionObservableChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Observable<(FieldsSelection<UserTransaction, R> | undefined)>}),
-    userTransactions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>})&({get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserTransactionObservableChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Observable<(FieldsSelection<UserTransaction, R> | undefined)>}),
+    userTransactions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>}),
     
 /** Access to subgraph metadata */
 _meta: ((args?: {block?: (Block_height | null)}) => _Meta_ObservableChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Observable<(FieldsSelection<_Meta_, R> | undefined)>})&(_Meta_ObservableChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Observable<(FieldsSelection<_Meta_, R> | undefined)>})
@@ -4480,263 +5168,435 @@ id: ({get: (request?: boolean|number, defaultValue?: Scalars['ID']) => Observabl
 
 export interface SubscriptionPromiseChain{
     protocol: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ProtocolPromiseChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Promise<(FieldsSelection<Protocol, R> | undefined)>}),
-    protocols: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>})&({get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ProtocolPromiseChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Promise<(FieldsSelection<Protocol, R> | undefined)>}),
+    protocols: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Promise<FieldsSelection<Protocol, R>[]>}),
     contractToPoolMapping: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ContractToPoolMappingPromiseChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Promise<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
-    contractToPoolMappings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>})&({get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ContractToPoolMappingPromiseChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Promise<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
+    contractToPoolMappings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Promise<FieldsSelection<ContractToPoolMapping, R>[]>}),
     poolConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolConfigurationHistoryItemPromiseChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
-    poolConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>})&({get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolConfigurationHistoryItemPromiseChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
+    poolConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
     pool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolPromiseChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Promise<(FieldsSelection<Pool, R> | undefined)>}),
-    pools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>})&({get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolPromiseChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Promise<(FieldsSelection<Pool, R> | undefined)>}),
+    pools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Promise<FieldsSelection<Pool, R>[]>}),
     priceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceHistoryItemPromiseChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
-    priceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>})&({get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceHistoryItemPromiseChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
+    priceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Promise<FieldsSelection<PriceHistoryItem, R>[]>}),
     usdEthPriceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsdEthPriceHistoryItemPromiseChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
-    usdEthPriceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>})&({get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsdEthPriceHistoryItemPromiseChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
+    usdEthPriceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Promise<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
     chainlinkENS: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkENSPromiseChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Promise<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
-    chainlinkENSs: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>})&({get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkENSPromiseChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Promise<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
+    chainlinkENSs: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Promise<FieldsSelection<ChainlinkENS, R>[]>}),
     chainlinkAggregator: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkAggregatorPromiseChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Promise<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
-    chainlinkAggregators: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>})&({get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkAggregatorPromiseChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Promise<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
+    chainlinkAggregators: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Promise<FieldsSelection<ChainlinkAggregator, R>[]>}),
     priceOracleAsset: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleAssetPromiseChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Promise<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
-    priceOracleAssets: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>})&({get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleAssetPromiseChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Promise<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
+    priceOracleAssets: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Promise<FieldsSelection<PriceOracleAsset, R>[]>}),
     priceOracle: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOraclePromiseChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Promise<(FieldsSelection<PriceOracle, R> | undefined)>}),
-    priceOracles: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>})&({get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOraclePromiseChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Promise<(FieldsSelection<PriceOracle, R> | undefined)>}),
+    priceOracles: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Promise<FieldsSelection<PriceOracle, R>[]>}),
     stoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenPromiseChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Promise<(FieldsSelection<SToken, R> | undefined)>}),
-    stokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>})&({get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenPromiseChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Promise<(FieldsSelection<SToken, R> | undefined)>}),
+    stokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Promise<FieldsSelection<SToken, R>[]>}),
     vtoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenPromiseChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Promise<(FieldsSelection<VToken, R> | undefined)>}),
-    vtokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>})&({get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenPromiseChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Promise<(FieldsSelection<VToken, R> | undefined)>}),
+    vtokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Promise<FieldsSelection<VToken, R>[]>}),
     atoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenPromiseChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Promise<(FieldsSelection<AToken, R> | undefined)>}),
-    atokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>})&({get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenPromiseChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Promise<(FieldsSelection<AToken, R> | undefined)>}),
+    atokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Promise<FieldsSelection<AToken, R>[]>}),
     variableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableDebtTokenPromiseChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Promise<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
-    variableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>})&({get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableDebtTokenPromiseChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Promise<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
+    variableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Promise<FieldsSelection<VariableDebtToken, R>[]>}),
     stableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableDebtTokenPromiseChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Promise<(FieldsSelection<StableDebtToken, R> | undefined)>}),
-    stableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>})&({get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableDebtTokenPromiseChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Promise<(FieldsSelection<StableDebtToken, R> | undefined)>}),
+    stableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Promise<FieldsSelection<StableDebtToken, R>[]>}),
     referrer: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReferrerPromiseChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Promise<(FieldsSelection<Referrer, R> | undefined)>}),
-    referrers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>})&({get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReferrerPromiseChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Promise<(FieldsSelection<Referrer, R> | undefined)>}),
+    referrers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Promise<FieldsSelection<Referrer, R>[]>}),
     deposit: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => DepositPromiseChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Promise<(FieldsSelection<Deposit, R> | undefined)>}),
-    deposits: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>})&({get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => DepositPromiseChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Promise<(FieldsSelection<Deposit, R> | undefined)>}),
+    deposits: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Promise<FieldsSelection<Deposit, R>[]>}),
     redeemUnderlying: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RedeemUnderlyingPromiseChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Promise<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
-    redeemUnderlyings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>})&({get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RedeemUnderlyingPromiseChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Promise<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
+    redeemUnderlyings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Promise<FieldsSelection<RedeemUnderlying, R>[]>}),
     borrow: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => BorrowPromiseChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Promise<(FieldsSelection<Borrow, R> | undefined)>}),
-    borrows: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>})&({get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => BorrowPromiseChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Promise<(FieldsSelection<Borrow, R> | undefined)>}),
+    borrows: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Promise<FieldsSelection<Borrow, R>[]>}),
     swap: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapPromiseChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Promise<(FieldsSelection<Swap, R> | undefined)>}),
-    swaps: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>})&({get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapPromiseChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Promise<(FieldsSelection<Swap, R> | undefined)>}),
+    swaps: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Promise<FieldsSelection<Swap, R>[]>}),
     usageAsCollateral: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsageAsCollateralPromiseChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Promise<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
-    usageAsCollaterals: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>})&({get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsageAsCollateralPromiseChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Promise<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
+    usageAsCollaterals: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Promise<FieldsSelection<UsageAsCollateral, R>[]>}),
     rebalanceStableBorrowRate: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RebalanceStableBorrowRatePromiseChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Promise<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
-    rebalanceStableBorrowRates: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>})&({get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RebalanceStableBorrowRatePromiseChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Promise<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
+    rebalanceStableBorrowRates: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Promise<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
     repay: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RepayPromiseChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Promise<(FieldsSelection<Repay, R> | undefined)>}),
-    repays: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>})&({get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RepayPromiseChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Promise<(FieldsSelection<Repay, R> | undefined)>}),
+    repays: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Promise<FieldsSelection<Repay, R>[]>}),
     flashLoan: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => FlashLoanPromiseChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Promise<(FieldsSelection<FlashLoan, R> | undefined)>}),
-    flashLoans: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>})&({get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => FlashLoanPromiseChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Promise<(FieldsSelection<FlashLoan, R> | undefined)>}),
+    flashLoans: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Promise<FieldsSelection<FlashLoan, R>[]>}),
     liquidationCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => LiquidationCallPromiseChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Promise<(FieldsSelection<LiquidationCall, R> | undefined)>}),
-    liquidationCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>})&({get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => LiquidationCallPromiseChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Promise<(FieldsSelection<LiquidationCall, R> | undefined)>}),
+    liquidationCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Promise<FieldsSelection<LiquidationCall, R>[]>}),
     originationFeeLiquidation: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => OriginationFeeLiquidationPromiseChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Promise<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
-    originationFeeLiquidations: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>})&({get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => OriginationFeeLiquidationPromiseChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Promise<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
+    originationFeeLiquidations: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Promise<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
     reserveConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveConfigurationHistoryItemPromiseChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
-    reserveConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>})&({get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveConfigurationHistoryItemPromiseChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
+    reserveConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Promise<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
     reserveParamsHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveParamsHistoryItemPromiseChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
-    reserveParamsHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>})&({get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveParamsHistoryItemPromiseChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
+    reserveParamsHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Promise<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
     incentivesController: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivesControllerPromiseChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Promise<(FieldsSelection<IncentivesController, R> | undefined)>}),
-    incentivesControllers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>})&({get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivesControllerPromiseChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Promise<(FieldsSelection<IncentivesController, R> | undefined)>}),
+    incentivesControllers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Promise<FieldsSelection<IncentivesController, R>[]>}),
     incentivizedAction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivizedActionPromiseChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Promise<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
-    incentivizedActions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>})&({get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivizedActionPromiseChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Promise<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
+    incentivizedActions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Promise<FieldsSelection<IncentivizedAction, R>[]>}),
     claimIncentiveCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ClaimIncentiveCallPromiseChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Promise<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
-    claimIncentiveCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>})&({get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ClaimIncentiveCallPromiseChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Promise<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
+    claimIncentiveCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Promise<FieldsSelection<ClaimIncentiveCall, R>[]>}),
     mapAssetPool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => MapAssetPoolPromiseChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Promise<(FieldsSelection<MapAssetPool, R> | undefined)>}),
-    mapAssetPools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>})&({get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => MapAssetPoolPromiseChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Promise<(FieldsSelection<MapAssetPool, R> | undefined)>}),
+    mapAssetPools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Promise<FieldsSelection<MapAssetPool, R>[]>}),
     reserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReservePromiseChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Promise<(FieldsSelection<Reserve, R> | undefined)>}),
-    reserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>})&({get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReservePromiseChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Promise<(FieldsSelection<Reserve, R> | undefined)>}),
+    reserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Promise<FieldsSelection<Reserve, R>[]>}),
     wethreserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => WETHReservePromiseChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Promise<(FieldsSelection<WETHReserve, R> | undefined)>}),
-    wethreserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>})&({get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => WETHReservePromiseChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Promise<(FieldsSelection<WETHReserve, R> | undefined)>}),
+    wethreserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Promise<FieldsSelection<WETHReserve, R>[]>}),
     atokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenBalanceHistoryItemPromiseChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
-    atokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>})&({get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenBalanceHistoryItemPromiseChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
+    atokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
     vtokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenBalanceHistoryItemPromiseChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
-    vtokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>})&({get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenBalanceHistoryItemPromiseChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
+    vtokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
     stokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenBalanceHistoryItemPromiseChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
-    stokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>})&({get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenBalanceHistoryItemPromiseChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Promise<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
+    stokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Promise<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
     stableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableTokenDelegatedAllowancePromiseChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
-    stableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>})&({get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableTokenDelegatedAllowancePromiseChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
+    stableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
     variableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableTokenDelegatedAllowancePromiseChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
-    variableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>})&({get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableTokenDelegatedAllowancePromiseChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Promise<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
+    variableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Promise<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
     userReserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserReservePromiseChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Promise<(FieldsSelection<UserReserve, R> | undefined)>}),
-    userReserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>})&({get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserReservePromiseChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Promise<(FieldsSelection<UserReserve, R> | undefined)>}),
+    userReserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Promise<FieldsSelection<UserReserve, R>[]>}),
     user: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserPromiseChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Promise<(FieldsSelection<User, R> | undefined)>}),
-    users: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>})&({get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserPromiseChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Promise<(FieldsSelection<User, R> | undefined)>}),
+    users: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Promise<FieldsSelection<User, R>[]>}),
     swapHistory: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapHistoryPromiseChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Promise<(FieldsSelection<SwapHistory, R> | undefined)>}),
-    swapHistories: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>})&({get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapHistoryPromiseChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Promise<(FieldsSelection<SwapHistory, R> | undefined)>}),
+    swapHistories: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Promise<FieldsSelection<SwapHistory, R>[]>}),
     userTransaction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserTransactionPromiseChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Promise<(FieldsSelection<UserTransaction, R> | undefined)>}),
-    userTransactions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>})&({get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserTransactionPromiseChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Promise<(FieldsSelection<UserTransaction, R> | undefined)>}),
+    userTransactions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Promise<FieldsSelection<UserTransaction, R>[]>}),
     
 /** Access to subgraph metadata */
 _meta: ((args?: {block?: (Block_height | null)}) => _Meta_PromiseChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Promise<(FieldsSelection<_Meta_, R> | undefined)>})&(_Meta_PromiseChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Promise<(FieldsSelection<_Meta_, R> | undefined)>})
@@ -4744,263 +5604,435 @@ _meta: ((args?: {block?: (Block_height | null)}) => _Meta_PromiseChain & {get: <
 
 export interface SubscriptionObservableChain{
     protocol: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ProtocolObservableChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Observable<(FieldsSelection<Protocol, R> | undefined)>}),
-    protocols: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>})&({get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ProtocolObservableChain & {get: <R extends ProtocolRequest>(request: R, defaultValue?: (FieldsSelection<Protocol, R> | undefined)) => Observable<(FieldsSelection<Protocol, R> | undefined)>}),
+    protocols: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Protocol_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Protocol_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ProtocolRequest>(request: R, defaultValue?: FieldsSelection<Protocol, R>[]) => Observable<FieldsSelection<Protocol, R>[]>}),
     contractToPoolMapping: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ContractToPoolMappingObservableChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Observable<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
-    contractToPoolMappings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>})&({get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ContractToPoolMappingObservableChain & {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: (FieldsSelection<ContractToPoolMapping, R> | undefined)) => Observable<(FieldsSelection<ContractToPoolMapping, R> | undefined)>}),
+    contractToPoolMappings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ContractToPoolMapping_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ContractToPoolMapping_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ContractToPoolMappingRequest>(request: R, defaultValue?: FieldsSelection<ContractToPoolMapping, R>[]) => Observable<FieldsSelection<ContractToPoolMapping, R>[]>}),
     poolConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolConfigurationHistoryItemObservableChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
-    poolConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>})&({get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolConfigurationHistoryItemObservableChain & {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PoolConfigurationHistoryItem, R> | undefined)>}),
+    poolConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PoolConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PoolConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PoolConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<PoolConfigurationHistoryItem, R>[]>}),
     pool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PoolObservableChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Observable<(FieldsSelection<Pool, R> | undefined)>}),
-    pools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>})&({get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PoolObservableChain & {get: <R extends PoolRequest>(request: R, defaultValue?: (FieldsSelection<Pool, R> | undefined)) => Observable<(FieldsSelection<Pool, R> | undefined)>}),
+    pools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Pool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Pool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PoolRequest>(request: R, defaultValue?: FieldsSelection<Pool, R>[]) => Observable<FieldsSelection<Pool, R>[]>}),
     priceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceHistoryItemObservableChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
-    priceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>})&({get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceHistoryItemObservableChain & {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<PriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<PriceHistoryItem, R> | undefined)>}),
+    priceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<PriceHistoryItem, R>[]) => Observable<FieldsSelection<PriceHistoryItem, R>[]>}),
     usdEthPriceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsdEthPriceHistoryItemObservableChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
-    usdEthPriceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>})&({get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsdEthPriceHistoryItemObservableChain & {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<UsdEthPriceHistoryItem, R> | undefined)>}),
+    usdEthPriceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsdEthPriceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsdEthPriceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsdEthPriceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<UsdEthPriceHistoryItem, R>[]) => Observable<FieldsSelection<UsdEthPriceHistoryItem, R>[]>}),
     chainlinkENS: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkENSObservableChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Observable<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
-    chainlinkENSs: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>})&({get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkENSObservableChain & {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkENS, R> | undefined)) => Observable<(FieldsSelection<ChainlinkENS, R> | undefined)>}),
+    chainlinkENSs: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkENS_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkENS_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkENSRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkENS, R>[]) => Observable<FieldsSelection<ChainlinkENS, R>[]>}),
     chainlinkAggregator: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ChainlinkAggregatorObservableChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Observable<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
-    chainlinkAggregators: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>})&({get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ChainlinkAggregatorObservableChain & {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: (FieldsSelection<ChainlinkAggregator, R> | undefined)) => Observable<(FieldsSelection<ChainlinkAggregator, R> | undefined)>}),
+    chainlinkAggregators: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ChainlinkAggregator_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ChainlinkAggregator_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ChainlinkAggregatorRequest>(request: R, defaultValue?: FieldsSelection<ChainlinkAggregator, R>[]) => Observable<FieldsSelection<ChainlinkAggregator, R>[]>}),
     priceOracleAsset: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleAssetObservableChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Observable<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
-    priceOracleAssets: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>})&({get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleAssetObservableChain & {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracleAsset, R> | undefined)) => Observable<(FieldsSelection<PriceOracleAsset, R> | undefined)>}),
+    priceOracleAssets: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracleAsset_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracleAsset_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleAssetRequest>(request: R, defaultValue?: FieldsSelection<PriceOracleAsset, R>[]) => Observable<FieldsSelection<PriceOracleAsset, R>[]>}),
     priceOracle: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => PriceOracleObservableChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Observable<(FieldsSelection<PriceOracle, R> | undefined)>}),
-    priceOracles: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>})&({get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => PriceOracleObservableChain & {get: <R extends PriceOracleRequest>(request: R, defaultValue?: (FieldsSelection<PriceOracle, R> | undefined)) => Observable<(FieldsSelection<PriceOracle, R> | undefined)>}),
+    priceOracles: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (PriceOracle_orderBy | null),orderDirection?: (OrderDirection | null),where?: (PriceOracle_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends PriceOracleRequest>(request: R, defaultValue?: FieldsSelection<PriceOracle, R>[]) => Observable<FieldsSelection<PriceOracle, R>[]>}),
     stoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenObservableChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Observable<(FieldsSelection<SToken, R> | undefined)>}),
-    stokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>})&({get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenObservableChain & {get: <R extends STokenRequest>(request: R, defaultValue?: (FieldsSelection<SToken, R> | undefined)) => Observable<(FieldsSelection<SToken, R> | undefined)>}),
+    stokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenRequest>(request: R, defaultValue?: FieldsSelection<SToken, R>[]) => Observable<FieldsSelection<SToken, R>[]>}),
     vtoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenObservableChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Observable<(FieldsSelection<VToken, R> | undefined)>}),
-    vtokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>})&({get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenObservableChain & {get: <R extends VTokenRequest>(request: R, defaultValue?: (FieldsSelection<VToken, R> | undefined)) => Observable<(FieldsSelection<VToken, R> | undefined)>}),
+    vtokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenRequest>(request: R, defaultValue?: FieldsSelection<VToken, R>[]) => Observable<FieldsSelection<VToken, R>[]>}),
     atoken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenObservableChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Observable<(FieldsSelection<AToken, R> | undefined)>}),
-    atokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>})&({get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenObservableChain & {get: <R extends ATokenRequest>(request: R, defaultValue?: (FieldsSelection<AToken, R> | undefined)) => Observable<(FieldsSelection<AToken, R> | undefined)>}),
+    atokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (AToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (AToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenRequest>(request: R, defaultValue?: FieldsSelection<AToken, R>[]) => Observable<FieldsSelection<AToken, R>[]>}),
     variableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableDebtTokenObservableChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Observable<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
-    variableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>})&({get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableDebtTokenObservableChain & {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<VariableDebtToken, R> | undefined)) => Observable<(FieldsSelection<VariableDebtToken, R> | undefined)>}),
+    variableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<VariableDebtToken, R>[]) => Observable<FieldsSelection<VariableDebtToken, R>[]>}),
     stableDebtToken: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableDebtTokenObservableChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Observable<(FieldsSelection<StableDebtToken, R> | undefined)>}),
-    stableDebtTokens: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>})&({get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableDebtTokenObservableChain & {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: (FieldsSelection<StableDebtToken, R> | undefined)) => Observable<(FieldsSelection<StableDebtToken, R> | undefined)>}),
+    stableDebtTokens: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableDebtToken_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableDebtToken_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableDebtTokenRequest>(request: R, defaultValue?: FieldsSelection<StableDebtToken, R>[]) => Observable<FieldsSelection<StableDebtToken, R>[]>}),
     referrer: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReferrerObservableChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Observable<(FieldsSelection<Referrer, R> | undefined)>}),
-    referrers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>})&({get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReferrerObservableChain & {get: <R extends ReferrerRequest>(request: R, defaultValue?: (FieldsSelection<Referrer, R> | undefined)) => Observable<(FieldsSelection<Referrer, R> | undefined)>}),
+    referrers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Referrer_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Referrer_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReferrerRequest>(request: R, defaultValue?: FieldsSelection<Referrer, R>[]) => Observable<FieldsSelection<Referrer, R>[]>}),
     deposit: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => DepositObservableChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Observable<(FieldsSelection<Deposit, R> | undefined)>}),
-    deposits: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>})&({get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => DepositObservableChain & {get: <R extends DepositRequest>(request: R, defaultValue?: (FieldsSelection<Deposit, R> | undefined)) => Observable<(FieldsSelection<Deposit, R> | undefined)>}),
+    deposits: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Deposit_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Deposit_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends DepositRequest>(request: R, defaultValue?: FieldsSelection<Deposit, R>[]) => Observable<FieldsSelection<Deposit, R>[]>}),
     redeemUnderlying: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RedeemUnderlyingObservableChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Observable<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
-    redeemUnderlyings: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>})&({get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RedeemUnderlyingObservableChain & {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: (FieldsSelection<RedeemUnderlying, R> | undefined)) => Observable<(FieldsSelection<RedeemUnderlying, R> | undefined)>}),
+    redeemUnderlyings: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RedeemUnderlying_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RedeemUnderlying_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RedeemUnderlyingRequest>(request: R, defaultValue?: FieldsSelection<RedeemUnderlying, R>[]) => Observable<FieldsSelection<RedeemUnderlying, R>[]>}),
     borrow: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => BorrowObservableChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Observable<(FieldsSelection<Borrow, R> | undefined)>}),
-    borrows: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>})&({get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => BorrowObservableChain & {get: <R extends BorrowRequest>(request: R, defaultValue?: (FieldsSelection<Borrow, R> | undefined)) => Observable<(FieldsSelection<Borrow, R> | undefined)>}),
+    borrows: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Borrow_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Borrow_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends BorrowRequest>(request: R, defaultValue?: FieldsSelection<Borrow, R>[]) => Observable<FieldsSelection<Borrow, R>[]>}),
     swap: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapObservableChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Observable<(FieldsSelection<Swap, R> | undefined)>}),
-    swaps: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>})&({get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapObservableChain & {get: <R extends SwapRequest>(request: R, defaultValue?: (FieldsSelection<Swap, R> | undefined)) => Observable<(FieldsSelection<Swap, R> | undefined)>}),
+    swaps: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Swap_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Swap_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapRequest>(request: R, defaultValue?: FieldsSelection<Swap, R>[]) => Observable<FieldsSelection<Swap, R>[]>}),
     usageAsCollateral: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UsageAsCollateralObservableChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Observable<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
-    usageAsCollaterals: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>})&({get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UsageAsCollateralObservableChain & {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: (FieldsSelection<UsageAsCollateral, R> | undefined)) => Observable<(FieldsSelection<UsageAsCollateral, R> | undefined)>}),
+    usageAsCollaterals: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UsageAsCollateral_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UsageAsCollateral_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UsageAsCollateralRequest>(request: R, defaultValue?: FieldsSelection<UsageAsCollateral, R>[]) => Observable<FieldsSelection<UsageAsCollateral, R>[]>}),
     rebalanceStableBorrowRate: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RebalanceStableBorrowRateObservableChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Observable<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
-    rebalanceStableBorrowRates: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>})&({get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RebalanceStableBorrowRateObservableChain & {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: (FieldsSelection<RebalanceStableBorrowRate, R> | undefined)) => Observable<(FieldsSelection<RebalanceStableBorrowRate, R> | undefined)>}),
+    rebalanceStableBorrowRates: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (RebalanceStableBorrowRate_orderBy | null),orderDirection?: (OrderDirection | null),where?: (RebalanceStableBorrowRate_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RebalanceStableBorrowRateRequest>(request: R, defaultValue?: FieldsSelection<RebalanceStableBorrowRate, R>[]) => Observable<FieldsSelection<RebalanceStableBorrowRate, R>[]>}),
     repay: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => RepayObservableChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Observable<(FieldsSelection<Repay, R> | undefined)>}),
-    repays: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>})&({get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => RepayObservableChain & {get: <R extends RepayRequest>(request: R, defaultValue?: (FieldsSelection<Repay, R> | undefined)) => Observable<(FieldsSelection<Repay, R> | undefined)>}),
+    repays: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Repay_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Repay_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends RepayRequest>(request: R, defaultValue?: FieldsSelection<Repay, R>[]) => Observable<FieldsSelection<Repay, R>[]>}),
     flashLoan: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => FlashLoanObservableChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Observable<(FieldsSelection<FlashLoan, R> | undefined)>}),
-    flashLoans: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>})&({get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => FlashLoanObservableChain & {get: <R extends FlashLoanRequest>(request: R, defaultValue?: (FieldsSelection<FlashLoan, R> | undefined)) => Observable<(FieldsSelection<FlashLoan, R> | undefined)>}),
+    flashLoans: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (FlashLoan_orderBy | null),orderDirection?: (OrderDirection | null),where?: (FlashLoan_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends FlashLoanRequest>(request: R, defaultValue?: FieldsSelection<FlashLoan, R>[]) => Observable<FieldsSelection<FlashLoan, R>[]>}),
     liquidationCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => LiquidationCallObservableChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Observable<(FieldsSelection<LiquidationCall, R> | undefined)>}),
-    liquidationCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>})&({get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => LiquidationCallObservableChain & {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: (FieldsSelection<LiquidationCall, R> | undefined)) => Observable<(FieldsSelection<LiquidationCall, R> | undefined)>}),
+    liquidationCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (LiquidationCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (LiquidationCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends LiquidationCallRequest>(request: R, defaultValue?: FieldsSelection<LiquidationCall, R>[]) => Observable<FieldsSelection<LiquidationCall, R>[]>}),
     originationFeeLiquidation: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => OriginationFeeLiquidationObservableChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Observable<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
-    originationFeeLiquidations: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>})&({get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => OriginationFeeLiquidationObservableChain & {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: (FieldsSelection<OriginationFeeLiquidation, R> | undefined)) => Observable<(FieldsSelection<OriginationFeeLiquidation, R> | undefined)>}),
+    originationFeeLiquidations: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (OriginationFeeLiquidation_orderBy | null),orderDirection?: (OrderDirection | null),where?: (OriginationFeeLiquidation_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends OriginationFeeLiquidationRequest>(request: R, defaultValue?: FieldsSelection<OriginationFeeLiquidation, R>[]) => Observable<FieldsSelection<OriginationFeeLiquidation, R>[]>}),
     reserveConfigurationHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveConfigurationHistoryItemObservableChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
-    reserveConfigurationHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>})&({get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveConfigurationHistoryItemObservableChain & {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveConfigurationHistoryItem, R> | undefined)>}),
+    reserveConfigurationHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveConfigurationHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveConfigurationHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveConfigurationHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveConfigurationHistoryItem, R>[]) => Observable<FieldsSelection<ReserveConfigurationHistoryItem, R>[]>}),
     reserveParamsHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveParamsHistoryItemObservableChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
-    reserveParamsHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>})&({get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveParamsHistoryItemObservableChain & {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ReserveParamsHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ReserveParamsHistoryItem, R> | undefined)>}),
+    reserveParamsHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ReserveParamsHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ReserveParamsHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveParamsHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ReserveParamsHistoryItem, R>[]) => Observable<FieldsSelection<ReserveParamsHistoryItem, R>[]>}),
     incentivesController: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivesControllerObservableChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Observable<(FieldsSelection<IncentivesController, R> | undefined)>}),
-    incentivesControllers: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>})&({get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivesControllerObservableChain & {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: (FieldsSelection<IncentivesController, R> | undefined)) => Observable<(FieldsSelection<IncentivesController, R> | undefined)>}),
+    incentivesControllers: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivesController_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivesController_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivesControllerRequest>(request: R, defaultValue?: FieldsSelection<IncentivesController, R>[]) => Observable<FieldsSelection<IncentivesController, R>[]>}),
     incentivizedAction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => IncentivizedActionObservableChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Observable<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
-    incentivizedActions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>})&({get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => IncentivizedActionObservableChain & {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: (FieldsSelection<IncentivizedAction, R> | undefined)) => Observable<(FieldsSelection<IncentivizedAction, R> | undefined)>}),
+    incentivizedActions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (IncentivizedAction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (IncentivizedAction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends IncentivizedActionRequest>(request: R, defaultValue?: FieldsSelection<IncentivizedAction, R>[]) => Observable<FieldsSelection<IncentivizedAction, R>[]>}),
     claimIncentiveCall: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ClaimIncentiveCallObservableChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Observable<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
-    claimIncentiveCalls: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>})&({get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ClaimIncentiveCallObservableChain & {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: (FieldsSelection<ClaimIncentiveCall, R> | undefined)) => Observable<(FieldsSelection<ClaimIncentiveCall, R> | undefined)>}),
+    claimIncentiveCalls: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ClaimIncentiveCall_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ClaimIncentiveCall_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ClaimIncentiveCallRequest>(request: R, defaultValue?: FieldsSelection<ClaimIncentiveCall, R>[]) => Observable<FieldsSelection<ClaimIncentiveCall, R>[]>}),
     mapAssetPool: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => MapAssetPoolObservableChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Observable<(FieldsSelection<MapAssetPool, R> | undefined)>}),
-    mapAssetPools: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>})&({get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => MapAssetPoolObservableChain & {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: (FieldsSelection<MapAssetPool, R> | undefined)) => Observable<(FieldsSelection<MapAssetPool, R> | undefined)>}),
+    mapAssetPools: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (MapAssetPool_orderBy | null),orderDirection?: (OrderDirection | null),where?: (MapAssetPool_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends MapAssetPoolRequest>(request: R, defaultValue?: FieldsSelection<MapAssetPool, R>[]) => Observable<FieldsSelection<MapAssetPool, R>[]>}),
     reserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ReserveObservableChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Observable<(FieldsSelection<Reserve, R> | undefined)>}),
-    reserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>})&({get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ReserveObservableChain & {get: <R extends ReserveRequest>(request: R, defaultValue?: (FieldsSelection<Reserve, R> | undefined)) => Observable<(FieldsSelection<Reserve, R> | undefined)>}),
+    reserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (Reserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (Reserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ReserveRequest>(request: R, defaultValue?: FieldsSelection<Reserve, R>[]) => Observable<FieldsSelection<Reserve, R>[]>}),
     wethreserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => WETHReserveObservableChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Observable<(FieldsSelection<WETHReserve, R> | undefined)>}),
-    wethreserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>})&({get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => WETHReserveObservableChain & {get: <R extends WETHReserveRequest>(request: R, defaultValue?: (FieldsSelection<WETHReserve, R> | undefined)) => Observable<(FieldsSelection<WETHReserve, R> | undefined)>}),
+    wethreserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (WETHReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (WETHReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends WETHReserveRequest>(request: R, defaultValue?: FieldsSelection<WETHReserve, R>[]) => Observable<FieldsSelection<WETHReserve, R>[]>}),
     atokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => ATokenBalanceHistoryItemObservableChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
-    atokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>})&({get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => ATokenBalanceHistoryItemObservableChain & {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<ATokenBalanceHistoryItem, R> | undefined)>}),
+    atokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (ATokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (ATokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends ATokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<ATokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<ATokenBalanceHistoryItem, R>[]>}),
     vtokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VTokenBalanceHistoryItemObservableChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
-    vtokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>})&({get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VTokenBalanceHistoryItemObservableChain & {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<VTokenBalanceHistoryItem, R> | undefined)>}),
+    vtokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VTokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VTokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VTokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<VTokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<VTokenBalanceHistoryItem, R>[]>}),
     stokenBalanceHistoryItem: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => STokenBalanceHistoryItemObservableChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
-    stokenBalanceHistoryItems: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>})&({get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => STokenBalanceHistoryItemObservableChain & {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: (FieldsSelection<STokenBalanceHistoryItem, R> | undefined)) => Observable<(FieldsSelection<STokenBalanceHistoryItem, R> | undefined)>}),
+    stokenBalanceHistoryItems: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (STokenBalanceHistoryItem_orderBy | null),orderDirection?: (OrderDirection | null),where?: (STokenBalanceHistoryItem_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends STokenBalanceHistoryItemRequest>(request: R, defaultValue?: FieldsSelection<STokenBalanceHistoryItem, R>[]) => Observable<FieldsSelection<STokenBalanceHistoryItem, R>[]>}),
     stableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => StableTokenDelegatedAllowanceObservableChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
-    stableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>})&({get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => StableTokenDelegatedAllowanceObservableChain & {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<StableTokenDelegatedAllowance, R> | undefined)>}),
+    stableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (StableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (StableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends StableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<StableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<StableTokenDelegatedAllowance, R>[]>}),
     variableTokenDelegatedAllowance: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => VariableTokenDelegatedAllowanceObservableChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
-    variableTokenDelegatedAllowances: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>})&({get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => VariableTokenDelegatedAllowanceObservableChain & {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: (FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)) => Observable<(FieldsSelection<VariableTokenDelegatedAllowance, R> | undefined)>}),
+    variableTokenDelegatedAllowances: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (VariableTokenDelegatedAllowance_orderBy | null),orderDirection?: (OrderDirection | null),where?: (VariableTokenDelegatedAllowance_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends VariableTokenDelegatedAllowanceRequest>(request: R, defaultValue?: FieldsSelection<VariableTokenDelegatedAllowance, R>[]) => Observable<FieldsSelection<VariableTokenDelegatedAllowance, R>[]>}),
     userReserve: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserReserveObservableChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Observable<(FieldsSelection<UserReserve, R> | undefined)>}),
-    userReserves: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>})&({get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserReserveObservableChain & {get: <R extends UserReserveRequest>(request: R, defaultValue?: (FieldsSelection<UserReserve, R> | undefined)) => Observable<(FieldsSelection<UserReserve, R> | undefined)>}),
+    userReserves: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserReserve_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserReserve_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserReserveRequest>(request: R, defaultValue?: FieldsSelection<UserReserve, R>[]) => Observable<FieldsSelection<UserReserve, R>[]>}),
     user: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserObservableChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Observable<(FieldsSelection<User, R> | undefined)>}),
-    users: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>})&({get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserObservableChain & {get: <R extends UserRequest>(request: R, defaultValue?: (FieldsSelection<User, R> | undefined)) => Observable<(FieldsSelection<User, R> | undefined)>}),
+    users: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (User_orderBy | null),orderDirection?: (OrderDirection | null),where?: (User_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserRequest>(request: R, defaultValue?: FieldsSelection<User, R>[]) => Observable<FieldsSelection<User, R>[]>}),
     swapHistory: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => SwapHistoryObservableChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Observable<(FieldsSelection<SwapHistory, R> | undefined)>}),
-    swapHistories: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>})&({get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => SwapHistoryObservableChain & {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: (FieldsSelection<SwapHistory, R> | undefined)) => Observable<(FieldsSelection<SwapHistory, R> | undefined)>}),
+    swapHistories: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (SwapHistory_orderBy | null),orderDirection?: (OrderDirection | null),where?: (SwapHistory_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends SwapHistoryRequest>(request: R, defaultValue?: FieldsSelection<SwapHistory, R>[]) => Observable<FieldsSelection<SwapHistory, R>[]>}),
     userTransaction: ((args: {id: Scalars['ID'],
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => UserTransactionObservableChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Observable<(FieldsSelection<UserTransaction, R> | undefined)>}),
-    userTransactions: ((args?: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
-/** The block at which the query should be executed. Can either be an `{ number: Int }` containing the block number or a `{ hash: Bytes }` value containing a block hash. Defaults to the latest block when omitted. */
-block?: (Block_height | null)}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>})&({get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>}),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => UserTransactionObservableChain & {get: <R extends UserTransactionRequest>(request: R, defaultValue?: (FieldsSelection<UserTransaction, R> | undefined)) => Observable<(FieldsSelection<UserTransaction, R> | undefined)>}),
+    userTransactions: ((args: {skip?: (Scalars['Int'] | null),first?: (Scalars['Int'] | null),orderBy?: (UserTransaction_orderBy | null),orderDirection?: (OrderDirection | null),where?: (UserTransaction_filter | null),
+/** The block at which the query should be executed. Can either be a `{ hash: Bytes }` value containing a block hash, a `{ number: Int }` containing the block number, or a `{ number_gte: Int }` containing the minimum block number. In the case of `number_gte`, the query will be executed on the latest block only if the subgraph has progressed to or past the minimum block number. Defaults to the latest block when omitted. */
+block?: (Block_height | null),
+/** Set to `allow` to receive data even if the subgraph has skipped over errors while syncing. */
+subgraphError: _SubgraphErrorPolicy_}) => {get: <R extends UserTransactionRequest>(request: R, defaultValue?: FieldsSelection<UserTransaction, R>[]) => Observable<FieldsSelection<UserTransaction, R>[]>}),
     
 /** Access to subgraph metadata */
 _meta: ((args?: {block?: (Block_height | null)}) => _Meta_ObservableChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Observable<(FieldsSelection<_Meta_, R> | undefined)>})&(_Meta_ObservableChain & {get: <R extends _Meta_Request>(request: R, defaultValue?: (FieldsSelection<_Meta_, R> | undefined)) => Observable<(FieldsSelection<_Meta_, R> | undefined)>})

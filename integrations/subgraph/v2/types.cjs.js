@@ -409,6 +409,9 @@ module.exports = {
             "number": [
                 40
             ],
+            "number_gte": [
+                40
+            ],
             "__typename": [
                 105
             ]
@@ -746,6 +749,12 @@ module.exports = {
                 11
             ],
             "borrowRateMode_not": [
+                11
+            ],
+            "borrowRateMode_in": [
+                11
+            ],
+            "borrowRateMode_not_in": [
                 11
             ],
             "referrer": [
@@ -4567,10 +4576,22 @@ module.exports = {
             "type_not": [
                 63
             ],
+            "type_in": [
+                63
+            ],
+            "type_not_in": [
+                63
+            ],
             "platform": [
                 62
             ],
             "platform_not": [
+                62
+            ],
+            "platform_in": [
+                62
+            ],
+            "platform_not_in": [
                 62
             ],
             "dependentAssets": [
@@ -4886,6 +4907,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4909,6 +4934,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4921,6 +4950,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4944,6 +4977,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4956,6 +4993,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4979,6 +5020,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -4991,6 +5036,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5014,6 +5063,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5026,6 +5079,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5049,6 +5106,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5061,6 +5122,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5084,6 +5149,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5096,6 +5165,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5119,6 +5192,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5131,6 +5208,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5154,6 +5235,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5166,6 +5251,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5189,6 +5278,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5201,6 +5294,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5224,6 +5321,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5236,6 +5337,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5259,6 +5364,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5271,6 +5380,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5294,6 +5407,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5306,6 +5423,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5329,6 +5450,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5341,6 +5466,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5364,6 +5493,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5376,6 +5509,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5399,6 +5536,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5411,6 +5552,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5434,6 +5579,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5446,6 +5595,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5469,6 +5622,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5481,6 +5638,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5504,6 +5665,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5516,6 +5681,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5539,6 +5708,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5551,6 +5724,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5574,6 +5751,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5586,6 +5767,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5609,6 +5794,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5621,6 +5810,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5644,6 +5837,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5656,6 +5853,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5679,6 +5880,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5691,6 +5896,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5714,6 +5923,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5726,6 +5939,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5749,6 +5966,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5761,6 +5982,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5784,6 +6009,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5796,6 +6025,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5819,6 +6052,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5831,6 +6068,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5854,6 +6095,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5866,6 +6111,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5889,6 +6138,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5901,6 +6154,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5924,6 +6181,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5936,6 +6197,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5959,6 +6224,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5971,6 +6240,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -5994,6 +6267,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6006,6 +6283,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6029,6 +6310,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6041,6 +6326,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6064,6 +6353,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6076,6 +6369,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6099,6 +6396,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6111,6 +6412,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6134,6 +6439,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6146,6 +6455,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6169,6 +6482,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6181,6 +6498,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6204,6 +6525,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6216,6 +6541,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6239,6 +6568,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6251,6 +6584,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6274,6 +6611,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6286,6 +6627,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6309,6 +6654,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6321,6 +6670,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6344,6 +6697,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6356,6 +6713,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -6379,6 +6740,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11316,6 +11681,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11339,6 +11708,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11351,6 +11724,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11374,6 +11751,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11386,6 +11767,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11409,6 +11794,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11421,6 +11810,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11444,6 +11837,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11456,6 +11853,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11479,6 +11880,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11491,6 +11896,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11514,6 +11923,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11526,6 +11939,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11549,6 +11966,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11561,6 +11982,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11584,6 +12009,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11596,6 +12025,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11619,6 +12052,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11631,6 +12068,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11654,6 +12095,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11666,6 +12111,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11689,6 +12138,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11701,6 +12154,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11724,6 +12181,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11736,6 +12197,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11759,6 +12224,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11771,6 +12240,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11794,6 +12267,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11806,6 +12283,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11829,6 +12310,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11841,6 +12326,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11864,6 +12353,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11876,6 +12369,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11899,6 +12396,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11911,6 +12412,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11934,6 +12439,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11946,6 +12455,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11969,6 +12482,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -11981,6 +12498,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12004,6 +12525,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12016,6 +12541,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12039,6 +12568,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12051,6 +12584,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12074,6 +12611,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12086,6 +12627,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12109,6 +12654,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12121,6 +12670,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12144,6 +12697,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12156,6 +12713,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12179,6 +12740,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12191,6 +12756,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12214,6 +12783,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12226,6 +12799,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12249,6 +12826,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12261,6 +12842,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12284,6 +12869,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12296,6 +12885,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12319,6 +12912,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12331,6 +12928,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12354,6 +12955,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12366,6 +12971,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12389,6 +12998,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12401,6 +13014,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12424,6 +13041,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12436,6 +13057,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12459,6 +13084,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12471,6 +13100,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12494,6 +13127,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12506,6 +13143,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12529,6 +13170,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12541,6 +13186,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12564,6 +13213,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12576,6 +13229,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12599,6 +13256,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12611,6 +13272,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12634,6 +13299,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12646,6 +13315,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12669,6 +13342,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12681,6 +13358,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12704,6 +13385,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12716,6 +13401,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12739,6 +13428,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12751,6 +13444,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12774,6 +13471,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12786,6 +13487,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -12809,6 +13514,10 @@ module.exports = {
                     ],
                     "block": [
                         8
+                    ],
+                    "subgraphError": [
+                        145,
+                        "_SubgraphErrorPolicy_!"
                     ]
                 }
             ],
@@ -13285,10 +13994,22 @@ module.exports = {
             "borrowRateModeFrom_not": [
                 11
             ],
+            "borrowRateModeFrom_in": [
+                11
+            ],
+            "borrowRateModeFrom_not_in": [
+                11
+            ],
             "borrowRateModeTo": [
                 11
             ],
             "borrowRateModeTo_not": [
+                11
+            ],
+            "borrowRateModeTo_in": [
+                11
+            ],
+            "borrowRateModeTo_not_in": [
                 11
             ],
             "stableBorrowRate": [

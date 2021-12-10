@@ -1,6 +1,9 @@
 import { MongoClient } from "mongodb"
 
-export const mongoClient = new MongoClient(process.env.DATABASE_URL as string)
+export const mongoClient = new MongoClient(process.env.DATABASE_URL as string, {
+  retryWrites: true,
+  retryReads: true,
+})
 
 export async function getMongoClient() {
   await mongoClient.connect()
@@ -28,4 +31,3 @@ export enum ORDER {
   ASC = 1,
   DESC = -1,
 }
-

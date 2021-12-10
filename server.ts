@@ -2,7 +2,6 @@
 import blitz from "blitz/custom-server"
 import { createServer } from "http"
 import { parse } from "url"
-import { log } from "@blitzjs/display"
 import "./app/crons"
 
 const { PORT = "3000" } = process.env
@@ -17,6 +16,6 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url!, true)
     handle(req, res, parsedUrl)
   }).listen(PORT, () => {
-    log.success(`Ready on http://localhost:${PORT}`)
+    // log.success(`Ready on http://localhost:${PORT}`)
   })
 })

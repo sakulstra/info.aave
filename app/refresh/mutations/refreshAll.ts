@@ -73,7 +73,7 @@ export async function refreshAll() {
       fetchNextUserReserves(poolId, gqlSdkAvalanche)
     )
   )
-  await Promise.all(promises.flat())
+  await Promise.allSettled(promises.flat())
 }
 
 export async function refreshUsers() {

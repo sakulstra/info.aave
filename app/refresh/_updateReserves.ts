@@ -18,6 +18,7 @@ export async function updateReserves(gqlSdk: typeof gqlSdkV2, poolId: string) {
   const result = await gqlSdk.query({
     reserves: [
       {
+        subgraphError: "deny",
         orderBy: "lastUpdateTimestamp",
         where: { lastUpdateTimestamp_gte: reserve?.lastUpdateTimestamp || 0, pool: poolId },
       },

@@ -81,6 +81,7 @@ async function getV1ReservesSnapshot(
   const result = await gqlClient.query({
     reserves: [
       {
+        subgraphError: "deny",
         where: {
           pool: poolId,
         },
@@ -195,6 +196,7 @@ async function getV2ReservesSnapshot(
   const result = await gqlClient.query({
     reserves: [
       {
+        subgraphError: "deny",
         where: {
           pool: poolId,
         },
